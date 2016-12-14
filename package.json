@@ -1,0 +1,32 @@
+{
+  "name": "concussion-history",
+  "version": "1.0.0",
+  "description": "Please answer the following questions about your injury and leave any necessary comments.",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^2.5.2",
+    "ejs-locals": "^1.0.2",
+    "express": "^4.14.0",
+    "fs": "0.0.1-security"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffreyshi17/Concussion-History.git"
+  },
+  "keywords": [
+    "concussion",
+    "history",
+    "tracker"
+  ],
+  "author": "Jeffrey Shi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeffreyshi17/Concussion-History/issues"
+  },
+  "homepage": "https://github.com/jeffreyshi17/Concussion-History#readme"
+}
