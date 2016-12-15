@@ -27,6 +27,9 @@ app.get('/symptoms', function(req, res){
         res.locals.data = JSON.parse(fs.readFileSync("data/concussiontracker.json", 'utf8'));
         res.render('symptoms.ejs');
 });
+app.get('/about', function(req, res){
+		res.render('about.ejs');
+});
 app.listen(port);
 
 console.log("Server working");
