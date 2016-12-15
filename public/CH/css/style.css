@@ -1,12 +1,12 @@
  .answer{
      margin-left: 40px;
  }
- .option {
+ .option1 {
      display: none;
      margin-left: 60px;
 }
-.suboption {
-     margin-left: 60px;
+.option2 {
+     display: none;
 }
  body {
      margin: 40px auto;
