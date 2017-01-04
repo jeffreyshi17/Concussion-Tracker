@@ -24,7 +24,7 @@ app.get('/summary', function(req, res){
 
 
 app.get('/symptoms', function(req, res){
-        res.locals.data = JSON.parse(fs.readFileSync("data/concussiontracker.json", 'utf8'));
+        res.locals.data = JSON.parse(fs.readFileSync("data/symptoms.json", 'utf8'));
         res.render('symptoms.ejs');
 });
 app.get('/about', function(req, res){
