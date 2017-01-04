@@ -1,0 +1,13 @@
+{
+	"questionLabels": ["first name", "last name", "birthday", "gender", "email", "parent first name", "parent last name", "parent email"],
+	"patientInformation": [
+	 	{"firstname": " "},
+	 	{"lastname": " "},
+	 	{"birthday": " "},
+	 	{"gender": " "},
+	 	{"email": " "},
+	 	{"parentFirstName": " "},
+	 	{"parentLastName": " "},
+	 	{"parentEmail": " "}
+	 ]
+}
