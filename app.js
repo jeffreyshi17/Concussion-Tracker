@@ -34,6 +34,10 @@ app.get('/recoveryactivities', function(req, res){
 app.get('/about', function(req, res){
 		res.render('about.ejs');
 });
+app.get('/faq', function(req, res){
+        res.locals.data = JSON.parse(fs.readFileSync("data/faq.json", 'utf8'));
+        res.render('faq.ejs');
+});
 app.listen(port);
 
 console.log("Server working");

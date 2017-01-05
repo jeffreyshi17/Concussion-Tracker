@@ -1,0 +1,97 @@
+[
+  {
+  	"question": "What is a concussion?", 
+    "answer": [
+    		"A concussion is a type of traumatic brain injury that is caused by a bump, blow, or jolt to the head, or by a hit to the body that causes the head and brain to move rapidly back and forth.  This sudden movement can cause the brain to bounce around or twist in the skull, stretching and damaging the brain cells and creating chemical changes in the brain."
+  			]
+  },
+  {
+  	"question": "What are the signs and symptoms of a concussion?",
+	"answer": [ 
+			"Can’t recall events prior to or after a hit or fall.Appears dazed or stunned.",
+			"Forgets an instruction, is confused about an assignment or position, or is unsure of the game, score, or opponent.",
+			"Moves clumsily.",
+			"Answers questions slowly.",
+			"Loses consciousness (even briefly).",
+			"Shows mood, behavior, or personality changes.",
+			"Headache or “pressure” in head.",
+			"Nausea or vomiting.",
+			"Balance problems or dizziness, or double or blurry vision.",
+			"Bothered by light or noise.",
+			"Feeling sluggish, hazy, foggy, or groggy.",
+			"Confusion, or concentration or memory problems.",
+			"Just not feeling right, or feeling down."
+			]
+	},
+	{
+	  "question": "What should I do if I think my child has a concussion?",
+	  "answer": [
+	  		"Implement the HEADS UP action plan.", 
+			"Remove from play or activity.",
+			"Seek medical attention.",
+			"Ask for written instructions from the young athlete’s health care provider on return to school and activity."
+			]
+	},
+	{
+	  "question": "What is useful information to have when I see the physician after a suspected concussion?",
+	  "answer": [
+	  		"Cause of the injury and force of the hit or blow to the head or body.",
+			"Any loss of consciousness, and if so, for how long?",
+			"Any memory loss right after the injury.",
+			"Number of previous concussions (if applicable) "
+			]
+	},
+ 	{
+ 	  "question": "What are some recovery tips?",
+	  "answer": [
+	  		"Rest helps the brain heal.",
+			"Keep a regular sleep routine with no late nights and no sleepovers.  Nap if you feel it is necessary.",
+			"Make sure to avoid high-risk and high-speed activities that could result in another bump or jolt to the head or body.",
+			"Return to activity slowly",
+			"Do not return to activity all at once. Instead return to activity in increments of 10-20 minutes with rest in between.",
+			"Students may need to spend less time at school initially, rest often, or be given more time to take tests."
+			]
+	},
+ 	{
+ 		"question": "When can I return to school?",
+		"answer": [
+			"It is important to return to school slowly.  Start with 20 minutes of activity and then take a break and rest.  If this is tolerable, you can begin to increase the activity time, but do so slowly in increments of 10 minutes.  If your symptoms return, rest completely until they are resolved and begin activity again for a shorter duration.", 
+			"Most kids and teens will only need assistance through informal academic adjustments as they recover. However, for kids and teens with ongoing symptoms you should discuss accommodations with your neurologist or healthcare provider. "
+			]
+	},
+	{
+		"question": "When can I return to exercise?",
+		"answer": [
+			"After a concussion, an athlete should only return to exercise or sports after returning to school or work and not experiencing any symptoms.  Once they are back to school or work and are no longer experiencing symptoms, a patient should receive clearance from their doctor and then begin with the return to exercise 6 step progression."
+			]
+	},
+	{
+		"question": "What should I do if I have symptoms after exercise?",
+		"answer": [
+			"It is important to watch for concussion symptoms after each day’s return to play progression activity.  If an athlete’s symptoms come back, or if he or she gets new symptoms, this is a sign the athlete is pushing too hard.  The athlete should STOP these activities and the medical provider should be contacted.  After more rest and no concussion symptoms, the athlete can start at the previous step."
+			]
+	}, 
+ 	{
+ 		"question": "What is Post- Concussive Syndrome?",
+		"answer": [
+			"While the majority of children and teens with a concussion recover within a couple of weeks, some will have symptoms for longer.  If your child’s symptoms do not go away in this time frame or get worse after return to regular activity, talk with your child’s healthcare provider.  Post-concussive syndrome is rare after only one concussion, but can occur in patients with multiple concussions."
+			]
+	},  
+ 	{
+ 		"question": "What are dangerous signs and symptoms of a concussion?",
+		"answer": [
+			"If your child or teen is experiencing any of these symptoms, take your child to the emergency department:",
+			"One pupil larger than the other.",
+			"Drowsiness or inability to wake up.",
+			"A headache that gets worse and does not go away.",
+			"Slurred speech, weakness, numbness, or decreased coordination.",
+			"Repeated vomiting or nausea, convulsions or seizures (shaking or twitching).",
+			"Unusual behavior, increased confusion, restlessness, or agitation.",
+			"Loss of consciousness (passed out/ knocked out). Even a brief LOC should be taken seriously.",
+			"If your toddler or infant is experiencing any of these symptoms, take him/her to the emergency department:",
+			"Any of the signs and symptoms listed above.",
+			"Will not stop crying and cannot be consoled.",
+			"Will not nurse or eat. "
+			]
+	}
+]
