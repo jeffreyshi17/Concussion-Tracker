@@ -27,6 +27,10 @@ app.get('/symptoms', function(req, res){
         res.locals.data = JSON.parse(fs.readFileSync("data/symptoms.json", 'utf8'));
         res.render('symptoms.ejs');
 });
+app.get('/recoveryactivities', function(req, res){
+        res.locals.data = JSON.parse(fs.readFileSync("data/recoveryActivities.json", 'utf8'));
+        res.render('recoveryactivities.ejs');
+});
 app.get('/about', function(req, res){
 		res.render('about.ejs');
 });
