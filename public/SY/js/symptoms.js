@@ -10,8 +10,8 @@ function storeToLocalStorage() {
         if (e.type == "checkbox" && e.checked!="false") {
             localStorage.setItem(e.id, e.checked);
         }
-        if (e.type == "range" && e.value!="0"){
-            locatStorage.setItem(e.id, e.value);
+        if (e.type == "range"){
+            localStorage.setItem(e.id, e.value);
         }
     }
 }
@@ -21,9 +21,10 @@ function restoreFromLocalStorage() {
 	var i;
 	for(i = 0; i < children.length; i++){
         if (children[i].type=="range"){
-            if(localStorage.getItem(children[i].id) != "0"){
+            if(localStorage.getItem(children[i].id) != ""){
                 children[i].value = localStorage.getItem(children[i].id);
             }
+            else children[i].value = 0;
         }
 		if (children[i].type=="checkbox"){
 			if(localStorage.getItem(children[i].id) == "false"){
