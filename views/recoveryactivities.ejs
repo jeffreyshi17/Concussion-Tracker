@@ -16,7 +16,7 @@
 			<% for(var j = 0; j< data.questions[i].answers.length; j++) { %>
 			
 				<BLOCKQUOTE>
-				<br><br><%= data.questions[i].answers[j].text %> <input type= '<%= data.questions[i].answers[j].type %>' id = '<%=data.questions[i].answers[j].id%>' name= '<%= i %>' >  
+				<%= data.questions[i].answers[j].text %> <input type= '<%= data.questions[i].answers[j].type %>' id = '<%=data.questions[i].answers[j].id%>' name= '<%= i %>' >  
 				</BLOCKQUOTE>
 			
 				
@@ -25,10 +25,10 @@
 				<% for(var k = 0; k< data.questions[i].answers[j].options.length; k++) { %>
 					<BLOCKQUOTE><BLOCKQUOTE>
 					<% if(data.questions[i].answers[j].options[k].type === ""){ %>
-						<br><br><%= data.questions[i].answers[j].options[k].text %>
+						<%= data.questions[i].answers[j].options[k].text %>
 					<% } else{ %>
 
-						<br><br><%= data.questions[i].answers[j].options[k].text %> <input type= '<%= data.questions[i].answers[j].options[k].type %>' id = '<%=data.questions[i].answers[j].options[k].id%>'   name= '<%= i + 1 + j %>' > 
+						<%= data.questions[i].answers[j].options[k].text %> <input type= '<%= data.questions[i].answers[j].options[k].type %>' id = '<%=data.questions[i].answers[j].options[k].id%>'   name= '<%= i + 1 + j %>' > 
 
 					<% } %>
 					</BLOCKQUOTE></BLOCKQUOTE>	
@@ -38,10 +38,10 @@
 						<% for(var l = 0; l < data.questions[i].answers[j].options[k].options.length; l++) { %>
 						<BLOCKQUOTE><BLOCKQUOTE>
 						<% if(data.questions[i].answers[j].options[k].options[l].type === ""){ %>
-							<br><br><%= data.questions[i].answers[j].options[k].options[l].text %>
+							<%= data.questions[i].answers[j].options[k].options[l].text %>
 						<% } else{ %>
 
-							<br><br><%= data.questions[i].answers[j].options[k].options[l].text %> <input type= '<%= data.questions[i].answers[j].options[k].options[l].type %>' id = '<%=data.questions[i].answers[j].options[k].options[l].id%>'   name= '<%= i + 1 + j + k%>' > 
+							<%= data.questions[i].answers[j].options[k].options[l].text %> <input type= '<%= data.questions[i].answers[j].options[k].options[l].type %>' id = '<%=data.questions[i].answers[j].options[k].options[l].id%>'   name= '<%= i + 1 + j + k%>' > 
 
 						<% } %>
 						</BLOCKQUOTE></BLOCKQUOTE>	
@@ -50,10 +50,10 @@
 								<% for(var m = 0; m < data.questions[i].answers[j].options[k].options[l].options.length; m++) { %>
 									<BLOCKQUOTE><BLOCKQUOTE>
 									<% if(data.questions[i].answers[j].options[k].options[l].options[m].type === ""){ %>
-									<br><br><%= data.questions[i].answers[j].options[k].options[l].options[m].text %>
+									<%= data.questions[i].answers[j].options[k].options[l].options[m].text %>
 									<% } else{ %>
 
-									<br><br><%= data.questions[i].answers[j].options[k].options[l].options[m].text %> <input type= '<%= data.questions[i].answers[j].options[k].options[l].options[m].type %>' id = '<%=data.questions[i].answers[j].options[k].options[l].options[m].id%>'   name= '<%= i + 1 + j + l %>' > 
+									<%= data.questions[i].answers[j].options[k].options[l].options[m].text %> <input type= '<%= data.questions[i].answers[j].options[k].options[l].options[m].type %>' id = '<%=data.questions[i].answers[j].options[k].options[l].options[m].id%>'   name= '<%= i + 1 + j + l %>' > 
 
 									<% } %>
 									</BLOCKQUOTE></BLOCKQUOTE>	
@@ -62,10 +62,10 @@
 											<% for(var n = 0; n < data.questions[i].answers[j].options[k].options[l].options[m].options.length; n++) { %>
 												<BLOCKQUOTE><BLOCKQUOTE>
 												<% if(data.questions[i].answers[j].options[k].options[l].options[m].options[n].type === ""){ %>
-												<br><br><%= data.questions[i].answers[j].options[k].options[l].options[m].options[n].text %>
+												<%= data.questions[i].answers[j].options[k].options[l].options[m].options[n].text %>
 												<% } else{ %>
 
-												<br><br><%= data.questions[i].answers[j].options[k].options[l].options[m].options[n].text %> <input type= '<%= data.questions[i].answers[j].options[k].options[l].options[m].options[n].type %>' id = '<%=data.questions[i].answers[j].options[k].options[l].options[m].options[n].id%>'   name= '<%= i + 1 + j + l+ m %>' > 
+												<%= data.questions[i].answers[j].options[k].options[l].options[m].options[n].text %> <input type= '<%= data.questions[i].answers[j].options[k].options[l].options[m].options[n].type %>' id = '<%=data.questions[i].answers[j].options[k].options[l].options[m].options[n].id%>'   name= '<%= i + 1 + j + l+ m %>' > 
 
 												<% } %>
 												</BLOCKQUOTE></BLOCKQUOTE>	
@@ -88,7 +88,8 @@
 		<DIV id = 'footer'></DIV>
 		</form>
 		<button id="submit">submit</button>
-		<button id="viewAnswers">View Answers</button>
+		<button id="display">View Answers</button>
+		<button id="display">View Answers</button>
 		<script src="RA/js/scripts.js"></script>
 		
 	</BODY>
