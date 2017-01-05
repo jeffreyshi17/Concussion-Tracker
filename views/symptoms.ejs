@@ -1,10 +1,43 @@
-<html>
-	<head>
-		<title><%= data[0].title %></title>
-		<link href="/CH/css/style.css" rel="stylesheet" type="text/css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	</head>
-	<body>    
-        <h1>PUT SYMPTOMS PAGE HERE</h1>
-	</body>
-</html>
+<HTML>
+	<HEAD>
+		<TITLE>Symptoms</TITLE>
+	</HEAD>
+	<BODY>
+		<DIV id = 'header'><H1>Symptoms</H1></DIV>
+		<DIV id = 'body'>
+		<button id="save">Save to Local Storage</button>
+		<button id="check">Restore from Local Storage</button>
+		<button id="clear">Clear Local Storage</button>
+		<button id="summary">Display Results</button>
+		<form id="container">
+		<table> 
+		  	<td>Symptoms:</td>
+		  	<th><td>Pre-Injury</td></th>
+			<th><td>Post-Injury</td></th>
+			<th><td>Additional Information:</td></th>
+			<% for(i=0; i<data.questions.length; i++){ %>
+			    <tr>
+				<div class = "question" id="<%=data.questions[i].id %>"> 
+		    	<td><%=data.questions[i].question%></td>
+					<%for(j=0; j<data.questions[i].answers.length; j++){%>
+					<th><td>
+						<div class = "answer">
+						<%if(data.questions[i].answers[j].type=="slider"){%>
+							<input type="range" id="<%=data.questions[i].answers[j].id%>" min="<%=data.questions[i].answers[j].min%>" max="<%=data.questions[i].answers[j].max%>" step="<%=data.questions[i].answers[j].step%>" value="0">
+						<% } else{ %>
+							<%=data.questions[i].answers[j].text%>
+							<input type= "<%=data.questions[i].answers[j].type%>" id="<%=data.questions[i].answers[j].id%>">
+						<% } %>
+						</div>
+					</td></th>
+					<% }; %>
+				</div>
+				</tr> 
+		    <% }; %>
+	    </table>
+		</form>
+		</DIV>
+		<DIV id = 'footer'></DIV>
+		<script src="/public/SY/js/symptoms.js"></script>
+	</BODY>
+</HTML>
