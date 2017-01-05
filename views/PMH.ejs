@@ -1,0 +1,58 @@
+<HTML>
+	<HEAD>
+		<TITLE>Past Medical History</TITLE>
+	</HEAD>
+	<BODY>
+		<DIV id = 'header'><H1>Past Medical History</H1></DIV>
+		<DIV id = 'body'>
+
+			<% for (var i = 0; i < data[0].questions.length; i++){ %>
+				<h2><%= data[0].questions[i].question %></h2>
+
+					<% for (var j = 0; j < data[0].questions[i].answers.length; j++){ %>
+						<div><%= data[0].questions[i].answers[j].text %></div>
+							<% if (data[0].questions[i].answers[j].type == "checkbox"){ %>
+								<% var x = "PMH_" + i.toString() + "_" + j.toString(); %>
+								<input type="checkbox" id = <%= x %> >
+							<% } else if (data[0].questions[i].answers[j].type == "text"){ %>
+								<% var x = "PMH_" + i.toString() + "_" + j.toString(); %>
+								<input type="text" id = <%= x %> >
+							<% } else if (data[0].questions[i].answers[j].type == "radio") { %>
+								<% var x = "PMH_" + i.toString() + "_" + j.toString(); %>
+								<input type = "radio" name = "r" id = <%= x %> >
+							<% } %>
+							<% for (var k = 0; k < data[0].questions[i].answers[j].options.length; k++){ %>
+								<div><%= data[0].questions[i].answers[j].options[k].text %></div>
+									<% if (data[0].questions[i].answers[j].options[k].type == "checkbox"){ %>
+										<% var x = "PMH_" + i.toString() + "_" + j.toString() + "_" + k.toString(); %>										<input type="checkbox" id = <%= x %> >
+									<% } else if (data[0].questions[i].answers[j].options[k].type == "text"){ %>
+										<% var x = "PMH_" + i.toString() + "_" + j.toString() + "_" + k.toString(); %>
+										<input type="text" id = <%= x %> >
+									<% } else if (data[0].questions[i].answers[j].options[k].type == "radio") { %>
+										<% var x = "PMH_" + i.toString() + "_" + j.toString() + "_" + k.toString(); %>
+										<input type = "radio" name = "r" id = <%= x %> >
+									<% } %>
+									<% for (var l = 0; l < data[0].questions[i].answers[j].options[k].options.length; l++){ %>
+										<div><%= data[0].questions[i].answers[j].options[k].options[l].text %></div>
+											<% if (data[0].questions[i].answers[j].options[k].options[l].type == "checkbox"){ %>
+												<% var x = "PMH_" + i.toString() + "_" + j.toString() + "_" + k.toString() + "_" + l.toString(); %>
+												<input type="checkbox" id = <%= x %> >
+											<% } else if (data[0].questions[i].answers[j].options[k].options[l].type == "text"){ %>
+												<% var x = "PMH_" + i.toString() + "_" + j.toString() + "_" + k.toString() + "_" + l.toString(); %>
+												<input type="text" id = <%= x %> >
+											<% } else if (data[0].questions[i].answers[j].options[k].options[l].type == "radio") { %>
+												<% var x = "PMH_" + i.toString() + "_" + j.toString() + "_" + k.toString() + "_" + l.toString(); %>
+												<input type = "radio" name = "r" id = <%= x %> >
+											<% } %>
+									<% } %> 
+							<% } %>
+					<% } %>
+			<% } %> 
+
+		</DIV>
+		<DIV id = 'footer'></DIV>
+		<button id = "submit">Submit</button>
+		<button id = "summary">View summary of results</button>
+		<script src = "js/script.js"></script>
+	</BODY>
+</HTML>
