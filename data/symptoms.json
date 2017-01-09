@@ -160,7 +160,7 @@
 			"id": "SY_7",
 			"question": "In a Fog",
 			"answers": [{
-				"id": "SY_1_0",
+				"id": "SY_7_0",
 				"type": "slider",
 				"text": "Pre-Injury",
 				"min": "0",
