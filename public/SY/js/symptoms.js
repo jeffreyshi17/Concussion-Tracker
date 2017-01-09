@@ -1,21 +1,20 @@
 function storeToLocalStorage() {
-    var parent = document.getElementById('container')
-        , children = parent.getElementsByTagName('input');
-    var i, e;
-    for (i = 0; i < children.length; ++i) {
-        e = children[i];
-        if (e.type == "text" && e.value!="") {
-            localStorage.setItem(e.id, e.value);
+    var save = '{"title": "Symptom Tracker","answers": [';
+    var body = document.querySelectorAll("input");
+    for(var i = 0; i < body.length; i++){
+        if(body[i].type == "range"){
+            save +='{"id": "'+ body[i].id +'","value": "'+body[i].value+'"},';
         }
-        if (e.type == "checkbox" && e.checked!="false") {
-            localStorage.setItem(e.id, e.checked);
-        }
-        if (e.type == "range"){
-            localStorage.setItem(e.id, e.value);
+        if(body[i].type == "text"){
+            save +='{"id": "'+ body[i].id +'","answer": "' + body[i].value +'"},';
         }
     }
+    save = save.substring(0, save.length - 1);
+    save += ']}';
+    var date = new Date();
+    var d = (date.getMonth()+1+"/"+date.getDate()+"/"+date.getFullYear());
+    localStorage.setItem('Symptoms '+d, save);
 }
-
 function restoreFromLocalStorage() {
 	var parent = document.getElementById('container'), children = parent.getElementsByTagName('input');
 	var i;
