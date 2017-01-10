@@ -34,9 +34,7 @@ function submit() {
 	}
 	answerJ = answerJ.substring(0, answerJ.length - 2); //gets rid of extra space and comma
 	answerJ+=']}';
-	var testString = "asdkfjas;ldfjas;ldfjas;ldfjas;ldfjasd;lfjasdkfjas;ldfjas;ldfjas;ldfjas;ldfjasd;lfjasdkfjas;ldfjas;ldfjas;ldfjas;ldfjasd;lfjasdkfjas;ldfjas;ldfjas;ldfjas;ldfjasd;lfjasdkfjas;ldfjas;ldfjas;ldfjas;ldfjasd;lfjasdkfjas;ldfjas;ldfjas;ldfjas;ldfjasd;lfjasdkfjas;ldfjas;ldfjas;ldfjas;ldfjasd;lfjasdkfjas;ldfjas;ldfjas;ldfjas;ldfjasd;lfjasdkfjas;ldfjas;ldfjas;ldfjas;ldfjasd;lfjLASTLETTERS";
 	localStorage.setItem("PMH", answerJ);
-	console.log(testString);
 	console.log(localStorage.getItem("PMH"));
 	console.log("submit end");
 }
