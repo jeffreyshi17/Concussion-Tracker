@@ -12,8 +12,7 @@ function storeToLocalStorage() {
     save = save.substring(0, save.length - 1);
     save += ']}';
     var date = new Date();
-    var d = (date.getFullYear()+"/"+date.getMonth()+"/"+date.getDate());
-    localStorage.setItem('Symptoms '+d, save);
+    localStorage.setItem('Symptoms '+date.getTime(), save);
 }
 function restoreFromLocalStorage() {
 	var parent = document.getElementById('container'), children = parent.getElementsByTagName('input');
