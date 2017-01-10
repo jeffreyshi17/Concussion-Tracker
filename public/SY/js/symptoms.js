@@ -1,5 +1,6 @@
 function storeToLocalStorage() {
-    var save = '{"title": "Symptom Tracker","answers": [';
+    var date = new Date();
+    var save = '{"title": "Symptom Tracker", "time": "'+date.getTime()+'","answers": [';
     var body = document.querySelectorAll("input");
     for(var i = 0; i < body.length; i++){
         if(body[i].type == "range"){
@@ -11,33 +12,11 @@ function storeToLocalStorage() {
     }
     save = save.substring(0, save.length - 1);
     save += ']}';
-    var date = new Date();
-    localStorage.setItem('Symptoms '+date.getTime(), save);
+    var d = (date.getFullYear()+"/"+date.getMonth()+1+"/"+date.getDate());
+    localStorage.setItem('Symptoms '+d, save);
 }
 function restoreFromLocalStorage() {
-	var parent = document.getElementById('container'), children = parent.getElementsByTagName('input');
-	var i;
-	for(i = 0; i < children.length; i++){
-        if (children[i].type=="range"){
-            if(localStorage.getItem(children[i].id) != ""){
-                children[i].value = localStorage.getItem(children[i].id);
-            }
-            else children[i].value = 0;
-        }
-		if (children[i].type=="checkbox"){
-			if(localStorage.getItem(children[i].id) == "false"){
-				children[i].checked = false;
-			}
-			else if(localStorage.getItem(children[i].id) == "true"){
-				children[i].checked = true;
-			}
- 		}
- 		 if(children[i].type == "text"){
- 		 	if(localStorage.getItem(children[i].id) != ""){
- 		 		children[i].value = localStorage.getItem(children[i].id);
- 		 	}
- 		 }
- 	}
+	var max = localStorage.getItem(5);
 }
 
 var clearLocal = function(){
