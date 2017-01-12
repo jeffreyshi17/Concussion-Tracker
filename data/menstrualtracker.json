@@ -1,0 +1,85 @@
+{
+    "id": "MH",
+    "title": "Menstrual History",
+    "desc": "Please answer the following questions about your menstrual history and leave any necessary comments. Please note any changes in your menstrual cycle from before your injury (pre-injury) to after your injury (post-injury).",
+    "questions": [{
+        "id": "MH_0",
+        "question": "Day of last period(first day):",
+        "answers": [{
+            "id": "MH_0_0",
+            "type": "date",
+            "options": []
+        }]
+    }, 
+    {
+        "id": "MH_1",
+        "question": "Are you menopausal?",
+        "answers": [{
+            "id": "MH_1_0",
+            "text": "yes",
+            "type": "radio",
+            "options": []
+        }, {
+            "id": "MH_1_1",
+            "text": "no",
+            "type": "radio",
+            "options": []
+        }]
+    },
+    {
+        "id": "MH_2",
+        "question": "Are you taking oral contraceptives?",
+        "answers": [{
+        "id": "MH_2_0",
+        "text": "yes",
+        "type": "radio",
+        "options": []
+        }, {
+        "id": "MH_2_1",
+        "text": "no",
+        "type": "radio",
+        "options": []
+            }]
+		},
+	{
+		"id":"MH_3",
+		"question": "Have you missed any periods recently? (since last check-in)",
+		"answers": [{
+			"id":"MH_3_0",
+			"text": "yes",
+			"type": "radio",
+			"options": [
+		{
+			"id": "MH_3_0_0",
+			"text": "If yes, how many and when?",
+			"type": "textbox" 
+		}]
+		}, {
+			"id":"MH_3_1",
+			"text": "no",
+			"type": "radio",
+			"options": []
+		}]
+	},
+	{
+		"id":"MH_4",
+		"question": "Describe your periods",
+		"answers": [{
+			"id":"MH_4_0",
+			"text": "Light",
+			"type": "radio",
+			"options": []
+		}, {
+			"id":"MH_4_1",
+			"text": "Moderate",
+			"type": "radio",
+			"options": []
+		}, {
+			"id":"MH_4_2",
+			"text": "Heavy",
+			"type": "radio",
+			"options": []
+		}]
+	}
+    ]
+}
