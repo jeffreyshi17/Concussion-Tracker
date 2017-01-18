@@ -1,9 +1,9 @@
 <HTML>
 	<HEAD>
-		<TITLE>Symptoms</TITLE>
+		<TITLE>Symptom Tracker</TITLE>
 	</HEAD>
 	<BODY>
-		<DIV id = 'header'><H1>Symptoms</H1></DIV>
+		<DIV id = 'header'><H1>Symptom Tracker</H1></DIV>
 		<DIV id = 'body'>
 		<button id="save">Save to Local Storage</button>
 		<button id="check">Restore from Local Storage</button>
@@ -12,14 +12,13 @@
 		<form id="container">
 		<table> 
 		  	<td>Symptoms:</td>
-		  	<th><td>Pre-Injury</td></th>
-			<th><td>Post-Injury</td></th>
+		  	<th><td>Severity:</td></th>
 			<th><td>Additional Information:</td></th>
 			<% for(i=0; i<data.questions.length; i++){ %>
 			    <tr>
 				<div class = "question" id="<%=data.questions[i].id %>"> 
 		    	<td><%=data.questions[i].question%></td>
-					<%for(j=0; j<data.questions[i].answers.length; j++){%>
+					<%for(j=0; j<data.questions[i].answers.length; j+=2){%>
 					<th><td>
 						<div class = "answer">
 						<%if(data.questions[i].answers[j].type=="slider"){%>
