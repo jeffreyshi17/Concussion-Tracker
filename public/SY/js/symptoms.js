@@ -38,7 +38,7 @@ var clearLocal = function(){
 	localStorage.clear();
 }
 var createSummary = function(){
-window.location.href = "summary";
+window.location.href = "results";
 }
 document.getElementById("save").addEventListener("click",storeToLocalStorage);
 document.getElementById("check").addEventListener("click",restoreFromLocalStorage);
