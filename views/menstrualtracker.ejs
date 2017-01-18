@@ -1,3 +1,4 @@
+<!DOCTYPE HTML>
 <HTML>
 	<HEAD>
 		<TITLE>Menstrual Tracker</TITLE>
@@ -19,28 +20,14 @@
 		<DIV id = 'body'>
 		<H1><%=data.title%></H1>
 		<H2><%=data.desc%></H2>
-
-		<form id ="menstrualtracker">
-
-		  <% for(var i =0; i < data.questions.length; i++){ %>
-		    <br><br><%= data.questions[i].question %>
-			<form>
-			<% for(var j = 0; j< data.questions[i].answers.length; j++) { %>
-				<%if(data.questions[i].answers[j].type == "date"){%>
-					<input type="date" id = "<%=data.questions[i].answers[j].id%>"> </input>
-				<%}%>
-				<%if(data.questions[i].answers[j].type == "radio"){%>
-					
-					<input type="radio" id = " <%= data.questions[i].answers[j].id %>" name = "data.questions[i].id"> </input>
-					
-				<%}%>
-				<%= data.questions[i].answers[j].text %>
-				
-			<% } %>
-			</form>
-		  <% } %>
+		<% for(var i =0; i < data.questions.length; i++){ %>
+		    <br><%= data.questions[i].question %>
+			<form><% for(var j = 0; j< data.questions[i].answers.length; j++) { %><%if(data.questions[i].answers[j].type == "date"){%>
+					<input type="date" id = "<%=data.questions[i].answers[j].id%>"> <%}%><%if(data.questions[i].answers[j].type == "radio"){%>
+					<input type="radio" id = "<%=data.questions[i].answers[j].id %>" name = "data.questions[i].id"> <%}%><%= data.questions[i].answers[j].text %><% } %>
+			</form> <% } %>
 		</DIV>
-		</form>
+		
 		<button id="submit">submit</button>
 		<button id="display">View Answers</button>
 		<script src="MT/js/scripts.js"></script>
