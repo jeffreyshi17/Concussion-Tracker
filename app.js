@@ -38,6 +38,10 @@ app.get('/menstrualtracker', function(req, res){
         res.locals.data = JSON.parse(fs.readFileSync("data/menstrualtracker.json", 'utf8'));
         res.render('menstrualtracker.ejs');
 });
+app.get('/sactracker', function(req, res){
+        res.locals.data = JSON.parse(fs.readFileSync("data/sac.json", 'utf8'));
+        res.render('sac.ejs');
+});
 app.listen(port);
 
 http.createServer(function (req, res) {
