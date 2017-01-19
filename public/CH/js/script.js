@@ -4,9 +4,7 @@ var idlist = [];
 $.ajax({
     url: 'http://concussiontracker.herokuapp.com/mainjson'
     , dataType: "json"
-    , //jsonpCallback: "_concussiontracker",
-    //cache: false,
-    timeout: 5000
+    , timeout: 5000
     , success: function (data) {
         JSONsrc = JSON.parse(data);
         generateForm();
@@ -32,8 +30,8 @@ function storeToLocalStorage() {
         if (e.type == "checkbox" || e.type == "radio") {
             answer.answer = e.checked;
         }
-        if (e.type == "range"){
-            answer.answer = $("#"+e.id+"Val").innerHTML;
+        if (e.type == "range") {
+            answer.answer = $("#" + e.id + "Val").innerHTML;
         }
         answersObj[idIndex].answers.push(answer);
     }
@@ -42,6 +40,7 @@ function storeToLocalStorage() {
 }
 
 function generateForm() {
+    //appendRestore();
     for (var k = 0; k < JSONsrc.length; k++) {
         var temp = {};
         temp.title = JSONsrc[k].title;
@@ -66,6 +65,7 @@ function generateForm() {
             }
         }
     }
+    restoreFromLocalStorage();
     appendSubmit();
 }
 
@@ -185,8 +185,36 @@ function appendSubmit() {
     sub.id = "submit";
     container.appendChild(sub);
     $(sub).on('click', function () {
-            storeToLocalStorage();
+        storeToLocalStorage();
     });
+}
+
+function appendRestore() {
+    var restore = document.createElement('button');
+    restore.className = "btn btn-default";
+    restore.innerHTML = "Restore from localStorage";
+    restore.id = "restore";
+    container.appendChild(restore);
+    $(restore).on('click', function () {
+        restoreFromLocalStorage();
+    });
+}
+
+function restoreFromLocalStorage() {
+    var a = JSON.parse(localStorage.getItem('init'));
+    for (var i = 0; i < a.length; i++) {
+        for (var j = 0; j < a[i].answers.length; j++) {
+            var q = a[i].answers[j];
+            var type = document.getElementById(q.id).type;
+            if (type == "checkbox" || type == "radio") {
+                document.getElementById(q.id).checked = q.answer;
+            }
+            else {
+                document.getElementById(q.id).value = q.answer;
+                console.log(q.answer);
+            }
+        }
+    }
 }
 /*
 $(document).ready(function () {
