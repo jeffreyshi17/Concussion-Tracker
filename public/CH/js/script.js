@@ -1,46 +1,49 @@
 var JSONsrc;
-var answersObj= {}; 
 $.ajax({
-    url: 'https://https://concussiontracker.herokuapp.com:8124/',
-    dataType: "jsonp",
-    jsonpCallback: "_concussiontracker",
-    cache: false,
-    timeout: 5000,
-    success: function (data) {
+    url: 'http://localhost:8124/'
+    , dataType: "jsonp"
+    , jsonpCallback: "_concussiontracker"
+    , cache: false
+    , timeout: 5000
+    , success: function (data) {
         JSONsrc = JSON.parse(data);
         generateForm();
-    },
-    error: function (jqXHR, textStatus, errorThrown) {
+    }
+    , error: function (jqXHR, textStatus, errorThrown) {
         alert('error ' + textStatus + " " + errorThrown);
     }
 });
+document.getElementById("viewSavedAnswers").addEventListener("click", function () {
+    window.location.href = 'results.html';
+});
+document.getElementById("submit").addEventListener("click", function () {
+    storeToLocalStorage();
+});
 
 function storeToLocalStorage() {
-    var ancestor = document.getElementById('container'),
-        descendents = ancestor.getElementsByTagName('INPUT');
+    var ancestor = document.getElementById('container')
+        , descendents = ancestor.getElementsByTagName('INPUT');
     var i, e;
     for (i = 0; i < descendents.length; ++i) {
         e = descendents[i];
-        if (e.type == "text") {
-            localStorage.setItem(e.id, e.value);
-        }
+        console.log(e.id.substring(0, e.id.indexOf("s")) + "form");
+        if ((e.id.indexOf("s") != -1 && document.getElementById(e.id.substring(0, e.id.indexOf("s")) + "form").display != "none") || e.id.indexOf("s") == -1)
+            if (e.type == "text") {
+                localStorage.setItem(e.id, e.value);
+            }
         if (e.type == "checkbox" || e.type == "radio") {
             localStorage.setItem(e.id, e.checked);
-        }
-        if (e.type == "date"){
-            
         }
     }
 }
 
 function generateForm() {
     for (var k = 0; k < JSONsrc.length; k++) {
-        answerObj[k].title = JSONsrc[k]["title"];
         var title = document.createElement('h1');
         title.className = "page-header";
         var description = document.createElement('h2');
         title.appendChild(document.createTextNode(JSONsrc[k]["title"]));
-        title.id = JSONsrc[k].id;
+        title.id = "title";
         description.appendChild(document.createTextNode(JSONsrc[k]["desc"]));
         container.appendChild(title);
         container.appendChild(description);
@@ -54,7 +57,6 @@ function generateForm() {
             }
         }
     }
-    appendSubmit();
 }
 
 function appendOptions(e1, lev, x) {
@@ -70,7 +72,8 @@ function appendOptions(e1, lev, x) {
     }
     if (select) {
         el = document.createElement('select');
-    } else {
+    }
+    else {
         el = document.createElement('span');
     }
     el.className = "option level" + x;
@@ -80,12 +83,14 @@ function appendOptions(e1, lev, x) {
             if (lev[i]["options"]) {
                 appendOptions(el, lev[i]["options"], x + 1);
             }
-        } else {
+        }
+        else {
             singop = document.createElement('div');
             if (other) {
                 ex = appendOption(e1, lev[i]);
                 //add directly to target
-            } else {
+            }
+            else {
                 ex = appendOption(singop, lev[i]);
                 el.appendChild(singop);
                 //add to div
@@ -113,22 +118,23 @@ var appendOption = function (target, op) {
         input.value = text;
         input.innerHTML = text;
         target.appendChild(input);
-    } else if (type == "range") {
+    }
+    else if (type == "range") {
         var slidervalue = document.createElement('span');
         var tabElement = document.createElement('tab');
         tabElement.align = "right";
         slidervalue.id = id + "Val";
         label.htmlFor = id;
         $(input).attr({
-            'data-slider-min': op.min,
-            'data-slider-max': op.max,
-            'data-slider-step': op.step,
-            'data-slider-value': Math.round((op.max - op.min) / 2),
-            'type': "text",
-            'data-slider-tooltip': "hide",
-        });
+            'data-slider-min': op.min
+            , 'data-slider-max': op.max
+            , 'data-slider-step': op.step
+            , 'data-slider-value': Math.round((op.max - op.min) / 2)
+            , 'type': "text"
+            , 'data-slider-tooltip': "hide"
+        , });
         $(slidervalue).css("padding-left", "10px");
-        $(spancontainer).css("padding-left", "10px");
+            $(spancontainer).css("padding-left", "10px");
         label.appendChild(document.createTextNode(text));
         target.appendChild(label);
         target.appendChild(tabElement);
@@ -141,7 +147,8 @@ var appendOption = function (target, op) {
             $(slidervalue).text(slideEvt.value);
             console.log(slideEvt.value);
         });
-    } else { //checkbox, textbox, radio
+    }
+    else { //checkbox, textbox, radio
         input.name = id.substring(0, id.lastIndexOf("_") - 1);
         label.htmlFor = id;
         label.appendChild(document.createTextNode(text));
@@ -150,25 +157,16 @@ var appendOption = function (target, op) {
             target.appendChild(label);
             spancontainer.appendChild(input);
             target.appendChild(spancontainer);
-        } else if (type == "") {
+        }
+        else if (type == "") {
             target.appendChild(label);
-        } else {
+        }
+        else {
             target.appendChild(input);
             target.appendChild(label);
         }
     }
     return input;
-}
-
-function appendSubmit() {
-    var sub = document.createElement('button');
-    sub.className = "btn btn-default";
-    sub.innerHTML = "Submit";
-    sub.id = "submit";
-    container.appendChild(sub);
-    $(sub).on('click', function () {
-        alert('User clicked on "foo."');
-    });
 }
 if (localStorage.length == 0) {
     storeToLocalStorage();
