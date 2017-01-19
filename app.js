@@ -59,5 +59,5 @@ http.createServer(function (req, res) {
     });
     var response = (fs.readFileSync("data/concussiontracker.json", 'utf8')).replace(/(\r\n|\n|\r)/gm, "") 
     res.end('_concussiontracker(\'' + response + '\')');
-}).listen(444);
+}).listen(38084);
 console.log("Server working");
