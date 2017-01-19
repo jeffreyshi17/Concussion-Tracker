@@ -1,108 +1,36 @@
 <html>
-   <head>
-      <title>
-         <%= data[0].title %>
-      </title>
-      <link href="/CH/css/style.css" rel="stylesheet" type="text/css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-      <!-- Latest compiled and minified CSS -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-      <!-- Optional theme -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-      <!-- Latest compiled and minified JavaScript -->
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-   </head>
-   <body>
-      <button id="viewSavedAnswers">View Saved Answers</button>
-      <!-- Title, Description begin -->
-      <h1><%= data[0].title %></h1>
-      <h2><%= data[0].desc %></h2>
-      <!-- Title, Description end -->
-      <form id="container">
-         <% for(var i=0; i<data[0]["questions"].length; i++) { %>
-         <div class="question" id="<%= data[0]["questions"][i].id %>">
-            <h3><%= data[0]["questions"][i].question %><span class="alert"></span></h3>
-            <!-- answers begin -->
-            <% for (var j = 0; j < data[0]["questions"][i].answers.length; j++) { %>
-            <div class="answer">
-               <% if (data[0]["questions"][i].answers[j].type.indexOf("check")!=-1){%>
-               <!-- Add checkbox from type -->
-               <input type="checkbox" id="<%= data[0]["questions"][i].answers[j].id %>">
-               <% }%>
-               <% if (data[0]["questions"][i].answers[j].type.indexOf("radio")!=-1){%>
-               <!-- Add radio from type -->
-               <input type="radio" name="<%= data[0]["questions"][i].id %>" id="<%= data[0]["questions"][i].answers[j].id %>">
-               <% }%>
-               <!-- Add label to input -->
-               <label for="<%=data[0]["questions"][i].answers[j].id%>">
-               <%= data[0]["questions"][i].answers[j].text %>
-               </label>
-               <% if (data[0]["questions"][i].answers[j].type.indexOf("text")!=-1){%>
-               <!-- Add textbox from type -->
-               <input type="text" id="<%= data[0]["questions"][i].answers[j].id %>">
-               <% }%>
-               <% if (data[0]["questions"][i].answers[j].options){%>
-               <!-- options begin -->
-               <div class="option1" id="<%= data[0]["questions"][i].answers[j].id + "_options"%>">
-                  <% for (var k = 0; k < data[0]["questions"][i].answers[j].options.length; k++) { %>
-                  <div class="option1div">
-                     <% if (data[0]["questions"][i].answers[j].options[k].type.indexOf("check")!=-1){%>
-                     <!-- Add checkbox from type -->
-                     <input type="checkbox" id="<%= data[0]["questions"][i].answers[j].options[k].id %>">
-                     <% }%>
-                     <% if (data[0]["questions"][i].answers[j].options[k].type.indexOf("radio")!=-1){%>
-                     <!-- Add radio from type -->
-                     <input type="radio" name="<%= data[0]["questions"][i].answers[j].id %>" id="<%= data[0]["questions"][i].answers[j].options[k].id %>">
-                     <% }%>
-                     <!-- Add label to input -->
-                     <label for="<%=data[0]["questions"][i].answers[j].options[k].id%>">
-                     <%= data[0]["questions"][i].answers[j].options[k].text %>
-                     </label>
-                     <% if (data[0]["questions"][i].answers[j].options[k].type.indexOf("text")!=-1){%>
-                     <!-- Add textbox from type -->
-                     <input type="text" id="<%= data[0]["questions"][i].answers[j].options[k].id %>">
-                     <% }%>
-                     <% if (data[0]["questions"][i].answers[j].options[k].options){%>
-                     <!-- options begin -->
-                     <span class="option2" id="<%= data[0]["questions"][i].answers[j].options[k].id + "_options"%>">
-                        <% for (var l = 0; l < data[0]["questions"][i].answers[j].options[k].options.length; l++) { %>
-                            <span class="option2div">
-                            <% if (data[0]["questions"][i].answers[j].options[k].options[l].type.indexOf("check")!=-1){%>
-                            <!-- Add checkbox from type -->
-                            <input type="checkbox" id="<%= data[0]["questions"][i].answers[j].options[k].options[l].id %>">
-                            <% }%>
-                            <% if (data[0]["questions"][i].answers[j].options[k].options[l].type.indexOf("radio")!=-1){%>
-                            <!-- Add radio from type -->
-                            <input type="radio" name="<%= data[0]["questions"][i].answers[j].options[k].id %>" id="<%= data[0]["questions"][i].answers[j].options[k].options[l].id %>">
-                            <% }%>
-                            <!-- Add label to input -->
-                            <label for="<%=data[0]["questions"][i].answers[j].options[k].options[l].id%>">
-                            <%=data[0]["questions"][i].answers[j].options[k].options[l].text %>
-                            </label>
-                            <!-- Add textbox from type -->
-                            <% if (data[0]["questions"][i].answers[j].options[k].options[l].type.indexOf("text")!=-1){%>
-                            <input type="text" id="<%= data[0]["questions"][i].answers[j].options[k].options[l].id %>">
-                            <% }%>
-                            </span>
-                        <% }%>
-                     </span>
-                     <% }%>
-                     <!-- options end -->
-                  </div>
-                  <% }%>
-               </div>
-               <% }%>
-               <!-- options end -->
-            </div>
-            <% } %>
-            <!-- answers end -->
-         </div>
-         <% } %>
-         <!-- questions end -->
-         <br>
-         <br>
-         <input type="submit" value="Submit"> 
-      </form>
-      <script src="/CH/js/script.js"></script>
-   </body>
+
+<head>
+    <title>
+        <%= data[0].title %>
+    </title>
+    <link href="/CH/css/style.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <button id="viewSavedAnswers">View Saved Answers</button>
+    <!-- Title, Description begin -->
+    <h1><%= data[0].title %></h1>
+    <h2><%= data[0].desc %></h2>
+    <!-- Title, Description end -->
+    <form id="container"> </form>
+    <%
+        var container = document.getElementById("container");
+        for (var i = 0; i < data[0]["questions"]; i++) {
+            var question = document.createElement('h3');
+            question.innerHTML = data[0]["questions"][i].question;
+            container.appendChild(question);
+            console.log("sdf");
+        }
+    %>
+    <script src="/CH/js/script.js"></script>
+</body>
+
 </html>
