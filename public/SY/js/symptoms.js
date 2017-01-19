@@ -20,7 +20,7 @@ function storeToLocalStorage() {
     //RTP protocol
 
     var date = new Date();
-    var save = '{"title": "Symptom Tracker", "time": "'+date.getTime()+'", "level": "'+level+'", "answers": [';
+    var save = '{"title": "Symptom Tracker", "time": "'+date.getTime()+'", "level": "'+level.toString()+'", "answers": [';
     var body = document.querySelectorAll("input");
     for(var i = 0; i < body.length; i++){
         if(body[i].type == "range"){
@@ -71,7 +71,7 @@ function storeToLocalStorage() {
     for (var i = localStorage.length-1; i >= 0; i--){
         if(localStorage.key(i).substring(0,8) == "Symptoms"){
             var json = JSON.parse(localStorage.getItem(localStorage.key(i)));
-            json.level = level;
+            json.level = level.toString();
             break;
         }
     }
