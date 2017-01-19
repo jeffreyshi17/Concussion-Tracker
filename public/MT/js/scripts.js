@@ -3,7 +3,7 @@ $(function() {
 });
 
 
-function Submit (){
+function Submit(){
 
 var save = '{"title": "Menstrual Tracker",';
 
