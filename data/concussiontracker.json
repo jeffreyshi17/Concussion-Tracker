@@ -1,493 +1,85 @@
 [{
-	"id": "SY",
-	"title": "Symptoms",
-	"desc": "Please indicate any symptoms you experienced regularly at any time prior to your injury (pre-injury) and symptoms you experienced after your injury (post-injury). Leave any necessary comments.",
+	"id": "PI",
+	"title": "Patient Information",
+	"desc": " ",
 	"questions": [{
-		"id": "SY_0",
-		"question": "Headaches",
+		"id": "PI_0",
+		"question": "What is your first name?",
 		"answers": [{
-			"id": "SY_0_0",
-			"type": "range",
-			"text": "Pre-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
-		}, {
-			"id": "SY_0_1",
-			"type": "range",
-			"text": "Post-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
-		}, {
-			"id": "SY_0_2",
+			"id": "PI_0_0",
 			"type": "text",
-			"text": "If so, what medications are you taking and how often"
+			"text": ""
 		}]
 	}, {
-			"id": "SY_1",
-			"question": "Pressure in Head",
-			"answers": [{
-				"id": "SY_1_0",
-				"type": "range",
-				"text": "Pre-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_1_1",
-				"type": "range",
-				"text": "Post-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_1_2",
-				"type": "text",
-				"text": "Additional Comments"
-			}]
+		"id": "PI_1",
+		"question": "What is your last name?",
+		"answers": [{
+			"id": "PI_1_0",
+			"type": "text",
+			"text": ""
+		}]
+	}, {
+		"id": "PI_2",
+		"question": "What is your birthday?",
+		"answers": [{
+			"id": "PI_2_0",
+			"type": "date",
+			"text": ""
+		}]
+	}, {
+		"id": "PI_3",
+		"question": "What gender are you?",
+		"answers": [{
+			"id": "PI_3_0",
+			"type": "checkbox",
+			"text": "Male"
 		}, {
-			"id": "SY_2",
-			"question": "Nausea/Vomiting",
-			"answers": [{
-				"id": "SY_2_0",
-				"type": "range",
-				"text": "Pre-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_2_1",
-				"type": "range",
-				"text": "Post-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_2_2",
-				"type": "text",
-				"text": "Additional Comments"
-			}]
+			"id": "PI_3_2",
+			"type": "checkbox",
+			"text": "Female"
 		}, {
-			"id": "SY_3",
-			"question": "Sensitivity to light",
-			"answers": [{
-				"id": "SY_3_0",
-				"type": "range",
-				"text": "Pre-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_3_1",
-				"type": "range",
-				"text": "Post-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_3_2",
-				"type": "text",
-				"text": "Additional Comments"
-			}]
-		}, {
-			"id": "SY_4",
-			"question": "Sensitivity to Noise",
-			"answers": [{
-				"id": "SY_4_0",
-				"type": "range",
-				"text": "Pre-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_4_1",
-				"type": "range",
-				"text": "Post-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_4_2",
-				"type": "text",
-				"text": "Additional Comments"
-			}]
-		}, {
-			"id": "SY_5",
-			"question": "Dizziness/Vertigo",
-			"answers": [{
-				"id": "SY_5_0",
-				"type": "range",
-				"text": "Pre-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_5_1",
-				"type": "range",
-				"text": "Post-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_5_2",
-				"type": "text",
-				"text": "Additional Comments"
-			}]
-		}, {
-			"id": "SY_6",
-			"question": "Slowed Down",
-			"answers": [{
-				"id": "SY_6_0",
-				"type": "range",
-				"text": "Pre-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_6_1",
-				"type": "range",
-				"text": "Post-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_6_2",
-				"type": "text",
-				"text": "Additional Comments"
-			}]
-		}, {
-			"id": "SY_7",
-			"question": "In a Fog",
-			"answers": [{
-				"id": "SY_7_0",
-				"type": "range",
-				"text": "Pre-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_7_1",
-				"type": "range",
-				"text": "Post-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_7_2",
-				"type": "text",
-				"text": "Additional Comments"
-			}]
-		}, {
-			"id": "SY_8",
-			"question": "Not Right",
-			"answers": [{
-				"id": "SY_8_0",
-				"type": "range",
-				"text": "Pre-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_8_1",
-				"type": "range",
-				"text": "Post-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_8_2",
-				"type": "text",
-				"text": "Additional Comments"
-			}]
-		}, {
-			"id": "SY_9",
-			"question": "Difficulty Concentrating",
-			"answers": [{
-				"id": "SY_9_0",
-				"type": "range",
-				"text": "Pre-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_9_1",
-				"type": "range",
-				"text": "Post-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_9_2",
-				"type": "text",
-				"text": "Additional Comments"
-			}]
-		}, {
-			"id": "SY_10",
-			"question": "Memory Difficulties",
-			"answers": [{
-				"id": "SY_10_0",
-				"type": "range",
-				"text": "Pre-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_10_1",
-				"type": "range",
-				"text": "Post-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_10_2",
-				"type": "text",
-				"text": "Additional Comments"
-			}]
-		}, {
-			"id": "SY_11",
-			"question": "Fatigued or Low Energy",
-			"answers": [{
-				"id": "SY_11_0",
-				"type": "range",
-				"text": "Pre-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_11_1",
-				"type": "range",
-				"text": "Post-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_11_2",
-				"type": "text",
-				"text": "Additional Comments"
-			}]
-		}, {
-			"id": "SY_12",
-			"question": "Confused",
-			"answers": [{
-				"id": "SY_12_0",
-				"type": "range",
-				"text": "Pre-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_12_1",
-				"type": "range",
-				"text": "Post-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_12_2",
-				"type": "text",
-				"text": "Additional Comments"
-			}]
-		}, {
-			"id": "SY_13",
-			"question": "Irritable",
-			"answers": [{
-				"id": "SY_13_0",
-				"type": "range",
-				"text": "Pre-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_13_1",
-				"type": "range",
-				"text": "Post-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_13_2",
-				"type": "text",
-				"text": "Additional Comments"
-			}]
-		}, {
-			"id": "SY_14",
-			"question": "Sad",
-			"answers": [{
-				"id": "SY_14_0",
-				"type": "range",
-				"text": "Pre-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_14_1",
-				"type": "range",
-				"text": "Post-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_14_2",
-				"type": "text",
-				"text": "Additional Comments"
-			}]
-		}, {
-			"id": "SY_15",
-			"question": "Nervous",
-			"answers": [{
-				"id": "SY_15_0",
-				"type": "range",
-				"text": "Pre-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_15_1",
-				"type": "range",
-				"text": "Post-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_15_2",
-				"type": "text",
-				"text": "Additional Comments"
-			}]
-		}, {
-			"id": "SY_16",
-			"question": "Anxious",
-			"answers": [{
-				"id": "SY_16_0",
-				"type": "range",
-				"text": "Pre-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_16_1",
-				"type": "range",
-				"text": "Post-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_16_2",
-				"type": "text",
-				"text": "Additional Comments"
-			}]
-		}, {
-			"id": "SY_17",
-			"question": "Drowsy",
-			"answers": [{
-				"id": "SY_17_0",
-				"type": "range",
-				"text": "Pre-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_17_1",
-				"type": "range",
-				"text": "Post-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_17_2",
-				"type": "text",
-				"text": "Additional Comments"
-			}]
-		}, {
-			"id": "SY_18",
-			"question": "Sleeping More Than Usual",
-			"answers": [{
-				"id": "SY_18_0",
-				"type": "range",
-				"text": "Pre-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_18_1",
-				"type": "range",
-				"text": "Post-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_18_2",
-				"type": "text",
-				"text": "If so, have you been napping and how much"
-			}]
-		}, {
-				"id": "SY_19",
-				"question": "Sleeping Less Than Usual",
-				"answers": [{
-					"id": "SY_19_0",
-					"type": "range",
-					"text": "Pre-Injury",
-					"min": "0",
-					"max": "10",
-					"step": "1"
-				}, {
-					"id": "SY_19_1",
-					"type": "range",
-					"text": "Post-Injury",
-					"min": "0",
-					"max": "10",
-					"step": "1"
-				}, {
-					"id": "SY_19_2",
-					"type": "text",
-					"text": "Additional Comments"
-				}]
-		}, {
-			"id": "SY_20",
-			"question": "Balance Problems",
-			"answers": [{
-				"id": "SY_20_0",
-				"type": "range",
-				"text": "Pre-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_20_1",
-				"type": "range",
-				"text": "Post-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_20_2",
-				"type": "text",
-				"text": "Additional Comments"
-			}]
-		}, {
-			"id": "SY_21",
-			"question": "Neck Pain",
-			"answers": [{
-				"id": "SY_21_0",
-				"type": "range",
-				"text": "Pre-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_21_1",
-				"type": "range",
-				"text": "Post-Injury",
-				"min": "0",
-				"max": "10",
-				"step": "1"
-			}, {
-				"id": "SY_21_2",
-				"type": "text",
-				"text": "Additional Comments"
+			"id": "PI_3_3",
+			"type": "checkbox",
+			"text": "Other:",
+			"options": [{
+				"id": "PI_3_3_0",
+				"type": "text"
 			}]
 		}]
-},{
+	}, {
+		"id": "PI_4",
+		"question": "What is your email?",
+		"answers": [{
+			"id": "PI_4_0",
+			"type": "text",
+			"text": ""
+		}]
+	}, {
+		"id": "PI_5",
+		"question": "What is your parent&#39s first name?",
+		"answers": [{
+			"id": "PI_5_0",
+			"type": "text",
+			"text": ""
+		}]
+	}, {
+		"id": "PI_6",
+		"question": "What is your parent&#39s last name?",
+		"answers": [{
+			"id": "PI_6_0",
+			"type": "text",
+			"text": ""
+		}]
+	}, {
+		"id": "PI_7",
+		"question": "What is your parent&#39s email?",
+		"answers": [{
+			"id": "PI_7_0",
+			"type": "text",
+			"text": ""
+		}]
+	}]
+}, {
 	"id": "CH",
 	"title": "Concussion History",
 	"desc": "Please answer the following questions about your injury and leave any necessary comments.",
@@ -792,7 +384,758 @@
 
 		}]
 	}]
-},{
+}, {
+	"id": "SY",
+	"title": "Symptoms",
+	"desc": "Please indicate any symptoms you experienced regularly at any time prior to your injury (pre-injury) and symptoms you experienced after your injury (post-injury). Leave any necessary comments.",
+	"questions": [{
+		"id": "SY_0",
+		"question": "Headaches",
+		"answers": [{
+			"id": "SY_0_0",
+			"type": "range",
+			"text": "Pre-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_0_1",
+			"type": "range",
+			"text": "Post-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_0_2",
+			"type": "text",
+			"text": "If so, what medications are you taking and how often"
+		}]
+	}, {
+		"id": "SY_1",
+		"question": "Pressure in Head",
+		"answers": [{
+			"id": "SY_1_0",
+			"type": "range",
+			"text": "Pre-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_1_1",
+			"type": "range",
+			"text": "Post-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_1_2",
+			"type": "text",
+			"text": "Additional Comments"
+		}]
+	}, {
+		"id": "SY_2",
+		"question": "Nausea/Vomiting",
+		"answers": [{
+			"id": "SY_2_0",
+			"type": "range",
+			"text": "Pre-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_2_1",
+			"type": "range",
+			"text": "Post-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_2_2",
+			"type": "text",
+			"text": "Additional Comments"
+		}]
+	}, {
+		"id": "SY_3",
+		"question": "Sensitivity to light",
+		"answers": [{
+			"id": "SY_3_0",
+			"type": "range",
+			"text": "Pre-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_3_1",
+			"type": "range",
+			"text": "Post-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_3_2",
+			"type": "text",
+			"text": "Additional Comments"
+		}]
+	}, {
+		"id": "SY_4",
+		"question": "Sensitivity to Noise",
+		"answers": [{
+			"id": "SY_4_0",
+			"type": "range",
+			"text": "Pre-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_4_1",
+			"type": "range",
+			"text": "Post-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_4_2",
+			"type": "text",
+			"text": "Additional Comments"
+		}]
+	}, {
+		"id": "SY_5",
+		"question": "Dizziness/Vertigo",
+		"answers": [{
+			"id": "SY_5_0",
+			"type": "range",
+			"text": "Pre-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_5_1",
+			"type": "range",
+			"text": "Post-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_5_2",
+			"type": "text",
+			"text": "Additional Comments"
+		}]
+	}, {
+		"id": "SY_6",
+		"question": "Slowed Down",
+		"answers": [{
+			"id": "SY_6_0",
+			"type": "range",
+			"text": "Pre-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_6_1",
+			"type": "range",
+			"text": "Post-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_6_2",
+			"type": "text",
+			"text": "Additional Comments"
+		}]
+	}, {
+		"id": "SY_7",
+		"question": "In a Fog",
+		"answers": [{
+			"id": "SY_7_0",
+			"type": "range",
+			"text": "Pre-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_7_1",
+			"type": "range",
+			"text": "Post-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_7_2",
+			"type": "text",
+			"text": "Additional Comments"
+		}]
+	}, {
+		"id": "SY_8",
+		"question": "Not Right",
+		"answers": [{
+			"id": "SY_8_0",
+			"type": "range",
+			"text": "Pre-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_8_1",
+			"type": "range",
+			"text": "Post-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_8_2",
+			"type": "text",
+			"text": "Additional Comments"
+		}]
+	}, {
+		"id": "SY_9",
+		"question": "Difficulty Concentrating",
+		"answers": [{
+			"id": "SY_9_0",
+			"type": "range",
+			"text": "Pre-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_9_1",
+			"type": "range",
+			"text": "Post-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_9_2",
+			"type": "text",
+			"text": "Additional Comments"
+		}]
+	}, {
+		"id": "SY_10",
+		"question": "Memory Difficulties",
+		"answers": [{
+			"id": "SY_10_0",
+			"type": "range",
+			"text": "Pre-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_10_1",
+			"type": "range",
+			"text": "Post-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_10_2",
+			"type": "text",
+			"text": "Additional Comments"
+		}]
+	}, {
+		"id": "SY_11",
+		"question": "Fatigued or Low Energy",
+		"answers": [{
+			"id": "SY_11_0",
+			"type": "range",
+			"text": "Pre-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_11_1",
+			"type": "range",
+			"text": "Post-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_11_2",
+			"type": "text",
+			"text": "Additional Comments"
+		}]
+	}, {
+		"id": "SY_12",
+		"question": "Confused",
+		"answers": [{
+			"id": "SY_12_0",
+			"type": "range",
+			"text": "Pre-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_12_1",
+			"type": "range",
+			"text": "Post-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_12_2",
+			"type": "text",
+			"text": "Additional Comments"
+		}]
+	}, {
+		"id": "SY_13",
+		"question": "Irritable",
+		"answers": [{
+			"id": "SY_13_0",
+			"type": "range",
+			"text": "Pre-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_13_1",
+			"type": "range",
+			"text": "Post-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_13_2",
+			"type": "text",
+			"text": "Additional Comments"
+		}]
+	}, {
+		"id": "SY_14",
+		"question": "Sad",
+		"answers": [{
+			"id": "SY_14_0",
+			"type": "range",
+			"text": "Pre-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_14_1",
+			"type": "range",
+			"text": "Post-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_14_2",
+			"type": "text",
+			"text": "Additional Comments"
+		}]
+	}, {
+		"id": "SY_15",
+		"question": "Nervous",
+		"answers": [{
+			"id": "SY_15_0",
+			"type": "range",
+			"text": "Pre-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_15_1",
+			"type": "range",
+			"text": "Post-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_15_2",
+			"type": "text",
+			"text": "Additional Comments"
+		}]
+	}, {
+		"id": "SY_16",
+		"question": "Anxious",
+		"answers": [{
+			"id": "SY_16_0",
+			"type": "range",
+			"text": "Pre-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_16_1",
+			"type": "range",
+			"text": "Post-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_16_2",
+			"type": "text",
+			"text": "Additional Comments"
+		}]
+	}, {
+		"id": "SY_17",
+		"question": "Drowsy",
+		"answers": [{
+			"id": "SY_17_0",
+			"type": "range",
+			"text": "Pre-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_17_1",
+			"type": "range",
+			"text": "Post-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_17_2",
+			"type": "text",
+			"text": "Additional Comments"
+		}]
+	}, {
+		"id": "SY_18",
+		"question": "Sleeping More Than Usual",
+		"answers": [{
+			"id": "SY_18_0",
+			"type": "range",
+			"text": "Pre-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_18_1",
+			"type": "range",
+			"text": "Post-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_18_2",
+			"type": "text",
+			"text": "If so, have you been napping and how much"
+		}]
+	}, {
+		"id": "SY_19",
+		"question": "Sleeping Less Than Usual",
+		"answers": [{
+			"id": "SY_19_0",
+			"type": "range",
+			"text": "Pre-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_19_1",
+			"type": "range",
+			"text": "Post-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_19_2",
+			"type": "text",
+			"text": "Additional Comments"
+		}]
+	}, {
+		"id": "SY_20",
+		"question": "Balance Problems",
+		"answers": [{
+			"id": "SY_20_0",
+			"type": "range",
+			"text": "Pre-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_20_1",
+			"type": "range",
+			"text": "Post-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_20_2",
+			"type": "text",
+			"text": "Additional Comments"
+		}]
+	}, {
+		"id": "SY_21",
+		"question": "Neck Pain",
+		"answers": [{
+			"id": "SY_21_0",
+			"type": "range",
+			"text": "Pre-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_21_1",
+			"type": "range",
+			"text": "Post-Injury",
+			"min": "0",
+			"max": "10",
+			"step": "1"
+		}, {
+			"id": "SY_21_2",
+			"type": "text",
+			"text": "Additional Comments"
+		}]
+	}]
+}, {
+	"id": "PMH",
+	"title": "Past Medical History",
+	"desc": "Please answer the following questions about your past medical history and leave any necessary comments.",
+	"questions": [{
+		"id": "PMH_0",
+		"question": "Personal History",
+		"answers": [{
+			"id": "PMH_0_0",
+			"type": "",
+			"text": "",
+			"options": [{
+				"id": "PMH_0_0_0",
+				"type": "checkbox",
+				"text": "Headaches/migraines",
+				"options": []
+			}, {
+				"id": "PMH_0_0_1",
+				"type": "checkbox",
+				"text": "Depression",
+				"options": []
+			}, {
+				"id": "PMH_0_0_2",
+				"type": "checkbox",
+				"text": "Anxiety",
+				"options": []
+			}, {
+				"id": "PMH_0_0_3",
+				"type": "checkbox",
+				"text": "Mood changes",
+				"options": []
+			}, {
+				"id": "PMH_0_0_4",
+				"type": "checkbox",
+				"text": "Diagnosed learning disability",
+				"options": [{
+					"id": "PMH_0_0_4_0",
+					"type": "text",
+					"text": "Please list:"
+				}]
+			}]
+		}]
+	}, {
+		"id": "PMH_1",
+		"question": "Family History",
+		"answers": [{
+			"id": "PMH_1_0",
+			"type": "",
+			"text": "",
+			"options": [{
+				"id": "PMH_1_0_0",
+				"type": "checkbox",
+				"text": "Headaches/migraines",
+				"options": []
+			}, {
+				"id": "PMH_1_0_1",
+				"type": "checkbox",
+				"text": "Depression",
+				"options": []
+			}, {
+				"id": "PMH_1_0_2",
+				"type": "checkbox",
+				"text": "Anxiety",
+				"options": []
+			}, {
+				"id": "PMH_1_0_3",
+				"type": "checkbox",
+				"text": "Mood changes",
+				"options": []
+			}]
+		}]
+	}, {
+		"id": "PMH_2",
+		"question": "Birth",
+		"answers": [{
+			"id": "PMH_2_0",
+			"type": "",
+			"text": "",
+			"options": [{
+				"id": "PMH_2_0_0",
+				"type": "checkbox",
+				"text": "Full term",
+				"options": []
+			}, {
+				"id": "PMH_2_0_1",
+				"type": "checkbox",
+				"text": "Premature",
+				"options": [{
+					"id": "PMH_2_0_1_0",
+					"type": "text",
+					"text": "Please specify at how many weeks of gestation"
+				}]
+			}, {
+				"id": "PMH_2_0_2",
+				"type": "checkbox",
+				"text": "Vaginal",
+				"options": []
+			}, {
+				"id": "PMH_2_0_3",
+				"type": "checkbox",
+				"text": "C-Section",
+				"options": [{
+					"id": "PMH_2_0_3_0",
+					"type": "text",
+					"text": "Pleae specify the indication"
+				}]
+			}]
+		}]
+	}, {
+		"id": "PMH_3",
+		"question": "Did you reach developmental milestones growing up?",
+		"answers": [{
+			"id": "PMH_3_0",
+			"type": "radio",
+			"text": "Yes",
+			"options": []
+		}, {
+			"id": "PMH_3_1",
+			"type": "radio",
+			"text": "No",
+			"options": [{
+				"id": "PMH_3_1_0",
+				"type": "text",
+				"text": "If no, please explain",
+				"options": []
+			}]
+		}]
+	}, {
+		"id": "PMH_4",
+		"question": "Did you consume alcohol?",
+		"answers": [{
+			"id": "PMH_4_0",
+			"type": "checkbox",
+			"text": "Pre-Injury",
+			"options": []
+		}, {
+			"id": "PMH_4_1",
+			"type": "checkbox",
+			"text": "Post-Injury",
+			"options": []
+		}]
+	}, {
+		"id": "PMH_5",
+		"question": "Did you smoke cigarettes?",
+		"answers": [{
+			"id": "PMH_5_0",
+			"type": "checkbox",
+			"text": "Pre-Injury",
+			"options": []
+		}, {
+			"id": "PMH_5_1",
+			"type": "checkbox",
+			"text": "Post-Injury",
+			"options": []
+		}]
+	}, {
+		"id": "PMH_6",
+		"question": "Did you smoke marijuana?",
+		"answers": [{
+			"id": "PMH_6_0",
+			"type": "checkbox",
+			"text": "Pre-Injury",
+			"options": []
+		}, {
+			"id": "PMH_6_1",
+			"type": "checkbox",
+			"text": "Post-Injury",
+			"options": []
+		}]
+	}, {
+		"id": "PMH_7",
+		"question": "Did you use recreational drugs",
+		"answers": [{
+			"id": "PMH_7_0",
+			"type": "checkbox",
+			"text": "Pre-Injury",
+			"options": []
+		}, {
+			"id": "PMH_7_1",
+			"type": "checkbox",
+			"text": "Post-Injury",
+			"options": []
+		}]
+	}]
+}, {
+	"id": "MH",
+	"title": "Menstrual History",
+	"desc": "Please answer the following questions about your menstrual history and leave any necessary comments. Please note any changes in your menstrual cycle from before your injury (pre-injury) to after your injury (post-injury).",
+	"questions": [{
+		"id": "MH_0",
+		"question": "Day of last period(first day):",
+		"answers": [{
+			"id": "MH_0_0",
+			"type": "date",
+			"options": []
+		}]
+	}, {
+		"id": "MH_1",
+		"question": "Are you menopausal?",
+		"answers": [{
+			"id": "MH_1_0",
+			"text": "yes",
+			"type": "radio",
+			"options": []
+		}, {
+			"id": "MH_1_1",
+			"text": "no",
+			"type": "radio",
+			"options": []
+		}]
+	}, {
+		"id": "MH_2",
+		"question": "Are you taking oral contraceptives?",
+		"answers": [{
+			"id": "MH_2_0",
+			"text": "yes",
+			"type": "radio",
+			"options": []
+		}, {
+			"id": "MH_2_1",
+			"text": "no",
+			"type": "radio",
+			"options": []
+		}]
+	}, {
+		"id": "MH_3",
+		"question": "Have you missed any periods recently? (since last check-in)",
+		"answers": [{
+			"id": "MH_3_0",
+			"text": "yes",
+			"type": "radio",
+			"options": [{
+				"id": "MH_3_0_0",
+				"text": "If yes, how many and when?",
+				"type": "textbox"
+			}]
+		}, {
+			"id": "MH_3_1",
+			"text": "no",
+			"type": "radio",
+			"options": []
+		}]
+	}, {
+		"id": "MH_4",
+		"question": "Describe your periods",
+		"answers": [{
+			"id": "MH_4_0",
+			"text": "Light",
+			"type": "radio",
+			"options": []
+		}, {
+			"id": "MH_4_1",
+			"text": "Moderate",
+			"type": "radio",
+			"options": []
+		}, {
+			"id": "MH_4_2",
+			"text": "Heavy",
+			"type": "radio",
+			"options": []
+		}]
+	}]
+}, {
 	"id": "RA",
 	"title": "Recovery Activities",
 	"desc": "Please answer the following questions about your recovery period and leave any necessary comments. If your recovery was longer than four weeks, base your answers on the first four weeks of your recovery.",
