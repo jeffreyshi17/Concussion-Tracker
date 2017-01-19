@@ -106,6 +106,8 @@ var appendOption = function (target, op) {
     id = op.id;
     type = op.type;
     text = op.text || "";
+    text = $('<textarea />').html(text).text();
+
     var spancontainer = document.createElement('span');
     var input = document.createElement('input');
     var label = document.createElement('label');

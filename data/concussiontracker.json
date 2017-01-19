@@ -1917,7 +1917,7 @@
 		}]
 	}, {
 		"id": "RA_10",
-		"question": "Did you do any wor-related reading? (e.g. homework, articles, research, etc.)",
+		"question": "Did you do any work-related reading? (e.g. homework, articles, research, etc.)",
 		"answers": [{
 			"id": "RA_10_0",
 			"type": "radio",
@@ -2943,4 +2943,202 @@
 			"options": []
 		}]
 	}]
+}, {
+	"id": "AI",
+	"title": "Additional Information",
+	"desc": "Please answer these questions so we can get additional information we may need.",
+	"questions": [{
+			"id": "AI_0",
+			"question": "What sports do you play?",
+			"answers": [{
+				"id": "AI_0_0",
+				"type": "checkbox",
+				"text": "Football"
+			}, {
+				"id": "AI_0_1",
+				"type": "checkbox",
+				"text": "Baseball"
+			}, {
+				"id": "AI_0_2",
+				"type": "checkbox",
+				"text": "Softball"
+			}, {
+				"id": "AI_0_3",
+				"type": "checkbox",
+				"text": "Basketball"
+			}, {
+				"id": "AI_0_4",
+				"type": "checkbox",
+				"text": "Lacrossse"
+			}, {
+				"id": "AI_0_5",
+				"type": "checkbox",
+				"text": "Hockey"
+			}, {
+				"id": "AI_0_6",
+				"type": "checkbox",
+				"text": "Rugby"
+			}, {
+				"id": "AI_0_7",
+				"type": "checkbox",
+				"text": "Soccer"
+			}, {
+				"id": "AI_0_8",
+				"type": "checkbox",
+				"text": "Cycling"
+			}, {
+				"id": "AI_0_9",
+				"type": "checkbox",
+				"text": "Gymnastics"
+			}, {
+				"id": "AI_0_10",
+				"type": "text",
+				"text": "Other:"
+			}]
+		},
+
+		{
+			"id": "AI_1",
+			"question": "What sports have you played in the past?",
+			"answers": [{
+				"id": "AI_1_0",
+				"type": "checkbox",
+				"text": "Football"
+			}, {
+				"id": "AI_1_1",
+				"type": "checkbox",
+				"text": "Baseball"
+			}, {
+				"id": "AI_1_2",
+				"type": "checkbox",
+				"text": "Softball"
+			}, {
+				"id": "AI_1_3",
+				"type": "checkbox",
+				"text": "Basketball"
+			}, {
+				"id": "AI_1_4",
+				"type": "checkbox",
+				"text": "Lacrossse"
+			}, {
+				"id": "AI_1_5",
+				"type": "checkbox",
+				"text": "Hockey"
+			}, {
+				"id": "AI_1_6",
+				"type": "checkbox",
+				"text": "Rugby"
+			}, {
+				"id": "AI_1_7",
+				"type": "checkbox",
+				"text": "Soccer"
+			}, {
+				"id": "AI_1_8",
+				"type": "checkbox",
+				"text": "Cycling"
+			}, {
+				"id": "AI_1_9",
+				"type": "checkbox",
+				"text": "Gymnastics"
+			}, {
+				"id": "AI_1_10",
+				"type": "text",
+				"text": "Other:"
+			}]
+		},
+
+		{
+			"id": "AI_2",
+			"question": "Race",
+			"answers": [{
+				"id": "AI_2_0",
+				"type": "checkbox",
+				"text": "Alaskan/American Indian"
+			}, {
+				"id": "AI_2_1",
+				"type": "checkbox",
+				"text": "Asian/Pacific Islander"
+			}, {
+				"id": "AI_2_2",
+				"type": "checkbox",
+				"text": "Black, not Hispanic"
+			}, {
+				"id": "AI_2_3",
+				"type": "checkbox",
+				"text": "Hispanic"
+			}, {
+				"id": "AI_2_4",
+				"type": "checkbox",
+				"text": "Caucasian"
+			}, {
+				"id": "AI_2_5",
+				"type": "text",
+				"text": "Other, please specify"
+			}]
+		}, {
+			"id": "AI_3",
+			"question": "Marital Status",
+			"answers": [{
+				"id": "AI_3_0",
+				"type": "checkbox",
+				"text": "Single, never married"
+			}, {
+				"id": "AI_3_1",
+				"type": "checkbox",
+				"text": "Married or in a domestic partnership"
+			}, {
+				"id": "AI_3_2",
+				"type": "checkbox",
+				"text": "Divorced"
+			}, {
+				"id": "AI_3_3",
+				"type": "checkbox",
+				"text": "Separated"
+			}, {
+				"id": "AI_3_4",
+				"type": "checkbox",
+				"text": "Widowed"
+			}]
+		}, {
+			"id": "AI_4",
+			"question": "Highest Level of Education",
+			"answers": [{
+				"id": "AI_4_0",
+				"type": "checkbox",
+				"text": "No high school"
+			}, {
+				"id": "AI_4_1",
+				"type": "checkbox",
+				"text": "Some high school, no diploma"
+			}, {
+				"id": "AI_4_2",
+				"type": "checkbox",
+				"text": "High school diploma"
+			}, {
+				"id": "AI_4_3",
+				"type": "checkbox",
+				"text": "Associate&#39s Degree"
+			}, {
+				"id": "AI_4_4",
+				"type": "checkbox",
+				"text": "Bachelor&#39s Degree"
+			}, {
+				"id": "AI_4_5",
+				"type": "checkbox",
+				"text": "Master&#39s Degree"
+			}, {
+				"id": "AI_4_6",
+				"type": "checkbox",
+				"text": "MD/DO"
+			}]
+		}, {
+			"id": "AI_5",
+			"question": "Is there anything you would like us to know about your concussion or concussion recovery?",
+			"answers": [{
+				"id": "AI_5_0",
+				"type": "text",
+				"text": ""
+			}]
+		}
+	]
 }]
