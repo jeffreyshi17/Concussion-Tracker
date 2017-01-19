@@ -6,10 +6,10 @@ function storeToLocalStorage() {
         if(body[i].type == "range"){
             save +='{"id": "'+ body[i].id +'","value": "'+body[i].value+'"},';
         }
-        if(body[i].type == "text"){
+/*        if(body[i].type == "text"){
             save +='{"id": "'+ body[i].id +'","answer": "' + body[i].value +'"},';
         }
-    }
+*/    }
     save = save.substring(0, save.length - 1);
     save += ']}';
     var d = (date.getFullYear()+"/"+date.getMonth()+1+"/"+date.getDate());

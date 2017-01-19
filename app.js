@@ -23,6 +23,10 @@ app.get('/symptoms', function(req, res){
         res.locals.data = JSON.parse(fs.readFileSync("data/symptoms.json", 'utf8'));
         res.render('symptoms.ejs');
 });
+app.get('/results', function(req, res){
+        res.locals.data = JSON.parse(fs.readFileSync("data/symptoms.json", 'utf8'));
+        res.render('results.ejs');
+});
 app.get('/recoveryactivities', function(req, res){
         res.locals.data = JSON.parse(fs.readFileSync("data/recoveryActivities.json", 'utf8'));
         res.render('recoveryactivities.ejs');
