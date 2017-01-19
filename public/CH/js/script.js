@@ -201,16 +201,18 @@ function appendRestore() {
 }
 
 function restoreFromLocalStorage() {
-    var a = JSON.parse(localStorage.getItem('init'));
-    for (var i = 0; i < a.length; i++) {
-        for (var j = 0; j < a[i].answers.length; j++) {
-            var q = a[i].answers[j];
-            var type = document.getElementById(q.id).type;
-            if (type == "checkbox" || type == "radio") {
-                document.getElementById(q.id).checked = q.answer;
-            }
-            else {
-                document.getElementById(q.id).value = q.answer;
+    if (localStorage.getItem('init')) {
+        var a = JSON.parse(localStorage.getItem('init'));
+        for (var i = 0; i < a.length; i++) {
+            for (var j = 0; j < a[i].answers.length; j++) {
+                var q = a[i].answers[j];
+                var type = document.getElementById(q.id).type;
+                if (type == "checkbox" || type == "radio") {
+                    document.getElementById(q.id).checked = q.answer;
+                }
+                else {
+                    document.getElementById(q.id).value = q.answer;
+                }
             }
         }
     }
