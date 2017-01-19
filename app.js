@@ -52,12 +52,4 @@ app.get('/results', function(req, res){
 });
 app.listen(port);
 
-http.createServer(function (req, res) {
-    console.log('request received');
-    res.writeHead(200, {
-        'Content-Type': 'text/plain'
-    });
-    var response = (fs.readFileSync("data/concussiontracker.json", 'utf8')).replace(/(\r\n|\n|\r)/gm, "") 
-    res.end('_concussiontracker(\'' + response + '\')');
-}).listen(38084);
 console.log("Server working");
