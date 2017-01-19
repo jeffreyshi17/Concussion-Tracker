@@ -1,13 +1,15 @@
 {
-  "name": "concussion-history",
-  "version": "1.0.0",
-  "description": "Please answer the following questions about your injury and leave any necessary comments.",
+  "name": "sprint-3",
+  "version": "0.0.1",
+  "description": "This is sprint 3 of the Concussion Tracker.\r Group Members:\r Julian Anderson\r Nick Mullikin\r Jeffrey Shi\r Nick Vonk\r Arjun Madan",
   "main": "app.js",
   "dependencies": {
-    "ejs": "^2.5.2",
-    "ejs-locals": "^1.0.2",
+    "app": "^0.1.0",
+    "ejs": "^2.5.5",
     "express": "^4.14.0",
-    "fs": "0.0.1-security"
+    "fs": "0.0.1-security",
+    "port": "^0.8.1",
+    "server": "^1.0.0-alpha.16"
   },
   "devDependencies": {},
   "scripts": {
@@ -16,17 +18,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jeffreyshi17/Concussion-History.git"
+    "url": "git+https://github.com/jeffreyshi17/Sprint-3.git"
   },
-  "keywords": [
-    "concussion",
-    "history",
-    "tracker"
-  ],
-  "author": "Jeffrey Shi",
-  "license": "ISC",
+  "author": "",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jeffreyshi17/Concussion-History/issues"
+    "url": "https://github.com/jeffreyshi17/Sprint-3/issues"
   },
-  "homepage": "https://github.com/jeffreyshi17/Concussion-History#readme"
+  "homepage": "https://github.com/jeffreyshi17/Sprint-3#readme"
 }
