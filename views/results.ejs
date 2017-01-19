@@ -10,14 +10,14 @@
 			<tr>
 		  	<td>Symptoms:</td>
 		  	<th><td>Severity:</td></th>
-			<th><td>Additional Information</td></th>
+<!--			<th><td>Additional Information</td></th> -->
 			</tr>
 			<td></td>
 			<th><td> Date: </td></th>
 				<% for(i=0; i<data.questions.length; i++){ %>
 			    <tr id = <%=data.questions[i].id%>>
 		    	<td><%=data.questions[i].question%></td>
-					<%for(j=0; j<data.questions[i].answers.length; j+=2){%>
+					<%for(j=0; j<data.questions[i].answers.length; j+=3){%>
 					<th><td>
 						<div class = "answer">
 						<%if(data.questions[i].answers[j].type=="slider"){%>
