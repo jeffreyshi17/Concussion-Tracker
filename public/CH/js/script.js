@@ -1,6 +1,6 @@
 $(document).ready(function () {
     if (localStorage.length === 0) {
-	document.getElementById("viewSavedAnswers").disabled=true;
+        document.getElementById("viewSavedAnswers").disabled = true;
     }
     $('input:checkbox').change(function () {
         if ($(this).is(":checked")) {
@@ -14,8 +14,8 @@ $(document).ready(function () {
             }
         }
         else {
-            if (document.getElementById((this).id + "_options")) {
-                document.getElementById((this).id + "_options").style.display = "none";
+            if ($(this).id + "_options") {
+                ($(this).id + "_options").style.display = "none";
             }
         }
     });
@@ -91,12 +91,11 @@ $('#container').submit(function () {
             }
         }
         localStorage.setItem("CH", JSON.stringify(data));
-        scroll(0,0)
-    window.location.href = 'symptoms';
-    } 
-        return false;
+        scroll(0, 0)
+        window.location.href = 'symptoms';
+    }
+    return false;
 });
-
 document.getElementById("viewSavedAnswers").addEventListener("click", function () {
     window.location.href = 'summary';
 });
