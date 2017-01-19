@@ -42,6 +42,10 @@ app.get('/sactracker', function(req, res){
         res.locals.data = JSON.parse(fs.readFileSync("data/sac.json", 'utf8'));
         res.render('sac.ejs');
 });
+app.get('/results', function(req, res){
+	    res.locals.data = JSON.parse(fs.readFileSync("data/symptoms.json", 'utf8'));
+        res.render('results.ejs');
+});
 app.listen(port);
 
 http.createServer(function (req, res) {
