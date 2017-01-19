@@ -5,13 +5,13 @@ var express = require('express')
     , fs = require('fs')
     , ejs = require('ejs')
     , port = process.env.PORT || 3000;
-/*
+
 app.use(express.static('public'))
 app.set('view engine', 'ejs');
 app.get('/', function(req, res){
         res.render('index.ejs');
 });
-app.get('/concussionhistory', function(req, res){
+app.get('/question', function(req, res){
         res.locals.data = JSON.parse(fs.readFileSync("data/concussiontracker.json", 'utf8'));
         res.render('concussionhistory.ejs');
 });
@@ -39,7 +39,7 @@ app.get('/menstrualtracker', function(req, res){
         res.render('menstrualtracker.ejs');
 });
 app.listen(port);
-*/
+
 http.createServer(function (req, res) {
     console.log('request received');
     res.writeHead(200, {

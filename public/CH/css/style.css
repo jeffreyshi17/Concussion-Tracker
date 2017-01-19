@@ -1,26 +1,23 @@
- .answer{
-     margin-left: 40px;
- }
- .option1 {
-     display: none;
-     margin-left: 60px;
+.option {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
 }
-.option2 {
-     display: none;
+label {font-weight: 400 !important}
+
+
+.option.level0 {
+    margin-left: 40px;
 }
- body {
-     margin: 40px auto;
-     line-height: 1.6;
-     font-size: 18px;
-     color: #444;
-     padding: 0 10px
- }
- h1,
- h2,
- h3 {
-     line-height: 1.2
- }
-.alert{
-color: red;
-font-size: 14px;`
+.option.level1 {
+    margin-left: 40px;
+}
+.option.level2 {
+    margin-left: 40px;
+}
+.option.level3 {
+    margin-left: 40px; 
+}
+.subform {
+    display: none;
 }
