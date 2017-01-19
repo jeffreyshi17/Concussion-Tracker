@@ -1,43 +1,56 @@
 var JSONsrc;
-var answersObj= [];
+var answersObj = [];
+var idlist = [];
 $.ajax({
-    url: 'http://localhost:8194',
-    dataType: "json",
-    //jsonpCallback: "_concussiontracker",
+    url: 'http://localhost:8194'
+    , dataType: "json"
+    , //jsonpCallback: "_concussiontracker",
     //cache: false,
-    timeout: 5000,
-    success: function (data) {
+    timeout: 5000
+    , success: function (data) {
         JSONsrc = JSON.parse(data);
         generateForm();
-    },
-    error: function (jqXHR, textStatus, errorThrown) {
+    }
+    , error: function (jqXHR, textStatus, errorThrown) {
         console.log('error ' + textStatus + " " + errorThrown);
     }
 });
 
 function storeToLocalStorage() {
-    var ancestor = document.getElementById('container'),
-        descendents = ancestor.getElementsByTagName('INPUT');
+    var ancestor = document.getElementById('container')
+        , descendents = ancestor.getElementsByTagName('INPUT');
     var i, e;
     for (i = 0; i < descendents.length; ++i) {
         e = descendents[i];
-        if (e.type == "text") {
-            localStorage.setItem(e.id, e.value);
+        var answer = {};
+        var id = e.id.substring(0, e.id.indexOf("_"));
+        var idIndex = idlist.indexOf(id);
+        answer.id = e.id;
+        if (e.type == "text" || e.type == "date") {
+            answer.answer = e.value;
+            //answersObj[idIndex].answers.push(e.value);
         }
         if (e.type == "checkbox" || e.type == "radio") {
-            localStorage.setItem(e.id, e.checked);
+            //localStorage.setItem(e.id, e.checked);
+            answer.answer = e.checked;
+            //answersObj[idIndex].answers.push(e.checked);
         }
-        if (e.type == "date"){
-            
+        if (e.type == "range"){
+            answer.answer = $("#"+e.id+"Val").innerHTML;
         }
+        answersObj[idIndex].answers.push(answer);
     }
+    var s = JSON.stringify(answersObj);
+    localStorage.setItem('init', s);
+
 }
 
 function generateForm() {
     for (var k = 0; k < JSONsrc.length; k++) {
         var temp = {};
-        temp.title = JSONsrc[k]["title"];
+        temp.title = JSONsrc[k].title;
         temp.answers = [];
+        idlist.push(JSONsrc[k].id)
         answersObj.push(temp);
         var title = document.createElement('h1');
         title.className = "page-header";
@@ -73,7 +86,8 @@ function appendOptions(e1, lev, x) {
     }
     if (select) {
         el = document.createElement('select');
-    } else {
+    }
+    else {
         el = document.createElement('span');
     }
     el.className = "option level" + x;
@@ -83,12 +97,14 @@ function appendOptions(e1, lev, x) {
             if (lev[i]["options"]) {
                 appendOptions(el, lev[i]["options"], x + 1);
             }
-        } else {
+        }
+        else {
             singop = document.createElement('div');
             if (other) {
                 ex = appendOption(e1, lev[i]);
                 //add directly to target
-            } else {
+            }
+            else {
                 ex = appendOption(singop, lev[i]);
                 el.appendChild(singop);
                 //add to div
@@ -105,7 +121,6 @@ var appendOption = function (target, op) {
     type = op.type;
     text = op.text || "";
     text = $('<textarea />').html(text).text();
-
     var spancontainer = document.createElement('span');
     var input = document.createElement('input');
     var label = document.createElement('label');
@@ -116,20 +131,21 @@ var appendOption = function (target, op) {
         input.value = text;
         input.innerHTML = text;
         target.appendChild(input);
-    } else if (type == "range") {
+    }
+    else if (type == "range") {
         var slidervalue = document.createElement('span');
         var tabElement = document.createElement('tab');
         tabElement.align = "right";
         slidervalue.id = id + "Val";
         label.htmlFor = id;
         $(input).attr({
-            'data-slider-min': op.min,
-            'data-slider-max': op.max,
-            'data-slider-step': op.step,
-            'data-slider-value': Math.round((op.max - op.min) / 2),
-            'type': "text",
-            'data-slider-tooltip': "hide",
-        });
+            'data-slider-min': op.min
+            , 'data-slider-max': op.max
+            , 'data-slider-step': op.step
+            , 'data-slider-value': Math.round((op.max - op.min) / 2)
+            , 'type': "range"
+            , 'data-slider-tooltip': "hide"
+        , });
         $(slidervalue).css("padding-left", "10px");
         $(spancontainer).css("padding-left", "10px");
         label.appendChild(document.createTextNode(text));
@@ -144,8 +160,9 @@ var appendOption = function (target, op) {
             $(slidervalue).text(slideEvt.value);
             console.log(slideEvt.value);
         });
-    } else { //checkbox, textbox, radio
-        input.name = id.substring(0, id.lastIndexOf("_") - 1);
+    }
+    else { //checkbox, textbox, radio
+        input.name = id.substring(0, id.lastIndexOf("_"));
         label.htmlFor = id;
         label.appendChild(document.createTextNode(text));
         if (type == "text") {
@@ -153,9 +170,11 @@ var appendOption = function (target, op) {
             target.appendChild(label);
             spancontainer.appendChild(input);
             target.appendChild(spancontainer);
-        } else if (type == "") {
+        }
+        else if (type == "") {
             target.appendChild(label);
-        } else {
+        }
+        else {
             target.appendChild(input);
             target.appendChild(label);
         }
@@ -170,11 +189,8 @@ function appendSubmit() {
     sub.id = "submit";
     container.appendChild(sub);
     $(sub).on('click', function () {
-        alert('User clicked on "foo."');
+            storeToLocalStorage();
     });
-}
-if (localStorage.length == 0) {
-    storeToLocalStorage();
 }
 /*
 $(document).ready(function () {
