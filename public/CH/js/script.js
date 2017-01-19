@@ -1,10 +1,10 @@
 var JSONsrc;
-var answersObj= {}; 
+var answersObj= [];
 $.ajax({
-    url: 'http://concussiontracker.herokuapp.com:8194',
-    dataType: "jsonp",
-    jsonpCallback: "_concussiontracker",
-    cache: false,
+    url: 'http://localhost:8194',
+    dataType: "json",
+    //jsonpCallback: "_concussiontracker",
+    //cache: false,
     timeout: 5000,
     success: function (data) {
         JSONsrc = JSON.parse(data);
@@ -35,7 +35,10 @@ function storeToLocalStorage() {
 
 function generateForm() {
     for (var k = 0; k < JSONsrc.length; k++) {
-        //answerObj[k].title = JSONsrc[k]["title"];
+        var temp = {};
+        temp.title = JSONsrc[k]["title"];
+        temp.answers = [];
+        answersObj.push(temp);
         var title = document.createElement('h1');
         title.className = "page-header";
         var description = document.createElement('h2');
