@@ -22,7 +22,17 @@
 				<div class = "col-md-100">
 				  <% for(var i =0; i < data.length; i++){ %>
 					<H2> <%= data[i].question %></H2>
-					<div><%= data[i].answer %> </div>
+					<% if (data[i].answer.length > 1) { %>
+						<ul class="dl-horizontal">
+							<% for (var j = 0; j < data[i].answer.length; j++){%>
+								<li><%= data[i].answer[j] %> </li>
+							<%}%>
+						</ul>
+					<%}%>
+					<% if (data[i].answer.length == 1){ %>
+						<%= data[i].answer[0]%>
+					<%}%>
+					
 				  <% } %>
 				</div>
 			</div>
