@@ -1,7 +1,7 @@
 var JSONsrc;
 var answersObj= {}; 
 $.ajax({
-    url: 'http://concussiontracker.herokuapp.com:8124/',
+    url: 'http://concussiontracker.herokuapp.com:80/',
     dataType: "jsonp",
     jsonpCallback: "_concussiontracker",
     cache: false,
@@ -11,7 +11,7 @@ $.ajax({
         generateForm();
     },
     error: function (jqXHR, textStatus, errorThrown) {
-        alert('error ' + textStatus + " " + errorThrown);
+        console.log('error ' + textStatus + " " + errorThrown);
     }
 });
 
@@ -35,7 +35,7 @@ function storeToLocalStorage() {
 
 function generateForm() {
     for (var k = 0; k < JSONsrc.length; k++) {
-        answerObj[k].title = JSONsrc[k]["title"];
+        //answerObj[k].title = JSONsrc[k]["title"];
         var title = document.createElement('h1');
         title.className = "page-header";
         var description = document.createElement('h2');
