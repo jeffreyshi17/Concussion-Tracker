@@ -3,21 +3,19 @@
 		<TITLE>Symptoms Summary</TITLE>
 	</HEAD>
 	<BODY>
-	<% include partials/head %>
 		<DIV id = 'header'><H1>Symptoms</H1></DIV>
 		<DIV id = 'body'>
 		<form id="container">
-		<table> 
+		<table id = 'table'> 
+			<tr>
 		  	<td>Symptoms:</td>
 		  	<th><td>Severity:</td></th>
 			<th><td>Additional Information</td></th>
-			<tr> </tr>
+			</tr>
 			<td></td>
 			<th><td> Date: </td></th>
-			
-						<% for(i=0; i<data.questions.length; i++){ %>
-			    <tr>
-				<div class = "question" id="<%=data.questions[i].id %>"> 
+				<% for(i=0; i<data.questions.length; i++){ %>
+			    <tr id = <%=data.questions[i].id%>>
 		    	<td><%=data.questions[i].question%></td>
 					<%for(j=0; j<data.questions[i].answers.length; j+=2){%>
 					<th><td>
@@ -31,7 +29,6 @@
 						</div>
 					</td></th>
 					<% }; %>
-				</div>
 				</tr> 
 		    <% }; %>
 	    </table>
