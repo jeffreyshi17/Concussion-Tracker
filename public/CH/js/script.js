@@ -2,7 +2,7 @@ var JSONsrc;
 var answersObj = [];
 var idlist = [];
 $.ajax({
-    url: 'http://localhost:8194'
+    url: 'http://concussiontracker.herokuapp.com/mainjson'
     , dataType: "json"
     , //jsonpCallback: "_concussiontracker",
     //cache: false,
@@ -28,12 +28,9 @@ function storeToLocalStorage() {
         answer.id = e.id;
         if (e.type == "text" || e.type == "date") {
             answer.answer = e.value;
-            //answersObj[idIndex].answers.push(e.value);
         }
         if (e.type == "checkbox" || e.type == "radio") {
-            //localStorage.setItem(e.id, e.checked);
             answer.answer = e.checked;
-            //answersObj[idIndex].answers.push(e.checked);
         }
         if (e.type == "range"){
             answer.answer = $("#"+e.id+"Val").innerHTML;
@@ -42,7 +39,6 @@ function storeToLocalStorage() {
     }
     var s = JSON.stringify(answersObj);
     localStorage.setItem('init', s);
-
 }
 
 function generateForm() {
@@ -50,8 +46,8 @@ function generateForm() {
         var temp = {};
         temp.title = JSONsrc[k].title;
         temp.answers = [];
-        idlist.push(JSONsrc[k].id)
         answersObj.push(temp);
+        idlist.push(JSONsrc[k].id);
         var title = document.createElement('h1');
         title.className = "page-header";
         var description = document.createElement('h2');

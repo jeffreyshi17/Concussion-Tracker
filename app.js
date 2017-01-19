@@ -49,6 +49,17 @@ app.get('/results', function (req, res) {
     res.locals.data = JSON.parse(fs.readFileSync("data/symptoms.json", 'utf8'));
     res.render('results.ejs');
 });
+app.get('/mainjson', function (req, res) {
+    console.log('request received');
+    res.writeHead(200, {
+        'Content-Type': 'text/plain'
+        , 'Access-Control-Allow-Methods': 'PUT, GET, POST, DELETE, OPTIONS'
+        , 'Access-Control-Allow-Headers': 'Content-Type'
+        , "Access-Control-Allow-Origin": "*"
+    });
+    //res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify(fs.readFileSync("data/concussiontracker.json", 'utf8'), null, 3));
+});
 app.listen(port);
 /*
 http.createServer(function (req, res) {
@@ -60,15 +71,5 @@ http.createServer(function (req, res) {
     res.end('_concussiontracker(\'' + response + '\')');
 }).listen(8194);
 */
-http.createServer(function (req, res) {
-    console.log('request received');
-    res.writeHead(200, {
-        'Content-Type': 'text/plain'
-        , 'Access-Control-Allow-Methods': 'PUT, GET, POST, DELETE, OPTIONS'
-        , 'Access-Control-Allow-Headers': 'Content-Type'
-        , "Access-Control-Allow-Origin": "*"
-    });
-    //res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify(fs.readFileSync("data/concussiontracker.json", 'utf8'), null, 3));
-}).listen(8194);
+
 console.log("Server working");
