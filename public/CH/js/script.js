@@ -1,7 +1,7 @@
 var JSONsrc;
 var answersObj= {}; 
 $.ajax({
-    url: 'https://https://concussiontracker.herokuapp.com:8124/',
+    url: 'https://http://concussiontracker.herokuapp.com:8124/',
     dataType: "jsonp",
     jsonpCallback: "_concussiontracker",
     cache: false,
