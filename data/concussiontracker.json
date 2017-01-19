@@ -1053,7 +1053,7 @@
 		}]
 	}, {
 		"id": "RA_5",
-		"question": "Dud you use your cell phone for anything Other: than phone calls? (e.g. texting, social media, apps, etc.)",
+		"question": "Dud you use your cell phone for anything other than phone calls? (e.g. texting, social media, apps, etc.)",
 		"answers": [{
 			"id": "RA_5_0",
 			"type": "radio",
@@ -2242,7 +2242,7 @@
 		}]
 	}, {
 		"id": "RA_17",
-		"question": "Did you exercise? (e.g. running, swimming, biking, sports, treadmill, sexual intercourse, or anOther: form of exercise)",
+		"question": "Did you exercise? (e.g. running, swimming, biking, sports, treadmill, sexual intercourse, or another form of exercise)",
 		"answers": [{
 			"id": "RA_17_0",
 			"type": "radio",

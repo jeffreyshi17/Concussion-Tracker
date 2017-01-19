@@ -3,21 +3,36 @@
     font-size: 16px;
     font-weight: 400;
 }
-label {font-weight: 400 !important}
 
+label {
+    font-weight: 400 !important
+}
 
 .option.level0 {
     margin-left: 40px;
 }
+
 .option.level1 {
     margin-left: 40px;
 }
+
 .option.level2 {
     margin-left: 40px;
 }
+
 .option.level3 {
-    margin-left: 40px; 
+    margin-left: 40px;
 }
+
 .subform {
     display: none;
+}
+
+#container {
+    margin: 40px auto;
+    max-width: 800px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #444;
+    padding: 0 10px
 }
