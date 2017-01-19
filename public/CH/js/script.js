@@ -211,7 +211,6 @@ function restoreFromLocalStorage() {
             }
             else {
                 document.getElementById(q.id).value = q.answer;
-                console.log(q.answer);
             }
         }
     }
