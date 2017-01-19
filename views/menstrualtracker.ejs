@@ -14,20 +14,22 @@
 	</HEAD>
 	<BODY>
 	<% include partials/head %>
-		<DIV id = 'header'><H1></H1></DIV>
-		<DIV id = 'body'>
+		<DIV id = 'body' class="text-center">
 		<H1><%=data.title%></H1>
-		<H2><%=data.desc%></H2>
+		<H2 class = 'page-header'><%=data.desc%></H2>
+		<div class="text-center">
 		<% for(var i =0; i < data.questions.length; i++){ %>
 		    <br><%= data.questions[i].question %>
 			<form><% for(var j = 0; j< data.questions[i].answers.length; j++) { %><%if(data.questions[i].answers[j].type == "date"){%>
 					<input type="date" id = "<%=data.questions[i].answers[j].id%>"> <%}%><%if(data.questions[i].answers[j].type == "radio"){%>
 					<input type="radio" id = "<%=data.questions[i].answers[j].id %>" name = "data.questions[i].id"> <%}%><%= data.questions[i].answers[j].text %><% } %>
 			</form> <% } %>
-		</DIV>
+			</div>
 		
-		<button id="submit">submit</button>
-		<button id="display">View Answers</button>
+		
+		<button id="submit" class="btn btn-default">submit</button>
+		<button id="display" class="btn btn-default">View Answers</button>
+		</DIV>
 		<script src="/MT/js/scripts.js"></script>
 		
 	</BODY>
