@@ -152,9 +152,8 @@ var appendOption = function (target, op) {
         target.appendChild(slidervalue);
         $(slidervalue).text(Math.round((op.max - op.min) / 2));
         $(input).slider();
-        $(input).on("slide", function (slideEvt) {
-            $(slidervalue).text(slideEvt.value);
-            console.log(slideEvt.value);
+        $(input).on("change", function (slideEvt) {
+            $(slidervalue).text(slideEvt.value.newValue);
         });
     }
     else { //checkbox, textbox, radio
