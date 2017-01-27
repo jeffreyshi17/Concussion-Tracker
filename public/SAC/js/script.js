@@ -8,8 +8,15 @@ function submit(){
 	console.log("submit running");
 	var date = "";
 	var d = new Date();
-	date = (d.getMinutes().toString()) + "." + (d.getHours().toString()) + "." + (d.getDate().toString()) + "." + (d.getMonth().toString()) + "." + (d.getFullYear().toString());
-	console.log(date);
+	// var dSeconds = "";
+	// var dMinutes = "";
+	// var dHours = "";
+	// var dDates = "";
+	// var dMonths = "";
+	// var dYears = "";
+	date = d.toLocaleString();
+
+	// date = (d.getMinutes().toString()) + "." + (d.getHours().toString()) + "." + (d.getDate().toString()) + "." + (d.getMonth().toString()) + "." + (d.getFullYear().toString());
 
 	if (localStorage.getItem("SAC") == null){
 		var answerJ = '{"title": "Sleep, Alcohol, Caffeine Tracker", "groups": [{';
@@ -96,15 +103,15 @@ function createSummary(){
 	var localStorageI = localStorage.getItem("SAC");
 	var localStorageJ = JSON.parse(localStorageI);
 	var all = "";
-	all+="<h1>Summary of Submitted Results</h1>";
+	all+="<h1 align = center>Summary of Submitted Results</h1>";
 	for (var g = 0; g < localStorageJ.groups.length; g++){
-		all+="<div>" + localStorageJ.groups[g].date + "</div>";
+		all+="<div align = center><b>" + localStorageJ.groups[g].date + "</b></div>";
 		for (var i = 0; i < data[0].questions.length; i++){
-			all += "<div>" + data[0].questions[i].question + "</div>";
+			all += "<div align = center>" + data[0].questions[i].question + "</div>";
 
 			for (var j = 0; j < data[0].questions[i].answers.length; j++){
 				if (data[0].questions[i].answers[j].type == ""){
-					all += "<div>" + data[0].questions[i].answers[j].text + "</div>";
+					all += "<div align = center>" + data[0].questions[i].answers[j].text + "</div>";
 				}
 				else {
 					var jsonid = data[0].questions[i].answers[j].id;
@@ -114,13 +121,13 @@ function createSummary(){
 							placeInStorage = a;
 						}
 					}
-					all += "<div>" + data[0].questions[i].answers[j].text + ": " + localStorageJ.groups[g].answers[placeInStorage].answer + "</div>";
+					all += "<div align = center>" + data[0].questions[i].answers[j].text + ": " + localStorageJ.groups[g].answers[placeInStorage].answer + "</div>";
 				}
 
 				if (typeof data[0].questions[i].answers[j].options != "undefined"){
 				for (var k = 0; k < data[0].questions[i].answers[j].options.length; k++){
 					if (data[0].questions[i].answers[j].options[k].type == ""){
-						all += "<div>" + data[0].questions[i].answers[j].options[k].text + "</div>";
+						all += "<div align = center>" + data[0].questions[i].answers[j].options[k].text + "</div>";
 					}
 					else {
 						var jsonid = data[0].questions[i].answers[j].options[k].id;
@@ -130,13 +137,13 @@ function createSummary(){
 								placeInStorage = a;
 							}
 						}
-						all += "<div>" + data[0].questions[i].answers[j].options[k].text + ": " + localStorageJ.groups[g].answers[placeInStorage].answer + "</div>";
+						all += "<div align = center>" + data[0].questions[i].answers[j].options[k].text + ": " + localStorageJ.groups[g].answers[placeInStorage].answer + "</div>";
 					}
 
 					if (typeof data[0].questions[i].answers[j].options[k].options != "undefined"){
 					for (var l = 0; l < data[0].questions[i].answers[j].options[k].options.length; l++){
 						if (data[0].questions[i].answers[j].options[k].options[l].type == ""){
-							all += "<div>" + data[0].questions[i].answers[j].options[k].options[l].text + "</div>";
+							all += "<div align = center>" + data[0].questions[i].answers[j].options[k].options[l].text + "</div>";
 						}
 						else {
 							var jsonid = data[0].questions[i].answers[j].options[k].options[l].id;
@@ -146,13 +153,13 @@ function createSummary(){
 									placeInStorage = a;
 								}
 							}
-							all += "<div>" + data[0].questions[i].answers[j].options[k].options[l].text + ": " + localStorageJ.groups[g].answers[placeInStorage].answer + "</div>";
+							all += "<div align = center>" + data[0].questions[i].answers[j].options[k].options[l].text + ": " + localStorageJ.groups[g].answers[placeInStorage].answer + "</div>";
 						}
 
 						if (typeof data[0].questions[i].answers[j].options[k].options[l].options != "undefined"){
 						for (var m = 0; m < data[0].questions[i].answers[j].options[k].options[l].options.length; m++){ 	
 							if (data[0].questions[i].answers[j].options[k].options[l].options[m].type == ""){
-								all += "<div>" + questions[i].answers[j].options[k].options[l].options[m].text + "</div>";
+								all += "<div align = center>" + questions[i].answers[j].options[k].options[l].options[m].text + "</div>";
 							}
 							else {
 								var jsonid = data[0].questions[i].answers[j].options[k].options[l].options[m].id;
@@ -162,7 +169,7 @@ function createSummary(){
 										placeInStorage = a;
 									}
 								}
-								all += "<div>" + data[0].questions[i].answers[j].options[k].options[l].options[m].text + ": " + localStorageJ.groups[g].answers[placeInStorage].answer + "</div>";
+								all += "<div align = center>" + data[0].questions[i].answers[j].options[k].options[l].options[m].text + ": " + localStorageJ.groups[g].answers[placeInStorage].answer + "</div>";
 							}
 						}
 						}
