@@ -105,9 +105,9 @@ function createSummary(){
 	var all = "";
 	all+="<h1 align = center>Summary of Submitted Results</h1>";
 	for (var g = 0; g < localStorageJ.groups.length; g++){
-		all+="<div align = center><b>" + localStorageJ.groups[g].date + "</b></div>";
+		all+="<div align = center><b><u>" + localStorageJ.groups[g].date + "</u></b></div>";
 		for (var i = 0; i < data[0].questions.length; i++){
-			all += "<div align = center>" + data[0].questions[i].question + "</div>";
+			all += "<div align = center><b>" + data[0].questions[i].question + "</b></div>";
 
 			for (var j = 0; j < data[0].questions[i].answers.length; j++){
 				if (data[0].questions[i].answers[j].type == ""){
@@ -121,7 +121,16 @@ function createSummary(){
 							placeInStorage = a;
 						}
 					}
-					all += "<div align = center>" + data[0].questions[i].answers[j].text + ": " + localStorageJ.groups[g].answers[placeInStorage].answer + "</div>";
+					if (data[0].questions[i].answers[j].type == "text"){
+						if (localStorageJ.groups[g].answers[placeInStorage].answer != ""){
+							all += "<div align = center>" + data[0].questions[i].answers[j].text + ": " + localStorageJ.groups[g].answers[placeInStorage].answer + "</div>";
+						}
+					}
+					else {
+						if (localStorageJ.groups[g].answers[placeInStorage].answer != "No"){
+							all += "<div align = center>" + data[0].questions[i].answers[j].text + "</div>";
+						}
+					}
 				}
 
 				if (typeof data[0].questions[i].answers[j].options != "undefined"){
@@ -137,7 +146,17 @@ function createSummary(){
 								placeInStorage = a;
 							}
 						}
-						all += "<div align = center>" + data[0].questions[i].answers[j].options[k].text + ": " + localStorageJ.groups[g].answers[placeInStorage].answer + "</div>";
+						if (data[0].questions[i].answers[j].options[k].type == "text"){
+							if (localStorageJ.groups[g].answers[placeInStorage].answer != ""){
+								all += "<div align = center>" + data[0].questions[i].answers[j].options[k].text + ": " + localStorageJ.groups[g].answers[placeInStorage].answer + "</div>";
+							}
+						}
+						else {
+							if (localStorageJ.groups[g].answers[placeInStorage].answer != "No"){
+								all += "<div align = center>" + data[0].questions[i].answers[j].options[k].text + "</div>";
+							}
+						}						
+						
 					}
 
 					if (typeof data[0].questions[i].answers[j].options[k].options != "undefined"){
@@ -153,7 +172,16 @@ function createSummary(){
 									placeInStorage = a;
 								}
 							}
-							all += "<div align = center>" + data[0].questions[i].answers[j].options[k].options[l].text + ": " + localStorageJ.groups[g].answers[placeInStorage].answer + "</div>";
+							if (data[0].questions[i].answers[j].options[k].options[l].type == "text"){
+								if (localStorageJ.groups[g].answers[placeInStorage].answer != ""){
+									all += "<div align = center>" + data[0].questions[i].answers[j].options[k].options[l].text + ": " + localStorageJ.groups[g].answers[placeInStorage].answer + "</div>";
+								}
+							}
+							else {
+								if (localStorageJ.groups[g].answers[placeInStorage].answer != "No"){
+									all += "<div align = center>" + data[0].questions[i].answers[j].options[k].options[l].text + "</div>";
+								}
+							}							
 						}
 
 						if (typeof data[0].questions[i].answers[j].options[k].options[l].options != "undefined"){
@@ -169,7 +197,17 @@ function createSummary(){
 										placeInStorage = a;
 									}
 								}
-								all += "<div align = center>" + data[0].questions[i].answers[j].options[k].options[l].options[m].text + ": " + localStorageJ.groups[g].answers[placeInStorage].answer + "</div>";
+								if (data[0].questions[i].answers[j].options[k].options[l].options[m].type == "text"){
+									if (localStorageJ.groups[g].answers[placeInStorage].answer != ""){
+										all += "<div align = center>" + data[0].questions[i].answers[j].options[k].options[l].options[m].text + ": " + localStorageJ.groups[g].answers[placeInStorage].answer + "</div>";
+									}
+								}
+								else {
+									if (localStorageJ.groups[g].answers[placeInStorage].answer != "No"){
+										all += "<div align = center>" + data[0].questions[i].answers[j].options[k].options[l].options[m].text+ "</div>";
+									}
+								}								
+
 							}
 						}
 						}
