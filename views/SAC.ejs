@@ -15,8 +15,8 @@
 	  </HEAD>
 	<BODY>
 	<% include partials/head %>
-		<DIV id = 'header'><H1>Sleep, Alcohol, Caffeine Tracker</H1></DIV>
-		<DIV id = 'body'>
+		<DIV id = 'header' ><H1>Sleep, Alcohol, Caffeine Tracker</H1></DIV>
+		<DIV id = 'body' class = 'container'>
 
 			<% for (var i = 0; i < data[0].questions.length; i++){ %>
 				<h2><%= data[0].questions[i].question %></h2>
