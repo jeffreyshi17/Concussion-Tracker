@@ -97,21 +97,14 @@ function storeToLocalStorage() {
     */
 }
 function restoreFromLocalStorage() {
-    var json;
-    for (var i = localStorage.length-1; i >= 0; i--){
-        if(localStorage.key(i).substring(0,8) == "Symptoms"){
-            json = JSON.parse(localStorage.getItem(localStorage.key(i)));
-            //console.log(json);
-            break;
-        }
-    }
+    var json = JSON.parse(localStorage.getItem("Symptoms"));
     var input = document.querySelectorAll("input");
     for(var i = 0; i < input.length; i++){
         if(input[i].type == 'range'){
-            input[i].value = json.answers[i].value;
+            input[i].value = json.form[json.form.length-1].answers[i].value;
         }
         if(input[i].type == "text"){
-            input[i].value = json.answers[i].answer;
+            input[i].value = json.form[json.form.length-1].answers[i].answer;
         }
     }
 }
