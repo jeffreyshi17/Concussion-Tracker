@@ -45,9 +45,11 @@ app.get('/sactracker', function (req, res) {
     res.locals.data = JSON.parse(fs.readFileSync("data/SAC.json", 'utf8'));
     res.render('SAC.ejs');
 });
-app.get('/results', function (req, res) {
+app.get('/allresults', function (req, res) {
     res.locals.data = JSON.parse(fs.readFileSync("data/symptoms.json", 'utf8'));
-    res.render('results.ejs');
+	res.locals.data1 = JSON.parse(fs.readFileSync("data/SAC.json", 'utf8'));
+	res.locals.data2 = JSON.parse(fs.readFileSync("data/concussiontracker.json", 'utf8'));
+    res.render('allresults.ejs');
 });
 app.get('/mainjson', function (req, res) {
     console.log('request received');
