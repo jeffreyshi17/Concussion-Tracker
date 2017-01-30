@@ -2,7 +2,8 @@ var JSONsrc;
 var answersObj = [];
 var idlist = [];
 $.ajax({
-    url: 'http://concussiontracker.herokuapp.com/mainjson'
+    //url: 'http://concussiontracker.herokuapp.com/mainjson'
+    url: 'http://localhost:3000/mainjson'
     , dataType: "json"
     , timeout: 5000
     , success: function (data) {
@@ -216,6 +217,35 @@ function restoreFromLocalStorage() {
         }
     }
 }
+/*
+$("input:checkbox").each(function () {
+    if (!$(this).is(':checked')){
+    for (var i = 0; i < this.parentNode.childNodes.length; i++) {
+        if (this.parentNode.childNodes[i] != this) {
+            this.parentNode.childNodes[i].style.display = "none";
+        }
+    }}
+});
+
+*/
+function hideunhide() {
+    $("input:checkbox").each(function () {
+        if (!$(this).is(':checked')) {
+            for (var i = 0; i < this.parentNode.childNodes.length; i++) {
+                this.parentNode.childNodes[i].style.display = "none";
+            }
+        } else {
+            
+            for (var i = 0; i < this.parentNode.childNodes.length; i++) {
+                this.parentNode.childNodes[i].style.display = "block";
+            }
+        }
+    });
+}
+$('input:checkbox').change(function () {
+    hideunhide();
+});
+hideunhide();
 /*
 $(document).ready(function () {
     $('input:checkbox').change(function () {
