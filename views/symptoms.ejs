@@ -11,15 +11,14 @@
 	  <link rel="stylesheet" href="MT/js/jquery-ui-1.12.1.custom/jquery-ui.min.css">
 	  <link rel="stylesheet" href="MT/js/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css">
 	  <link rel="stylesheet" href="MT/js/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css">
+	  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
 	</HEAD>
 	<BODY>
 	<% include partials/head %>
-		<DIV id = 'header'><H1>Symptoms</H1> <H2 id="rtp">Click save to see the return to play stage</H2> </DIV>
+		<DIV id = 'header'  class = 'page-header'><H1>Symptoms</H1> </DIV>
 		<DIV id = 'body'>
-		<button id="save">Save to Local Storage</button>
-		<button id="check">Restore from Local Storage</button>
-		<button id="clear">Clear Local Storage</button>
-		<button id="summary">Display Results</button>
+		
 		<form id="container">
 		<table> 
 		  	<td>Symptoms:</td>
@@ -45,6 +44,11 @@
 		    <% }; %>
 	    </table>
 		</form>
+		<H3 id="rtp">Click save to see the return to play stage</H3> 
+		<button id="save" class="btn btn-default">Save</button>
+		<! id="check"></button>
+		<! id="clear"></button>
+		<button id="summary" class="btn btn-default">Display Results</button>
 		</DIV>
 		<DIV id = 'footer'></DIV>
 		<script src="/SY/js/symptoms.js"></script>
