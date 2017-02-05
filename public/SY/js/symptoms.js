@@ -48,7 +48,12 @@ function storeToLocalStorage() {
         }
         save = save.substring(0, save.length-1);
         save += ']}]}';
-        localStorage.setItem('Symptoms',save);
+		for (var i = 0; i < 1000; i++){
+			if(localStorage.getItem("Symptoms"+i) === null){
+				localStorage.setItem('Symptoms'+i,save);
+			}
+			break;
+		}
     }
 
     /*
@@ -115,6 +120,6 @@ var createSummary = function(){
 window.location.href = "results";
 }
 document.getElementById("save").addEventListener("click",storeToLocalStorage);
-document.getElementById("check").addEventListener("click",restoreFromLocalStorage);
-document.getElementById("clear").addEventListener("click",clearLocal);
-document.getElementById("summary").addEventListener("click",createSummary);
+//document.getElementById("check").addEventListener("click",restoreFromLocalStorage);
+//document.getElementById("clear").addEventListener("click",clearLocal);
+//document.getElementById("summary").addEventListener("click",createSummary);

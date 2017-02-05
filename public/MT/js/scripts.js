@@ -1,6 +1,35 @@
 $(function() {
-     $( "#MH_0_0" ).datepicker({ dateFormat: 'yy-mm-dd'}); 
+     $( "#MH_1_0" ).datepicker({ dateFormat: 'yy-mm-dd'}); 
 });
+
+$(document).ready(function(){
+		$("#MH_2_0,##MH_3_0,#MH_4_0").each(function(){
+			$(this).css("display","none");
+		});	
+		$("#MH_2_0").css("display","none");
+		//Hide div w/id extra
+		
+		// Add onclick handler to checkbox w/id checkme
+	   $("#MH_0_1").click(function(){
+
+		// If checked
+		if ($("#MH_0_1").is(":checked"))
+		{
+			//show the hidden div
+			$("#MH_2_0,##MH_3_0,#MH_4_0").each(function(){
+			$(this).show("fast");
+		});	
+		}
+		else
+		{
+			//otherwise, hide it
+			$("#MH_2_0,##MH_3_0,#MH_4_0").each(function(){
+			$(this).css("display","none");
+			});	
+		}
+	  });
+
+	});
 
 
 function Submit (){

@@ -5,7 +5,7 @@ var express = require('express')
     , fs = require('fs')
     , ejs = require('ejs')
     , port = process.env.PORT || 3000;
-app.use(express.static('public'))
+app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.get('/', function (req, res) {
     res.render('index.ejs');
@@ -74,4 +74,4 @@ http.createServer(function (req, res) {
 }).listen(8194);
 */
 
-console.log("Server working");
+console.log("Listening on port 3000!");
