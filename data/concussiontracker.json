@@ -408,7 +408,7 @@
 		}, {
 			"id": "SY_0_2",
 			"type": "text",
-			"text": "If so, what medications are you taking and how often"
+			"text": "If so, what medications are you taking and how often?"
 		}]
 	}, {
 		"id": "SY_1",
@@ -804,7 +804,7 @@
 		}, {
 			"id": "SY_18_2",
 			"type": "text",
-			"text": "If so, have you been napping and how much"
+			"text": "If so, have you been napping and how much?"
 		}]
 	}, {
 		"id": "SY_19",
@@ -977,7 +977,7 @@
 				"options": [{
 					"id": "PMH_2_0_3_0",
 					"type": "text",
-					"text": "Pleae specify the indication"
+					"text": "Please specify the indication"
 				}]
 			}]
 		}]
