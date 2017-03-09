@@ -1,9 +1,17 @@
 var JSONsrc;
 var answersObj = [];
 var idlist = [];
+$.ajaxPrefilter(function (options) {
+    if (options.crossDomain && jQuery.support.cors) {
+        var http = (window.location.protocol === 'http:' ? 'http:' : 'https:');
+        options.url = http + '//cors-anywhere.herokuapp.com/' + options.url;
+        //options.url = "http://cors.corsproxy.io/url=" + options.url;
+    }
+});
 $.ajax({
-    //url: 'http://concussiontracker.herokuapp.com/mainjson'
-    url: 'http://localhost:3000/mainjson'
+    url: 'http://concussiontracker.herokuapp.com/mainjson'
+        //url: 'http://localhost:3000/mainjson'
+        
     , dataType: "json"
     , timeout: 5000
     , success: function (data) {
@@ -234,8 +242,8 @@ function hideunhide() {
             for (var i = 0; i < this.parentNode.childNodes.length; i++) {
                 this.parentNode.childNodes[i].style.display = "none";
             }
-        } else {
-            
+        }
+        else {
             for (var i = 0; i < this.parentNode.childNodes.length; i++) {
                 this.parentNode.childNodes[i].style.display = "block";
             }
