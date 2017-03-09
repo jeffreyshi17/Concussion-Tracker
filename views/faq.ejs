@@ -1,44 +1,44 @@
 <!DOCTYPE HTML>
-<HTML>
-	<HEAD>
-	  <TITLE>FAQ</TITLE>
-	  <link href="/CH/css/style.css" rel="stylesheet" type="text/css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
-      <script src ="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	  <script src = "MT/js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-	  <link rel="stylesheet" href="MT/js/jquery-ui-1.12.1.custom/jquery-ui.min.css">
-	  <link rel="stylesheet" href="MT/js/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css">
-	  <link rel="stylesheet" href="MT/js/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css">
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-	</HEAD>
-	<BODY>
-	<% include partials/head %>
+<html>
+	<head>
+	  <title>FAQ</title>
+	  	<% include partials/head %>
+
+	</head>
+	<body>
+	<% include partials/nav %>
 		<div class = "container">
 			<div class="jumbotron text-center">
 				<h1>Frequently Asked Questions</h1>
 			</div>
-			<div class = "containter" >
-				<div class = "col-md-100">
-				  <% for(var i =0; i < data.length; i++){ %>
-					<H2> <%= data[i].question %></H2>
-					<% if (data[i].answer.length > 1) { %>
+			<div class = "col-md-10">
+			  <% for(var i =0; i < data.length; i++){ %>
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="<%= i %>_0">
+					  <h4 class="panel-title">
+						<a role="button" data-toggle="collapse" data-parent="#accordion" href="#<%= i %>" aria-expanded="false" aria-controls="<%= i %>"  >
+						  <%= data[i].question %>
+						</a>
+					  </h4>
+					</div>
+					<div id="<%= i %>" class="panel-collapse collapse in" role="tabpanel"  aria-expanded="false" aria-labelledby="<%= i %>_0" hide = true>
+					  <div class="panel-body">
 						<ul class="dl-horizontal">
-							<% for (var j = 0; j < data[i].answer.length; j++){%>
-								<li><%= data[i].answer[j] %> </li>
-							<%}%>
+						<% if (data[i].answer.length > 1) { %>
+								<% for (var j = 0; j < data[i].answer.length; j++){%>
+										<li><%= data[i].answer[j] %> </li>
+								<%}%>
+						<%}%>
+						<% if (data[i].answer.length == 1){ %>
+							<%= data[i].answer[0]%>
+						<%}%>
 						</ul>
-					<%}%>
-					<% if (data[i].answer.length == 1){ %>
-						<%= data[i].answer[0]%>
-					<%}%>
-					
-				  <% } %>
-				</div>
+						</div>
+					</div>
+				  </div>
+			  <% } %>
 			</div>
 		</div>
-		
-	</BODY>
-</HTML>
+		<script src="/js/faq.js"></script>
+	</body>
+</html>
