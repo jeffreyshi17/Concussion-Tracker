@@ -1172,7 +1172,7 @@
 			"options": [{
 				"id": "RA_2_0_0",
 				"type": "text",
-				"text": "If yes, How many days (including half days)?",
+				"text": "If yes, how many days (including half days)?",
 				"options": []
 			}]
 		}, {
@@ -1396,7 +1396,7 @@
 		}]
 	}, {
 		"id": "RA_5",
-		"question": "Dud you use your cell phone for anything other than phone calls? (e.g. texting, social media, apps, etc.)",
+		"question": "Did you use your cell phone for anything other than phone calls? (e.g. texting, social media, apps, etc.)",
 		"answers": [{
 			"id": "RA_5_0",
 			"type": "radio",
