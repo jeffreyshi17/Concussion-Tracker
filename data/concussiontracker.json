@@ -20,7 +20,7 @@
 		}]
 	}, {
 		"id": "PI_2",
-		"question": "What is your birthday?",
+		"question": "When is your birthday?",
 		"answers": [{
 			"id": "PI_2_0",
 			"type": "date",
