@@ -24,14 +24,10 @@ function storeToLocalStorage() {
     var body = document.querySelectorAll("input");
     if(localStorage.getItem('Symptoms') == null){
         var save = '{"title": "Symptom Tracker", "form":[{"date": "'+date+'", "answers":[';
-
         for(var i = 0; i < body.length; i++){
             if(body[i].type == "range"){
                 save +='{"id": "'+ body[i].id +'","value": "'+body[i].value+'"},';
             }
-        /*if(body[i].type == "text"){
-            save +='{"id": "'+ body[i].id +'","answer": "' + body[i].value +'"},';
-        }*/
         }
     save = save.substring(0, save.length - 1);
     save += ']}]}';
@@ -48,12 +44,7 @@ function storeToLocalStorage() {
         }
         save = save.substring(0, save.length-1);
         save += ']}]}';
-		for (var i = 0; i < 1000; i++){
-			if(localStorage.getItem("Symptoms"+i) === null){
-				localStorage.setItem('Symptoms'+i,save);
-			}
-			break;
-		}
+        localStorage.setItem('Symptoms',save);
     }
 
     /*
