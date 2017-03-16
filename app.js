@@ -47,8 +47,8 @@ app.get('/sactracker', function (req, res) {
 });
 app.get('/allresults', function (req, res) {
     res.locals.data = JSON.parse(fs.readFileSync("data/symptoms.json", 'utf8'));
-	res.locals.data1 = JSON.parse(fs.readFileSync("data/SAC.json", 'utf8'));
-	res.locals.data2 = JSON.parse(fs.readFileSync("data/concussiontracker.json", 'utf8'));
+    res.locals.data1 = JSON.parse(fs.readFileSync("data/SAC.json", 'utf8'));
+    res.locals.data2 = JSON.parse(fs.readFileSync("data/concussiontracker.json", 'utf8'));
     res.render('allresults.ejs');
 });
 app.get('/mainjson', function (req, res) {
@@ -62,6 +62,10 @@ app.get('/mainjson', function (req, res) {
     //res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify(fs.readFileSync("data/concussiontracker.json", 'utf8'), null, 3));
 });
+app.get('/settings', function (req, res) {
+    //res.locals.data = JSON.parse(fs.readFileSync("data/concussiontracker.json", 'utf8'));
+    res.render('settings.ejs');
+});
 app.listen(port);
 /*
 http.createServer(function (req, res) {
@@ -73,5 +77,4 @@ http.createServer(function (req, res) {
     res.end('_concussiontracker(\'' + response + '\')');
 }).listen(8194);
 */
-
 console.log("Listening on port 3000!");

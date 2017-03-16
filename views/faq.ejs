@@ -11,17 +11,17 @@
 			<div class="jumbotron text-center">
 				<h1>Frequently Asked Questions</h1>
 			</div>
-			<div class = "col-md-10">
+			<div class = "col-md-12">
 			  <% for(var i =0; i < data.length; i++){ %>
 				<div class="panel panel-default">
-					<div class="panel-heading" role="tab" id="<%= i %>_0">
+					<div role="button" class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#<%= i %>" aria-expanded="false" aria-controls="<%= i %>" role="tab" id="<%= i %>_0">
 					  <h4 class="panel-title">
-						<a role="button" data-toggle="collapse" data-parent="#accordion" href="#<%= i %>" aria-expanded="false" aria-controls="<%= i %>"  >
+						<span >
 						  <%= data[i].question %>
-						</a>
+						</span>
 					  </h4>
 					</div>
-					<div id="<%= i %>" class="panel-collapse collapse in" role="tabpanel"  aria-expanded="false" aria-labelledby="<%= i %>_0" hide = true>
+					<div id="<%= i %>" class="panel-collapse collapse" role="tabpanel"  aria-expanded="false" aria-labelledby="<%= i %>_0" hide = true>
 					  <div class="panel-body">
 						<ul class="dl-horizontal">
 						<% if (data[i].answer.length > 1) { %>

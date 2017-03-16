@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>FAQ</title>
+    <% include partials/head %>
+        <script>
+            var app = angular.module('myApp', []);
+            var strDate = JSON.parse(localStorage.init)[0].answers[2].answer;
+            var dateParts = strDate.split("-");
+            var date = dateParts[1] + "/" + dateParts[2] + "/" + dateParts[0];
+            
+            var gender;
+            if (JSON.parse(localStorage.init)[0].answers[3].answer){
+                gender = "Male";
+            }
+            if (JSON.parse(localStorage.init)[0].answers[4].answer){
+                gender = "Female";
+            }
+            if (JSON.parse(localStorage.init)[0].answers[5].answer){
+                gender = "Other";
+            }
+            app.controller('myCtrl', function ($scope, $sce) {
+                $scope.name = $sce.trustAsHtml(JSON.parse(localStorage.init)[0].answers[0].answer + " " + JSON.parse(localStorage.init)[0].answers[1].answer);
+                $scope.birthday = $sce.trustAsHtml(date);
+                $scope.gender = $sce.trustAsHtml();
+            });
+        </script>
+</head>
+
+<body>
+    <% include partials/nav %>
+        <div class="container">
+            <div class="jumbotron text-center">
+                <h1>Account Settings</h1> </div>
+            <div class="col-md-12" ng-app="myApp" ng-controller="myCtrl">
+                <div class="panel panel-default">
+                    <div role="button" class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#name" aria-expanded="false" aria-controls="name" role="tab">
+                        <h4 class="panel-title">
+                        <table width = "50%">
+                            <tr>
+                            <td><strong>Name</strong></td>
+                            <td id = "name" ng-bind-html="name"></td>
+                            </tr>
+                            </table>
+					  </h4> </div>
+                    <div id="name" class="panel-collapse collapse" role="tabpanel" aria-expanded="false" aria-labelledby="name" hide=t rue>
+                        <div class="panel-body">
+                            <ul class="dl-horizontal"> IDK </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div role="button" class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#birthday" aria-expanded="false" aria-controls="birthday" role="tab">
+                        <h4 class="panel-title">
+                            
+                        <table width = "50%">
+                            <tr>
+                            <td><strong>Birthday</strong></td>
+                            <td id = "name" ng-bind-html="birthday"></td>
+                            </tr>
+                            </table>
+					  </h4> </div>
+                    <div id="birthday" class="panel-collapse collapse" role="tabpanel" aria-expanded="false" aria-labelledby="birthday" hide=t rue>
+                        <div class="panel-body">
+                            <ul class="dl-horizontal"> IDK </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div role="button" class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#gender" aria-expanded="false" aria-controls="gender" role="tab">
+                        <h4 class="panel-title">
+                            
+                        <table width = "50%">
+                            <tr>
+                            <td><strong>Gender</strong></td>
+                            <td id = "name" ng-bind-html="gender"></td>
+                            </tr>
+                            </table>
+					  </h4> </div>
+                    <div id="gender" class="panel-collapse collapse" role="tabpanel" aria-expanded="false" aria-labelledby="gender" hide=t rue>
+                        <div class="panel-body">
+                            <ul class="dl-horizontal"> IDK </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div role="button" class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#email" aria-expanded="false" aria-controls="email" role="tab">
+                        <h4 class="panel-title">
+                            
+                        <table width = "50%">
+                            <tr>
+                            <td><strong>Email</strong></td>
+                            <td id = "name">asdf</td>
+                            </tr>
+                            </table>
+					  </h4> </div>
+                    <div id="email" class="panel-collapse collapse" role="tabpanel" aria-expanded="false" aria-labelledby="email" hide=t rue>
+                        <div class="panel-body">
+                            <ul class="dl-horizontal"> IDK </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

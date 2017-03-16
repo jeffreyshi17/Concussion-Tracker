@@ -34,15 +34,15 @@
 			"type": "checkbox",
 			"text": "Male"
 		}, {
-			"id": "PI_3_2",
+			"id": "PI_3_1",
 			"type": "checkbox",
 			"text": "Female"
 		}, {
-			"id": "PI_3_3",
+			"id": "PI_3_2",
 			"type": "checkbox",
 			"text": "Other:",
 			"options": [{
-				"id": "PI_3_3_0",
+				"id": "PI_3_2_0",
 				"type": "text"
 			}]
 		}]
