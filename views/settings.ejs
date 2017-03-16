@@ -5,25 +5,27 @@
     <title>FAQ</title>
     <% include partials/head %>
         <script>
+            
             var app = angular.module('myApp', []);
             var strDate = JSON.parse(localStorage.init)[0].answers[2].answer;
             var dateParts = strDate.split("-");
             var date = dateParts[1] + "/" + dateParts[2] + "/" + dateParts[0];
-            
             var gender;
-            if (JSON.parse(localStorage.init)[0].answers[3].answer){
+            console.log(JSON.parse(localStorage.init)[0].answers[3].answer);
+            if (JSON.parse(localStorage.init)[0].answers[3].answer) {
                 gender = "Male";
             }
-            if (JSON.parse(localStorage.init)[0].answers[4].answer){
+            if (JSON.parse(localStorage.init)[0].answers[4].answer) {
                 gender = "Female";
             }
-            if (JSON.parse(localStorage.init)[0].answers[5].answer){
-                gender = "Other";
+            if (JSON.parse(localStorage.init)[0].answers[5].answer) {
+                gender = JSON.parse(localStorage.init)[0].answers[6].answer;
             }
             app.controller('myCtrl', function ($scope, $sce) {
                 $scope.name = $sce.trustAsHtml(JSON.parse(localStorage.init)[0].answers[0].answer + " " + JSON.parse(localStorage.init)[0].answers[1].answer);
                 $scope.birthday = $sce.trustAsHtml(date);
-                $scope.gender = $sce.trustAsHtml();
+                $scope.gender = $sce.trustAsHtml(gender);
+                $scope.email = $sce.trustAsHtml(JSON.parse(localStorage.init)[0].answers[7].answer);
             });
         </script>
 </head>
@@ -38,26 +40,37 @@
                     <div role="button" class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#name" aria-expanded="false" aria-controls="name" role="tab">
                         <h4 class="panel-title">
                         <table width = "50%">
+  <col width="50%">
+  <col width="50%">
                             <tr>
                             <td><strong>Name</strong></td>
-                            <td id = "name" ng-bind-html="name"></td>
+                            <td ng-bind-html="name"></td>
                             </tr>
                             </table>
 					  </h4> </div>
                     <div id="name" class="panel-collapse collapse" role="tabpanel" aria-expanded="false" aria-labelledby="name" hide=t rue>
                         <div class="panel-body">
-                            <ul class="dl-horizontal"> IDK </ul>
+                            <ul class="dl-horizontal">
+                                <div class="form-group col-xs-6">
+                                    <label for="localCopy[0].answers[0].answer" class="sr-only"></label>
+                                    <input id="localCopy[0].answers[0].answer" class="form-control input-group-lg reg_name" type="text" name="firstname" title="Enter first name" placeholder="First name" /> </div>
+                                <div class="form-group col-xs-6">
+                                    <label for="localCopy[0].answers[1].answer" class="sr-only"></label>
+                                    <input id="localCopy[0].answers[1].answer" class="form-control input-group-lg reg_name" type="text" name="lastname" title="Enter last name" placeholder="Last name" /> </div>
+                                <button type="button" class="btn btn-primary update" data-toggle="collapse" data-parent="#accordion" href="#name" aria-expanded="false" aria-controls="name">Submit</button>
+                            </ul>
                         </div>
                     </div>
                 </div>
                 <div class="panel panel-default">
                     <div role="button" class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#birthday" aria-expanded="false" aria-controls="birthday" role="tab">
                         <h4 class="panel-title">
-                            
                         <table width = "50%">
+  <col width="50%">
+  <col width="50%">
                             <tr>
                             <td><strong>Birthday</strong></td>
-                            <td id = "name" ng-bind-html="birthday"></td>
+                            <td ng-bind-html="birthday"></td>
                             </tr>
                             </table>
 					  </h4> </div>
@@ -72,9 +85,11 @@
                         <h4 class="panel-title">
                             
                         <table width = "50%">
+  <col width="50%">
+  <col width="50%">
                             <tr>
                             <td><strong>Gender</strong></td>
-                            <td id = "name" ng-bind-html="gender"></td>
+                            <td ng-bind-html="gender"></td>
                             </tr>
                             </table>
 					  </h4> </div>
@@ -89,9 +104,11 @@
                         <h4 class="panel-title">
                             
                         <table width = "50%">
+  <col width="50%">
+  <col width="50%">
                             <tr>
                             <td><strong>Email</strong></td>
-                            <td id = "name">asdf</td>
+                            <td ng-bind-html="email"></td>
                             </tr>
                             </table>
 					  </h4> </div>
@@ -103,5 +120,23 @@
                 </div>
             </div>
         </div>
+        <script>
+            document.querySelectorAll('.update').forEach(function (button) {
+                button.onclick = function () {
+                    
+                    var localCopy = JSON.parse(localStorage.init);
+
+                    
+                    button.parentNode.querySelectorAll('.form-control').forEach(function (input) {
+                        console.log(input);
+                        console.log(input.id + " = '" + input.value + "'");
+                        eval(input.id + " = '" + input.value + "'");
+                        localStorage.init = JSON.stringify(localCopy);
+                        location.reload();
+                    });
+                }
+            });
+        </script>
 </body>
+
 </html>
