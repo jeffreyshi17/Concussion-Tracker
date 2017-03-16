@@ -51,6 +51,9 @@ app.get('/allresults', function (req, res) {
     res.locals.data2 = JSON.parse(fs.readFileSync("data/concussiontracker.json", 'utf8'));
     res.render('allresults.ejs');
 });
+app.get('/settings', function (req, res) {
+    res.render('settings.ejs');
+});
 app.get('/mainjson', function (req, res) {
     console.log('request received');
     res.writeHead(200, {

@@ -1,20 +1,21 @@
 function displayMT(){
+	var edits = false;
 	var text = '<div class="container theme-showcase" role="main"> <div class="page-header"><h1>Menstrual Tracker Results</h1></div> <div class ="row"> <div class = "col-md-6"> <table class = "table" > <thead> <tr> <td>Date</td> <td>Last Period</td> <td>Menopausal</td> <td>Oral contraceptives</td> <td>Missed Periods</td> <td>Period Description</td> </tr> </thead> <tbody>';
 	for(var i = 0; i< localStorage.length; i++){
 		var json = JSON.parse(localStorage.getItem(localStorage.key(i)));
 		if(typeof json.title != "undefined" && json.title == "Menstrual Tracker" ){
+			edits = true;
 			text+= '<tr>';
 			text+='<td>'+ json.date+'</td>';
-			
 				for(var j = 0; j < json.answers.length; j++){
 					text +='<td>'+ json.answers[j].answer+'</td>';
 				}
-			
 			text+= "</tr>";
 		}
 	}
 	text += '</tbody> </table> </div> </div> </div> </BODY> </HTML>';
-	document.getElementById("menstrual_tracker").innerHTML = text;
+	if(edits){
+	document.getElementById("menstrual_tracker").innerHTML = text;}
 }
 function displayS(){
 	for(var i = 0; i< localStorage.length; i++){
@@ -40,7 +41,6 @@ function displayS(){
 				}
 			}
 		}
-		
 	}
 	var contentToRemove = document.querySelectorAll("#original");
 		$(contentToRemove).remove(); 
@@ -49,7 +49,7 @@ function displaySAC(){
 	var text = '[{ 	"id": "SAC", 	"title": "Sleep/Alcohol/Caffeine Tracker", 	"desc": "Please answer the following questions about your daily sleep and alcohol/caffeine consumption", 	"date": "", 	"questions": [{ 		"id": "SAC_0", 		"question": "How many hours of sleep did you get last night?", 		"answers": [{ 			"id": "SAC_0_0", 			"type": "text", 			"text": "hrs", 			"options": [{ 				"id": "SAC_0_0_0",  				"type": "text", 				"text": "How many times, if any, did you wake up during the night?"  			}, { 				"id": "SAC_0_0_1", 				"type": "text", 				"text": "Please rate the quality of your sleep on a scale of 1 to 5" 			}]  		}] 	}, { 		"id": "SAC_1", 		"question": "Did you drink alcohol today?", 		"answers": [{ 			"id": "SAC_1_0", 			"type": "radio", 			"text": "Yes", 			"options": [{ 				"id": "SAC_1_0_0", 				"type": "checkbox", 				"text": "Beer", 				"options": [{ 					"id": "SAC_1_0_0_0", 					"type": "text", 					"text": "If yes, how many beers?" 				}] 			}, { 				"id": "SAC_1_0_1", 				"type": "checkbox", 				"text": "Wine", 				"options": [{ 					"id": "SAC_1_0_1_0", 					"type" :"text", 					"text": "If yes, how many glasses?" 				}] 			}, { 				"id": "SAC_1_0_2", 				"type": "checkbox", 				"text": "Hard liquor", 				"options": [{ 					"id": "SAC_1_0_2_0", 					"type": "text", 					"text": "If yes, what liquor?", 					"options":[{ 						"id": "SAC_1_0_2_0_0", 						"type": "text", 						"text": "How many shots?" 					}] 				}] 			}] 		}, { 			"id": "SAC_1_1", 			"type": "radio", 			"text": "No" 		}]    	}, { 		"id": "SAC_2", 		"question": "Did you consume caffeine today?", 		"answers": [{ 			"id": "SAC_2_0", 			"type": "radio", 			"text": "Yes", 			"options": [{ 				"id": "SAC_2_0_0", 				"type": "checkbox", 				"text": "Coffee", 				"options": [{ 					"id": "SAC_2_0_0_0", 					"type": "text", 					"text": "How many 8oz cups?" 				}] 			}, { 				"id": "SAC_2_0_1", 				"type": "checkbox", 				"text": "Tea", 				"options": [{ 					"id": "SAC_2_0_1_0", 					"type": "text", 					"text": "How many 8oz cups?" 				}] 			}, { 				"id": "SAC_2_0_2", 				"type": "checkbox", 				"text": "Other", 				"options": [{ 					"id": "SAC_2_0_2_0", 					"type": "text", 					"text": "How many milligrams?" 				}] 			}] 		}, { 			"id": "SAC_2_1", 			"type": "radio", 			"text": "No" 		}] 	}, { 		"id": "SAC_3", 		"question": "Did you consume drugs today?", 		"answers": [{ 			"id": "SAC_3_0", 			"type": "radio", 			"text": "Yes", 			"options": [{ 				"id": "SAC_3_0_0", 				"type": "checkbox",  				"text": "Marijuana", 				"options": [{ 					"id": "SAC_3_0_0_0", 					"type": "checkbox", 					"text": "Recreational Marijuana", 					"options": [{ 						"id": "SAC_3_0_0_0_0", 						"type": "text", 						"text": "How many grams?" 					}] 				}, { 					"id": "SAC_3_0_0_1", 					"type": "checkbox", 					"text": "Medicinal Marijuana", 					"options": [{ 						"id": "SAC_3_0_0_0_1", 						"type": "text", 						"text": "How many grams?" 					}]  				}] 			}, { 				"id": "SAC_3_0_1", 				"type": "checkbox", 				"text": "Cocaine", 				"options": [{ 					"id": "SAC_3_0_1_0", 					"type": "text", 					"text": "How many grams?" 				}] 			}, { 				"id": "SAC_3_0_2", 				"type": "checkbox", 				"text": "Other drug", 				"options": [{ 					"id": "SAC_3_0_2_0", 					"type": "text", 					"text": "What drug?" 				}, { 					"id": "SAC_3_0_2_1", 					"type": "text", 					"text": "How many grams?" 				}] 			}] 		}] 	}]   }]';
 	var localStorageI = localStorage.getItem("SAC");
 	var data = JSON.parse(text);
-	if(typeof localStorageI != 'undefined'){
+	if(typeof JSON.parse(localStorageI) != 'undefined'){
 		var localStorageJ = JSON.parse(localStorageI);
 		var all = "";
 		all+="<div class = 'container'>";
@@ -133,7 +133,6 @@ function displaySAC(){
 									}
 								}							
 							}
-
 							if (typeof data[0].questions[i].answers[j].options[k].options[l].options != "undefined"){
 							for (var m = 0; m < data[0].questions[i].answers[j].options[k].options[l].options.length; m++){ 	
 								if (data[0].questions[i].answers[j].options[k].options[l].options[m].type == ""){
@@ -157,11 +156,9 @@ function displaySAC(){
 											all += "<div >" + data[0].questions[i].answers[j].options[k].options[l].options[m].text+ "</div>";
 										}
 									}								
-
 								}
 							}
 							}
-
 						}
 						}
 					}
@@ -169,20 +166,20 @@ function displaySAC(){
 				}
 				all += "<br></br>";
 			}
-			
 		}
 		all+="</div>";
 	}
 	console.log(all);
 	document.getElementById("SAC").outerHTML = all;
-	
 }
-
-
-
+function displayFTQ(){
+var results = JSON.parse("init");
+console.log(results);
+}
 
 document.addEventListener('DOMContentLoaded', function() {
 	displayMT();
 	displayS();
 	displaySAC();
+	
 });
