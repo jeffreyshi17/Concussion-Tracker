@@ -5,7 +5,6 @@
     <title>FAQ</title>
     <% include partials/head %>
         <script>
-            
             var app = angular.module('myApp', []);
             var strDate = JSON.parse(localStorage.init)[0].answers[2].answer;
             var dateParts = strDate.split("-");
@@ -26,6 +25,8 @@
                 $scope.birthday = $sce.trustAsHtml(date);
                 $scope.gender = $sce.trustAsHtml(gender);
                 $scope.email = $sce.trustAsHtml(JSON.parse(localStorage.init)[0].answers[7].answer);
+                $scope.parentname = $sce.trustAsHtml(JSON.parse(localStorage.init)[0].answers[8].answer + " " + JSON.parse(localStorage.init)[0].answers[9].answer);
+                $scope.parentemail = $sce.trustAsHtml(JSON.parse(localStorage.init)[0].answers[10].answer);
             });
         </script>
 </head>
@@ -51,13 +52,15 @@
                     <div id="name" class="panel-collapse collapse" role="tabpanel" aria-expanded="false" aria-labelledby="name" hide=t rue>
                         <div class="panel-body">
                             <ul class="dl-horizontal">
-                                <div class="form-group col-xs-6">
-                                    <label for="localCopy[0].answers[0].answer" class="sr-only"></label>
-                                    <input id="localCopy[0].answers[0].answer" class="form-control input-group-lg reg_name" type="text" name="firstname" title="Enter first name" placeholder="First name" /> </div>
-                                <div class="form-group col-xs-6">
-                                    <label for="localCopy[0].answers[1].answer" class="sr-only"></label>
-                                    <input id="localCopy[0].answers[1].answer" class="form-control input-group-lg reg_name" type="text" name="lastname" title="Enter last name" placeholder="Last name" /> </div>
-                                <button type="button" class="btn btn-primary update" data-toggle="collapse" data-parent="#accordion" href="#name" aria-expanded="false" aria-controls="name">Submit</button>
+                                <form>
+                                    <div class="form-group col-xs-6">
+                                        <label for="localCopy[0].answers[0].answer" class="sr-only"></label>
+                                        <input id="localCopy[0].answers[0].answer" class="form-control input-group-lg reg_name" type="text" name="firstname" title="Enter first name" placeholder="First name" /> </div>
+                                    <div class="form-group col-xs-6">
+                                        <label for="localCopy[0].answers[1].answer" class="sr-only"></label>
+                                        <input id="localCopy[0].answers[1].answer" class="form-control input-group-lg reg_name" type="text" name="lastname" title="Enter last name" placeholder="Last name" /> </div>
+                                    <button type="submit" class="btn btn-primary update" data-toggle="collapse" data-parent="#accordion" href="#name" aria-expanded="false" aria-controls="name">Submit</button>
+                                </form>
                             </ul>
                         </div>
                     </div>
@@ -76,7 +79,12 @@
 					  </h4> </div>
                     <div id="birthday" class="panel-collapse collapse" role="tabpanel" aria-expanded="false" aria-labelledby="birthday" hide=t rue>
                         <div class="panel-body">
-                            <ul class="dl-horizontal"> IDK </ul>
+                            <form>
+                                <div class="form-group col-xs-12">
+                                    <label for="localCopy[0].answers[2].answer" class="sr-only"></label>
+                                    <input id="localCopy[0].answers[2].answer" class="form-control input-group-lg reg_name" type="date" name="email" title="Enter birthday" /> </div>
+                                <button type="submit" class="btn btn-primary update" data-toggle="collapse" data-parent="#accordion" href="#name" aria-expanded="false" aria-controls="name">Submit</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -95,7 +103,19 @@
 					  </h4> </div>
                     <div id="gender" class="panel-collapse collapse" role="tabpanel" aria-expanded="false" aria-labelledby="gender" hide=t rue>
                         <div class="panel-body">
-                            <ul class="dl-horizontal"> IDK </ul>
+                            <form>
+                                <input id="localCopy[0].answers[3].answer" type="checkbox" name="Male" />
+                                <label for="localCopy[0].answers[3].answer">Male</label>
+                                <br>
+                                <input id="localCopy[0].answers[4].answer" type="checkbox" name="Female" />
+                                <label for="localCopy[0].answers[4].answer">Female</label>
+                                <br>
+                                <input id="localCopy[0].answers[5].answer" type="checkbox" name="Other" />
+                                <label for="localCopy[0].answers[5].answer">Other</label>
+                                <input id="localCopy[0].answers[6].answer" type="text" name="Other" />
+                                <br>
+                                <button type="submit" class="btn btn-primary update" data-toggle="collapse" data-parent="#accordion" href="#gender" aria-expanded="false" aria-controls="name">Submit</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -114,7 +134,66 @@
 					  </h4> </div>
                     <div id="email" class="panel-collapse collapse" role="tabpanel" aria-expanded="false" aria-labelledby="email" hide=t rue>
                         <div class="panel-body">
-                            <ul class="dl-horizontal"> IDK </ul>
+                            <form>
+                                <div class="form-group col-xs-12">
+                                    <label for="localCopy[0].answers[7].answer" class="sr-only"></label>
+                                    <input id="localCopy[0].answers[7].answer" class="form-control input-group-lg reg_name" type="text" name="email" title="Enter email" placeholder="johnsmith@example.com" /> </div>
+                                <button type="submit" class="btn btn-primary update" data-toggle="collapse" data-parent="#accordion" href="#name" aria-expanded="false" aria-controls="name">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div role="button" class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#parentname" aria-expanded="false" aria-controls="parentname" role="tab">
+                        <h4 class="panel-title">
+                        <table width = "50%">
+  <col width="50%">
+  <col width="50%">
+                            <tr>
+                            <td><strong>Parent Name</strong></td>
+                            <td ng-bind-html="parentname"></td>
+                            </tr>
+                            </table>
+					  </h4> </div>
+                    <div id="parentname" class="panel-collapse collapse" role="tabpanel" aria-expanded="false" aria-labelledby="parentname" hide=t rue>
+                        <div class="panel-body">
+                            <ul class="dl-horizontal">
+                                <form>
+                                    <div class="form-group col-xs-6">
+                                        <label for="localCopy[0].answers[8].answer" class="sr-only"></label>
+                                        <input id="localCopy[0].answers[8].answer" class="form-control input-group-lg reg_name" type="text" name="parentfirstname" title="Enter first name" placeholder="First name" /> </div>
+                                    <div class="form-group col-xs-6">
+                                        <label for="localCopy[0].answers[9].answer" class="sr-only"></label>
+                                        <input id="localCopy[0].answers[9].answer" class="form-control input-group-lg reg_name" type="text" name="parentlastname" title="Enter last name" placeholder="Last name" /> </div>
+                                    <button type="submit" class="btn btn-primary update" data-toggle="collapse" data-parent="#accordion" href="#name" aria-expanded="false" aria-controls="name">Submit</button>
+                                </form>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div role="button" class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#parentemail" aria-expanded="false" aria-controls="parentemail" role="tab">
+                        <h4 class="panel-title">
+                            
+                        <table width = "50%">
+  <col width="50%">
+  <col width="50%">
+                            <tr>
+                            <td><strong>Parent Email</strong></td>
+                            <td ng-bind-html="parentemail"></td>
+                            </tr>
+                            </table>
+					  </h4> </div>
+                    <div id="parentemail" class="panel-collapse collapse" role="tabpanel" aria-expanded="false" aria-labelledby="email" hide=t rue>
+                        <div class="panel-body">
+                            <ul class="dl-horizontal">
+                                <form>
+                                    <div class="form-group col-xs-12">
+                                        <label for="localCopy[0].answers[10].answer" class="sr-only"></label>
+                                        <input id="localCopy[0].answers[10].answer" class="form-control input-group-lg reg_name" type="text" name="parentemail" title="Enter email" placeholder="johnsmith@example.com" /> </div>
+                                    <button type="submit" class="btn btn-primary update" data-toggle="collapse" data-parent="#accordion" href="#name" aria-expanded="false" aria-controls="name">Submit</button>
+                                </form>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -123,14 +202,15 @@
         <script>
             document.querySelectorAll('.update').forEach(function (button) {
                 button.onclick = function () {
-                    
                     var localCopy = JSON.parse(localStorage.init);
-
-                    
-                    button.parentNode.querySelectorAll('.form-control').forEach(function (input) {
-                        console.log(input);
-                        console.log(input.id + " = '" + input.value + "'");
-                        eval(input.id + " = '" + input.value + "'");
+                    button.parentNode.querySelectorAll('input').forEach(function (input) {
+                        if (document.getElementById(input.id).type != "checkbox") {
+                            console.log("SDF");
+                            eval(input.id + " = '" + input.value + "'");
+                        }
+                        else {
+                            eval(input.id + " = " + input.checked);
+                        }
                         localStorage.init = JSON.stringify(localCopy);
                         location.reload();
                     });
