@@ -41,7 +41,7 @@ function storeToLocalStorage() {
            {
             date: date,
 			level: level,
-            answers: {}
+            answers: [{}]
 			}	;
         //save = save.substring(0, save.length-2);
        // save += ',{"date": "'+date+'", "answers":[';
@@ -53,7 +53,7 @@ function storeToLocalStorage() {
 				values: ""
 				};
 				save.form[position].answers[i].id =  body[i].id;
-				save.form[position].answers[i].id =  body[i].value;
+				save.form[position].answers[i].value =  body[i].value;
             }
         }
         //save = save.substring(0, save.length-1);

@@ -18,30 +18,34 @@ function displayMT(){
 	document.getElementById("menstrual_tracker").innerHTML = text;}
 }
 function displayS(){
-	for(var i = 0; i< localStorage.length; i++){
-		var json = JSON.parse("Symptom Tracker");
+		var json = JSON.parse(localStorage.getItem("Symptoms"));
 		var insert = document.createElement("td");
 		insert.innerHTML = json.form[0].date.substring(0,10);
-		var date = document.getElementById("date").parentNode.parentNode.appendChild(insert);
-		if(localStorage.getItem(localStorage.key(i)).substring(11,26) == "Symptom Tracker"){
-			for (var j = 0; j < json.form[0].answers.length; j++){
-				document.getElementById(json.form[0].answers[j].id).style.visibility = "visible";
-				var parent = document.getElementById(json.form[0].answers[j].id).parentNode.parentNode.parentNode;
+		insert.setAttribute("id","date");
+		for (var i = 0; i < json.form.length; i++){
+			var insertD = document.createElement("td");
+			insertD.innerHTML = json.form[i].date.substring(0,10);
+			var date = document.getElementById("date").parentNode.parentNode.appendChild(insertD);
+			for (var j = 0; j < json.form[i].answers.length; j++){
+				document.getElementById("R"+json.form[i].answers[j].id).style.visibility = "visible";
+				var parent = document.getElementById("R"+json.form[i].answers[j].id).parentNode.parentNode.parentNode;
 				var insert1 = document.createElement("td");
 				var insert2 = document.createElement("input");
 				parent.appendChild(insert1);
 				insert1.appendChild(insert2);
 				insert2.setAttribute("type", "range");
-				insert2.setAttribute("id", json.form[0].answers[j].id);
+				insert2.setAttribute("id", json.form[i].answers[j].id);
 				insert2.setAttribute("min", 0);
 				insert2.setAttribute("max", 10);
-				insert2.setAttribute("value", json.form[0].answers[j].value);
-				
+				insert2.setAttribute("value", json.form[i].answers[j].value);
+				insert2.setAttribute("disabled", true);
+				insert2.setAttribute("style", "border-left:30px");
 			}
 		}
-	}
 	var contentToRemove = document.querySelectorAll("#original");
 		$(contentToRemove).remove(); 
+	$("#symptoms").removeAttr( "hidden" );
+	console.log(json);
 }
 function displaySAC(){
 	if(localStorage.getItem("SAC") != null){
@@ -299,6 +303,7 @@ function generateForm() {
             }
         }
     }
+    $("input").attr("disabled", true);
     restoreFromLocalStorage();
     //appendSubmit();
 }

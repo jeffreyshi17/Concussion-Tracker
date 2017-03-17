@@ -14,7 +14,6 @@
 		  	<td>Symptoms:</td>
 		  	<th><td>Severity:</td></th>
 			<% for(i=0; i<data.questions.length; i++){ %>
-			    <tr>
 				<tr id = <%=data.questions[i].id%>>
 		    	<td><%=data.questions[i].question%></td>
 					<%for(j=0; j<data.questions[i].answers.length; j+=3){%>
