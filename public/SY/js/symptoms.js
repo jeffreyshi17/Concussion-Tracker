@@ -1,5 +1,4 @@
 function storeToLocalStorage() {
-/*
     //RTP Protocol
     var level;
     var jtime;
@@ -17,7 +16,6 @@ function storeToLocalStorage() {
             break;
         }
     }
-    */
     //RTP protocol
 
     var date = new Date();
@@ -47,7 +45,6 @@ function storeToLocalStorage() {
         localStorage.setItem('Symptoms',save);
     }
 
-    /*
     //RTP Protocol
     var change = false;
     var fullday = false;
@@ -62,8 +59,8 @@ function storeToLocalStorage() {
                     if(json.time - json2.time >= 86400000){
                         fullday = true;
                     }
-                    for(var x = 0; x <=40 ; x+=2){
-                        if(json2.answers[x].value < json.answers[x].value && level >= 1){
+                    for(var x = 0; x <=21 ; x+=1){
+                        if(json2.form[json2.form.length-1].answers[x].value < json.form[json.form.length-1].answers[x].value && level >= 1){
                             change = true;
                         }
                     }
@@ -88,9 +85,8 @@ function storeToLocalStorage() {
             break;
         }
     }
-    localStorage.setItem("Symptoms "+d, JSON.stringify(json));
+    localStorage.setItem("Symptoms", JSON.stringify(json));
     //RTP Protocol
-    */
 }
 function restoreFromLocalStorage() {
     var json = JSON.parse(localStorage.getItem("Symptoms"));
