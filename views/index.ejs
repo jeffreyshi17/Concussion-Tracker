@@ -4,8 +4,23 @@
 	 	<% include partials/head %>
 
 	</HEAD>
-	<body>    
+	<body>
 	<% include partials/nav %>
-        <button onclick="window.location.href='/question'">Start Quiz</button>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+      	<div class="col-md-4 text-center">
+	        <h1> Welcome to Concussion Tracker!</h1>
+	        <% if(1===1){ %>
+	        	<p> It looks like it's your first time visiting! To start, please fill out the initial questionairre below. </p>
+	       	<% } else{ %>
+	       	<% } %>
+	        <button onclick="window.location.href='/question'">Start Initial Questionairre</button>
+        </div>
+      </div>
+    </div>
+
+
 	</body>
 </html>
