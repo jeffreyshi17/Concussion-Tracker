@@ -38,10 +38,10 @@ function storeToLocalStorage() {
 		save = JSON.parse(save);
 		position = save.form.length;
 		save.form[position] = 
-           {
-            date: date,
+           		{
+            		date: date.toString(),
 			level: level,
-            answers: [{}]
+            		answers: [{}]
 			}	;
         //save = save.substring(0, save.length-2);
        // save += ',{"date": "'+date+'", "answers":[';
