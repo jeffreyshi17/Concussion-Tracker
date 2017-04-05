@@ -8,24 +8,28 @@ $.ajaxPrefilter(function (options) {
         //options.url = "http://cors.corsproxy.io/url=" + options.url;
     }
 });
-$.ajax({
-    url: 'http://concussiontracker.herokuapp.com/mainjson'
-        //url: 'http://localhost:3000/mainjson'
-        
-    , dataType: "json"
-    , timeout: 5000
-    , success: function (data) {
-        JSONsrc = JSON.parse(data);
-        generateForm();
-    }
-    , error: function (jqXHR, textStatus, errorThrown) {
-        console.log('error ' + textStatus + " " + errorThrown);
-    }
-});
+if (!localStorage["initForm"]) {
+    $.ajax({
+        url: 'http://concussiontracker.herokuapp.com/mainjson',
+        dataType: "json",
+        timeout: 5000,
+        success: function (data) {
+            localStorage["initForm"] = data;
+            JSONsrc = JSON.parse(localStorage["initForm"]);
+            generateForm();
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.log('error ' + textStatus + " " + errorThrown);
+        }
+    });
+} else {
+    JSONsrc = JSON.parse(localStorage["initForm"]);
+    generateForm();
+}
 
 function storeToLocalStorage() {
-    var ancestor = document.getElementById('container')
-        , descendents = ancestor.getElementsByTagName('INPUT');
+    var ancestor = document.getElementById('container'),
+        descendents = ancestor.getElementsByTagName('INPUT');
     var i, e;
     for (i = 0; i < descendents.length; ++i) {
         e = descendents[i];
@@ -51,11 +55,13 @@ function storeToLocalStorage() {
 function generateForm() {
     //appendRestore();
     for (var k = 0; k < JSONsrc.length; k++) {
+        //Creating localStorage Object
         var temp = {};
         temp.title = JSONsrc[k].title;
         temp.answers = [];
         answersObj.push(temp);
         idlist.push(JSONsrc[k].id);
+        //title, description
         var title = document.createElement('h1');
         title.className = "page-header";
         var description = document.createElement('h2');
@@ -64,6 +70,7 @@ function generateForm() {
         description.appendChild(document.createTextNode(JSONsrc[k]["desc"]));
         container.appendChild(title);
         container.appendChild(description);
+        //Generating the actual form
         for (var i = 0; i < JSONsrc[k]["questions"].length; i++) {
             var e = document.createElement('h3');
             e.innerHTML = JSONsrc[k]["questions"][i].question;
@@ -79,7 +86,6 @@ function generateForm() {
 }
 
 function appendOptions(e1, lev, x) {
-    //e1 = target, lev = json obj, x = level
     var el; //container wrapper
     var other = false; //boolean other
     var select = false; //boolean select
@@ -91,8 +97,7 @@ function appendOptions(e1, lev, x) {
     }
     if (select) {
         el = document.createElement('select');
-    }
-    else {
+    } else {
         el = document.createElement('span');
     }
     el.className = "option level" + x;
@@ -102,14 +107,12 @@ function appendOptions(e1, lev, x) {
             if (lev[i]["options"]) {
                 appendOptions(el, lev[i]["options"], x + 1);
             }
-        }
-        else {
+        } else {
             singop = document.createElement('div');
             if (other) {
                 ex = appendOption(e1, lev[i]);
                 //add directly to target
-            }
-            else {
+            } else {
                 ex = appendOption(singop, lev[i]);
                 el.appendChild(singop);
                 //add to div
@@ -121,7 +124,8 @@ function appendOptions(e1, lev, x) {
     }
     e1.appendChild(el);
 }
-var appendOption = function (target, op) {
+
+function appendOption(target, op) {
     id = op.id;
     type = op.type;
     text = op.text || "";
@@ -136,49 +140,54 @@ var appendOption = function (target, op) {
         input.value = text;
         input.innerHTML = text;
         target.appendChild(input);
-    }
-    else if (type == "range") {
+    } else if (type == "range") {
+        input = document.createElement('div');
         var slidervalue = document.createElement('span');
         var tabElement = document.createElement('tab');
         tabElement.align = "right";
         slidervalue.id = id + "Val";
         label.htmlFor = id;
-        $(input).attr({
-            'data-slider-min': op.min
-            , 'data-slider-max': op.max
-            , 'data-slider-step': op.step
-            , 'data-slider-value': Math.round((op.max - op.min) / 2)
-            , 'type': "range"
-            , 'data-slider-tooltip': "hide"
-        , });
         $(slidervalue).css("padding-left", "10px");
-        $(spancontainer).css("padding-left", "10px");
         label.appendChild(document.createTextNode(text));
         target.appendChild(label);
         target.appendChild(tabElement);
         spancontainer.appendChild(input);
         target.appendChild(spancontainer);
         target.appendChild(slidervalue);
-        $(slidervalue).text(Math.round((op.max - op.min) / 2));
-        $(input).slider();
-        $(input).on("change", function (slideEvt) {
-            $(slidervalue).text(slideEvt.value.newValue);
+        $(slidervalue).text(0);
+        //input.className = "ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all";
+        $(input).slider({
+            orientation: "horizontal",
+            min: 0,
+            max: 10,
+            value: 0,
+            step: 1,
+            range: "min",
+            animate: "fast",
+            slide: function (event, ui) {
+                seeking = true;
+                $(slidervalue).text(slideEvt.value.newValue);
+            }
         });
-    }
-    else { //checkbox, textbox, radio
+        $(input).on("change", function (slideEvt) {});
+    } else { //checkbox, textbox, radio
         input.name = id.substring(0, id.lastIndexOf("_"));
         label.htmlFor = id;
         label.appendChild(document.createTextNode(text));
         if (type == "text") {
-            $(spancontainer).css("padding-left", "10px");
+            if (text != "") {
+                $(spancontainer).css("padding-left", "10px");
+            }
+            input.className = "form-control";
             target.appendChild(label);
             spancontainer.appendChild(input);
             target.appendChild(spancontainer);
-        }
-        else if (type == "") {
+        } else if (type == "") {
             target.appendChild(label);
-        }
-        else {
+        } else if (type == "checkbox") {
+            target.appendChild(input);
+            target.appendChild(label);
+        } else {
             target.appendChild(input);
             target.appendChild(label);
         }
@@ -217,8 +226,7 @@ function restoreFromLocalStorage() {
                 var type = document.getElementById(q.id).type;
                 if (type == "checkbox" || type == "radio") {
                     document.getElementById(q.id).checked = q.answer;
-                }
-                else {
+                } else {
                     document.getElementById(q.id).value = q.answer;
                 }
             }
@@ -240,17 +248,38 @@ function hideunhide() {
     $("input:checkbox").each(function () {
         if (!$(this).is(':checked')) {
             for (var i = 0; i < this.parentNode.childNodes.length; i++) {
-                this.parentNode.childNodes[i].style.display = "none";
+                if ($(this.parentNode.childNodes[i]).hasClass("option")) {
+                    this.parentNode.childNodes[i].style.display = "none";
+                }
+            }
+        } else {
+            for (var i = 0; i < this.parentNode.childNodes.length; i++) {
+                if ($(this.parentNode.childNodes[i]).hasClass("option")) {
+                    this.parentNode.childNodes[i].style.display = "block";
+                }
             }
         }
-        else {
+    });
+    $("input:radio").each(function () {
+        if (!$(this).is(':checked')) {
             for (var i = 0; i < this.parentNode.childNodes.length; i++) {
-                this.parentNode.childNodes[i].style.display = "block";
+                if ($(this.parentNode.childNodes[i]).hasClass("option")) {
+                    this.parentNode.childNodes[i].style.display = "none";
+                }
+            }
+        } else {
+            for (var i = 0; i < this.parentNode.childNodes.length; i++) {
+                if ($(this.parentNode.childNodes[i]).hasClass("option")) {
+                    this.parentNode.childNodes[i].style.display = "block";
+                }
             }
         }
     });
 }
 $('input:checkbox').change(function () {
+    hideunhide();
+});
+$('input:radio').change(function () {
     hideunhide();
 });
 hideunhide();
