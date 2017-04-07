@@ -155,21 +155,20 @@ function appendOption(target, op) {
         target.appendChild(spancontainer);
         target.appendChild(slidervalue);
         $(slidervalue).text(0);
-        //input.className = "ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all";
         $(input).slider({
             orientation: "horizontal",
             min: 0,
             max: 10,
             value: 0,
             step: 1,
-            range: "min",
             animate: "fast",
+            create: function () {
+                handle.text($(this).slider("value"));
+            },
             slide: function (event, ui) {
-                seeking = true;
-                $(slidervalue).text(slideEvt.value.newValue);
+                $(slidervalue).text(ui.value);
             }
         });
-        $(input).on("change", function (slideEvt) {});
     } else { //checkbox, textbox, radio
         input.name = id.substring(0, id.lastIndexOf("_"));
         label.htmlFor = id;
