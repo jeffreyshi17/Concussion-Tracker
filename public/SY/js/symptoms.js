@@ -131,8 +131,6 @@ for(k=0; k< container.length; k++){
 	if(container[k].type == 'range'){
 		$("#"+container[k].id+"v").text($("#"+container[k].id).val());  
 		$("#"+container[k].id).on('change', function(){
-    			for(k=0; k< container.length; k++){
-    				$("#"+container[k].id+"v").text($("#"+container[k].id).val());
-    			}
+    			$("#"+this.id+"v").text($(this).val());
 		});
 }}
