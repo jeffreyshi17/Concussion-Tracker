@@ -5,7 +5,6 @@ $.ajaxPrefilter(function (options) {
     if (options.crossDomain && jQuery.support.cors) {
         var http = (window.location.protocol === 'http:' ? 'http:' : 'https:');
         options.url = http + '//cors-anywhere.herokuapp.com/' + options.url;
-        //options.url = "http://cors.corsproxy.io/url=" + options.url;
     }
 });
 if (!localStorage["initForm"]) {
@@ -27,7 +26,7 @@ if (!localStorage["initForm"]) {
     generateForm();
 }
 
-function storeToLocalStorage() {
+function storeToLocalStorage(localStorageVariableName) {
     var ancestor = document.getElementById('container'),
         descendents = ancestor.getElementsByTagName('INPUT');
     var i, e;
@@ -49,7 +48,7 @@ function storeToLocalStorage() {
         answersObj[idIndex].answers.push(answer);
     }
     var s = JSON.stringify(answersObj);
-    localStorage.setItem('init', s);
+    localStorage.setItem(localStorageVariableName, s);
 }
 
 function generateForm() {
@@ -163,7 +162,7 @@ function appendOption(target, op) {
             step: 1,
             animate: "fast",
             create: function () {
-                handle.text($(this).slider("value"));
+                $(slidervalue).text($(this).slider("value"));
             },
             slide: function (event, ui) {
                 $(slidervalue).text(ui.value);
