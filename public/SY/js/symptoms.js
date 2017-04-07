@@ -38,10 +38,10 @@ function storeToLocalStorage() {
 		save = JSON.parse(save);
 		position = save.form.length;
 		save.form[position] = 
-           {
-            date: date,
+           		{
+            		date: date.toString(),
 			level: level,
-            answers: [{}]
+            		answers: [{}]
 			}	;
         //save = save.substring(0, save.length-2);
        // save += ',{"date": "'+date+'", "answers":[';
@@ -127,3 +127,12 @@ document.getElementById("save").addEventListener("click",storeToLocalStorage);
 //document.getElementById("check").addEventListener("click",restoreFromLocalStorage);
 //document.getElementById("clear").addEventListener("click",clearLocal);
 //document.getElementById("summary").addEventListener("click",createSummary);
+for(k=0; k< container.length; k++){
+	if(container[k].type == 'range'){
+		$("#"+container[k].id+"v").text($("#"+container[k].id).val());  
+		$("#"+container[k].id).on('change', function(){
+    			for(k=0; k< container.length; k++){
+    				$("#"+container[k].id+"v").text($("#"+container[k].id).val());
+    			}
+		});
+}}
