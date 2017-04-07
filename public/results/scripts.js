@@ -42,6 +42,7 @@ function displayS(){
 				insert2.setAttribute("style", "border-left:30px");
 			}
 		}
+
 	var contentToRemove = document.querySelectorAll("#original");
 		$(contentToRemove).remove(); 
 	$("#symptoms").removeAttr( "hidden" );
