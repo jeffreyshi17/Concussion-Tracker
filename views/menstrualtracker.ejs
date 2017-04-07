@@ -15,6 +15,7 @@
 			<form><% for(var j = 0; j< data.questions[i].answers.length; j++) { %><%if(data.questions[i].answers[j].type == "date"){%>
 					<input type="date" id = "<%=data.questions[i].answers[j].id%>"> <%}%><%if(data.questions[i].answers[j].type == "radio"){%>
 					<input type="radio" id = "<%=data.questions[i].answers[j].id %>" name = "data.questions[i].id"> <%}%><%= data.questions[i].answers[j].text %><% } %>
+					
 			</form> <% } %>
 		</div>
 		

@@ -18,6 +18,7 @@ function displayMT(){
 	document.getElementById("menstrual_tracker").innerHTML = text;}
 }
 function displayS(){
+		if( !localStorage.getItem("Symptoms")== null){
 		var json = JSON.parse(localStorage.getItem("Symptoms"));
 		var insert = document.createElement("td");
 		insert.innerHTML = json.form[0].date.substring(0,10);
@@ -46,7 +47,7 @@ function displayS(){
 	var contentToRemove = document.querySelectorAll("#original");
 		$(contentToRemove).remove(); 
 	$("#symptoms").removeAttr( "hidden" );
-	console.log(json);
+}
 }
 function displaySAC(){
 	if(localStorage.getItem("SAC") != null){
