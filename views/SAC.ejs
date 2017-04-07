@@ -9,11 +9,8 @@
 		<DIV id = 'header' class = 'page-header'><H1>Sleep, Alcohol, Caffeine Tracker</H1></DIV>
 		<DIV id = 'body' class = 'container'>
 		<TITLE>Sleep, Alcohol, Caffeine Tracker</TITLE>
-
-
 			<% for (var i = 0; i < data[0].questions.length; i++){ %>
 				<h2><%= data[0].questions[i].question %></h2>
-
 					<% for (var j = 0; j < data[0].questions[i].answers.length; j++){ %>
 						<div><%= data[0].questions[i].answers[j].text %></div>
 							<% if (data[0].questions[i].answers[j].type == "checkbox"){ %>
@@ -26,7 +23,6 @@
 								<% var x = data[0].questions[i].answers[j].id; %>
 								<input type = "radio" name = "r" id = <%= x %> >
 							<% } %>
-
 							<% if (typeof data[0].questions[i].answers[j].options != "undefined"){ %>
 							<% for (var k = 0; k < data[0].questions[i].answers[j].options.length; k++){ %>
 								<div><%= data[0].questions[i].answers[j].options[k].text %></div>
@@ -65,20 +61,11 @@
 													<% } else if (data[0].questions[i].answers[j].options[k].options[l].options[m].type == "radio") { %>
 														<% var x = data[0].questions[i].answers[j].options[k].options[l].options[m].id; %>
 														<input type = "radio" name = "r" id = <%= x %> >
-													<% } %>
-											<% } %>
-											<% } %>
-									<% } %> 
-									<% } %>
-							<% } %>
-							<% } %>
-					<% } %>
-			<% } %> 
-
+													<% } %><% } %><% } %><% } %> <% } %><% } %><% } %><% } %><% } %> 
 		</DIV>
-		<DIV id = 'footer'></DIV>
-		<button id = "submit">Submit</button>
-		<button id = "summary">View summary of results</button>
+		<DIV id = 'footer' class ="container">
+		<button onclick="location.href='/';" id = "submit" class = "btn btn-default">Submit</button>
+		</DIV>
 		<script src = "SAC/js/script.js"></script>
 	</BODY>
 </HTML>
