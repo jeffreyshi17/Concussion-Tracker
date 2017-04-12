@@ -244,20 +244,26 @@ $("input:checkbox").each(function () {
 
 */
 function hideunhide() {
+    console.log("update");
     $("input:checkbox").each(function () {
         if (!$(this).is(':checked')) {
             for (var i = 0; i < this.parentNode.childNodes.length; i++) {
                 if ($(this.parentNode.childNodes[i]).hasClass("option")) {
                     this.parentNode.childNodes[i].style.display = "none";
+                    console.log("hide");
+                    console.log(this.id);
                 }
             }
         } else {
             for (var i = 0; i < this.parentNode.childNodes.length; i++) {
                 if ($(this.parentNode.childNodes[i]).hasClass("option")) {
                     this.parentNode.childNodes[i].style.display = "block";
+                    console.log("show");
+                    console.log(this.id);
                 }
             }
         }
+
     });
     $("input:radio").each(function () {
         if (!$(this).is(':checked')) {
