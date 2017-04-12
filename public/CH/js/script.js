@@ -80,6 +80,7 @@ function generateForm() {
             }
         }
     }
+    hideunhide();
     restoreFromLocalStorage();
     appendSubmit();
 }
@@ -200,7 +201,7 @@ function appendSubmit() {
     sub.id = "submit";
     container.appendChild(sub);
     $(sub).on('click', function () {
-        storeToLocalStorage();
+        storeToLocalStorage('init');
     });
 }
 
@@ -280,7 +281,6 @@ $('input:checkbox').change(function () {
 $('input:radio').change(function () {
     hideunhide();
 });
-hideunhide();
 /*
 $(document).ready(function () {
     $('input:checkbox').change(function () {
