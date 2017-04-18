@@ -101,7 +101,7 @@ function appendOptions(e1, lev, x) {
     var other = false; //boolean other
     var select = false; //boolean select
     if (e1.innerText.indexOf("Other") != -1) {
-        other = true;
+        other = false;
     }
     if (lev[0] && lev[0].type == "select") {
         select = true;
