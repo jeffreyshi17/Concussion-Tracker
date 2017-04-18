@@ -1,3143 +1,3146 @@
 [{
-	"id": "PI",
-	"title": "Patient Information",
-	"desc": " ",
-	"questions": [{
-		"id": "PI_0",
-		"question": "What is your first name?",
-		"answers": [{
-			"id": "PI_0_0",
-			"type": "text",
-			"text": ""
+    "id": "PI",
+    "title": "Patient Information",
+    "desc": " ",
+    "questions": [{
+        "id": "PI_0",
+        "question": "What is your first name?",
+        "answers": [{
+            "id": "PI_0_0",
+            "type": "text",
+            "text": ""
 		}]
 	}, {
-		"id": "PI_1",
-		"question": "What is your last name?",
-		"answers": [{
-			"id": "PI_1_0",
-			"type": "text",
-			"text": ""
+        "id": "PI_1",
+        "question": "What is your last name?",
+        "answers": [{
+            "id": "PI_1_0",
+            "type": "text",
+            "text": ""
 		}]
 	}, {
-		"id": "PI_2",
-		"question": "When is your birthday?",
-		"answers": [{
-			"id": "PI_2_0",
-			"type": "date",
-			"text": ""
+        "id": "PI_2",
+        "question": "When is your birthday?",
+        "answers": [{
+            "id": "PI_2_0",
+            "type": "date",
+            "text": ""
 		}]
 	}, {
-		"id": "PI_3",
-		"question": "What gender are you?",
-		"answers": [{
-			"id": "PI_3_0",
-			"type": "checkbox",
-			"text": "Male"
+        "id": "PI_3",
+        "question": "What gender are you?",
+        "answers": [{
+            "id": "PI_3_0",
+            "type": "checkbox",
+            "text": "Male"
 		}, {
-			"id": "PI_3_1",
-			"type": "checkbox",
-			"text": "Female"
+            "id": "PI_3_1",
+            "type": "checkbox",
+            "text": "Female"
 		}, {
-			"id": "PI_3_2",
-			"type": "checkbox",
-			"text": "Other:",
-			"options": [{
-				"id": "PI_3_2_0",
-				"type": "text"
+            "id": "PI_3_2",
+            "type": "checkbox",
+            "text": "Other:",
+            "options": [{
+                "id": "PI_3_2_0",
+                "type": "text",
+                "text": "Please specify:"
 			}]
 		}]
 	}, {
-		"id": "PI_4",
-		"question": "What is your email?",
-		"answers": [{
-			"id": "PI_4_0",
-			"type": "text",
-			"text": ""
+        "id": "PI_4",
+        "question": "What is your email?",
+        "answers": [{
+            "id": "PI_4_0",
+            "type": "text",
+            "text": ""
 		}]
 	}, {
-		"id": "PI_5",
-		"question": "What is your parent&#39s first name?",
-		"answers": [{
-			"id": "PI_5_0",
-			"type": "text",
-			"text": ""
+        "id": "PI_5",
+        "question": "What is your parent&#39s first name?",
+        "answers": [{
+            "id": "PI_5_0",
+            "type": "text",
+            "text": ""
 		}]
 	}, {
-		"id": "PI_6",
-		"question": "What is your parent&#39s last name?",
-		"answers": [{
-			"id": "PI_6_0",
-			"type": "text",
-			"text": ""
+        "id": "PI_6",
+        "question": "What is your parent&#39s last name?",
+        "answers": [{
+            "id": "PI_6_0",
+            "type": "text",
+            "text": ""
 		}]
 	}, {
-		"id": "PI_7",
-		"question": "What is your parent&#39s email?",
-		"answers": [{
-			"id": "PI_7_0",
-			"type": "text",
-			"text": ""
+        "id": "PI_7",
+        "question": "What is your parent&#39s email?",
+        "answers": [{
+            "id": "PI_7_0",
+            "type": "text",
+            "text": ""
 		}]
 	}]
 }, {
-	"id": "CH",
-	"title": "Concussion History",
-	"desc": "Please answer the following questions about your injury and leave any necessary comments.",
-	"questions": [{
-		"id": "CH_0",
-		"question": "How did you get your injury?",
-		"answers": [{
-			"id": "CH_0_0",
-			"type": "checkbox",
-			"text": "Fell"
+    "id": "CH",
+    "title": "Concussion History",
+    "desc": "Please answer the following questions about your injury and leave any necessary comments.",
+    "questions": [{
+        "id": "CH_0",
+        "question": "How did you get your injury?",
+        "answers": [{
+            "id": "CH_0_0",
+            "type": "checkbox",
+            "text": "Fell"
 
 		}, {
-			"id": "CH_0_1",
-			"type": "checkbox",
-			"text": "Hit head on stationary object:",
-			"options": [{
-				"id": "CH_0_1_0",
-				"type": "checkbox",
-				"text": "Frozen ground (e.g. ice rink, ski/snowboarding trail, etc.)"
+            "id": "CH_0_1",
+            "type": "checkbox",
+            "text": "Hit head on stationary object:",
+            "options": [{
+                "id": "CH_0_1_0",
+                "type": "checkbox",
+                "text": "Frozen ground (e.g. ice rink, ski/snowboarding trail, etc.)"
 
 			}, {
-				"id": "CH_0_1_1",
-				"type": "checkbox",
-				"text": "Grass"
+                "id": "CH_0_1_1",
+                "type": "checkbox",
+                "text": "Grass"
 
 			}, {
-				"id": "CH_0_1_2",
-				"type": "checkbox",
-				"text": "Wall"
+                "id": "CH_0_1_2",
+                "type": "checkbox",
+                "text": "Wall"
 
 			}, {
-				"id": "CH_0_1_3",
-				"type": "checkbox",
-				"text": "Car door"
+                "id": "CH_0_1_3",
+                "type": "checkbox",
+                "text": "Car door"
 
 			}, {
-				"id": "CH_0_1_4",
-				"type": "checkbox",
-				"text": "Concrete"
+                "id": "CH_0_1_4",
+                "type": "checkbox",
+                "text": "Concrete"
 
 			}, {
-				"id": "CH_0_1_5",
-				"type": "checkbox",
-				"text": "Furniture"
+                "id": "CH_0_1_5",
+                "type": "checkbox",
+                "text": "Furniture"
 
 			}, {
-				"id": "CH_0_1_6",
-				"type": "checkbox",
-				"text": "Synthetic turf"
+                "id": "CH_0_1_6",
+                "type": "checkbox",
+                "text": "Synthetic turf"
 
 			}, {
-				"id": "CH_0_1_7",
-				"type": "checkbox",
-				"text": "Pole"
+                "id": "CH_0_1_7",
+                "type": "checkbox",
+                "text": "Pole"
 
 			}, {
-				"id": "CH_0_1_8",
-				"type": "checkbox",
-				"text": "Other:",
-				"options": [{
-					"id": "CH_0_1_8_0",
-					"type": "text"
+                "id": "CH_0_1_8",
+                "type": "checkbox",
+                "text": "Other:",
+                "options": [{
+                    "id": "CH_0_1_8_0",
+                    "type": "text",
+                    "text": "Please specify:"
 				}]
 			}]
 		}, {
-			"id": "CH_0_2",
-			"type": "checkbox",
-			"text": "Hit on head with moving object:",
-			"options": [{
-				"id": "CH_0_2_0",
-				"type": "checkbox",
-				"text": "Baseball/softball"
+            "id": "CH_0_2",
+            "type": "checkbox",
+            "text": "Hit on head with moving object:",
+            "options": [{
+                "id": "CH_0_2_0",
+                "type": "checkbox",
+                "text": "Baseball/softball"
 
 			}, {
-				"id": "CH_0_2_1",
-				"type": "checkbox",
-				"text": "Soccer ball"
+                "id": "CH_0_2_1",
+                "type": "checkbox",
+                "text": "Soccer ball"
 
 			}, {
-				"id": "CH_0_2_2",
-				"type": "checkbox",
-				"text": "Hockey puck"
+                "id": "CH_0_2_2",
+                "type": "checkbox",
+                "text": "Hockey puck"
 
 			}, {
-				"id": "CH_0_2_3",
-				"type": "checkbox",
-				"text": "Basketball"
+                "id": "CH_0_2_3",
+                "type": "checkbox",
+                "text": "Basketball"
 
 			}, {
-				"id": "CH_0_2_4",
-				"type": "checkbox",
-				"text": "Lacrosse ball"
+                "id": "CH_0_2_4",
+                "type": "checkbox",
+                "text": "Lacrosse ball"
 
 			}, {
-				"id": "CH_0_2_5",
-				"type": "checkbox",
-				"text": "Sports equipment (e.g. hockey stick, golf club, etc.)"
+                "id": "CH_0_2_5",
+                "type": "checkbox",
+                "text": "Sports equipment (e.g. hockey stick, golf club, etc.)"
 
 			}, {
-				"id": "CH_0_2_6",
-				"type": "checkbox",
-				"text": "Other:",
-				"options": [{
-					"id": "CH_0_2_6_0",
-					"type": "text"
+                "id": "CH_0_2_6",
+                "type": "checkbox",
+                "text": "Other:",
+                "options": [{
+                    "id": "CH_0_2_6_0",
+                    "type": "text"
 				}]
 			}]
 		}, {
-			"id": "CH_0_3",
-			"type": "checkbox",
-			"text": "Collision:",
-			"options": [{
-				"id": "CH_0_3_0",
-				"type": "checkbox",
-				"text": "Head to head"
+            "id": "CH_0_3",
+            "type": "checkbox",
+            "text": "Collision:",
+            "options": [{
+                "id": "CH_0_3_0",
+                "type": "checkbox",
+                "text": "Head to head"
 
 			}, {
-				"id": "CH_0_3_1",
-				"type": "checkbox",
-				"text": "Knee to head"
+                "id": "CH_0_3_1",
+                "type": "checkbox",
+                "text": "Knee to head"
 
 			}, {
-				"id": "CH_0_3_2",
-				"type": "checkbox",
-				"text": "Fist to head"
+                "id": "CH_0_3_2",
+                "type": "checkbox",
+                "text": "Fist to head"
 
 			}, {
-				"id": "CH_0_3_3",
-				"type": "checkbox",
-				"text": "Elbow to head"
+                "id": "CH_0_3_3",
+                "type": "checkbox",
+                "text": "Elbow to head"
 
 			}, {
-				"id": "CH_0_3_4",
-				"type": "checkbox",
-				"text": "Foot to head"
+                "id": "CH_0_3_4",
+                "type": "checkbox",
+                "text": "Foot to head"
 
 			}, {
-				"id": "CH_0_3_5",
-				"type": "checkbox",
-				"text": "Other:",
-				"options": [{
-					"id": "CH_0_3_5_0",
-					"type": "text"
+                "id": "CH_0_3_5",
+                "type": "checkbox",
+                "text": "Other:",
+                "options": [{
+                    "id": "CH_0_3_5_0",
+                    "type": "text",
+                    "text": "Please specify:"
 				}]
 			}]
 		}]
 	}, {
-		"id": "CH_1",
-		"question": "Location of impact on head:",
-		"answers": [{
-			"id": "CH_1_0",
-			"type": "checkbox",
-			"text": "front"
+        "id": "CH_1",
+        "question": "Location of impact on head:",
+        "answers": [{
+            "id": "CH_1_0",
+            "type": "checkbox",
+            "text": "front"
 
 		}, {
-			"id": "CH_1_1",
-			"type": "checkbox",
-			"text": "back"
+            "id": "CH_1_1",
+            "type": "checkbox",
+            "text": "back"
 
 		}, {
-			"id": "CH_1_2",
-			"type": "checkbox",
-			"text": "left side"
+            "id": "CH_1_2",
+            "type": "checkbox",
+            "text": "left side"
 
 		}, {
-			"id": "CH_1_3",
-			"type": "checkbox",
-			"text": "right side"
+            "id": "CH_1_3",
+            "type": "checkbox",
+            "text": "right side"
 
 		}, {
-			"id": "CH_1_4",
-			"type": "checkbox",
-			"text": "top"
+            "id": "CH_1_4",
+            "type": "checkbox",
+            "text": "top"
 
 		}, {
-			"id": "CH_1_5",
-			"type": "checkbox",
-			"text": "unknown or N/A"
+            "id": "CH_1_5",
+            "type": "checkbox",
+            "text": "unknown or N/A"
 
 		}]
 	}, {
-		"id": "CH_2",
-		"question": "Were you wearing a helmet when you were injured?",
-		"answers": [{
-			"id": "CH_2_0",
-			"type": "radio",
-			"text": "yes"
+        "id": "CH_2",
+        "question": "Were you wearing a helmet when you were injured?",
+        "answers": [{
+            "id": "CH_2_0",
+            "type": "radio",
+            "text": "yes"
 
 		}, {
-			"id": "CH_2_1",
-			"type": "radio",
-			"text": "no"
+            "id": "CH_2_1",
+            "type": "radio",
+            "text": "no"
 
 		}]
 	}, {
-		"id": "CH_3",
-		"question": "Were you wearing any other form of headgear when you were injured?",
-		"answers": [{
-			"id": "CH_3_0",
-			"type": "radio",
-			"text": "yes",
-			"options": [{
-				"id": "CH_3_0_0",
-				"type": "text",
-				"text": "If yes, please specify:"
+        "id": "CH_3",
+        "question": "Were you wearing any other form of headgear when you were injured?",
+        "answers": [{
+            "id": "CH_3_0",
+            "type": "radio",
+            "text": "yes",
+            "options": [{
+                "id": "CH_3_0_0",
+                "type": "text",
+                "text": "If yes, please specify:"
 
 			}]
 		}, {
-			"id": "CH_3_1",
-			"type": "radio",
-			"text": "no"
+            "id": "CH_3_1",
+            "type": "radio",
+            "text": "no"
 
 		}]
 	}, {
-		"id": "CH_4",
-		"question": "Did you lose consciousness?",
-		"answers": [{
-			"id": "CH_4_0",
-			"type": "radio",
-			"text": "yes",
-			"options": [{
-				"id": "CH_4_0_0",
-				"type": "text",
-				"text": "If yes, for how long?"
+        "id": "CH_4",
+        "question": "Did you lose consciousness?",
+        "answers": [{
+            "id": "CH_4_0",
+            "type": "radio",
+            "text": "yes",
+            "options": [{
+                "id": "CH_4_0_0",
+                "type": "text",
+                "text": "If yes, for how long?"
 
 			}]
 		}, {
-			"id": "CH_4_1",
-			"type": "radio",
-			"text": "no"
+            "id": "CH_4_1",
+            "type": "radio",
+            "text": "no"
 
 		}]
 	}, {
-		"id": "CH_5",
-		"question": "Do you have full recollection of the events?",
-		"answers": [{
-			"id": "CH_5_0",
-			"type": "radio",
-			"text": "yes"
+        "id": "CH_5",
+        "question": "Do you have full recollection of the events?",
+        "answers": [{
+            "id": "CH_5_0",
+            "type": "radio",
+            "text": "yes"
 
 		}, {
-			"id": "CH_5_1",
-			"type": "radio",
-			"text": "no"
+            "id": "CH_5_1",
+            "type": "radio",
+            "text": "no"
 
 		}]
 	}, {
-		"id": "CH_6",
-		"question": "Do you have any amnesia?",
-		"answers": [{
-			"id": "CH_6_0",
-			"type": "radio",
-			"text": "yes",
-			"options": [{
-				"id": "CH_6_0_0",
-				"type": "text",
-				"text": "If yes, for how long?"
+        "id": "CH_6",
+        "question": "Do you have any amnesia?",
+        "answers": [{
+            "id": "CH_6_0",
+            "type": "radio",
+            "text": "yes",
+            "options": [{
+                "id": "CH_6_0_0",
+                "type": "text",
+                "text": "If yes, for how long?"
 
 			}]
 		}, {
-			"id": "CH_6_1",
-			"type": "radio",
-			"text": "no"
+            "id": "CH_6_1",
+            "type": "radio",
+            "text": "no"
 
 		}]
 	}, {
-		"id": "CH_7",
-		"question": "Have you ever had any prior concussions?",
-		"answers": [{
-			"id": "CH_7_0",
-			"type": "radio",
-			"text": "yes",
-			"options": {
-				"id": "CH_7_0_0",
-				"type": "text",
-				"text": "If yes, please list dates and describe the details, setting sin which it happened, and how long it took for you to recover?"
+        "id": "CH_7",
+        "question": "Have you ever had any prior concussions?",
+        "answers": [{
+            "id": "CH_7_0",
+            "type": "radio",
+            "text": "yes",
+            "options": {
+                "id": "CH_7_0_0",
+                "type": "text",
+                "text": "If yes, please list dates and describe the details, setting sin which it happened, and how long it took for you to recover?"
 
-			}
+            }
 		}, {
-			"id": "CH_7_1",
-			"type": "radio",
-			"text": "no"
+            "id": "CH_7_1",
+            "type": "radio",
+            "text": "no"
 
 		}]
 	}, {
-		"id": "CH_8",
-		"question": "Have you ever had any symptoms that may have resulted from a head injury?",
-		"answers": [{
-			"id": "CH_8_0",
-			"type": "radio",
-			"text": "yes",
-			"options": [{
-				"id": "CH_8_0_0",
-				"type": "text",
-				"text": "If yes, please list the dates and describe the details and setting in which it happened:"
+        "id": "CH_8",
+        "question": "Have you ever had any symptoms that may have resulted from a head injury?",
+        "answers": [{
+            "id": "CH_8_0",
+            "type": "radio",
+            "text": "yes",
+            "options": [{
+                "id": "CH_8_0_0",
+                "type": "text",
+                "text": "If yes, please list the dates and describe the details and setting in which it happened:"
 
 			}]
 		}, {
-			"id": "CH_8_1",
-			"type": "radio",
-			"text": "no"
+            "id": "CH_8_1",
+            "type": "radio",
+            "text": "no"
 
 		}]
 	}]
 }, {
-	"id": "SY",
-	"title": "Symptoms",
-	"desc": "Please indicate any symptoms you experienced regularly at any time prior to your injury (pre-injury) and symptoms you experienced after your injury (post-injury). Leave any necessary comments.",
-	"questions": [{
-		"id": "SY_0",
-		"question": "Headaches",
-		"answers": [{
-			"id": "SY_0_0",
-			"type": "range",
-			"text": "Pre-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+    "id": "SY",
+    "title": "Symptoms",
+    "desc": "Please indicate any symptoms you experienced regularly at any time prior to your injury (pre-injury) and symptoms you experienced after your injury (post-injury). Leave any necessary comments.",
+    "questions": [{
+        "id": "SY_0",
+        "question": "Headaches",
+        "answers": [{
+            "id": "SY_0_0",
+            "type": "range",
+            "text": "Pre-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_0_1",
-			"type": "range",
-			"text": "Post-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+            "id": "SY_0_1",
+            "type": "range",
+            "text": "Post-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_0_2",
-			"type": "text",
-			"text": "If so, what medications are you taking and how often?"
+            "id": "SY_0_2",
+            "type": "text",
+            "text": "If so, what medications are you taking and how often?"
 		}]
 	}, {
-		"id": "SY_1",
-		"question": "Pressure in Head",
-		"answers": [{
-			"id": "SY_1_0",
-			"type": "range",
-			"text": "Pre-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+        "id": "SY_1",
+        "question": "Pressure in Head",
+        "answers": [{
+            "id": "SY_1_0",
+            "type": "range",
+            "text": "Pre-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_1_1",
-			"type": "range",
-			"text": "Post-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+            "id": "SY_1_1",
+            "type": "range",
+            "text": "Post-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_1_2",
-			"type": "text",
-			"text": "Additional Comments"
+            "id": "SY_1_2",
+            "type": "text",
+            "text": "Additional Comments"
 		}]
 	}, {
-		"id": "SY_2",
-		"question": "Nausea/Vomiting",
-		"answers": [{
-			"id": "SY_2_0",
-			"type": "range",
-			"text": "Pre-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+        "id": "SY_2",
+        "question": "Nausea/Vomiting",
+        "answers": [{
+            "id": "SY_2_0",
+            "type": "range",
+            "text": "Pre-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_2_1",
-			"type": "range",
-			"text": "Post-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+            "id": "SY_2_1",
+            "type": "range",
+            "text": "Post-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_2_2",
-			"type": "text",
-			"text": "Additional Comments"
+            "id": "SY_2_2",
+            "type": "text",
+            "text": "Additional Comments"
 		}]
 	}, {
-		"id": "SY_3",
-		"question": "Sensitivity to light",
-		"answers": [{
-			"id": "SY_3_0",
-			"type": "range",
-			"text": "Pre-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+        "id": "SY_3",
+        "question": "Sensitivity to light",
+        "answers": [{
+            "id": "SY_3_0",
+            "type": "range",
+            "text": "Pre-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_3_1",
-			"type": "range",
-			"text": "Post-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+            "id": "SY_3_1",
+            "type": "range",
+            "text": "Post-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_3_2",
-			"type": "text",
-			"text": "Additional Comments"
+            "id": "SY_3_2",
+            "type": "text",
+            "text": "Additional Comments"
 		}]
 	}, {
-		"id": "SY_4",
-		"question": "Sensitivity to Noise",
-		"answers": [{
-			"id": "SY_4_0",
-			"type": "range",
-			"text": "Pre-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+        "id": "SY_4",
+        "question": "Sensitivity to Noise",
+        "answers": [{
+            "id": "SY_4_0",
+            "type": "range",
+            "text": "Pre-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_4_1",
-			"type": "range",
-			"text": "Post-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+            "id": "SY_4_1",
+            "type": "range",
+            "text": "Post-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_4_2",
-			"type": "text",
-			"text": "Additional Comments"
+            "id": "SY_4_2",
+            "type": "text",
+            "text": "Additional Comments"
 		}]
 	}, {
-		"id": "SY_5",
-		"question": "Dizziness/Vertigo",
-		"answers": [{
-			"id": "SY_5_0",
-			"type": "range",
-			"text": "Pre-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+        "id": "SY_5",
+        "question": "Dizziness/Vertigo",
+        "answers": [{
+            "id": "SY_5_0",
+            "type": "range",
+            "text": "Pre-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_5_1",
-			"type": "range",
-			"text": "Post-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+            "id": "SY_5_1",
+            "type": "range",
+            "text": "Post-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_5_2",
-			"type": "text",
-			"text": "Additional Comments"
+            "id": "SY_5_2",
+            "type": "text",
+            "text": "Additional Comments"
 		}]
 	}, {
-		"id": "SY_6",
-		"question": "Slowed Down",
-		"answers": [{
-			"id": "SY_6_0",
-			"type": "range",
-			"text": "Pre-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+        "id": "SY_6",
+        "question": "Slowed Down",
+        "answers": [{
+            "id": "SY_6_0",
+            "type": "range",
+            "text": "Pre-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_6_1",
-			"type": "range",
-			"text": "Post-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+            "id": "SY_6_1",
+            "type": "range",
+            "text": "Post-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_6_2",
-			"type": "text",
-			"text": "Additional Comments"
+            "id": "SY_6_2",
+            "type": "text",
+            "text": "Additional Comments"
 		}]
 	}, {
-		"id": "SY_7",
-		"question": "In a Fog",
-		"answers": [{
-			"id": "SY_7_0",
-			"type": "range",
-			"text": "Pre-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+        "id": "SY_7",
+        "question": "In a Fog",
+        "answers": [{
+            "id": "SY_7_0",
+            "type": "range",
+            "text": "Pre-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_7_1",
-			"type": "range",
-			"text": "Post-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+            "id": "SY_7_1",
+            "type": "range",
+            "text": "Post-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_7_2",
-			"type": "text",
-			"text": "Additional Comments"
+            "id": "SY_7_2",
+            "type": "text",
+            "text": "Additional Comments"
 		}]
 	}, {
-		"id": "SY_8",
-		"question": "Not Right",
-		"answers": [{
-			"id": "SY_8_0",
-			"type": "range",
-			"text": "Pre-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+        "id": "SY_8",
+        "question": "Not Right",
+        "answers": [{
+            "id": "SY_8_0",
+            "type": "range",
+            "text": "Pre-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_8_1",
-			"type": "range",
-			"text": "Post-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+            "id": "SY_8_1",
+            "type": "range",
+            "text": "Post-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_8_2",
-			"type": "text",
-			"text": "Additional Comments"
+            "id": "SY_8_2",
+            "type": "text",
+            "text": "Additional Comments"
 		}]
 	}, {
-		"id": "SY_9",
-		"question": "Difficulty Concentrating",
-		"answers": [{
-			"id": "SY_9_0",
-			"type": "range",
-			"text": "Pre-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+        "id": "SY_9",
+        "question": "Difficulty Concentrating",
+        "answers": [{
+            "id": "SY_9_0",
+            "type": "range",
+            "text": "Pre-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_9_1",
-			"type": "range",
-			"text": "Post-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+            "id": "SY_9_1",
+            "type": "range",
+            "text": "Post-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_9_2",
-			"type": "text",
-			"text": "Additional Comments"
+            "id": "SY_9_2",
+            "type": "text",
+            "text": "Additional Comments"
 		}]
 	}, {
-		"id": "SY_10",
-		"question": "Memory Difficulties",
-		"answers": [{
-			"id": "SY_10_0",
-			"type": "range",
-			"text": "Pre-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+        "id": "SY_10",
+        "question": "Memory Difficulties",
+        "answers": [{
+            "id": "SY_10_0",
+            "type": "range",
+            "text": "Pre-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_10_1",
-			"type": "range",
-			"text": "Post-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+            "id": "SY_10_1",
+            "type": "range",
+            "text": "Post-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_10_2",
-			"type": "text",
-			"text": "Additional Comments"
+            "id": "SY_10_2",
+            "type": "text",
+            "text": "Additional Comments"
 		}]
 	}, {
-		"id": "SY_11",
-		"question": "Fatigued or Low Energy",
-		"answers": [{
-			"id": "SY_11_0",
-			"type": "range",
-			"text": "Pre-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+        "id": "SY_11",
+        "question": "Fatigued or Low Energy",
+        "answers": [{
+            "id": "SY_11_0",
+            "type": "range",
+            "text": "Pre-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_11_1",
-			"type": "range",
-			"text": "Post-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+            "id": "SY_11_1",
+            "type": "range",
+            "text": "Post-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_11_2",
-			"type": "text",
-			"text": "Additional Comments"
+            "id": "SY_11_2",
+            "type": "text",
+            "text": "Additional Comments"
 		}]
 	}, {
-		"id": "SY_12",
-		"question": "Confused",
-		"answers": [{
-			"id": "SY_12_0",
-			"type": "range",
-			"text": "Pre-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+        "id": "SY_12",
+        "question": "Confused",
+        "answers": [{
+            "id": "SY_12_0",
+            "type": "range",
+            "text": "Pre-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_12_1",
-			"type": "range",
-			"text": "Post-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+            "id": "SY_12_1",
+            "type": "range",
+            "text": "Post-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_12_2",
-			"type": "text",
-			"text": "Additional Comments"
+            "id": "SY_12_2",
+            "type": "text",
+            "text": "Additional Comments"
 		}]
 	}, {
-		"id": "SY_13",
-		"question": "Irritable",
-		"answers": [{
-			"id": "SY_13_0",
-			"type": "range",
-			"text": "Pre-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+        "id": "SY_13",
+        "question": "Irritable",
+        "answers": [{
+            "id": "SY_13_0",
+            "type": "range",
+            "text": "Pre-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_13_1",
-			"type": "range",
-			"text": "Post-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+            "id": "SY_13_1",
+            "type": "range",
+            "text": "Post-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_13_2",
-			"type": "text",
-			"text": "Additional Comments"
+            "id": "SY_13_2",
+            "type": "text",
+            "text": "Additional Comments"
 		}]
 	}, {
-		"id": "SY_14",
-		"question": "Sad",
-		"answers": [{
-			"id": "SY_14_0",
-			"type": "range",
-			"text": "Pre-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+        "id": "SY_14",
+        "question": "Sad",
+        "answers": [{
+            "id": "SY_14_0",
+            "type": "range",
+            "text": "Pre-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_14_1",
-			"type": "range",
-			"text": "Post-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+            "id": "SY_14_1",
+            "type": "range",
+            "text": "Post-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_14_2",
-			"type": "text",
-			"text": "Additional Comments"
+            "id": "SY_14_2",
+            "type": "text",
+            "text": "Additional Comments"
 		}]
 	}, {
-		"id": "SY_15",
-		"question": "Nervous",
-		"answers": [{
-			"id": "SY_15_0",
-			"type": "range",
-			"text": "Pre-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+        "id": "SY_15",
+        "question": "Nervous",
+        "answers": [{
+            "id": "SY_15_0",
+            "type": "range",
+            "text": "Pre-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_15_1",
-			"type": "range",
-			"text": "Post-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+            "id": "SY_15_1",
+            "type": "range",
+            "text": "Post-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_15_2",
-			"type": "text",
-			"text": "Additional Comments"
+            "id": "SY_15_2",
+            "type": "text",
+            "text": "Additional Comments"
 		}]
 	}, {
-		"id": "SY_16",
-		"question": "Anxious",
-		"answers": [{
-			"id": "SY_16_0",
-			"type": "range",
-			"text": "Pre-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+        "id": "SY_16",
+        "question": "Anxious",
+        "answers": [{
+            "id": "SY_16_0",
+            "type": "range",
+            "text": "Pre-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_16_1",
-			"type": "range",
-			"text": "Post-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+            "id": "SY_16_1",
+            "type": "range",
+            "text": "Post-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_16_2",
-			"type": "text",
-			"text": "Additional Comments"
+            "id": "SY_16_2",
+            "type": "text",
+            "text": "Additional Comments"
 		}]
 	}, {
-		"id": "SY_17",
-		"question": "Drowsy",
-		"answers": [{
-			"id": "SY_17_0",
-			"type": "range",
-			"text": "Pre-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+        "id": "SY_17",
+        "question": "Drowsy",
+        "answers": [{
+            "id": "SY_17_0",
+            "type": "range",
+            "text": "Pre-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_17_1",
-			"type": "range",
-			"text": "Post-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+            "id": "SY_17_1",
+            "type": "range",
+            "text": "Post-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_17_2",
-			"type": "text",
-			"text": "Additional Comments"
+            "id": "SY_17_2",
+            "type": "text",
+            "text": "Additional Comments"
 		}]
 	}, {
-		"id": "SY_18",
-		"question": "Sleeping More Than Usual",
-		"answers": [{
-			"id": "SY_18_0",
-			"type": "range",
-			"text": "Pre-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+        "id": "SY_18",
+        "question": "Sleeping More Than Usual",
+        "answers": [{
+            "id": "SY_18_0",
+            "type": "range",
+            "text": "Pre-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_18_1",
-			"type": "range",
-			"text": "Post-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+            "id": "SY_18_1",
+            "type": "range",
+            "text": "Post-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_18_2",
-			"type": "text",
-			"text": "If so, have you been napping and how much?"
+            "id": "SY_18_2",
+            "type": "text",
+            "text": "If so, have you been napping and how much?"
 		}]
 	}, {
-		"id": "SY_19",
-		"question": "Sleeping Less Than Usual",
-		"answers": [{
-			"id": "SY_19_0",
-			"type": "range",
-			"text": "Pre-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+        "id": "SY_19",
+        "question": "Sleeping Less Than Usual",
+        "answers": [{
+            "id": "SY_19_0",
+            "type": "range",
+            "text": "Pre-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_19_1",
-			"type": "range",
-			"text": "Post-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+            "id": "SY_19_1",
+            "type": "range",
+            "text": "Post-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_19_2",
-			"type": "text",
-			"text": "Additional Comments"
+            "id": "SY_19_2",
+            "type": "text",
+            "text": "Additional Comments"
 		}]
 	}, {
-		"id": "SY_20",
-		"question": "Balance Problems",
-		"answers": [{
-			"id": "SY_20_0",
-			"type": "range",
-			"text": "Pre-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+        "id": "SY_20",
+        "question": "Balance Problems",
+        "answers": [{
+            "id": "SY_20_0",
+            "type": "range",
+            "text": "Pre-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_20_1",
-			"type": "range",
-			"text": "Post-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+            "id": "SY_20_1",
+            "type": "range",
+            "text": "Post-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_20_2",
-			"type": "text",
-			"text": "Additional Comments"
+            "id": "SY_20_2",
+            "type": "text",
+            "text": "Additional Comments"
 		}]
 	}, {
-		"id": "SY_21",
-		"question": "Neck Pain",
-		"answers": [{
-			"id": "SY_21_0",
-			"type": "range",
-			"text": "Pre-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+        "id": "SY_21",
+        "question": "Neck Pain",
+        "answers": [{
+            "id": "SY_21_0",
+            "type": "range",
+            "text": "Pre-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_21_1",
-			"type": "range",
-			"text": "Post-Injury",
-			"min": "0",
-			"max": "10",
-			"step": "1"
+            "id": "SY_21_1",
+            "type": "range",
+            "text": "Post-Injury",
+            "min": "0",
+            "max": "10",
+            "step": "1"
 		}, {
-			"id": "SY_21_2",
-			"type": "text",
-			"text": "Additional Comments"
+            "id": "SY_21_2",
+            "type": "text",
+            "text": "Additional Comments"
 		}]
 	}]
 }, {
-	"id": "PMH",
-	"title": "Past Medical History",
-	"desc": "Please answer the following questions about your past medical history and leave any necessary comments.",
-	"questions": [{
-		"id": "PMH_0",
-		"question": "Personal History",
-		"answers": [{
-			"id": "PMH_0_0",
-			"type": "",
-			"text": "",
-			"options": [{
-				"id": "PMH_0_0_0",
-				"type": "checkbox",
-				"text": "Headaches/migraines",
-				"options": []
+    "id": "PMH",
+    "title": "Past Medical History",
+    "desc": "Please answer the following questions about your past medical history and leave any necessary comments.",
+    "questions": [{
+        "id": "PMH_0",
+        "question": "Personal History",
+        "answers": [{
+            "id": "PMH_0_0",
+            "type": "",
+            "text": "",
+            "options": [{
+                "id": "PMH_0_0_0",
+                "type": "checkbox",
+                "text": "Headaches/migraines",
+                "options": []
 			}, {
-				"id": "PMH_0_0_1",
-				"type": "checkbox",
-				"text": "Depression",
-				"options": []
+                "id": "PMH_0_0_1",
+                "type": "checkbox",
+                "text": "Depression",
+                "options": []
 			}, {
-				"id": "PMH_0_0_2",
-				"type": "checkbox",
-				"text": "Anxiety",
-				"options": []
+                "id": "PMH_0_0_2",
+                "type": "checkbox",
+                "text": "Anxiety",
+                "options": []
 			}, {
-				"id": "PMH_0_0_3",
-				"type": "checkbox",
-				"text": "Mood changes",
-				"options": []
+                "id": "PMH_0_0_3",
+                "type": "checkbox",
+                "text": "Mood changes",
+                "options": []
 			}, {
-				"id": "PMH_0_0_4",
-				"type": "checkbox",
-				"text": "Diagnosed learning disability",
-				"options": [{
-					"id": "PMH_0_0_4_0",
-					"type": "text",
-					"text": "Please list:"
+                "id": "PMH_0_0_4",
+                "type": "checkbox",
+                "text": "Diagnosed learning disability",
+                "options": [{
+                    "id": "PMH_0_0_4_0",
+                    "type": "text",
+                    "text": "Please list:"
 				}]
 			}]
 		}]
 	}, {
-		"id": "PMH_1",
-		"question": "Family History",
-		"answers": [{
-			"id": "PMH_1_0",
-			"type": "",
-			"text": "",
-			"options": [{
-				"id": "PMH_1_0_0",
-				"type": "checkbox",
-				"text": "Headaches/migraines",
-				"options": []
+        "id": "PMH_1",
+        "question": "Family History",
+        "answers": [{
+            "id": "PMH_1_0",
+            "type": "",
+            "text": "",
+            "options": [{
+                "id": "PMH_1_0_0",
+                "type": "checkbox",
+                "text": "Headaches/migraines",
+                "options": []
 			}, {
-				"id": "PMH_1_0_1",
-				"type": "checkbox",
-				"text": "Depression",
-				"options": []
+                "id": "PMH_1_0_1",
+                "type": "checkbox",
+                "text": "Depression",
+                "options": []
 			}, {
-				"id": "PMH_1_0_2",
-				"type": "checkbox",
-				"text": "Anxiety",
-				"options": []
+                "id": "PMH_1_0_2",
+                "type": "checkbox",
+                "text": "Anxiety",
+                "options": []
 			}, {
-				"id": "PMH_1_0_3",
-				"type": "checkbox",
-				"text": "Mood changes",
-				"options": []
+                "id": "PMH_1_0_3",
+                "type": "checkbox",
+                "text": "Mood changes",
+                "options": []
 			}]
 		}]
 	}, {
-		"id": "PMH_2",
-		"question": "Birth",
-		"answers": [{
-			"id": "PMH_2_0",
-			"type": "",
-			"text": "",
-			"options": [{
-				"id": "PMH_2_0_0",
-				"type": "checkbox",
-				"text": "Full term",
-				"options": []
+        "id": "PMH_2",
+        "question": "Birth",
+        "answers": [{
+            "id": "PMH_2_0",
+            "type": "",
+            "text": "",
+            "options": [{
+                "id": "PMH_2_0_0",
+                "type": "checkbox",
+                "text": "Full term",
+                "options": []
 			}, {
-				"id": "PMH_2_0_1",
-				"type": "checkbox",
-				"text": "Premature",
-				"options": [{
-					"id": "PMH_2_0_1_0",
-					"type": "text",
-					"text": "Please specify at how many weeks of gestation"
+                "id": "PMH_2_0_1",
+                "type": "checkbox",
+                "text": "Premature",
+                "options": [{
+                    "id": "PMH_2_0_1_0",
+                    "type": "text",
+                    "text": "Please specify at how many weeks of gestation"
 				}]
 			}, {
-				"id": "PMH_2_0_2",
-				"type": "checkbox",
-				"text": "Vaginal",
-				"options": []
+                "id": "PMH_2_0_2",
+                "type": "checkbox",
+                "text": "Vaginal",
+                "options": []
 			}, {
-				"id": "PMH_2_0_3",
-				"type": "checkbox",
-				"text": "C-Section",
-				"options": [{
-					"id": "PMH_2_0_3_0",
-					"type": "text",
-					"text": "Please specify the indication"
+                "id": "PMH_2_0_3",
+                "type": "checkbox",
+                "text": "C-Section",
+                "options": [{
+                    "id": "PMH_2_0_3_0",
+                    "type": "text",
+                    "text": "Please specify the indication"
 				}]
 			}]
 		}]
 	}, {
-		"id": "PMH_3",
-		"question": "Did you reach developmental milestones growing up?",
-		"answers": [{
-			"id": "PMH_3_0",
-			"type": "radio",
-			"text": "Yes",
-			"options": []
+        "id": "PMH_3",
+        "question": "Did you reach developmental milestones growing up?",
+        "answers": [{
+            "id": "PMH_3_0",
+            "type": "radio",
+            "text": "Yes",
+            "options": []
 		}, {
-			"id": "PMH_3_1",
-			"type": "radio",
-			"text": "No",
-			"options": [{
-				"id": "PMH_3_1_0",
-				"type": "text",
-				"text": "If no, please explain",
-				"options": []
+            "id": "PMH_3_1",
+            "type": "radio",
+            "text": "No",
+            "options": [{
+                "id": "PMH_3_1_0",
+                "type": "text",
+                "text": "If no, please explain",
+                "options": []
 			}]
 		}]
 	}, {
-		"id": "PMH_4",
-		"question": "Did you consume alcohol?",
-		"answers": [{
-			"id": "PMH_4_0",
-			"type": "checkbox",
-			"text": "Pre-Injury",
-			"options": []
+        "id": "PMH_4",
+        "question": "Did you consume alcohol?",
+        "answers": [{
+            "id": "PMH_4_0",
+            "type": "checkbox",
+            "text": "Pre-Injury",
+            "options": []
 		}, {
-			"id": "PMH_4_1",
-			"type": "checkbox",
-			"text": "Post-Injury",
-			"options": []
+            "id": "PMH_4_1",
+            "type": "checkbox",
+            "text": "Post-Injury",
+            "options": []
 		}]
 	}, {
-		"id": "PMH_5",
-		"question": "Did you smoke cigarettes?",
-		"answers": [{
-			"id": "PMH_5_0",
-			"type": "checkbox",
-			"text": "Pre-Injury",
-			"options": []
+        "id": "PMH_5",
+        "question": "Did you smoke cigarettes?",
+        "answers": [{
+            "id": "PMH_5_0",
+            "type": "checkbox",
+            "text": "Pre-Injury",
+            "options": []
 		}, {
-			"id": "PMH_5_1",
-			"type": "checkbox",
-			"text": "Post-Injury",
-			"options": []
+            "id": "PMH_5_1",
+            "type": "checkbox",
+            "text": "Post-Injury",
+            "options": []
 		}]
 	}, {
-		"id": "PMH_6",
-		"question": "Did you smoke marijuana?",
-		"answers": [{
-			"id": "PMH_6_0",
-			"type": "checkbox",
-			"text": "Pre-Injury",
-			"options": []
+        "id": "PMH_6",
+        "question": "Did you smoke marijuana?",
+        "answers": [{
+            "id": "PMH_6_0",
+            "type": "checkbox",
+            "text": "Pre-Injury",
+            "options": []
 		}, {
-			"id": "PMH_6_1",
-			"type": "checkbox",
-			"text": "Post-Injury",
-			"options": []
+            "id": "PMH_6_1",
+            "type": "checkbox",
+            "text": "Post-Injury",
+            "options": []
 		}]
 	}, {
-		"id": "PMH_7",
-		"question": "Did you use recreational drugs?",
-		"answers": [{
-			"id": "PMH_7_0",
-			"type": "checkbox",
-			"text": "Pre-Injury",
-			"options": []
+        "id": "PMH_7",
+        "question": "Did you use recreational drugs?",
+        "answers": [{
+            "id": "PMH_7_0",
+            "type": "checkbox",
+            "text": "Pre-Injury",
+            "options": []
 		}, {
-			"id": "PMH_7_1",
-			"type": "checkbox",
-			"text": "Post-Injury",
-			"options": []
+            "id": "PMH_7_1",
+            "type": "checkbox",
+            "text": "Post-Injury",
+            "options": []
 		}]
 	}]
 }, {
-	"id": "MH",
-	"title": "Menstrual History",
-	"desc": "Please answer the following questions about your menstrual history and leave any necessary comments. Please note any changes in your menstrual cycle from before your injury (pre-injury) to after your injury (post-injury).",
-	"questions": [{
-		"id": "MH_0",
-		"question": "Day of last period(first day):",
-		"answers": [{
-			"id": "MH_0_0",
-			"type": "date",
-			"options": []
+    "id": "MH",
+    "title": "Menstrual History",
+    "desc": "Please answer the following questions about your menstrual history and leave any necessary comments. Please note any changes in your menstrual cycle from before your injury (pre-injury) to after your injury (post-injury).",
+    "questions": [{
+        "id": "MH_0",
+        "question": "Day of last period(first day):",
+        "answers": [{
+            "id": "MH_0_0",
+            "type": "date",
+            "options": []
 		}]
 	}, {
-		"id": "MH_1",
-		"question": "Are you menopausal?",
-		"answers": [{
-			"id": "MH_1_0",
-			"text": "yes",
-			"type": "radio",
-			"options": []
+        "id": "MH_1",
+        "question": "Are you menopausal?",
+        "answers": [{
+            "id": "MH_1_0",
+            "text": "yes",
+            "type": "radio",
+            "options": []
 		}, {
-			"id": "MH_1_1",
-			"text": "no",
-			"type": "radio",
-			"options": []
+            "id": "MH_1_1",
+            "text": "no",
+            "type": "radio",
+            "options": []
 		}]
 	}, {
-		"id": "MH_2",
-		"question": "Are you taking oral contraceptives?",
-		"answers": [{
-			"id": "MH_2_0",
-			"text": "yes",
-			"type": "radio",
-			"options": []
+        "id": "MH_2",
+        "question": "Are you taking oral contraceptives?",
+        "answers": [{
+            "id": "MH_2_0",
+            "text": "yes",
+            "type": "radio",
+            "options": []
 		}, {
-			"id": "MH_2_1",
-			"text": "no",
-			"type": "radio",
-			"options": []
+            "id": "MH_2_1",
+            "text": "no",
+            "type": "radio",
+            "options": []
 		}]
 	}, {
-		"id": "MH_3",
-		"question": "Have you missed any periods recently? (since last check-in)",
-		"answers": [{
-			"id": "MH_3_0",
-			"text": "yes",
-			"type": "radio",
-			"options": [{
-				"id": "MH_3_0_0",
-				"text": "If yes, how many and when?",
-				"type": "textbox"
+        "id": "MH_3",
+        "question": "Have you missed any periods recently? (since last check-in)",
+        "answers": [{
+            "id": "MH_3_0",
+            "text": "yes",
+            "type": "radio",
+            "options": [{
+                "id": "MH_3_0_0",
+                "text": "If yes, how many and when?",
+                "type": "textbox"
 			}]
 		}, {
-			"id": "MH_3_1",
-			"text": "no",
-			"type": "radio",
-			"options": []
+            "id": "MH_3_1",
+            "text": "no",
+            "type": "radio",
+            "options": []
 		}]
 	}, {
-		"id": "MH_4",
-		"question": "Describe your periods",
-		"answers": [{
-			"id": "MH_4_0",
-			"text": "Light",
-			"type": "radio",
-			"options": []
+        "id": "MH_4",
+        "question": "Describe your periods",
+        "answers": [{
+            "id": "MH_4_0",
+            "text": "Light",
+            "type": "radio",
+            "options": []
 		}, {
-			"id": "MH_4_1",
-			"text": "Moderate",
-			"type": "radio",
-			"options": []
+            "id": "MH_4_1",
+            "text": "Moderate",
+            "type": "radio",
+            "options": []
 		}, {
-			"id": "MH_4_2",
-			"text": "Heavy",
-			"type": "radio",
-			"options": []
+            "id": "MH_4_2",
+            "text": "Heavy",
+            "type": "radio",
+            "options": []
 		}]
 	}]
 }, {
-	"id": "RA",
-	"title": "Recovery Activities",
-	"desc": "Please answer the following questions about your recovery period and leave any necessary comments. If your recovery was longer than four weeks, base your answers on the first four weeks of your recovery.",
-	"questions": [{
-		"id": "RA_0",
-		"question": "How long after your injury did you return to practice or play of a sport?",
-		"answers": [{
-			"id": "RA_0_0",
-			"type": "text",
-			"text": "Days",
-			"options": []
+    "id": "RA",
+    "title": "Recovery Activities",
+    "desc": "Please answer the following questions about your recovery period and leave any necessary comments. If your recovery was longer than four weeks, base your answers on the first four weeks of your recovery.",
+    "questions": [{
+        "id": "RA_0",
+        "question": "How long after your injury did you return to practice or play of a sport?",
+        "answers": [{
+            "id": "RA_0_0",
+            "type": "text",
+            "text": "Days",
+            "options": []
 		}]
 	}, {
-		"id": "RA_1",
-		"question": "On average, how many hours per night do you sleep?",
-		"answers": [{
-			"id": "RA_1_0",
-			"type": "text",
-			"text": "Before your concussion",
-			"options": []
+        "id": "RA_1",
+        "question": "On average, how many hours per night do you sleep?",
+        "answers": [{
+            "id": "RA_1_0",
+            "type": "text",
+            "text": "Before your concussion",
+            "options": []
 		}, {
-			"id": "RA_1_1",
-			"type": "text",
-			"text": "After your concussion",
-			"options": []
+            "id": "RA_1_1",
+            "type": "text",
+            "text": "After your concussion",
+            "options": []
 		}]
 	}, {
-		"id": "RA_2",
-		"question": "Did you miss any school or work?",
-		"answers": [{
-			"id": "RA_2_0",
-			"type": "radio",
-			"text": "Yes",
-			"options": [{
-				"id": "RA_2_0_0",
-				"type": "text",
-				"text": "If yes, how many days (including half days)?",
-				"options": []
+        "id": "RA_2",
+        "question": "Did you miss any school or work?",
+        "answers": [{
+            "id": "RA_2_0",
+            "type": "radio",
+            "text": "Yes",
+            "options": [{
+                "id": "RA_2_0_0",
+                "type": "text",
+                "text": "If yes, how many days (including half days)?",
+                "options": []
 			}]
 		}, {
-			"id": "RA_2_1",
-			"type": "radio",
-			"text": "No",
-			"options": []
+            "id": "RA_2_1",
+            "type": "radio",
+            "text": "No",
+            "options": []
 		}]
 	}, {
-		"id": "RA_3",
-		"question": "Were you given work to complete? (i.e. schoolwork, homework , or work responsibilies)",
-		"answers": [{
-			"id": "RA_3_0",
-			"type": "radio",
-			"text": "Yes",
-			"options": [{
-				"id": "RA_3_0_0",
-				"type": "",
-				"text": "If yes, did you complete it?",
-				"options": [{
-					"id": "RA_3_0_0_0",
-					"type": "radio",
-					"text": "Yes",
-					"options": [{
-						"id": "RA_3_0_0_0_0",
-						"type": "",
-						"text": "How many hours per day?",
-						"options": [{
-							"id": "RA_3_0_0_0_0_0",
-							"type": "select",
-							"text": "0.5"
+        "id": "RA_3",
+        "question": "Were you given work to complete? (i.e. schoolwork, homework , or work responsibilies)",
+        "answers": [{
+            "id": "RA_3_0",
+            "type": "radio",
+            "text": "Yes",
+            "options": [{
+                "id": "RA_3_0_0",
+                "type": "",
+                "text": "If yes, did you complete it?",
+                "options": [{
+                    "id": "RA_3_0_0_0",
+                    "type": "radio",
+                    "text": "Yes",
+                    "options": [{
+                        "id": "RA_3_0_0_0_0",
+                        "type": "",
+                        "text": "How many hours per day?",
+                        "options": [{
+                            "id": "RA_3_0_0_0_0_0",
+                            "type": "select",
+                            "text": "0.5"
 						}, {
-							"id": "RA_3_0_0_0_0_1",
-							"type": "select",
-							"text": "1"
+                            "id": "RA_3_0_0_0_0_1",
+                            "type": "select",
+                            "text": "1"
 						}, {
-							"id": "RA_3_0_0_0_0_2",
-							"type": "select",
-							"text": "1.5"
+                            "id": "RA_3_0_0_0_0_2",
+                            "type": "select",
+                            "text": "1.5"
 						}, {
-							"id": "RA_3_0_0_0_0_3",
-							"type": "select",
-							"text": "2"
+                            "id": "RA_3_0_0_0_0_3",
+                            "type": "select",
+                            "text": "2"
 						}, {
-							"id": "RA_3_0_0_0_0_4",
-							"type": "select",
-							"text": "2.5"
+                            "id": "RA_3_0_0_0_0_4",
+                            "type": "select",
+                            "text": "2.5"
 						}, {
-							"id": "RA_3_0_0_0_0_5",
-							"type": "select",
-							"text": "3"
+                            "id": "RA_3_0_0_0_0_5",
+                            "type": "select",
+                            "text": "3"
 						}, {
-							"id": "RA_3_0_0_0_0_6",
-							"type": "select",
-							"text": "3.5"
+                            "id": "RA_3_0_0_0_0_6",
+                            "type": "select",
+                            "text": "3.5"
 						}, {
-							"id": "RA_3_0_0_0_0_7",
-							"type": "select",
-							"text": "4"
+                            "id": "RA_3_0_0_0_0_7",
+                            "type": "select",
+                            "text": "4"
 						}, {
-							"id": "RA_3_0_0_0_0_8",
-							"type": "select",
-							"text": "4.5"
+                            "id": "RA_3_0_0_0_0_8",
+                            "type": "select",
+                            "text": "4.5"
 						}, {
-							"id": "RA_3_0_0_0_0_9",
-							"type": "select",
-							"text": "5"
+                            "id": "RA_3_0_0_0_0_9",
+                            "type": "select",
+                            "text": "5"
 						}, {
-							"id": "RA_3_0_0_0_0_10",
-							"type": "select",
-							"text": "5.5"
+                            "id": "RA_3_0_0_0_0_10",
+                            "type": "select",
+                            "text": "5.5"
 						}, {
-							"id": "RA_3_0_0_0_0_11",
-							"type": "select",
-							"text": "6+"
+                            "id": "RA_3_0_0_0_0_11",
+                            "type": "select",
+                            "text": "6+"
 						}]
 					}, {
-						"id": "RA_3_0_0_0_1",
-						"type": "",
-						"text": "How many hours per day?",
-						"options": [{
-							"id": "RA_3_0_0_0_1_0",
-							"type": "select",
-							"text": "1"
+                        "id": "RA_3_0_0_0_1",
+                        "type": "",
+                        "text": "How many hours per day?",
+                        "options": [{
+                            "id": "RA_3_0_0_0_1_0",
+                            "type": "select",
+                            "text": "1"
 						}, {
-							"id": "RA_3_0_0_0_1_1",
-							"type": "select",
-							"text": "2"
+                            "id": "RA_3_0_0_0_1_1",
+                            "type": "select",
+                            "text": "2"
 						}, {
-							"id": "RA_3_0_0_0_1_2",
-							"type": "select",
-							"text": "3"
+                            "id": "RA_3_0_0_0_1_2",
+                            "type": "select",
+                            "text": "3"
 						}, {
-							"id": "RA_3_0_0_0_1_3",
-							"type": "select",
-							"text": "4"
+                            "id": "RA_3_0_0_0_1_3",
+                            "type": "select",
+                            "text": "4"
 						}, {
-							"id": "RA_3_0_0_0_1_4",
-							"type": "select",
-							"text": "5"
+                            "id": "RA_3_0_0_0_1_4",
+                            "type": "select",
+                            "text": "5"
 						}, {
-							"id": "RA_3_0_0_0_1_5",
-							"type": "select",
-							"text": "6"
+                            "id": "RA_3_0_0_0_1_5",
+                            "type": "select",
+                            "text": "6"
 						}, {
-							"id": "RA_3_0_0_0_1_6",
-							"type": "select",
-							"text": "7"
+                            "id": "RA_3_0_0_0_1_6",
+                            "type": "select",
+                            "text": "7"
 						}]
 					}]
 				}, {
-					"id": "RA_3_0_0_1",
-					"type": "radio",
-					"text": "No"
+                    "id": "RA_3_0_0_1",
+                    "type": "radio",
+                    "text": "No"
 				}]
 			}]
 		}, {
-			"id": "RA_3_0",
-			"type": "radio",
-			"text": "No"
+            "id": "RA_3_0",
+            "type": "radio",
+            "text": "No"
 		}]
 	}, {
-		"id": "RA_4",
-		"question": "Did you watch TV?",
-		"answers": [{
-			"id": "RA_4_0",
-			"type": "radio",
-			"text": "Yes",
-			"options": [{
-				"id": "RA_4_0_0",
-				"type": "",
-				"text": "How many hours per day?",
-				"options": [{
-					"id": "RA_4_0_0_0",
-					"type": "select",
-					"text": "0.5"
+        "id": "RA_4",
+        "question": "Did you watch TV?",
+        "answers": [{
+            "id": "RA_4_0",
+            "type": "radio",
+            "text": "Yes",
+            "options": [{
+                "id": "RA_4_0_0",
+                "type": "",
+                "text": "How many hours per day?",
+                "options": [{
+                    "id": "RA_4_0_0_0",
+                    "type": "select",
+                    "text": "0.5"
 				}, {
-					"id": "RA_4_0_0_1",
-					"type": "select",
-					"text": "1"
+                    "id": "RA_4_0_0_1",
+                    "type": "select",
+                    "text": "1"
 				}, {
-					"id": "RA_4_0_0_2",
-					"type": "select",
-					"text": "1.5"
+                    "id": "RA_4_0_0_2",
+                    "type": "select",
+                    "text": "1.5"
 				}, {
-					"id": "RA_4_0_0_3",
-					"type": "select",
-					"text": "2"
+                    "id": "RA_4_0_0_3",
+                    "type": "select",
+                    "text": "2"
 				}, {
-					"id": "RA_4_0_0_4",
-					"type": "select",
-					"text": "2.5"
+                    "id": "RA_4_0_0_4",
+                    "type": "select",
+                    "text": "2.5"
 				}, {
-					"id": "RA_4_0_0_5",
-					"type": "select",
-					"text": "3"
+                    "id": "RA_4_0_0_5",
+                    "type": "select",
+                    "text": "3"
 				}, {
-					"id": "RA_4_0_0_6",
-					"type": "select",
-					"text": "3.5"
+                    "id": "RA_4_0_0_6",
+                    "type": "select",
+                    "text": "3.5"
 				}, {
-					"id": "RA_4_0_0_7",
-					"type": "select",
-					"text": "4"
+                    "id": "RA_4_0_0_7",
+                    "type": "select",
+                    "text": "4"
 				}, {
-					"id": "RA_4_0_0_8",
-					"type": "select",
-					"text": "4.5"
+                    "id": "RA_4_0_0_8",
+                    "type": "select",
+                    "text": "4.5"
 				}, {
-					"id": "RA_4_0_0_9",
-					"type": "select",
-					"text": "5"
+                    "id": "RA_4_0_0_9",
+                    "type": "select",
+                    "text": "5"
 				}, {
-					"id": "RA_4_0_0_10",
-					"type": "select",
-					"text": "5.5"
+                    "id": "RA_4_0_0_10",
+                    "type": "select",
+                    "text": "5.5"
 				}, {
-					"id": "RA_4_0_0_11",
-					"type": "select",
-					"text": "6+"
+                    "id": "RA_4_0_0_11",
+                    "type": "select",
+                    "text": "6+"
 				}]
 			}, {
-				"id": "RA_4_0_1",
-				"type": "",
-				"text": "How many days per week?",
-				"options": [{
-					"id": "RA_4_0_1_0",
-					"type": "select",
-					"text": "1"
+                "id": "RA_4_0_1",
+                "type": "",
+                "text": "How many days per week?",
+                "options": [{
+                    "id": "RA_4_0_1_0",
+                    "type": "select",
+                    "text": "1"
 				}, {
-					"id": "RA_4_0_1_1",
-					"type": "select",
-					"text": "2"
+                    "id": "RA_4_0_1_1",
+                    "type": "select",
+                    "text": "2"
 				}, {
-					"id": "RA_4_0_1_2",
-					"type": "select",
-					"text": "3"
+                    "id": "RA_4_0_1_2",
+                    "type": "select",
+                    "text": "3"
 				}, {
-					"id": "RA_4_0_1_3",
-					"type": "select",
-					"text": "4"
+                    "id": "RA_4_0_1_3",
+                    "type": "select",
+                    "text": "4"
 				}, {
-					"id": "RA_4_0_1_4",
-					"type": "select",
-					"text": "5"
+                    "id": "RA_4_0_1_4",
+                    "type": "select",
+                    "text": "5"
 				}, {
-					"id": "RA_4_0_1_5",
-					"type": "select",
-					"text": "6"
+                    "id": "RA_4_0_1_5",
+                    "type": "select",
+                    "text": "6"
 				}, {
-					"id": "RA_4_0_1_6",
-					"type": "select",
-					"text": "7"
+                    "id": "RA_4_0_1_6",
+                    "type": "select",
+                    "text": "7"
 				}]
 			}]
 		}, {
-			"id": "RA_3_0",
-			"type": "radio",
-			"text": "No",
-			"options": []
+            "id": "RA_3_0",
+            "type": "radio",
+            "text": "No",
+            "options": []
 		}]
 	}, {
-		"id": "RA_5",
-		"question": "Did you use your cell phone for anything other than phone calls? (e.g. texting, social media, apps, etc.)",
-		"answers": [{
-			"id": "RA_5_0",
-			"type": "radio",
-			"text": "Yes",
-			"options": [{
-				"id": "RA_5_0_0",
-				"type": "",
-				"text": "How many hours per day?",
-				"options": [{
-					"id": "RA_5_0_0_0",
-					"type": "select",
-					"text": "0.5"
+        "id": "RA_5",
+        "question": "Did you use your cell phone for anything other than phone calls? (e.g. texting, social media, apps, etc.)",
+        "answers": [{
+            "id": "RA_5_0",
+            "type": "radio",
+            "text": "Yes",
+            "options": [{
+                "id": "RA_5_0_0",
+                "type": "",
+                "text": "How many hours per day?",
+                "options": [{
+                    "id": "RA_5_0_0_0",
+                    "type": "select",
+                    "text": "0.5"
 				}, {
-					"id": "RA_5_0_0_1",
-					"type": "select",
-					"text": "1"
+                    "id": "RA_5_0_0_1",
+                    "type": "select",
+                    "text": "1"
 				}, {
-					"id": "RA_5_0_0_2",
-					"type": "select",
-					"text": "1.5"
+                    "id": "RA_5_0_0_2",
+                    "type": "select",
+                    "text": "1.5"
 				}, {
-					"id": "RA_5_0_0_3",
-					"type": "select",
-					"text": "2"
+                    "id": "RA_5_0_0_3",
+                    "type": "select",
+                    "text": "2"
 				}, {
-					"id": "RA_5_0_0_4",
-					"type": "select",
-					"text": "2.5"
+                    "id": "RA_5_0_0_4",
+                    "type": "select",
+                    "text": "2.5"
 				}, {
-					"id": "RA_5_0_0_5",
-					"type": "select",
-					"text": "3"
+                    "id": "RA_5_0_0_5",
+                    "type": "select",
+                    "text": "3"
 				}, {
-					"id": "RA_5_0_0_6",
-					"type": "select",
-					"text": "3.5"
+                    "id": "RA_5_0_0_6",
+                    "type": "select",
+                    "text": "3.5"
 				}, {
-					"id": "RA_5_0_0_7",
-					"type": "select",
-					"text": "4"
+                    "id": "RA_5_0_0_7",
+                    "type": "select",
+                    "text": "4"
 				}, {
-					"id": "RA_5_0_0_8",
-					"type": "select",
-					"text": "4.5"
+                    "id": "RA_5_0_0_8",
+                    "type": "select",
+                    "text": "4.5"
 				}, {
-					"id": "RA_5_0_0_9",
-					"type": "select",
-					"text": "5"
+                    "id": "RA_5_0_0_9",
+                    "type": "select",
+                    "text": "5"
 				}, {
-					"id": "RA_5_0_0_10",
-					"type": "select",
-					"text": "5.5"
+                    "id": "RA_5_0_0_10",
+                    "type": "select",
+                    "text": "5.5"
 				}, {
-					"id": "RA_5_0_0_11",
-					"type": "select",
-					"text": "6+"
+                    "id": "RA_5_0_0_11",
+                    "type": "select",
+                    "text": "6+"
 				}]
 			}, {
-				"id": "RA_5_0_1",
-				"type": "",
-				"text": "How many days per week?",
-				"options": [{
-					"id": "RA_5_0_1_0",
-					"type": "select",
-					"text": "1"
+                "id": "RA_5_0_1",
+                "type": "",
+                "text": "How many days per week?",
+                "options": [{
+                    "id": "RA_5_0_1_0",
+                    "type": "select",
+                    "text": "1"
 				}, {
-					"id": "RA_5_0_1_1",
-					"type": "select",
-					"text": "2"
+                    "id": "RA_5_0_1_1",
+                    "type": "select",
+                    "text": "2"
 				}, {
-					"id": "RA_5_0_1_2",
-					"type": "select",
-					"text": "3"
+                    "id": "RA_5_0_1_2",
+                    "type": "select",
+                    "text": "3"
 				}, {
-					"id": "RA_5_0_1_3",
-					"type": "select",
-					"text": "4"
+                    "id": "RA_5_0_1_3",
+                    "type": "select",
+                    "text": "4"
 				}, {
-					"id": "RA_5_0_1_4",
-					"type": "select",
-					"text": "5"
+                    "id": "RA_5_0_1_4",
+                    "type": "select",
+                    "text": "5"
 				}, {
-					"id": "RA_5_0_1_5",
-					"type": "select",
-					"text": "6"
+                    "id": "RA_5_0_1_5",
+                    "type": "select",
+                    "text": "6"
 				}, {
-					"id": "RA_5_0_1_6",
-					"type": "select",
-					"text": "7"
+                    "id": "RA_5_0_1_6",
+                    "type": "select",
+                    "text": "7"
 				}]
 			}]
 		}, {
-			"id": "RA_5_1",
-			"type": "radio",
-			"text": "No",
-			"options": []
+            "id": "RA_5_1",
+            "type": "radio",
+            "text": "No",
+            "options": []
 		}]
 	}, {
-		"id": "RA_6",
-		"question": "Did you play video, phone, or computer games?",
-		"answers": [{
-			"id": "RA_6_0",
-			"type": "radio",
-			"text": "Yes",
-			"options": [{
-				"id": "RA_6_0_0",
-				"type": "",
-				"text": "How many hours per day?",
-				"options": [{
-					"id": "RA_6_0_0_0",
-					"type": "select",
-					"text": "0.5"
+        "id": "RA_6",
+        "question": "Did you play video, phone, or computer games?",
+        "answers": [{
+            "id": "RA_6_0",
+            "type": "radio",
+            "text": "Yes",
+            "options": [{
+                "id": "RA_6_0_0",
+                "type": "",
+                "text": "How many hours per day?",
+                "options": [{
+                    "id": "RA_6_0_0_0",
+                    "type": "select",
+                    "text": "0.5"
 				}, {
-					"id": "RA_6_0_0_1",
-					"type": "select",
-					"text": "1"
+                    "id": "RA_6_0_0_1",
+                    "type": "select",
+                    "text": "1"
 				}, {
-					"id": "RA_6_0_0_2",
-					"type": "select",
-					"text": "1.5"
+                    "id": "RA_6_0_0_2",
+                    "type": "select",
+                    "text": "1.5"
 				}, {
-					"id": "RA_6_0_0_3",
-					"type": "select",
-					"text": "2"
+                    "id": "RA_6_0_0_3",
+                    "type": "select",
+                    "text": "2"
 				}, {
-					"id": "RA_6_0_0_4",
-					"type": "select",
-					"text": "2.5"
+                    "id": "RA_6_0_0_4",
+                    "type": "select",
+                    "text": "2.5"
 				}, {
-					"id": "RA_6_0_0_5",
-					"type": "select",
-					"text": "3"
+                    "id": "RA_6_0_0_5",
+                    "type": "select",
+                    "text": "3"
 				}, {
-					"id": "RA_6_0_0_6",
-					"type": "select",
-					"text": "3.5"
+                    "id": "RA_6_0_0_6",
+                    "type": "select",
+                    "text": "3.5"
 				}, {
-					"id": "RA_6_0_0_7",
-					"type": "select",
-					"text": "4"
+                    "id": "RA_6_0_0_7",
+                    "type": "select",
+                    "text": "4"
 				}, {
-					"id": "RA_6_0_0_8",
-					"type": "select",
-					"text": "4.5"
+                    "id": "RA_6_0_0_8",
+                    "type": "select",
+                    "text": "4.5"
 				}, {
-					"id": "RA_6_0_0_9",
-					"type": "select",
-					"text": "5"
+                    "id": "RA_6_0_0_9",
+                    "type": "select",
+                    "text": "5"
 				}, {
-					"id": "RA_6_0_0_10",
-					"type": "select",
-					"text": "5.5"
+                    "id": "RA_6_0_0_10",
+                    "type": "select",
+                    "text": "5.5"
 				}, {
-					"id": "RA_6_0_0_11",
-					"type": "select",
-					"text": "6+"
+                    "id": "RA_6_0_0_11",
+                    "type": "select",
+                    "text": "6+"
 				}]
 			}, {
-				"id": "RA_6_0_1",
-				"type": "",
-				"text": "How many days per week?",
-				"options": [{
-					"id": "RA_6_0_1_0",
-					"type": "select",
-					"text": "1"
+                "id": "RA_6_0_1",
+                "type": "",
+                "text": "How many days per week?",
+                "options": [{
+                    "id": "RA_6_0_1_0",
+                    "type": "select",
+                    "text": "1"
 				}, {
-					"id": "RA_6_0_1_1",
-					"type": "select",
-					"text": "2"
+                    "id": "RA_6_0_1_1",
+                    "type": "select",
+                    "text": "2"
 				}, {
-					"id": "RA_6_0_1_2",
-					"type": "select",
-					"text": "3"
+                    "id": "RA_6_0_1_2",
+                    "type": "select",
+                    "text": "3"
 				}, {
-					"id": "RA_6_0_1_3",
-					"type": "select",
-					"text": "4"
+                    "id": "RA_6_0_1_3",
+                    "type": "select",
+                    "text": "4"
 				}, {
-					"id": "RA_6_0_1_4",
-					"type": "select",
-					"text": "5"
+                    "id": "RA_6_0_1_4",
+                    "type": "select",
+                    "text": "5"
 				}, {
-					"id": "RA_6_0_1_5",
-					"type": "select",
-					"text": "6"
+                    "id": "RA_6_0_1_5",
+                    "type": "select",
+                    "text": "6"
 				}, {
-					"id": "RA_6_0_1_6",
-					"type": "select",
-					"text": "7"
+                    "id": "RA_6_0_1_6",
+                    "type": "select",
+                    "text": "7"
 				}]
 			}]
 		}, {
-			"id": "RA_6_1",
-			"type": "radio",
-			"text": "No",
-			"options": []
+            "id": "RA_6_1",
+            "type": "radio",
+            "text": "No",
+            "options": []
 		}]
 	}, {
-		"id": "RA_7",
-		"question": "Did you use the computer for leisure?",
-		"answers": [{
-			"id": "RA_7_0",
-			"type": "radio",
-			"text": "Yes",
-			"options": [{
-				"id": "RA_7_0_0",
-				"type": "",
-				"text": "How many hours per day?",
-				"options": [{
-					"id": "RA_7_0_0_0",
-					"type": "select",
-					"text": "0.5"
+        "id": "RA_7",
+        "question": "Did you use the computer for leisure?",
+        "answers": [{
+            "id": "RA_7_0",
+            "type": "radio",
+            "text": "Yes",
+            "options": [{
+                "id": "RA_7_0_0",
+                "type": "",
+                "text": "How many hours per day?",
+                "options": [{
+                    "id": "RA_7_0_0_0",
+                    "type": "select",
+                    "text": "0.5"
 				}, {
-					"id": "RA_7_0_0_1",
-					"type": "select",
-					"text": "1"
+                    "id": "RA_7_0_0_1",
+                    "type": "select",
+                    "text": "1"
 				}, {
-					"id": "RA_7_0_0_2",
-					"type": "select",
-					"text": "1.5"
+                    "id": "RA_7_0_0_2",
+                    "type": "select",
+                    "text": "1.5"
 				}, {
-					"id": "RA_7_0_0_3",
-					"type": "select",
-					"text": "2"
+                    "id": "RA_7_0_0_3",
+                    "type": "select",
+                    "text": "2"
 				}, {
-					"id": "RA_7_0_0_4",
-					"type": "select",
-					"text": "2.5"
+                    "id": "RA_7_0_0_4",
+                    "type": "select",
+                    "text": "2.5"
 				}, {
-					"id": "RA_7_0_0_5",
-					"type": "select",
-					"text": "3"
+                    "id": "RA_7_0_0_5",
+                    "type": "select",
+                    "text": "3"
 				}, {
-					"id": "RA_7_0_0_6",
-					"type": "select",
-					"text": "3.5"
+                    "id": "RA_7_0_0_6",
+                    "type": "select",
+                    "text": "3.5"
 				}, {
-					"id": "RA_7_0_0_7",
-					"type": "select",
-					"text": "4"
+                    "id": "RA_7_0_0_7",
+                    "type": "select",
+                    "text": "4"
 				}, {
-					"id": "RA_7_0_0_8",
-					"type": "select",
-					"text": "4.5"
+                    "id": "RA_7_0_0_8",
+                    "type": "select",
+                    "text": "4.5"
 				}, {
-					"id": "RA_7_0_0_9",
-					"type": "select",
-					"text": "5"
+                    "id": "RA_7_0_0_9",
+                    "type": "select",
+                    "text": "5"
 				}, {
-					"id": "RA_7_0_0_10",
-					"type": "select",
-					"text": "5.5"
+                    "id": "RA_7_0_0_10",
+                    "type": "select",
+                    "text": "5.5"
 				}, {
-					"id": "RA_7_0_0_11",
-					"type": "select",
-					"text": "6+"
+                    "id": "RA_7_0_0_11",
+                    "type": "select",
+                    "text": "6+"
 				}]
 			}, {
-				"id": "RA_7_0_1",
-				"type": "",
-				"text": "How many days per week?",
-				"options": [{
-					"id": "RA_7_0_1_0",
-					"type": "select",
-					"text": "1"
+                "id": "RA_7_0_1",
+                "type": "",
+                "text": "How many days per week?",
+                "options": [{
+                    "id": "RA_7_0_1_0",
+                    "type": "select",
+                    "text": "1"
 				}, {
-					"id": "RA_7_0_1_1",
-					"type": "select",
-					"text": "2"
+                    "id": "RA_7_0_1_1",
+                    "type": "select",
+                    "text": "2"
 				}, {
-					"id": "RA_7_0_1_2",
-					"type": "select",
-					"text": "3"
+                    "id": "RA_7_0_1_2",
+                    "type": "select",
+                    "text": "3"
 				}, {
-					"id": "RA_7_0_1_3",
-					"type": "select",
-					"text": "4"
+                    "id": "RA_7_0_1_3",
+                    "type": "select",
+                    "text": "4"
 				}, {
-					"id": "RA_7_0_1_4",
-					"type": "select",
-					"text": "5"
+                    "id": "RA_7_0_1_4",
+                    "type": "select",
+                    "text": "5"
 				}, {
-					"id": "RA_7_0_1_5",
-					"type": "select",
-					"text": "6"
+                    "id": "RA_7_0_1_5",
+                    "type": "select",
+                    "text": "6"
 				}, {
-					"id": "RA_7_0_1_6",
-					"type": "select",
-					"text": "7"
+                    "id": "RA_7_0_1_6",
+                    "type": "select",
+                    "text": "7"
 				}]
 			}]
 		}, {
-			"id": "RA_7_1",
-			"type": "radio",
-			"text": "No",
-			"options": []
+            "id": "RA_7_1",
+            "type": "radio",
+            "text": "No",
+            "options": []
 		}]
 	}, {
-		"id": "RA_8",
-		"question": "Did you use the computer for work?",
-		"answers": [{
-			"id": "RA_8_0",
-			"type": "radio",
-			"text": "Yes",
-			"options": [{
-				"id": "RA_8_0_0",
-				"type": "",
-				"text": "How many hours per day?",
-				"options": [{
-					"id": "RA_8_0_0_0",
-					"type": "select",
-					"text": "0.5"
+        "id": "RA_8",
+        "question": "Did you use the computer for work?",
+        "answers": [{
+            "id": "RA_8_0",
+            "type": "radio",
+            "text": "Yes",
+            "options": [{
+                "id": "RA_8_0_0",
+                "type": "",
+                "text": "How many hours per day?",
+                "options": [{
+                    "id": "RA_8_0_0_0",
+                    "type": "select",
+                    "text": "0.5"
 				}, {
-					"id": "RA_8_0_0_1",
-					"type": "select",
-					"text": "1"
+                    "id": "RA_8_0_0_1",
+                    "type": "select",
+                    "text": "1"
 				}, {
-					"id": "RA_8_0_0_2",
-					"type": "select",
-					"text": "1.5"
+                    "id": "RA_8_0_0_2",
+                    "type": "select",
+                    "text": "1.5"
 				}, {
-					"id": "RA_8_0_0_3",
-					"type": "select",
-					"text": "2"
+                    "id": "RA_8_0_0_3",
+                    "type": "select",
+                    "text": "2"
 				}, {
-					"id": "RA_8_0_0_4",
-					"type": "select",
-					"text": "2.5"
+                    "id": "RA_8_0_0_4",
+                    "type": "select",
+                    "text": "2.5"
 				}, {
-					"id": "RA_8_0_0_5",
-					"type": "select",
-					"text": "3"
+                    "id": "RA_8_0_0_5",
+                    "type": "select",
+                    "text": "3"
 				}, {
-					"id": "RA_8_0_0_6",
-					"type": "select",
-					"text": "3.5"
+                    "id": "RA_8_0_0_6",
+                    "type": "select",
+                    "text": "3.5"
 				}, {
-					"id": "RA_8_0_0_7",
-					"type": "select",
-					"text": "4"
+                    "id": "RA_8_0_0_7",
+                    "type": "select",
+                    "text": "4"
 				}, {
-					"id": "RA_8_0_0_8",
-					"type": "select",
-					"text": "4.5"
+                    "id": "RA_8_0_0_8",
+                    "type": "select",
+                    "text": "4.5"
 				}, {
-					"id": "RA_8_0_0_9",
-					"type": "select",
-					"text": "5"
+                    "id": "RA_8_0_0_9",
+                    "type": "select",
+                    "text": "5"
 				}, {
-					"id": "RA_8_0_0_10",
-					"type": "select",
-					"text": "5.5"
+                    "id": "RA_8_0_0_10",
+                    "type": "select",
+                    "text": "5.5"
 				}, {
-					"id": "RA_8_0_0_11",
-					"type": "select",
-					"text": "6+"
+                    "id": "RA_8_0_0_11",
+                    "type": "select",
+                    "text": "6+"
 				}]
 			}, {
-				"id": "RA_8_0_1",
-				"type": "",
-				"text": "How many days per week?",
-				"options": [{
-					"id": "RA_8_0_1_0",
-					"type": "select",
-					"text": "1"
+                "id": "RA_8_0_1",
+                "type": "",
+                "text": "How many days per week?",
+                "options": [{
+                    "id": "RA_8_0_1_0",
+                    "type": "select",
+                    "text": "1"
 				}, {
-					"id": "RA_8_0_1_1",
-					"type": "select",
-					"text": "2"
+                    "id": "RA_8_0_1_1",
+                    "type": "select",
+                    "text": "2"
 				}, {
-					"id": "RA_8_0_1_2",
-					"type": "select",
-					"text": "3"
+                    "id": "RA_8_0_1_2",
+                    "type": "select",
+                    "text": "3"
 				}, {
-					"id": "RA_8_0_1_3",
-					"type": "select",
-					"text": "4"
+                    "id": "RA_8_0_1_3",
+                    "type": "select",
+                    "text": "4"
 				}, {
-					"id": "RA_8_0_1_4",
-					"type": "select",
-					"text": "5"
+                    "id": "RA_8_0_1_4",
+                    "type": "select",
+                    "text": "5"
 				}, {
-					"id": "RA_8_0_1_5",
-					"type": "select",
-					"text": "6"
+                    "id": "RA_8_0_1_5",
+                    "type": "select",
+                    "text": "6"
 				}, {
-					"id": "RA_8_0_1_6",
-					"type": "select",
-					"text": "7"
+                    "id": "RA_8_0_1_6",
+                    "type": "select",
+                    "text": "7"
 				}]
 			}]
 		}, {
-			"id": "RA_8_1",
-			"type": "radio",
-			"text": "No",
-			"options": []
+            "id": "RA_8_1",
+            "type": "radio",
+            "text": "No",
+            "options": []
 		}]
 	}, {
-		"id": "RA_9",
-		"question": "Did you do any leisurely reading? (e.g. books, magazines, etc.)",
-		"answers": [{
-			"id": "RA_9_0",
-			"type": "radio",
-			"text": "Yes",
-			"options": [{
-				"id": "RA_9_0_0",
-				"type": "",
-				"text": "If yes, what source did you use?",
-				"options": [{
-					"id": "RA_9_0_0_0",
-					"type": "checkbox",
-					"text": "Paper"
+        "id": "RA_9",
+        "question": "Did you do any leisurely reading? (e.g. books, magazines, etc.)",
+        "answers": [{
+            "id": "RA_9_0",
+            "type": "radio",
+            "text": "Yes",
+            "options": [{
+                "id": "RA_9_0_0",
+                "type": "",
+                "text": "If yes, what source did you use?",
+                "options": [{
+                    "id": "RA_9_0_0_0",
+                    "type": "checkbox",
+                    "text": "Paper"
 				}, {
-					"id": "RA_9_0_0_1",
-					"type": "checkbox",
-					"text": "Kindle e-Reader"
+                    "id": "RA_9_0_0_1",
+                    "type": "checkbox",
+                    "text": "Kindle e-Reader"
 				}, {
-					"id": "RA_9_0_0_2",
-					"type": "checkbox",
-					"text": "Computer"
+                    "id": "RA_9_0_0_2",
+                    "type": "checkbox",
+                    "text": "Computer"
 				}, {
-					"id": "RA_9_0_0_3",
-					"type": "checkbox",
-					"text": "iPad/Tablet"
+                    "id": "RA_9_0_0_3",
+                    "type": "checkbox",
+                    "text": "iPad/Tablet"
 				}]
 			}, {
-				"id": "RA_9_0_1",
-				"type": "",
-				"text": "How many hours per day?",
-				"options": [{
-					"id": "RA_9_0_1_0",
-					"type": "select",
-					"text": "0.5"
+                "id": "RA_9_0_1",
+                "type": "",
+                "text": "How many hours per day?",
+                "options": [{
+                    "id": "RA_9_0_1_0",
+                    "type": "select",
+                    "text": "0.5"
 				}, {
-					"id": "RA_9_0_1_1",
-					"type": "select",
-					"text": "1"
+                    "id": "RA_9_0_1_1",
+                    "type": "select",
+                    "text": "1"
 				}, {
-					"id": "RA_9_0_1_2",
-					"type": "select",
-					"text": "1.5"
+                    "id": "RA_9_0_1_2",
+                    "type": "select",
+                    "text": "1.5"
 				}, {
-					"id": "RA_9_0_1_3",
-					"type": "select",
-					"text": "2"
+                    "id": "RA_9_0_1_3",
+                    "type": "select",
+                    "text": "2"
 				}, {
-					"id": "RA_9_0_1_4",
-					"type": "select",
-					"text": "2.5"
+                    "id": "RA_9_0_1_4",
+                    "type": "select",
+                    "text": "2.5"
 				}, {
-					"id": "RA_9_0_1_5",
-					"type": "select",
-					"text": "3"
+                    "id": "RA_9_0_1_5",
+                    "type": "select",
+                    "text": "3"
 				}, {
-					"id": "RA_9_0_1_6",
-					"type": "select",
-					"text": "3.5"
+                    "id": "RA_9_0_1_6",
+                    "type": "select",
+                    "text": "3.5"
 				}, {
-					"id": "RA_9_0_1_7",
-					"type": "select",
-					"text": "4"
+                    "id": "RA_9_0_1_7",
+                    "type": "select",
+                    "text": "4"
 				}, {
-					"id": "RA_9_0_1_8",
-					"type": "select",
-					"text": "4.5"
+                    "id": "RA_9_0_1_8",
+                    "type": "select",
+                    "text": "4.5"
 				}, {
-					"id": "RA_9_0_1_9",
-					"type": "select",
-					"text": "5"
+                    "id": "RA_9_0_1_9",
+                    "type": "select",
+                    "text": "5"
 				}, {
-					"id": "RA_9_0_1_10",
-					"type": "select",
-					"text": "5.5"
+                    "id": "RA_9_0_1_10",
+                    "type": "select",
+                    "text": "5.5"
 				}, {
-					"id": "RA_9_0_10_11",
-					"type": "select",
-					"text": "6+"
+                    "id": "RA_9_0_10_11",
+                    "type": "select",
+                    "text": "6+"
 				}]
 			}, {
-				"id": "RA_9_0_2",
-				"type": "",
-				"text": "How many days per week?",
-				"options": [{
-					"id": "RA_9_0_2_0",
-					"type": "select",
-					"text": "1"
+                "id": "RA_9_0_2",
+                "type": "",
+                "text": "How many days per week?",
+                "options": [{
+                    "id": "RA_9_0_2_0",
+                    "type": "select",
+                    "text": "1"
 				}, {
-					"id": "RA_9_0_2_1",
-					"type": "select",
-					"text": "2"
+                    "id": "RA_9_0_2_1",
+                    "type": "select",
+                    "text": "2"
 				}, {
-					"id": "RA_9_0_2_2",
-					"type": "select",
-					"text": "3"
+                    "id": "RA_9_0_2_2",
+                    "type": "select",
+                    "text": "3"
 				}, {
-					"id": "RA_9_0_2_3",
-					"type": "select",
-					"text": "4"
+                    "id": "RA_9_0_2_3",
+                    "type": "select",
+                    "text": "4"
 				}, {
-					"id": "RA_9_0_2_4",
-					"type": "select",
-					"text": "5"
+                    "id": "RA_9_0_2_4",
+                    "type": "select",
+                    "text": "5"
 				}, {
-					"id": "RA_9_0_2_5",
-					"type": "select",
-					"text": "6"
+                    "id": "RA_9_0_2_5",
+                    "type": "select",
+                    "text": "6"
 				}, {
-					"id": "RA_9_0_2_6",
-					"type": "select",
-					"text": "7"
+                    "id": "RA_9_0_2_6",
+                    "type": "select",
+                    "text": "7"
 				}]
 			}]
 		}, {
-			"id": "RA_9_1",
-			"type": "radio",
-			"text": "No",
-			"options": []
+            "id": "RA_9_1",
+            "type": "radio",
+            "text": "No",
+            "options": []
 		}]
 	}, {
-		"id": "RA_10",
-		"question": "Did you do any work-related reading? (e.g. homework, articles, research, etc.)",
-		"answers": [{
-			"id": "RA_10_0",
-			"type": "radio",
-			"text": "Yes",
-			"options": [{
-				"id": "RA_10_0_0",
-				"type": "",
-				"text": "If yes, what source did you use?",
-				"options": [{
-					"id": "RA_10_0_0_0",
-					"type": "checkbox",
-					"text": "Paper"
+        "id": "RA_10",
+        "question": "Did you do any work-related reading? (e.g. homework, articles, research, etc.)",
+        "answers": [{
+            "id": "RA_10_0",
+            "type": "radio",
+            "text": "Yes",
+            "options": [{
+                "id": "RA_10_0_0",
+                "type": "",
+                "text": "If yes, what source did you use?",
+                "options": [{
+                    "id": "RA_10_0_0_0",
+                    "type": "checkbox",
+                    "text": "Paper"
 				}, {
-					"id": "RA_10_0_0_1",
-					"type": "checkbox",
-					"text": "Kindle e-Reader"
+                    "id": "RA_10_0_0_1",
+                    "type": "checkbox",
+                    "text": "Kindle e-Reader"
 				}, {
-					"id": "RA_10_0_0_2",
-					"type": "checkbox",
-					"text": "Computer"
+                    "id": "RA_10_0_0_2",
+                    "type": "checkbox",
+                    "text": "Computer"
 				}, {
-					"id": "RA_10_0_0_3",
-					"type": "checkbox",
-					"text": "iPad/Tablet"
+                    "id": "RA_10_0_0_3",
+                    "type": "checkbox",
+                    "text": "iPad/Tablet"
 				}]
 			}, {
-				"id": "RA_10_0_1",
-				"type": "",
-				"text": "How many hours per day?",
-				"options": [{
-					"id": "RA_10_0_1_0",
-					"type": "select",
-					"text": "0.5"
+                "id": "RA_10_0_1",
+                "type": "",
+                "text": "How many hours per day?",
+                "options": [{
+                    "id": "RA_10_0_1_0",
+                    "type": "select",
+                    "text": "0.5"
 				}, {
-					"id": "RA_10_0_1_1",
-					"type": "select",
-					"text": "1"
+                    "id": "RA_10_0_1_1",
+                    "type": "select",
+                    "text": "1"
 				}, {
-					"id": "RA_10_0_1_2",
-					"type": "select",
-					"text": "1.5"
+                    "id": "RA_10_0_1_2",
+                    "type": "select",
+                    "text": "1.5"
 				}, {
-					"id": "RA_10_0_1_3",
-					"type": "select",
-					"text": "2"
+                    "id": "RA_10_0_1_3",
+                    "type": "select",
+                    "text": "2"
 				}, {
-					"id": "RA_10_0_1_4",
-					"type": "select",
-					"text": "2.5"
+                    "id": "RA_10_0_1_4",
+                    "type": "select",
+                    "text": "2.5"
 				}, {
-					"id": "RA_10_0_1_5",
-					"type": "select",
-					"text": "3"
+                    "id": "RA_10_0_1_5",
+                    "type": "select",
+                    "text": "3"
 				}, {
-					"id": "RA_10_0_1_6",
-					"type": "select",
-					"text": "3.5"
+                    "id": "RA_10_0_1_6",
+                    "type": "select",
+                    "text": "3.5"
 				}, {
-					"id": "RA_10_0_1_7",
-					"type": "select",
-					"text": "4"
+                    "id": "RA_10_0_1_7",
+                    "type": "select",
+                    "text": "4"
 				}, {
-					"id": "RA_10_0_1_8",
-					"type": "select",
-					"text": "4.5"
+                    "id": "RA_10_0_1_8",
+                    "type": "select",
+                    "text": "4.5"
 				}, {
-					"id": "RA_10_0_1_9",
-					"type": "select",
-					"text": "5"
+                    "id": "RA_10_0_1_9",
+                    "type": "select",
+                    "text": "5"
 				}, {
-					"id": "RA_10_0_1_10",
-					"type": "select",
-					"text": "5.5"
+                    "id": "RA_10_0_1_10",
+                    "type": "select",
+                    "text": "5.5"
 				}, {
-					"id": "RA_10_0_1_11",
-					"type": "select",
-					"text": "6+"
+                    "id": "RA_10_0_1_11",
+                    "type": "select",
+                    "text": "6+"
 				}]
 			}, {
-				"id": "RA_10_0_2",
-				"type": "",
-				"text": "How many days per week?",
-				"options": [{
-					"id": "RA_10_0_2_0",
-					"type": "select",
-					"text": "1"
+                "id": "RA_10_0_2",
+                "type": "",
+                "text": "How many days per week?",
+                "options": [{
+                    "id": "RA_10_0_2_0",
+                    "type": "select",
+                    "text": "1"
 				}, {
-					"id": "RA_10_0_2_1",
-					"type": "select",
-					"text": "2"
+                    "id": "RA_10_0_2_1",
+                    "type": "select",
+                    "text": "2"
 				}, {
-					"id": "RA_10_0_2_2",
-					"type": "select",
-					"text": "3"
+                    "id": "RA_10_0_2_2",
+                    "type": "select",
+                    "text": "3"
 				}, {
-					"id": "RA_10_0_2_3",
-					"type": "select",
-					"text": "4"
+                    "id": "RA_10_0_2_3",
+                    "type": "select",
+                    "text": "4"
 				}, {
-					"id": "RA_10_0_2_4",
-					"type": "select",
-					"text": "5"
+                    "id": "RA_10_0_2_4",
+                    "type": "select",
+                    "text": "5"
 				}, {
-					"id": "RA_10_0_2_5",
-					"type": "select",
-					"text": "6"
+                    "id": "RA_10_0_2_5",
+                    "type": "select",
+                    "text": "6"
 				}, {
-					"id": "RA_10_0_2_6",
-					"type": "select",
-					"text": "7"
+                    "id": "RA_10_0_2_6",
+                    "type": "select",
+                    "text": "7"
 				}]
 			}]
 		}, {
-			"id": "RA_10_1",
-			"type": "radio",
-			"text": "No",
-			"options": []
+            "id": "RA_10_1",
+            "type": "radio",
+            "text": "No",
+            "options": []
 		}]
 	}, {
-		"id": "RA_11",
-		"question": "Did you listen to audio books, talk radio, or podcasts?",
-		"answers": [{
-			"id": "RA_11_0",
-			"type": "radio",
-			"text": "Yes",
-			"options": [{
-				"id": "RA_11_0_0",
-				"type": "",
-				"text": "If yes, did you use headphones?",
-				"options": [{
-					"id": "RA_11_0_0_0",
-					"type": "radio",
-					"text": "Yes"
+        "id": "RA_11",
+        "question": "Did you listen to audio books, talk radio, or podcasts?",
+        "answers": [{
+            "id": "RA_11_0",
+            "type": "radio",
+            "text": "Yes",
+            "options": [{
+                "id": "RA_11_0_0",
+                "type": "",
+                "text": "If yes, did you use headphones?",
+                "options": [{
+                    "id": "RA_11_0_0_0",
+                    "type": "radio",
+                    "text": "Yes"
 				}, {
-					"id": "RA_11_0_0_1",
-					"type": "radio",
-					"text": "No"
+                    "id": "RA_11_0_0_1",
+                    "type": "radio",
+                    "text": "No"
 				}]
 			}, {
-				"id": "RA_11_0_1",
-				"type": "",
-				"text": "How many hours per day?",
-				"options": [{
-					"id": "RA_11_0_1_0",
-					"type": "select",
-					"text": "0.5"
+                "id": "RA_11_0_1",
+                "type": "",
+                "text": "How many hours per day?",
+                "options": [{
+                    "id": "RA_11_0_1_0",
+                    "type": "select",
+                    "text": "0.5"
 				}, {
-					"id": "RA_11_0_1_1",
-					"type": "select",
-					"text": "1"
+                    "id": "RA_11_0_1_1",
+                    "type": "select",
+                    "text": "1"
 				}, {
-					"id": "RA_11_0_1_2",
-					"type": "select",
-					"text": "1.5"
+                    "id": "RA_11_0_1_2",
+                    "type": "select",
+                    "text": "1.5"
 				}, {
-					"id": "RA_11_0_1_3",
-					"type": "select",
-					"text": "2"
+                    "id": "RA_11_0_1_3",
+                    "type": "select",
+                    "text": "2"
 				}, {
-					"id": "RA_11_0_1_4",
-					"type": "select",
-					"text": "2.5"
+                    "id": "RA_11_0_1_4",
+                    "type": "select",
+                    "text": "2.5"
 				}, {
-					"id": "RA_11_0_1_5",
-					"type": "select",
-					"text": "3"
+                    "id": "RA_11_0_1_5",
+                    "type": "select",
+                    "text": "3"
 				}, {
-					"id": "RA_11_0_1_6",
-					"type": "select",
-					"text": "3.5"
+                    "id": "RA_11_0_1_6",
+                    "type": "select",
+                    "text": "3.5"
 				}, {
-					"id": "RA_11_0_1_7",
-					"type": "select",
-					"text": "4"
+                    "id": "RA_11_0_1_7",
+                    "type": "select",
+                    "text": "4"
 				}, {
-					"id": "RA_11_0_1_8",
-					"type": "select",
-					"text": "4.5"
+                    "id": "RA_11_0_1_8",
+                    "type": "select",
+                    "text": "4.5"
 				}, {
-					"id": "RA_11_0_1_9",
-					"type": "select",
-					"text": "5"
+                    "id": "RA_11_0_1_9",
+                    "type": "select",
+                    "text": "5"
 				}, {
-					"id": "RA_11_0_1_10",
-					"type": "select",
-					"text": "5.5"
+                    "id": "RA_11_0_1_10",
+                    "type": "select",
+                    "text": "5.5"
 				}, {
-					"id": "RA_11_0_1_11",
-					"type": "select",
-					"text": "6+"
+                    "id": "RA_11_0_1_11",
+                    "type": "select",
+                    "text": "6+"
 				}]
 			}, {
-				"id": "RA_11_0_2",
-				"type": "",
-				"text": "How many days per week?",
-				"options": [{
-					"id": "RA_11_0_2_0",
-					"type": "select",
-					"text": "1"
+                "id": "RA_11_0_2",
+                "type": "",
+                "text": "How many days per week?",
+                "options": [{
+                    "id": "RA_11_0_2_0",
+                    "type": "select",
+                    "text": "1"
 				}, {
-					"id": "RA_11_0_2_1",
-					"type": "select",
-					"text": "2"
+                    "id": "RA_11_0_2_1",
+                    "type": "select",
+                    "text": "2"
 				}, {
-					"id": "RA_11_0_2_2",
-					"type": "select",
-					"text": "3"
+                    "id": "RA_11_0_2_2",
+                    "type": "select",
+                    "text": "3"
 				}, {
-					"id": "RA_11_0_2_3",
-					"type": "select",
-					"text": "4"
+                    "id": "RA_11_0_2_3",
+                    "type": "select",
+                    "text": "4"
 				}, {
-					"id": "RA_11_0_2_4",
-					"type": "select",
-					"text": "5"
+                    "id": "RA_11_0_2_4",
+                    "type": "select",
+                    "text": "5"
 				}, {
-					"id": "RA_11_0_2_5",
-					"type": "select",
-					"text": "6"
+                    "id": "RA_11_0_2_5",
+                    "type": "select",
+                    "text": "6"
 				}, {
-					"id": "RA_11_0_2_6",
-					"type": "select",
-					"text": "7"
+                    "id": "RA_11_0_2_6",
+                    "type": "select",
+                    "text": "7"
 				}]
 			}]
 		}, {
-			"id": "RA_11_1",
-			"type": "radio",
-			"text": "No",
-			"options": []
+            "id": "RA_11_1",
+            "type": "radio",
+            "text": "No",
+            "options": []
 		}]
 	}, {
-		"id": "RA_12",
-		"question": "Did you listen to music?",
-		"answers": [{
-			"id": "RA_12_0",
-			"type": "radio",
-			"text": "Yes",
-			"options": [{
-				"id": "RA_12_0_0",
-				"type": "",
-				"text": "If yes, did you use headphones?",
-				"options": [{
-					"id": "RA_12_0_0_0",
-					"type": "radio",
-					"text": "Yes"
+        "id": "RA_12",
+        "question": "Did you listen to music?",
+        "answers": [{
+            "id": "RA_12_0",
+            "type": "radio",
+            "text": "Yes",
+            "options": [{
+                "id": "RA_12_0_0",
+                "type": "",
+                "text": "If yes, did you use headphones?",
+                "options": [{
+                    "id": "RA_12_0_0_0",
+                    "type": "radio",
+                    "text": "Yes"
 				}, {
-					"id": "RA_12_0_0_1",
-					"type": "radio",
-					"text": "No"
+                    "id": "RA_12_0_0_1",
+                    "type": "radio",
+                    "text": "No"
 				}]
 			}, {
-				"id": "RA_12_0_1",
-				"type": "",
-				"text": "What type?",
-				"options": [{
-					"id": "RA_12_0_1_0",
-					"type": "checkbox",
-					"text": "Pop"
+                "id": "RA_12_0_1",
+                "type": "",
+                "text": "What type?",
+                "options": [{
+                    "id": "RA_12_0_1_0",
+                    "type": "checkbox",
+                    "text": "Pop"
 				}, {
-					"id": "RA_12_0_1_1",
-					"type": "checkbox",
-					"text": "Hip hop"
+                    "id": "RA_12_0_1_1",
+                    "type": "checkbox",
+                    "text": "Hip hop"
 				}, {
-					"id": "RA_12_0_1_2",
-					"type": "checkbox",
-					"text": "Rock"
+                    "id": "RA_12_0_1_2",
+                    "type": "checkbox",
+                    "text": "Rock"
 				}, {
-					"id": "RA_12_0_1_3",
-					"type": "checkbox",
-					"text": "Rap"
+                    "id": "RA_12_0_1_3",
+                    "type": "checkbox",
+                    "text": "Rap"
 				}, {
-					"id": "RA_12_0_1_4",
-					"type": "checkbox",
-					"text": "Pop Rock"
+                    "id": "RA_12_0_1_4",
+                    "type": "checkbox",
+                    "text": "Pop Rock"
 				}, {
-					"id": "RA_12_0_1_5",
-					"type": "checkbox",
-					"text": "R&B"
+                    "id": "RA_12_0_1_5",
+                    "type": "checkbox",
+                    "text": "R&B"
 				}, {
-					"id": "RA_12_0_1_6",
-					"type": "checkbox",
-					"text": "Heavy metal"
+                    "id": "RA_12_0_1_6",
+                    "type": "checkbox",
+                    "text": "Heavy metal"
 				}, {
-					"id": "RA_12_0_1_7",
-					"type": "checkbox",
-					"text": "Electronic"
+                    "id": "RA_12_0_1_7",
+                    "type": "checkbox",
+                    "text": "Electronic"
 				}, {
-					"id": "RA_12_0_1_8",
-					"type": "checkbox",
-					"text": "Classical"
+                    "id": "RA_12_0_1_8",
+                    "type": "checkbox",
+                    "text": "Classical"
 				}, {
-					"id": "RA_12_0_1_9",
-					"type": "text",
-					"text": "Other:"
+                    "id": "RA_12_0_1_9",
+                    "type": "text",
+                    "text": "Other:"
 				}]
 			}, {
-				"id": "RA_12_0_2",
-				"type": "",
-				"text": "How many hours per day?",
-				"options": [{
-					"id": "RA_12_0_2_0",
-					"type": "select",
-					"text": "0.5"
+                "id": "RA_12_0_2",
+                "type": "",
+                "text": "How many hours per day?",
+                "options": [{
+                    "id": "RA_12_0_2_0",
+                    "type": "select",
+                    "text": "0.5"
 				}, {
-					"id": "RA_12_0_2_1",
-					"type": "select",
-					"text": "1"
+                    "id": "RA_12_0_2_1",
+                    "type": "select",
+                    "text": "1"
 				}, {
-					"id": "RA_12_0_2_2",
-					"type": "select",
-					"text": "1.5"
+                    "id": "RA_12_0_2_2",
+                    "type": "select",
+                    "text": "1.5"
 				}, {
-					"id": "RA_12_0_2_3",
-					"type": "select",
-					"text": "2"
+                    "id": "RA_12_0_2_3",
+                    "type": "select",
+                    "text": "2"
 				}, {
-					"id": "RA_12_0_2_4",
-					"type": "select",
-					"text": "2.5"
+                    "id": "RA_12_0_2_4",
+                    "type": "select",
+                    "text": "2.5"
 				}, {
-					"id": "RA_12_0_2_5",
-					"type": "select",
-					"text": "3"
+                    "id": "RA_12_0_2_5",
+                    "type": "select",
+                    "text": "3"
 				}, {
-					"id": "RA_12_0_2_6",
-					"type": "select",
-					"text": "3.5"
+                    "id": "RA_12_0_2_6",
+                    "type": "select",
+                    "text": "3.5"
 				}, {
-					"id": "RA_12_0_2_7",
-					"type": "select",
-					"text": "4"
+                    "id": "RA_12_0_2_7",
+                    "type": "select",
+                    "text": "4"
 				}, {
-					"id": "RA_12_0_2_8",
-					"type": "select",
-					"text": "4.5"
+                    "id": "RA_12_0_2_8",
+                    "type": "select",
+                    "text": "4.5"
 				}, {
-					"id": "RA_12_0_2_9",
-					"type": "select",
-					"text": "5"
+                    "id": "RA_12_0_2_9",
+                    "type": "select",
+                    "text": "5"
 				}, {
-					"id": "RA_12_0_2_10",
-					"type": "select",
-					"text": "5.5"
+                    "id": "RA_12_0_2_10",
+                    "type": "select",
+                    "text": "5.5"
 				}, {
-					"id": "RA_12_0_2_11",
-					"type": "select",
-					"text": "6+"
+                    "id": "RA_12_0_2_11",
+                    "type": "select",
+                    "text": "6+"
 				}]
 			}, {
-				"id": "RA_12_0_3",
-				"type": "",
-				"text": "How many days per week?",
-				"options": [{
-					"id": "RA_12_0_3_0",
-					"type": "select",
-					"text": "1"
+                "id": "RA_12_0_3",
+                "type": "",
+                "text": "How many days per week?",
+                "options": [{
+                    "id": "RA_12_0_3_0",
+                    "type": "select",
+                    "text": "1"
 				}, {
-					"id": "RA_12_0_3_1",
-					"type": "select",
-					"text": "2"
+                    "id": "RA_12_0_3_1",
+                    "type": "select",
+                    "text": "2"
 				}, {
-					"id": "RA_12_0_3_2",
-					"type": "select",
-					"text": "3"
+                    "id": "RA_12_0_3_2",
+                    "type": "select",
+                    "text": "3"
 				}, {
-					"id": "RA_12_0_3_3",
-					"type": "select",
-					"text": "4"
+                    "id": "RA_12_0_3_3",
+                    "type": "select",
+                    "text": "4"
 				}, {
-					"id": "RA_12_0_3_4",
-					"type": "select",
-					"text": "5"
+                    "id": "RA_12_0_3_4",
+                    "type": "select",
+                    "text": "5"
 				}, {
-					"id": "RA_12_0_3_5",
-					"type": "select",
-					"text": "6"
+                    "id": "RA_12_0_3_5",
+                    "type": "select",
+                    "text": "6"
 				}, {
-					"id": "RA_12_0_3_6",
-					"type": "select",
-					"text": "7"
+                    "id": "RA_12_0_3_6",
+                    "type": "select",
+                    "text": "7"
 				}]
 			}]
 		}, {
-			"id": "RA_12_1",
-			"type": "radio",
-			"text": "No",
-			"options": []
+            "id": "RA_12_1",
+            "type": "radio",
+            "text": "No",
+            "options": []
 		}]
 	}, {
-		"id": "RA_13",
-		"question": "Did friends come to visit?",
-		"answers": [{
-			"id": "RA_13_0",
-			"type": "radio",
-			"text": "Yes",
-			"options": [{
-				"id": "RA_13_0_0",
-				"type": "",
-				"text": "If yes, how many at a time?",
-				"options": [{
-					"id": "RA_13_0_0_0",
-					"type": "text",
-					"text": ""
+        "id": "RA_13",
+        "question": "Did friends come to visit?",
+        "answers": [{
+            "id": "RA_13_0",
+            "type": "radio",
+            "text": "Yes",
+            "options": [{
+                "id": "RA_13_0_0",
+                "type": "",
+                "text": "If yes, how many at a time?",
+                "options": [{
+                    "id": "RA_13_0_0_0",
+                    "type": "text",
+                    "text": ""
 				}]
 			}, {
-				"id": "RA_13_0_1",
-				"type": "",
-				"text": "How many hours per day?",
-				"options": [{
-					"id": "RA_13_0_1_0",
-					"type": "select",
-					"text": "0.5"
+                "id": "RA_13_0_1",
+                "type": "",
+                "text": "How many hours per day?",
+                "options": [{
+                    "id": "RA_13_0_1_0",
+                    "type": "select",
+                    "text": "0.5"
 				}, {
-					"id": "RA_13_0_1_1",
-					"type": "select",
-					"text": "1"
+                    "id": "RA_13_0_1_1",
+                    "type": "select",
+                    "text": "1"
 				}, {
-					"id": "RA_13_0_1_2",
-					"type": "select",
-					"text": "1.5"
+                    "id": "RA_13_0_1_2",
+                    "type": "select",
+                    "text": "1.5"
 				}, {
-					"id": "RA_13_0_1_3",
-					"type": "select",
-					"text": "2"
+                    "id": "RA_13_0_1_3",
+                    "type": "select",
+                    "text": "2"
 				}, {
-					"id": "RA_13_0_1_4",
-					"type": "select",
-					"text": "2.5"
+                    "id": "RA_13_0_1_4",
+                    "type": "select",
+                    "text": "2.5"
 				}, {
-					"id": "RA_13_0_1_5",
-					"type": "select",
-					"text": "3"
+                    "id": "RA_13_0_1_5",
+                    "type": "select",
+                    "text": "3"
 				}, {
-					"id": "RA_13_0_1_6",
-					"type": "select",
-					"text": "3.5"
+                    "id": "RA_13_0_1_6",
+                    "type": "select",
+                    "text": "3.5"
 				}, {
-					"id": "RA_13_0_1_7",
-					"type": "select",
-					"text": "4"
+                    "id": "RA_13_0_1_7",
+                    "type": "select",
+                    "text": "4"
 				}, {
-					"id": "RA_13_0_1_8",
-					"type": "select",
-					"text": "4.5"
+                    "id": "RA_13_0_1_8",
+                    "type": "select",
+                    "text": "4.5"
 				}, {
-					"id": "RA_13_0_1_9",
-					"type": "select",
-					"text": "5"
+                    "id": "RA_13_0_1_9",
+                    "type": "select",
+                    "text": "5"
 				}, {
-					"id": "RA_13_0_1_10",
-					"type": "select",
-					"text": "5.5"
+                    "id": "RA_13_0_1_10",
+                    "type": "select",
+                    "text": "5.5"
 				}, {
-					"id": "RA_13_0_1_11",
-					"type": "select",
-					"text": "6+"
+                    "id": "RA_13_0_1_11",
+                    "type": "select",
+                    "text": "6+"
 				}]
 			}, {
-				"id": "RA_13_0_2",
-				"type": "",
-				"text": "How many days per week?",
-				"options": [{
-					"id": "RA_13_0_2_0",
-					"type": "select",
-					"text": "1"
+                "id": "RA_13_0_2",
+                "type": "",
+                "text": "How many days per week?",
+                "options": [{
+                    "id": "RA_13_0_2_0",
+                    "type": "select",
+                    "text": "1"
 				}, {
-					"id": "RA_13_0_2_1",
-					"type": "select",
-					"text": "2"
+                    "id": "RA_13_0_2_1",
+                    "type": "select",
+                    "text": "2"
 				}, {
-					"id": "RA_13_0_2_2",
-					"type": "select",
-					"text": "3"
+                    "id": "RA_13_0_2_2",
+                    "type": "select",
+                    "text": "3"
 				}, {
-					"id": "RA_13_0_2_3",
-					"type": "select",
-					"text": "4"
+                    "id": "RA_13_0_2_3",
+                    "type": "select",
+                    "text": "4"
 				}, {
-					"id": "RA_13_0_2_4",
-					"type": "select",
-					"text": "5"
+                    "id": "RA_13_0_2_4",
+                    "type": "select",
+                    "text": "5"
 				}, {
-					"id": "RA_13_0_2_5",
-					"type": "select",
-					"text": "6"
+                    "id": "RA_13_0_2_5",
+                    "type": "select",
+                    "text": "6"
 				}, {
-					"id": "RA_13_0_2_6",
-					"type": "select",
-					"text": "7"
+                    "id": "RA_13_0_2_6",
+                    "type": "select",
+                    "text": "7"
 				}]
 			}]
 		}, {
-			"id": "RA_13_1",
-			"type": "radio",
-			"text": "No",
-			"options": []
+            "id": "RA_13_1",
+            "type": "radio",
+            "text": "No",
+            "options": []
 		}]
 	}, {
-		"id": "RA_14",
-		"question": "Did you attend any social or work-related events?",
-		"answers": [{
-			"id": "RA_14_0",
-			"type": "radio",
-			"text": "Yes",
-			"options": [{
-				"id": "RA_14_0_0",
-				"type": "text",
-				"text": "If yes, what was the event? Include the date and length of the event",
-				"options": []
+        "id": "RA_14",
+        "question": "Did you attend any social or work-related events?",
+        "answers": [{
+            "id": "RA_14_0",
+            "type": "radio",
+            "text": "Yes",
+            "options": [{
+                "id": "RA_14_0_0",
+                "type": "text",
+                "text": "If yes, what was the event? Include the date and length of the event",
+                "options": []
 			}]
 		}, {
-			"id": "RA_14_1",
-			"type": "radio",
-			"text": "No",
-			"options": []
+            "id": "RA_14_1",
+            "type": "radio",
+            "text": "No",
+            "options": []
 		}]
 	}, {
-		"id": "RA_15",
-		"question": "Did you travel?",
-		"answers": [{
-			"id": "RA_15_0",
-			"type": "radio",
-			"text": "Yes",
-			"options": [{
-				"id": "RA_15_0_0",
-				"type": "",
-				"text": "If yes, how long was your travel time?",
-				"options": [{
-					"id": "RA_15_0_0_0",
-					"type": "text",
-					"text": "To your destination (mins)"
+        "id": "RA_15",
+        "question": "Did you travel?",
+        "answers": [{
+            "id": "RA_15_0",
+            "type": "radio",
+            "text": "Yes",
+            "options": [{
+                "id": "RA_15_0_0",
+                "type": "",
+                "text": "If yes, how long was your travel time?",
+                "options": [{
+                    "id": "RA_15_0_0_0",
+                    "type": "text",
+                    "text": "To your destination (mins)"
 				}, {
-					"id": "RA_15_0_0_1",
-					"type": "text",
-					"text": "From your destination (mins)"
+                    "id": "RA_15_0_0_1",
+                    "type": "text",
+                    "text": "From your destination (mins)"
 				}]
 			}, {
-				"id": "RA_15_0_1",
-				"type": "",
-				"text": "Mode of transportation",
-				"options": [{
-					"id": "RA_15_0_1_0",
-					"type": "text",
-					"text": "Car"
+                "id": "RA_15_0_1",
+                "type": "",
+                "text": "Mode of transportation",
+                "options": [{
+                    "id": "RA_15_0_1_0",
+                    "type": "text",
+                    "text": "Car"
 				}, {
-					"id": "RA_15_0_1_1",
-					"type": "text",
-					"text": "Bus"
+                    "id": "RA_15_0_1_1",
+                    "type": "text",
+                    "text": "Bus"
 				}, {
-					"id": "RA_15_0_1_2",
-					"type": "text",
-					"text": "Train/subway"
+                    "id": "RA_15_0_1_2",
+                    "type": "text",
+                    "text": "Train/subway"
 				}, {
-					"id": "RA_15_0_1_3",
-					"type": "text",
-					"text": "Plane"
+                    "id": "RA_15_0_1_3",
+                    "type": "text",
+                    "text": "Plane"
 				}]
 			}]
 		}, {
-			"id": "RA_15_1",
-			"type": "radio",
-			"text": "No",
-			"options": []
+            "id": "RA_15_1",
+            "type": "radio",
+            "text": "No",
+            "options": []
 		}]
 	}, {
-		"id": "RA_16",
-		"question": "Did you walk for more than 5 minuets per day?",
-		"answers": [{
-			"id": "RA_16_0",
-			"type": "radio",
-			"text": "Yes",
-			"options": [{
-				"id": "RA_16_0_0",
-				"type": "",
-				"text": "How many hours per day?",
-				"options": [{
-					"id": "RA_16_0_0_0",
-					"type": "select",
-					"text": "0.5"
+        "id": "RA_16",
+        "question": "Did you walk for more than 5 minuets per day?",
+        "answers": [{
+            "id": "RA_16_0",
+            "type": "radio",
+            "text": "Yes",
+            "options": [{
+                "id": "RA_16_0_0",
+                "type": "",
+                "text": "How many hours per day?",
+                "options": [{
+                    "id": "RA_16_0_0_0",
+                    "type": "select",
+                    "text": "0.5"
 				}, {
-					"id": "RA_16_0_0_1",
-					"type": "select",
-					"text": "1"
+                    "id": "RA_16_0_0_1",
+                    "type": "select",
+                    "text": "1"
 				}, {
-					"id": "RA_16_0_0_2",
-					"type": "select",
-					"text": "1.5"
+                    "id": "RA_16_0_0_2",
+                    "type": "select",
+                    "text": "1.5"
 				}, {
-					"id": "RA_16_0_0_3",
-					"type": "select",
-					"text": "2"
+                    "id": "RA_16_0_0_3",
+                    "type": "select",
+                    "text": "2"
 				}, {
-					"id": "RA_16_0_0_4",
-					"type": "select",
-					"text": "2.5"
+                    "id": "RA_16_0_0_4",
+                    "type": "select",
+                    "text": "2.5"
 				}, {
-					"id": "RA_16_0_0_5",
-					"type": "select",
-					"text": "3"
+                    "id": "RA_16_0_0_5",
+                    "type": "select",
+                    "text": "3"
 				}, {
-					"id": "RA_16_0_0_6",
-					"type": "select",
-					"text": "3.5"
+                    "id": "RA_16_0_0_6",
+                    "type": "select",
+                    "text": "3.5"
 				}, {
-					"id": "RA_16_0_0_7",
-					"type": "select",
-					"text": "4"
+                    "id": "RA_16_0_0_7",
+                    "type": "select",
+                    "text": "4"
 				}, {
-					"id": "RA_16_0_0_8",
-					"type": "select",
-					"text": "4.5"
+                    "id": "RA_16_0_0_8",
+                    "type": "select",
+                    "text": "4.5"
 				}, {
-					"id": "RA_16_0_0_9",
-					"type": "select",
-					"text": "5"
+                    "id": "RA_16_0_0_9",
+                    "type": "select",
+                    "text": "5"
 				}, {
-					"id": "RA_16_0_0_10",
-					"type": "select",
-					"text": "5.5"
+                    "id": "RA_16_0_0_10",
+                    "type": "select",
+                    "text": "5.5"
 				}, {
-					"id": "RA_16_0_0_11",
-					"type": "select",
-					"text": "6+"
+                    "id": "RA_16_0_0_11",
+                    "type": "select",
+                    "text": "6+"
 				}]
 			}, {
-				"id": "RA_16_0_1",
-				"type": "",
-				"text": "How many days per week?",
-				"options": [{
-					"id": "RA_16_0_1_0",
-					"type": "select",
-					"text": "1"
+                "id": "RA_16_0_1",
+                "type": "",
+                "text": "How many days per week?",
+                "options": [{
+                    "id": "RA_16_0_1_0",
+                    "type": "select",
+                    "text": "1"
 				}, {
-					"id": "RA_16_0_1_1",
-					"type": "select",
-					"text": "2"
+                    "id": "RA_16_0_1_1",
+                    "type": "select",
+                    "text": "2"
 				}, {
-					"id": "RA_16_0_1_2",
-					"type": "select",
-					"text": "3"
+                    "id": "RA_16_0_1_2",
+                    "type": "select",
+                    "text": "3"
 				}, {
-					"id": "RA_16_0_1_3",
-					"type": "select",
-					"text": "4"
+                    "id": "RA_16_0_1_3",
+                    "type": "select",
+                    "text": "4"
 				}, {
-					"id": "RA_16_0_1_4",
-					"type": "select",
-					"text": "5"
+                    "id": "RA_16_0_1_4",
+                    "type": "select",
+                    "text": "5"
 				}, {
-					"id": "RA_16_0_1_5",
-					"type": "select",
-					"text": "6"
+                    "id": "RA_16_0_1_5",
+                    "type": "select",
+                    "text": "6"
 				}, {
-					"id": "RA_16_0_1_6",
-					"type": "select",
-					"text": "7"
+                    "id": "RA_16_0_1_6",
+                    "type": "select",
+                    "text": "7"
 				}]
 			}]
 		}, {
-			"id": "RA_16_1",
-			"type": "radio",
-			"text": "No",
-			"options": []
+            "id": "RA_16_1",
+            "type": "radio",
+            "text": "No",
+            "options": []
 		}]
 	}, {
-		"id": "RA_17",
-		"question": "Did you exercise? (e.g. running, swimming, biking, sports, treadmill, sexual intercourse, or another form of exercise)",
-		"answers": [{
-			"id": "RA_17_0",
-			"type": "radio",
-			"text": "Yes",
-			"options": [{
-				"id": "RA_17_0_0",
-				"type": "",
-				"text": "If yes, please specify?",
-				"options": [{
-					"id": "RA_17_0_0_0",
-					"type": "text",
-					"text": ""
+        "id": "RA_17",
+        "question": "Did you exercise? (e.g. running, swimming, biking, sports, treadmill, sexual intercourse, or another form of exercise)",
+        "answers": [{
+            "id": "RA_17_0",
+            "type": "radio",
+            "text": "Yes",
+            "options": [{
+                "id": "RA_17_0_0",
+                "type": "",
+                "text": "If yes, please specify?",
+                "options": [{
+                    "id": "RA_17_0_0_0",
+                    "type": "text",
+                    "text": ""
 				}]
 			}, {
-				"id": "RA_17_0_1",
-				"type": "",
-				"text": "How many hours per day?",
-				"options": [{
-					"id": "RA_17_0_1_0",
-					"type": "select",
-					"text": "0.5"
+                "id": "RA_17_0_1",
+                "type": "",
+                "text": "How many hours per day?",
+                "options": [{
+                    "id": "RA_17_0_1_0",
+                    "type": "select",
+                    "text": "0.5"
 				}, {
-					"id": "RA_17_0_1_1",
-					"type": "select",
-					"text": "1"
+                    "id": "RA_17_0_1_1",
+                    "type": "select",
+                    "text": "1"
 				}, {
-					"id": "RA_17_0_1_2",
-					"type": "select",
-					"text": "1.5"
+                    "id": "RA_17_0_1_2",
+                    "type": "select",
+                    "text": "1.5"
 				}, {
-					"id": "RA_17_0_1_3",
-					"type": "select",
-					"text": "2"
+                    "id": "RA_17_0_1_3",
+                    "type": "select",
+                    "text": "2"
 				}, {
-					"id": "RA_17_0_1_4",
-					"type": "select",
-					"text": "2.5"
+                    "id": "RA_17_0_1_4",
+                    "type": "select",
+                    "text": "2.5"
 				}, {
-					"id": "RA_17_0_1_5",
-					"type": "select",
-					"text": "3"
+                    "id": "RA_17_0_1_5",
+                    "type": "select",
+                    "text": "3"
 				}, {
-					"id": "RA_17_0_1_6",
-					"type": "select",
-					"text": "3.5"
+                    "id": "RA_17_0_1_6",
+                    "type": "select",
+                    "text": "3.5"
 				}, {
-					"id": "RA_17_0_1_7",
-					"type": "select",
-					"text": "4"
+                    "id": "RA_17_0_1_7",
+                    "type": "select",
+                    "text": "4"
 				}, {
-					"id": "RA_17_0_1_8",
-					"type": "select",
-					"text": "4.5"
+                    "id": "RA_17_0_1_8",
+                    "type": "select",
+                    "text": "4.5"
 				}, {
-					"id": "RA_17_0_1_9",
-					"type": "select",
-					"text": "5"
+                    "id": "RA_17_0_1_9",
+                    "type": "select",
+                    "text": "5"
 				}, {
-					"id": "RA_17_0_1_10",
-					"type": "select",
-					"text": "5.5"
+                    "id": "RA_17_0_1_10",
+                    "type": "select",
+                    "text": "5.5"
 				}, {
-					"id": "RA_17_0_1_11",
-					"type": "select",
-					"text": "6+"
+                    "id": "RA_17_0_1_11",
+                    "type": "select",
+                    "text": "6+"
 				}]
 			}, {
-				"id": "RA_17_0_2",
-				"type": "",
-				"text": "How many days per week?",
-				"options": [{
-					"id": "RA_17_0_2_0",
-					"type": "select",
-					"text": "1"
+                "id": "RA_17_0_2",
+                "type": "",
+                "text": "How many days per week?",
+                "options": [{
+                    "id": "RA_17_0_2_0",
+                    "type": "select",
+                    "text": "1"
 				}, {
-					"id": "RA_17_0_2_1",
-					"type": "select",
-					"text": "2"
+                    "id": "RA_17_0_2_1",
+                    "type": "select",
+                    "text": "2"
 				}, {
-					"id": "RA_17_0_2_2",
-					"type": "select",
-					"text": "3"
+                    "id": "RA_17_0_2_2",
+                    "type": "select",
+                    "text": "3"
 				}, {
-					"id": "RA_17_0_2_3",
-					"type": "select",
-					"text": "4"
+                    "id": "RA_17_0_2_3",
+                    "type": "select",
+                    "text": "4"
 				}, {
-					"id": "RA_17_0_2_4",
-					"type": "select",
-					"text": "5"
+                    "id": "RA_17_0_2_4",
+                    "type": "select",
+                    "text": "5"
 				}, {
-					"id": "RA_17_0_2_5",
-					"type": "select",
-					"text": "6"
+                    "id": "RA_17_0_2_5",
+                    "type": "select",
+                    "text": "6"
 				}, {
-					"id": "RA_17_0_2_6",
-					"type": "select",
-					"text": "7"
+                    "id": "RA_17_0_2_6",
+                    "type": "select",
+                    "text": "7"
 				}]
 			}]
 		}, {
-			"id": "RA_17_1",
-			"type": "radio",
-			"text": "No",
-			"options": []
+            "id": "RA_17_1",
+            "type": "radio",
+            "text": "No",
+            "options": []
 		}]
 	}, {
-		"id": "RA_18",
-		"question": "Did you carry heavy items during your recovery?",
-		"answers": [{
-			"id": "RA_18_0",
-			"type": "radio",
-			"text": "Yes",
-			"options": [{
-				"id": "RA_18_0_0",
-				"type": "",
-				"text": "If yes, please list the items and estimate the weight.",
-				"options": [{
-					"id": "RA_18_0_0_0",
-					"type": "text",
-					"text": ""
+        "id": "RA_18",
+        "question": "Did you carry heavy items during your recovery?",
+        "answers": [{
+            "id": "RA_18_0",
+            "type": "radio",
+            "text": "Yes",
+            "options": [{
+                "id": "RA_18_0_0",
+                "type": "",
+                "text": "If yes, please list the items and estimate the weight.",
+                "options": [{
+                    "id": "RA_18_0_0_0",
+                    "type": "text",
+                    "text": ""
 				}]
 			}, {
-				"id": "RA_18_0_1",
-				"type": "",
-				"text": "How many hours per day?",
-				"options": [{
-					"id": "RA_18_0_1_0",
-					"type": "select",
-					"text": "0.5"
+                "id": "RA_18_0_1",
+                "type": "",
+                "text": "How many hours per day?",
+                "options": [{
+                    "id": "RA_18_0_1_0",
+                    "type": "select",
+                    "text": "0.5"
 				}, {
-					"id": "RA_18_0_1_1",
-					"type": "select",
-					"text": "1"
+                    "id": "RA_18_0_1_1",
+                    "type": "select",
+                    "text": "1"
 				}, {
-					"id": "RA_18_0_1_2",
-					"type": "select",
-					"text": "1.5"
+                    "id": "RA_18_0_1_2",
+                    "type": "select",
+                    "text": "1.5"
 				}, {
-					"id": "RA_18_0_1_3",
-					"type": "select",
-					"text": "2"
+                    "id": "RA_18_0_1_3",
+                    "type": "select",
+                    "text": "2"
 				}, {
-					"id": "RA_18_0_1_4",
-					"type": "select",
-					"text": "2.5"
+                    "id": "RA_18_0_1_4",
+                    "type": "select",
+                    "text": "2.5"
 				}, {
-					"id": "RA_18_0_1_5",
-					"type": "select",
-					"text": "3"
+                    "id": "RA_18_0_1_5",
+                    "type": "select",
+                    "text": "3"
 				}, {
-					"id": "RA_18_0_1_6",
-					"type": "select",
-					"text": "3.5"
+                    "id": "RA_18_0_1_6",
+                    "type": "select",
+                    "text": "3.5"
 				}, {
-					"id": "RA_18_0_1_7",
-					"type": "select",
-					"text": "4"
+                    "id": "RA_18_0_1_7",
+                    "type": "select",
+                    "text": "4"
 				}, {
-					"id": "RA_18_0_1_8",
-					"type": "select",
-					"text": "4.5"
+                    "id": "RA_18_0_1_8",
+                    "type": "select",
+                    "text": "4.5"
 				}, {
-					"id": "RA_18_0_1_9",
-					"type": "select",
-					"text": "5"
+                    "id": "RA_18_0_1_9",
+                    "type": "select",
+                    "text": "5"
 				}, {
-					"id": "RA_18_0_1_10",
-					"type": "select",
-					"text": "5.5"
+                    "id": "RA_18_0_1_10",
+                    "type": "select",
+                    "text": "5.5"
 				}, {
-					"id": "RA_18_0_1_11",
-					"type": "select",
-					"text": "6+"
+                    "id": "RA_18_0_1_11",
+                    "type": "select",
+                    "text": "6+"
 				}]
 			}, {
-				"id": "RA_18_0_2",
-				"type": "",
-				"text": "How many days per week?",
-				"options": [{
-					"id": "RA_18_0_2_0",
-					"type": "select",
-					"text": "1"
+                "id": "RA_18_0_2",
+                "type": "",
+                "text": "How many days per week?",
+                "options": [{
+                    "id": "RA_18_0_2_0",
+                    "type": "select",
+                    "text": "1"
 				}, {
-					"id": "RA_18_0_2_1",
-					"type": "select",
-					"text": "2"
+                    "id": "RA_18_0_2_1",
+                    "type": "select",
+                    "text": "2"
 				}, {
-					"id": "RA_18_0_2_2",
-					"type": "select",
-					"text": "3"
+                    "id": "RA_18_0_2_2",
+                    "type": "select",
+                    "text": "3"
 				}, {
-					"id": "RA_18_0_2_3",
-					"type": "select",
-					"text": "4"
+                    "id": "RA_18_0_2_3",
+                    "type": "select",
+                    "text": "4"
 				}, {
-					"id": "RA_18_0_2_4",
-					"type": "select",
-					"text": "5"
+                    "id": "RA_18_0_2_4",
+                    "type": "select",
+                    "text": "5"
 				}, {
-					"id": "RA_18_0_2_5",
-					"type": "select",
-					"text": "6"
+                    "id": "RA_18_0_2_5",
+                    "type": "select",
+                    "text": "6"
 				}, {
-					"id": "RA_18_0_2_6",
-					"type": "select",
-					"text": "7"
+                    "id": "RA_18_0_2_6",
+                    "type": "select",
+                    "text": "7"
 				}]
 			}]
 		}, {
-			"id": "RA_18_1",
-			"type": "radio",
-			"text": "No",
-			"options": []
+            "id": "RA_18_1",
+            "type": "radio",
+            "text": "No",
+            "options": []
 		}]
 	}, {
-		"id": "RA_19",
-		"question": "Did you do any household chores?",
-		"answers": [{
-			"id": "RA_19_0",
-			"type": "radio",
-			"text": "Yes",
-			"options": [{
-				"id": "RA_19_0_0",
-				"type": "",
-				"text": "If yes, what chores?",
-				"options": [{
-					"id": "RA_19_0_0_0",
-					"type": "checkbox",
-					"text": "Cleaning"
+        "id": "RA_19",
+        "question": "Did you do any household chores?",
+        "answers": [{
+            "id": "RA_19_0",
+            "type": "radio",
+            "text": "Yes",
+            "options": [{
+                "id": "RA_19_0_0",
+                "type": "",
+                "text": "If yes, what chores?",
+                "options": [{
+                    "id": "RA_19_0_0_0",
+                    "type": "checkbox",
+                    "text": "Cleaning"
 				}, {
-					"id": "RA_19_0_0_1",
-					"type": "checkbox",
-					"text": "Taking out the garbage"
+                    "id": "RA_19_0_0_1",
+                    "type": "checkbox",
+                    "text": "Taking out the garbage"
 				}, {
-					"id": "RA_19_0_0_2",
-					"type": "checkbox",
-					"text": "Laundry"
+                    "id": "RA_19_0_0_2",
+                    "type": "checkbox",
+                    "text": "Laundry"
 				}, {
-					"id": "RA_19_0_0_3",
-					"type": "checkbox",
-					"text": "Washing dishes"
+                    "id": "RA_19_0_0_3",
+                    "type": "checkbox",
+                    "text": "Washing dishes"
 				}, {
-					"id": "RA_19_0_0_4",
-					"type": "checkbox",
-					"text": "Cooking"
+                    "id": "RA_19_0_0_4",
+                    "type": "checkbox",
+                    "text": "Cooking"
 				}, {
-					"id": "RA_19_0_0_5",
-					"type": "checkbox",
-					"text": "Grocery shopping"
+                    "id": "RA_19_0_0_5",
+                    "type": "checkbox",
+                    "text": "Grocery shopping"
 				}, {
-					"id": "RA_19_0_0_6",
-					"type": "checkbox",
-					"text": "Raking/shoveling"
+                    "id": "RA_19_0_0_6",
+                    "type": "checkbox",
+                    "text": "Raking/shoveling"
 				}, {
-					"id": "RA_19_0_0_7",
-					"type": "checkbox",
-					"text": "Mowing the lawn"
+                    "id": "RA_19_0_0_7",
+                    "type": "checkbox",
+                    "text": "Mowing the lawn"
 				}, {
-					"id": "RA_19_0_0_8",
-					"type": "text",
-					"text": "Other:"
+                    "id": "RA_19_0_0_8",
+                    "type": "text",
+                    "text": "Other:"
 				}]
 			}, {
-				"id": "RA_19_0_1",
-				"type": "",
-				"text": "How many hours per day?",
-				"options": [{
-					"id": "RA_19_0_1_0",
-					"type": "select",
-					"text": "0.5"
+                "id": "RA_19_0_1",
+                "type": "",
+                "text": "How many hours per day?",
+                "options": [{
+                    "id": "RA_19_0_1_0",
+                    "type": "select",
+                    "text": "0.5"
 				}, {
-					"id": "RA_19_0_1_1",
-					"type": "select",
-					"text": "1"
+                    "id": "RA_19_0_1_1",
+                    "type": "select",
+                    "text": "1"
 				}, {
-					"id": "RA_19_0_1_2",
-					"type": "select",
-					"text": "1.5"
+                    "id": "RA_19_0_1_2",
+                    "type": "select",
+                    "text": "1.5"
 				}, {
-					"id": "RA_19_0_1_3",
-					"type": "select",
-					"text": "2"
+                    "id": "RA_19_0_1_3",
+                    "type": "select",
+                    "text": "2"
 				}, {
-					"id": "RA_19_0_1_4",
-					"type": "select",
-					"text": "2.5"
+                    "id": "RA_19_0_1_4",
+                    "type": "select",
+                    "text": "2.5"
 				}, {
-					"id": "RA_19_0_1_5",
-					"type": "select",
-					"text": "3"
+                    "id": "RA_19_0_1_5",
+                    "type": "select",
+                    "text": "3"
 				}, {
-					"id": "RA_19_0_1_6",
-					"type": "select",
-					"text": "3.5"
+                    "id": "RA_19_0_1_6",
+                    "type": "select",
+                    "text": "3.5"
 				}, {
-					"id": "RA_19_0_1_7",
-					"type": "select",
-					"text": "4"
+                    "id": "RA_19_0_1_7",
+                    "type": "select",
+                    "text": "4"
 				}, {
-					"id": "RA_19_0_1_8",
-					"type": "select",
-					"text": "4.5"
+                    "id": "RA_19_0_1_8",
+                    "type": "select",
+                    "text": "4.5"
 				}, {
-					"id": "RA_19_0_1_9",
-					"type": "select",
-					"text": "5"
+                    "id": "RA_19_0_1_9",
+                    "type": "select",
+                    "text": "5"
 				}, {
-					"id": "RA_19_0_1_10",
-					"type": "select",
-					"text": "5.5"
+                    "id": "RA_19_0_1_10",
+                    "type": "select",
+                    "text": "5.5"
 				}, {
-					"id": "RA_19_0_1_11",
-					"type": "select",
-					"text": "6+"
+                    "id": "RA_19_0_1_11",
+                    "type": "select",
+                    "text": "6+"
 				}]
 			}, {
-				"id": "RA_19_0_2",
-				"type": "",
-				"text": "How many days per week?",
-				"options": [{
-					"id": "RA_19_0_2_0",
-					"type": "select",
-					"text": "1"
+                "id": "RA_19_0_2",
+                "type": "",
+                "text": "How many days per week?",
+                "options": [{
+                    "id": "RA_19_0_2_0",
+                    "type": "select",
+                    "text": "1"
 				}, {
-					"id": "RA_19_0_2_1",
-					"type": "select",
-					"text": "2"
+                    "id": "RA_19_0_2_1",
+                    "type": "select",
+                    "text": "2"
 				}, {
-					"id": "RA_19_0_2_2",
-					"type": "select",
-					"text": "3"
+                    "id": "RA_19_0_2_2",
+                    "type": "select",
+                    "text": "3"
 				}, {
-					"id": "RA_19_0_2_3",
-					"type": "select",
-					"text": "4"
+                    "id": "RA_19_0_2_3",
+                    "type": "select",
+                    "text": "4"
 				}, {
-					"id": "RA_19_0_2_4",
-					"type": "select",
-					"text": "5"
+                    "id": "RA_19_0_2_4",
+                    "type": "select",
+                    "text": "5"
 				}, {
-					"id": "RA_19_0_2_5",
-					"type": "select",
-					"text": "6"
+                    "id": "RA_19_0_2_5",
+                    "type": "select",
+                    "text": "6"
 				}, {
-					"id": "RA_19_0_2_6",
-					"type": "select",
-					"text": "7"
+                    "id": "RA_19_0_2_6",
+                    "type": "select",
+                    "text": "7"
 				}]
 			}]
 		}, {
-			"id": "RA_19_1",
-			"type": "radio",
-			"text": "No",
-			"options": []
+            "id": "RA_19_1",
+            "type": "radio",
+            "text": "No",
+            "options": []
 		}]
 	}]
 }, {
-	"id": "AI",
-	"title": "Additional Information",
-	"desc": "Please answer these questions so we can get additional information we may need.",
-	"questions": [{
-			"id": "AI_0",
-			"question": "What sports do you play?",
-			"answers": [{
-				"id": "AI_0_0",
-				"type": "checkbox",
-				"text": "Football"
+    "id": "AI",
+    "title": "Additional Information",
+    "desc": "Please answer these questions so we can get additional information we may need.",
+    "questions": [{
+            "id": "AI_0",
+            "question": "What sports do you play?",
+            "answers": [{
+                "id": "AI_0_0",
+                "type": "checkbox",
+                "text": "Football"
 			}, {
-				"id": "AI_0_1",
-				"type": "checkbox",
-				"text": "Baseball"
+                "id": "AI_0_1",
+                "type": "checkbox",
+                "text": "Baseball"
 			}, {
-				"id": "AI_0_2",
-				"type": "checkbox",
-				"text": "Softball"
+                "id": "AI_0_2",
+                "type": "checkbox",
+                "text": "Softball"
 			}, {
-				"id": "AI_0_3",
-				"type": "checkbox",
-				"text": "Basketball"
+                "id": "AI_0_3",
+                "type": "checkbox",
+                "text": "Basketball"
 			}, {
-				"id": "AI_0_4",
-				"type": "checkbox",
-				"text": "Lacrossse"
+                "id": "AI_0_4",
+                "type": "checkbox",
+                "text": "Lacrossse"
 			}, {
-				"id": "AI_0_5",
-				"type": "checkbox",
-				"text": "Hockey"
+                "id": "AI_0_5",
+                "type": "checkbox",
+                "text": "Hockey"
 			}, {
-				"id": "AI_0_6",
-				"type": "checkbox",
-				"text": "Rugby"
+                "id": "AI_0_6",
+                "type": "checkbox",
+                "text": "Rugby"
 			}, {
-				"id": "AI_0_7",
-				"type": "checkbox",
-				"text": "Soccer"
+                "id": "AI_0_7",
+                "type": "checkbox",
+                "text": "Soccer"
 			}, {
-				"id": "AI_0_8",
-				"type": "checkbox",
-				"text": "Cycling"
+                "id": "AI_0_8",
+                "type": "checkbox",
+                "text": "Cycling"
 			}, {
-				"id": "AI_0_9",
-				"type": "checkbox",
-				"text": "Gymnastics"
+                "id": "AI_0_9",
+                "type": "checkbox",
+                "text": "Gymnastics"
 			}, {
-				"id": "AI_0_10",
-				"type": "text",
-				"text": "Other:"
+                "id": "AI_0_10",
+                "type": "text",
+                "text": "Other:"
 			}]
 		},
 
-		{
-			"id": "AI_1",
-			"question": "What sports have you played in the past?",
-			"answers": [{
-				"id": "AI_1_0",
-				"type": "checkbox",
-				"text": "Football"
+        {
+            "id": "AI_1",
+            "question": "What sports have you played in the past?",
+            "answers": [{
+                "id": "AI_1_0",
+                "type": "checkbox",
+                "text": "Football"
 			}, {
-				"id": "AI_1_1",
-				"type": "checkbox",
-				"text": "Baseball"
+                "id": "AI_1_1",
+                "type": "checkbox",
+                "text": "Baseball"
 			}, {
-				"id": "AI_1_2",
-				"type": "checkbox",
-				"text": "Softball"
+                "id": "AI_1_2",
+                "type": "checkbox",
+                "text": "Softball"
 			}, {
-				"id": "AI_1_3",
-				"type": "checkbox",
-				"text": "Basketball"
+                "id": "AI_1_3",
+                "type": "checkbox",
+                "text": "Basketball"
 			}, {
-				"id": "AI_1_4",
-				"type": "checkbox",
-				"text": "Lacrossse"
+                "id": "AI_1_4",
+                "type": "checkbox",
+                "text": "Lacrossse"
 			}, {
-				"id": "AI_1_5",
-				"type": "checkbox",
-				"text": "Hockey"
+                "id": "AI_1_5",
+                "type": "checkbox",
+                "text": "Hockey"
 			}, {
-				"id": "AI_1_6",
-				"type": "checkbox",
-				"text": "Rugby"
+                "id": "AI_1_6",
+                "type": "checkbox",
+                "text": "Rugby"
 			}, {
-				"id": "AI_1_7",
-				"type": "checkbox",
-				"text": "Soccer"
+                "id": "AI_1_7",
+                "type": "checkbox",
+                "text": "Soccer"
 			}, {
-				"id": "AI_1_8",
-				"type": "checkbox",
-				"text": "Cycling"
+                "id": "AI_1_8",
+                "type": "checkbox",
+                "text": "Cycling"
 			}, {
-				"id": "AI_1_9",
-				"type": "checkbox",
-				"text": "Gymnastics"
+                "id": "AI_1_9",
+                "type": "checkbox",
+                "text": "Gymnastics"
 			}, {
-				"id": "AI_1_10",
-				"type": "text",
-				"text": "Other:"
+                "id": "AI_1_10",
+                "type": "text",
+                "text": "Other:"
 			}]
 		},
 
-		{
-			"id": "AI_2",
-			"question": "Race",
-			"answers": [{
-				"id": "AI_2_0",
-				"type": "checkbox",
-				"text": "Alaskan/American Indian"
+        {
+            "id": "AI_2",
+            "question": "Race",
+            "answers": [{
+                "id": "AI_2_0",
+                "type": "checkbox",
+                "text": "Alaskan/American Indian"
 			}, {
-				"id": "AI_2_1",
-				"type": "checkbox",
-				"text": "Asian/Pacific Islander"
+                "id": "AI_2_1",
+                "type": "checkbox",
+                "text": "Asian/Pacific Islander"
 			}, {
-				"id": "AI_2_2",
-				"type": "checkbox",
-				"text": "Black, not Hispanic"
+                "id": "AI_2_2",
+                "type": "checkbox",
+                "text": "Black, not Hispanic"
 			}, {
-				"id": "AI_2_3",
-				"type": "checkbox",
-				"text": "Hispanic"
+                "id": "AI_2_3",
+                "type": "checkbox",
+                "text": "Hispanic"
 			}, {
-				"id": "AI_2_4",
-				"type": "checkbox",
-				"text": "Caucasian"
+                "id": "AI_2_4",
+                "type": "checkbox",
+                "text": "Caucasian"
 			}, {
-				"id": "AI_2_5",
-				"type": "text",
-				"text": "Other, please specify"
+                "id": "AI_2_5",
+                "type": "text",
+                "text": "Other, please specify"
 			}]
 		}, {
-			"id": "AI_3",
-			"question": "Marital Status",
-			"answers": [{
-				"id": "AI_3_0",
-				"type": "checkbox",
-				"text": "Single, never married"
+            "id": "AI_3",
+            "question": "Marital Status",
+            "answers": [{
+                "id": "AI_3_0",
+                "type": "checkbox",
+                "text": "Single, never married"
 			}, {
-				"id": "AI_3_1",
-				"type": "checkbox",
-				"text": "Married or in a domestic partnership"
+                "id": "AI_3_1",
+                "type": "checkbox",
+                "text": "Married or in a domestic partnership"
 			}, {
-				"id": "AI_3_2",
-				"type": "checkbox",
-				"text": "Divorced"
+                "id": "AI_3_2",
+                "type": "checkbox",
+                "text": "Divorced"
 			}, {
-				"id": "AI_3_3",
-				"type": "checkbox",
-				"text": "Separated"
+                "id": "AI_3_3",
+                "type": "checkbox",
+                "text": "Separated"
 			}, {
-				"id": "AI_3_4",
-				"type": "checkbox",
-				"text": "Widowed"
+                "id": "AI_3_4",
+                "type": "checkbox",
+                "text": "Widowed"
 			}]
 		}, {
-			"id": "AI_4",
-			"question": "Highest Level of Education",
-			"answers": [{
-				"id": "AI_4_0",
-				"type": "checkbox",
-				"text": "No high school"
+            "id": "AI_4",
+            "question": "Highest Level of Education",
+            "answers": [{
+                "id": "AI_4_0",
+                "type": "checkbox",
+                "text": "No high school"
 			}, {
-				"id": "AI_4_1",
-				"type": "checkbox",
-				"text": "Some high school, no diploma"
+                "id": "AI_4_1",
+                "type": "checkbox",
+                "text": "Some high school, no diploma"
 			}, {
-				"id": "AI_4_2",
-				"type": "checkbox",
-				"text": "High school diploma"
+                "id": "AI_4_2",
+                "type": "checkbox",
+                "text": "High school diploma"
 			}, {
-				"id": "AI_4_3",
-				"type": "checkbox",
-				"text": "Associate&#39s Degree"
+                "id": "AI_4_3",
+                "type": "checkbox",
+                "text": "Associate&#39s Degree"
 			}, {
-				"id": "AI_4_4",
-				"type": "checkbox",
-				"text": "Bachelor&#39s Degree"
+                "id": "AI_4_4",
+                "type": "checkbox",
+                "text": "Bachelor&#39s Degree"
 			}, {
-				"id": "AI_4_5",
-				"type": "checkbox",
-				"text": "Master&#39s Degree"
+                "id": "AI_4_5",
+                "type": "checkbox",
+                "text": "Master&#39s Degree"
 			}, {
-				"id": "AI_4_6",
-				"type": "checkbox",
-				"text": "MD/DO"
+                "id": "AI_4_6",
+                "type": "checkbox",
+                "text": "MD/DO"
 			}]
 		}, {
-			"id": "AI_5",
-			"question": "Is there anything you would like us to know about your concussion or concussion recovery?",
-			"answers": [{
-				"id": "AI_5_0",
-				"type": "text",
-				"text": ""
+            "id": "AI_5",
+            "question": "Is there anything you would like us to know about your concussion or concussion recovery?",
+            "answers": [{
+                "id": "AI_5_0",
+                "type": "text",
+                "text": ""
 			}]
 		}
 	]
