@@ -1,17 +1,10 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-	  <title>FAQ</title>
-	  	<% include partials/head %>
-
-	</head>
-	<body>
-	<% include partials/nav %>
-		<div class = "container">
+<% include partials/updated-header.ejs %>
+<!-- 
+		<div class = "container"> -->
 			<div class="jumbotron text-center">
 				<h1>Frequently Asked Questions</h1>
 			</div>
-			<div class = "col-md-12">
+			<!-- <div class = "col-md-12"> -->
 			  <% for(var i =0; i < data.length; i++){ %>
 				<div class="panel panel-default">
 					<div role="button" class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#<%= i %>" aria-expanded="false" aria-controls="<%= i %>" role="tab" id="<%= i %>_0">
@@ -37,8 +30,8 @@
 					</div>
 				  </div>
 			  <% } %>
-			</div>
-		</div>
+			<!-- </div> -->
+	<!-- 	</div> -->
 		<script src="/js/faq.js"></script>
-	</body>
-</html>
+
+<% include partials/footer %>
