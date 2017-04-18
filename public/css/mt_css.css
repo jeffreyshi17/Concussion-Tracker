@@ -1,0 +1,78 @@
+form {
+  display: inline;
+}
+
+
+
+h1,h2,h3{
+  line-height:1.2
+}
+
+.indent1 {
+    margin-left: 50px;
+}
+
+.indenthome {
+    margin-left: 10px;
+}
+
+.indent2 {
+    margin-left: 100px;
+}
+
+
+.indent3 {
+    margin-left: 150px;
+}
+
+.hidden{
+  display:none;  
+}
+
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: auto}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+
+    }
+
+    .row.match-my-cols {
+    overflow: hidden; 
+}
+
+.row.match-my-cols [class*="col-"]{
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
+
+
+.btn{
+    background-color:#808080;
+    border-color: #808080;
+}
+
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
