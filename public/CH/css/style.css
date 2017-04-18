@@ -8,6 +8,14 @@ label {
     font-weight: 400 !important
 }
 
+input[type='checkbox'] {
+    margin-right: 5px;
+}
+
+input[type='radio'] {
+    margin-right: 5px;
+}
+
 .option.level0 {
     margin-left: 40px;
 }
