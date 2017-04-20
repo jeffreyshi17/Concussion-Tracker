@@ -30,8 +30,6 @@ function storeToLocalStorage(localStorageVariableName) {
     var ancestor = document.getElementById('container'),
         descendents = ancestor.getElementsByTagName('INPUT');
     var i, e;
-    var csv=[['id','answer']];
-    var csvRows=[];
     for (i = 0; i < descendents.length; ++i) {
         e = descendents[i];
         var answer = {};
@@ -47,19 +45,41 @@ function storeToLocalStorage(localStorageVariableName) {
         if (e.type == "range") {
             answer.answer = $("#" + e.id + "Val").innerHTML;
         }
-        csv.push([answer.id,answer.answer]);
-        csvRows.push(csv[i].join(','));
         answersObj[idIndex].answers.push(answer);
     }
-    csv = csvRows.join("%0A");
-    var a = document.createElement('a');
-    a.href = 'data:attachment/csv,' + csv;
-    a.target = '_blank';
-    a.download = 'PatientInformation.csv';
-    document.body.appendChild(a);
-    a.click();
     var s = JSON.stringify(answersObj);
     localStorage.setItem(localStorageVariableName, s);
+}
+
+function exportCSV(){
+    var ancestor = document.getElementById('container')
+        , descendents = ancestor.getElementsByTagName('INPUT');
+    var csv=[['id','answer']];
+    var csvRows=[];
+    for (i = 0; i < descendents.length; ++i) {
+        e = descendents[i];
+        var answer = {};
+        var id = e.id.substring(0, e.id.indexOf("_"));
+        answer.id = e.id;
+        if (e.type == "text" || e.type == "date") {
+            answer.answer = e.value;
+        }
+        if (e.type == "checkbox" || e.type == "radio") {
+            answer.answer = e.checked;
+        }
+        if (e.type == "range") {
+            answer.answer = $("#" + e.id + "Val").innerHTML;
+        }
+        csv.push([answer.id,answer.answer]);
+        csvRows.push(csv[i].join(','));
+    }
+    csv = csvRows.join("%0A");
+    var a         = document.createElement('a');
+    a.href        = 'data:attachment/csv,' + csv;
+    a.target      = '_blank';
+    a.download    = 'PatientInformation.csv';
+    document.body.appendChild(a);
+    a.click();
 }
 
 function generateForm() {
@@ -213,6 +233,7 @@ function appendSubmit() {
     container.appendChild(sub);
     $(sub).on('click', function () {
         storeToLocalStorage('init');
+        exportCSV();
     });
 }
 
