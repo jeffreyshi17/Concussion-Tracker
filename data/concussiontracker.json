@@ -1,4 +1,6 @@
-[{
+{
+    "version": "1.0.1",
+    "form":[{
     "id": "PI",
     "title": "Patient Information",
     "desc": " ",
@@ -358,7 +360,7 @@
             "options": {
                 "id": "CH_7_0_0",
                 "type": "text",
-                "text": "If yes, please list dates and describe the details, setting sin which it happened, and how long it took for you to recover?"
+                "text": "If yes, please list dates and describe the details, setting sin which it happened, and how long it took for you to recover"
 
             }
 		}, {
@@ -377,7 +379,7 @@
             "options": [{
                 "id": "CH_8_0_0",
                 "type": "text",
-                "text": "If yes, please list the dates and describe the details and setting in which it happened:"
+                "text": "If yes, please list the dates and describe the details and setting in which it happened"
 
 			}]
 		}, {
@@ -3159,4 +3161,4 @@
 			}]
 		}
 	]
-}]
+}]}
