@@ -51,11 +51,11 @@ function storeToLocalStorage(localStorageVariableName) {
     localStorage.setItem(localStorageVariableName, s);
 }
 
-function exportCSV(){
-    var ancestor = document.getElementById('container')
-        , descendents = ancestor.getElementsByTagName('INPUT');
-    var csv=[['id','answer']];
-    var csvRows=[];
+function exportCSV() {
+    var ancestor = document.getElementById('container'),
+        descendents = ancestor.getElementsByTagName('INPUT');
+    var csv = [['id', 'answer']];
+    var csvRows = [];
     for (i = 0; i < descendents.length; ++i) {
         e = descendents[i];
         var answer = {};
@@ -70,14 +70,14 @@ function exportCSV(){
         if (e.type == "range") {
             answer.answer = $("#" + e.id + "Val").innerHTML;
         }
-        csv.push([answer.id,answer.answer]);
+        csv.push([answer.id, answer.answer]);
         csvRows.push(csv[i].join(','));
     }
     csv = csvRows.join("%0A");
-    var a         = document.createElement('a');
-    a.href        = 'data:attachment/csv,' + csv;
-    a.target      = '_blank';
-    a.download    = 'PatientInformation.csv';
+    var a = document.createElement('a');
+    a.href = 'data:attachment/csv,' + csv;
+    a.target = '_blank';
+    a.download = 'PatientInformation.csv';
     document.body.appendChild(a);
     a.click();
 }
@@ -264,17 +264,7 @@ function restoreFromLocalStorage() {
         }
     }
 }
-/*
-$("input:checkbox").each(function () {
-    if (!$(this).is(':checked')){
-    for (var i = 0; i < this.parentNode.childNodes.length; i++) {
-        if (this.parentNode.childNodes[i] != this) {
-            this.parentNode.childNodes[i].style.display = "none";
-        }
-    }}
-});
 
-*/
 function hideunhide() {
     $("input:checkbox").each(function () {
         if (!$(this).is(':checked')) {
@@ -314,23 +304,3 @@ $('input:checkbox').change(function () {
 $('input:radio').change(function () {
     hideunhide();
 });
-/*
-$(document).ready(function () {
-    $('input:checkbox').change(function () {
-        if ($(this).is(":checked")) {
-            document.getElementById((this).id.substring(0, (this).id.length - 3) + "form").style.display = "inline";
-        }
-        else {
-            document.getElementById((this).id.substring(0, (this).id.length - 3) + "form").style.display = "none";
-        }
-    });
-    $('input:radio').change(function () {
-        if ($("#" + (this).id.substring(0, (this).id.length - 4) + "0inp").is(":checked")) {
-            document.getElementById((this).id.substring(0, (this).id.length - 4) + "0form").style.display = "inline";
-        }
-        else {
-            document.getElementById((this).id.substring(0, (this).id.length - 4) + "0form").style.display = "none";
-        }
-    });
-});
-*/
