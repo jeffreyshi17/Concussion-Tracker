@@ -1,10 +1,10 @@
-var express = require('express')
-    , app = express()
-    , http = require('http')
-    , server = http.createServer(app)
-    , fs = require('fs')
-    , ejs = require('ejs')
-    , port = process.env.PORT || 3000;
+var express = require('express'),
+    app = express(),
+    http = require('http'),
+    server = http.createServer(app),
+    fs = require('fs'),
+    ejs = require('ejs'),
+    port = process.env.PORT || 3000;
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.get('/', function (req, res) {
@@ -57,13 +57,25 @@ app.get('/settings', function (req, res) {
 app.get('/mainjson', function (req, res) {
     console.log('request received');
     res.writeHead(200, {
-        'Content-Type': 'text/plain'
-        , 'Access-Control-Allow-Methods': 'PUT, GET, POST, DELETE, OPTIONS'
-        , 'Access-Control-Allow-Headers': 'Content-Type'
-        , "Access-Control-Allow-Origin": "*"
+        'Content-Type': 'text/plain',
+        'Access-Control-Allow-Methods': 'PUT, GET, POST, DELETE, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        "Access-Control-Allow-Origin": "*"
     });
     //res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify(fs.readFileSync("data/concussiontracker.json", 'utf8'), null, 3));
+});
+
+app.get('/mainjsonversion', function (req, res) {
+    console.log('request received');
+    res.writeHead(200, {
+        'Content-Type': 'text/plain',
+        'Access-Control-Allow-Methods': 'PUT, GET, POST, DELETE, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        "Access-Control-Allow-Origin": "*"
+    });
+    //res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify(JSON.parse(fs.readFileSync("data/concussiontracker.json", 'utf8'), null, 3).version));
 });
 app.get('/settings', function (req, res) {
     //res.locals.data = JSON.parse(fs.readFileSync("data/concussiontracker.json", 'utf8'));
