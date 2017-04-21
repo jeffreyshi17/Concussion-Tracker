@@ -7,23 +7,37 @@ $.ajaxPrefilter(function (options) {
         options.url = http + '//cors-anywhere.herokuapp.com/' + options.url;
     }
 });
-if (!localStorage["initForm"]) {
-    $.ajax({
-        url: 'http://concussiontracker.herokuapp.com/mainjson',
-        dataType: "json",
-        timeout: 5000,
-        success: function (data) {
-            localStorage["initForm"] = data;
-            JSONsrc = JSON.parse(localStorage["initForm"]);
-            generateForm();
-        },
-        error: function (jqXHR, textStatus, errorThrown) {
-            console.log('error ' + textStatus + " " + errorThrown);
-        }
-    });
-} else {
-    JSONsrc = JSON.parse(localStorage["initForm"]);
-    generateForm();
+$.ajax({
+    url: 'http://concussiontracker.herokuapp.com/mainjsonversion',
+    dataType: "json",
+    timeout: 5000,
+    success: function (data) {
+        updateJSON(version);
+    },
+    error: function (jqXHR, textStatus, errorThrown) {
+        console.log('version number not available');
+    }
+});
+
+function updateJSON(webversion) {
+    if (!localStorage["initForm"] || localStorange["initForm"].version != webversion) {
+        $.ajax({
+            url: 'http://concussiontracker.herokuapp.com/mainjson',
+            dataType: "json",
+            timeout: 5000,
+            success: function (data) {
+                localStorage["initForm"] = data;
+                JSONsrc = JSON.parse(localStorage["initForm"]).form;
+                generateForm();
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log('failed to update json');
+            }
+        });
+    } else {
+        JSONsrc = JSON.parse(localStorage["initForm"]);
+        generateForm();
+    }
 }
 
 function storeToLocalStorage(localStorageVariableName) {
