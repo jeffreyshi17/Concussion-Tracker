@@ -40,7 +40,7 @@
 		}, {
             "id": "PI_3_2",
             "type": "checkbox",
-            "text": "Other:",
+            "text": "Other",
             "options": [{
                 "id": "PI_3_2_0",
                 "type": "text",
@@ -95,7 +95,7 @@
 		}, {
             "id": "CH_0_1",
             "type": "checkbox",
-            "text": "Hit head on stationary object:",
+            "text": "Hit head on stationary object",
             "options": [{
                 "id": "CH_0_1_0",
                 "type": "checkbox",
@@ -137,19 +137,19 @@
                 "text": "Pole"
 
 			}, {
-                "id": "CH_0_1_8",
+                "id": "",
                 "type": "checkbox",
-                "text": "Other:",
+                "text": "Other",
                 "options": [{
-                    "id": "CH_0_1_8_0",
+                    "id": "",
                     "type": "text",
-                    "text": "Please specify:"
+                    "text": "Please specify"
 				}]
 			}]
 		}, {
             "id": "CH_0_2",
             "type": "checkbox",
-            "text": "Hit on head with moving object:",
+            "text": "Hit on head with moving object",
             "options": [{
                 "id": "CH_0_2_0",
                 "type": "checkbox",
@@ -183,7 +183,7 @@
 			}, {
                 "id": "CH_0_2_6",
                 "type": "checkbox",
-                "text": "Other:",
+                "text": "Other",
                 "options": [{
                     "id": "CH_0_2_6_0",
                     "type": "text"
@@ -192,7 +192,7 @@
 		}, {
             "id": "CH_0_3",
             "type": "checkbox",
-            "text": "Collision:",
+            "text": "Collision",
             "options": [{
                 "id": "CH_0_3_0",
                 "type": "checkbox",
@@ -221,11 +221,11 @@
 			}, {
                 "id": "CH_0_3_5",
                 "type": "checkbox",
-                "text": "Other:",
+                "text": "Other",
                 "options": [{
                     "id": "CH_0_3_5_0",
                     "type": "text",
-                    "text": "Please specify:"
+                    "text": "Please specify"
 				}]
 			}]
 		}]
@@ -287,7 +287,7 @@
             "options": [{
                 "id": "CH_3_0_0",
                 "type": "text",
-                "text": "If yes, please specify:"
+                "text": "If yes, please specify"
 
 			}]
 		}, {
@@ -2488,7 +2488,7 @@
 		}]
 	}, {
         "id": "RA_16",
-        "question": "Did you walk for more than 5 minuets per day?",
+        "question": "Did you walk for more than 5 minutes per day?",
         "answers": [{
             "id": "RA_16_0",
             "type": "radio",
@@ -2596,7 +2596,7 @@
             "options": [{
                 "id": "RA_17_0_0",
                 "type": "",
-                "text": "If yes, please specify?",
+                "text": "If yes, please specify",
                 "options": [{
                     "id": "RA_17_0_0_0",
                     "type": "text",
@@ -2993,11 +2993,16 @@
                 "id": "AI_0_9",
                 "type": "checkbox",
                 "text": "Gymnastics"
-			}, {
+			},{
                 "id": "AI_0_10",
-                "type": "text",
-                "text": "Other:"
-			}]
+                "type": "checkbox",
+                "text": "Other",
+                "options": [{
+                    "id": "AI_0_10_0",
+                    "type": "text",
+                    "text": "Please specify:"
+                }]
+            }]
 		},
 
         {
@@ -3043,11 +3048,16 @@
                 "id": "AI_1_9",
                 "type": "checkbox",
                 "text": "Gymnastics"
-			}, {
+			},{
                 "id": "AI_1_10",
-                "type": "text",
-                "text": "Other:"
-			}]
+                "type": "checkbox",
+                "text": "Other",
+                "options": [{
+                    "id": "AI_1_10_0",
+                    "type": "text",
+                    "text": "Please specify:"
+                }]
+            }]
 		},
 
         {
@@ -3073,11 +3083,16 @@
                 "id": "AI_2_4",
                 "type": "checkbox",
                 "text": "Caucasian"
-			}, {
+			},{
                 "id": "AI_2_5",
-                "type": "text",
-                "text": "Other, please specify"
-			}]
+                "type": "checkbox",
+                "text": "Other",
+                "options": [{
+                    "id": "AI_2_5_0",
+                    "type": "text",
+                    "text": "Please specify:"
+                }]
+            }]
 		}, {
             "id": "AI_3",
             "question": "Marital Status",
