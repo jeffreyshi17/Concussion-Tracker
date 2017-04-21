@@ -60,6 +60,7 @@ function submit(){
 
 		var full = document.querySelectorAll("input");
 		for (var i = 0; i < full.length; i++){
+			
 			if (full[i].type == "checkbox"){
 				if (full[i].checked == true){
 					answerJ += '{"id": "' + full[i].id + '", "answer": "Yes"}, ';
