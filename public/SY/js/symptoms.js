@@ -130,7 +130,7 @@ document.getElementById("save").addEventListener("click",storeToLocalStorage);
 for(k=0; k< container.length; k++){
 	if(container[k].type == 'range'){
 		$("#"+container[k].id+"v").text($("#"+container[k].id).val());  
-		$("#"+container[k].id).on('change', function(){
+		$("#"+container[k].id).on('input', function(){
     			$("#"+this.id+"v").text($(this).val());
 		});
 }}
