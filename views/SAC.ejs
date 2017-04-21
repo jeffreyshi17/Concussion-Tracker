@@ -1,11 +1,21 @@
-<% include partials/updated-header.ejs %>
+<!doctype html>
+<html>
+<head>
+    <title>SAC</title>
+  	<% include partials/head %>
+
+</head>
+
+<body>
+    	<% include partials/nav %>
+
 		<DIV id = 'header' class = 'page-header'><H1>Sleep, Alcohol, Caffeine Tracker</H1></DIV>
 		<DIV id = 'body' class = 'container'>
 		<TITLE>Sleep, Alcohol, Caffeine Tracker</TITLE>
 			<% for (var i = 0; i < data[0].questions.length; i++){ %>
 				<h2><%= data[0].questions[i].question %></h2>
 					<% for (var j = 0; j < data[0].questions[i].answers.length; j++){ %>
-						<div><%= data[0].questions[i].answers[j].text %></div>
+						<div><p><%= data[0].questions[i].answers[j].text %></p></div>
 							<% if (data[0].questions[i].answers[j].type == "checkbox"){ %>
 								<% var x = data[0].questions[i].answers[j].id; %>
 								<input type="checkbox" id = <%= x %> >
@@ -61,4 +71,6 @@
 		</DIV>
 		<script src = "SAC/js/script.js"></script>
 
-<% include partials/footer %>
+</body>
+</head>
+</html>
