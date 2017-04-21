@@ -10,7 +10,7 @@ $.ajaxPrefilter(function (options) {
 
 updateJSON();
 
-function updateJSON(webversion) {
+function updateJSON() {
     $.ajax({
         url: 'http://concussiontracker.herokuapp.com/mainjson',
         dataType: "json",
