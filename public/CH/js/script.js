@@ -7,37 +7,23 @@ $.ajaxPrefilter(function (options) {
         options.url = http + '//cors-anywhere.herokuapp.com/' + options.url;
     }
 });
-$.ajax({
-    url: 'http://concussiontracker.herokuapp.com/mainjsonversion',
-    dataType: "json",
-    timeout: 5000,
-    success: function (data) {
-        updateJSON(version);
-    },
-    error: function (jqXHR, textStatus, errorThrown) {
-        console.log('version number not available');
-    }
-});
+
+updateJSON();
 
 function updateJSON(webversion) {
-    if (!localStorage["initForm"] || localStorange["initForm"].version != webversion) {
-        $.ajax({
-            url: 'http://concussiontracker.herokuapp.com/mainjson',
-            dataType: "json",
-            timeout: 5000,
-            success: function (data) {
-                localStorage["initForm"] = data;
-                JSONsrc = JSON.parse(localStorage["initForm"]).form;
-                generateForm();
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.log('failed to update json');
-            }
-        });
-    } else {
-        JSONsrc = JSON.parse(localStorage["initForm"]);
-        generateForm();
-    }
+    $.ajax({
+        url: 'http://concussiontracker.herokuapp.com/mainjson',
+        dataType: "json",
+        timeout: 5000,
+        success: function (data) {
+            localStorage["initForm"] = data;
+            JSONsrc = JSON.parse(localStorage["initForm"]).form;
+            generateForm();
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.log('failed to update json');
+        }
+    });
 }
 
 function storeToLocalStorage(localStorageVariableName) {
@@ -97,7 +83,6 @@ function exportCSV() {
 }
 
 function generateForm() {
-    //appendRestore();
     for (var k = 0; k < JSONsrc.length; k++) {
         //Creating localStorage Object
         var temp = {};
@@ -268,11 +253,13 @@ function restoreFromLocalStorage() {
         for (var i = 0; i < a.length; i++) {
             for (var j = 0; j < a[i].answers.length; j++) {
                 var q = a[i].answers[j];
-                var type = document.getElementById(q.id).type;
-                if (type == "checkbox" || type == "radio") {
-                    document.getElementById(q.id).checked = q.answer;
-                } else {
-                    document.getElementById(q.id).value = q.answer;
+                if (document.getElementById(q.id)) {
+                    var type = document.getElementById(q.id).type;
+                    if (type == "checkbox" || type == "radio") {
+                        document.getElementById(q.id).checked = q.answer;
+                    } else {
+                        document.getElementById(q.id).value = q.answer;
+                    }
                 }
             }
         }
