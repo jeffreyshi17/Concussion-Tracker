@@ -1,5 +1,5 @@
 {
-    "version": "1.0.1",
+    "version": "1.0.2",
     "form":[{
     "id": "PI",
     "title": "Patient Information",
@@ -182,7 +182,7 @@
                 "type": "checkbox",
                 "text": "Sports equipment (e.g. hockey stick, golf club, etc.)"
 
-			}, {
+			},{
                 "id": "CH_0_2_6",
                 "type": "checkbox",
                 "text": "Other",
@@ -237,32 +237,32 @@
         "answers": [{
             "id": "CH_1_0",
             "type": "checkbox",
-            "text": "front"
+            "text": "Front"
 
 		}, {
             "id": "CH_1_1",
             "type": "checkbox",
-            "text": "back"
+            "text": "Back"
 
 		}, {
             "id": "CH_1_2",
             "type": "checkbox",
-            "text": "left side"
+            "text": "Left side"
 
 		}, {
             "id": "CH_1_3",
             "type": "checkbox",
-            "text": "right side"
+            "text": "Right side"
 
 		}, {
             "id": "CH_1_4",
             "type": "checkbox",
-            "text": "top"
+            "text": "Top"
 
 		}, {
             "id": "CH_1_5",
             "type": "checkbox",
-            "text": "unknown or N/A"
+            "text": "Unknown or N/A"
 
 		}]
 	}, {
@@ -271,12 +271,12 @@
         "answers": [{
             "id": "CH_2_0",
             "type": "radio",
-            "text": "yes"
+            "text": "Yes"
 
 		}, {
             "id": "CH_2_1",
             "type": "radio",
-            "text": "no"
+            "text": "No"
 
 		}]
 	}, {
@@ -285,7 +285,7 @@
         "answers": [{
             "id": "CH_3_0",
             "type": "radio",
-            "text": "yes",
+            "text": "Yes",
             "options": [{
                 "id": "CH_3_0_0",
                 "type": "text",
@@ -295,7 +295,7 @@
 		}, {
             "id": "CH_3_1",
             "type": "radio",
-            "text": "no"
+            "text": "No"
 
 		}]
 	}, {
@@ -304,7 +304,7 @@
         "answers": [{
             "id": "CH_4_0",
             "type": "radio",
-            "text": "yes",
+            "text": "Yes",
             "options": [{
                 "id": "CH_4_0_0",
                 "type": "text",
@@ -314,7 +314,7 @@
 		}, {
             "id": "CH_4_1",
             "type": "radio",
-            "text": "no"
+            "text": "No"
 
 		}]
 	}, {
@@ -323,12 +323,12 @@
         "answers": [{
             "id": "CH_5_0",
             "type": "radio",
-            "text": "yes"
+            "text": "Yes"
 
 		}, {
             "id": "CH_5_1",
             "type": "radio",
-            "text": "no"
+            "text": "No"
 
 		}]
 	}, {
@@ -337,7 +337,7 @@
         "answers": [{
             "id": "CH_6_0",
             "type": "radio",
-            "text": "yes",
+            "text": "Yes",
             "options": [{
                 "id": "CH_6_0_0",
                 "type": "text",
@@ -347,7 +347,7 @@
 		}, {
             "id": "CH_6_1",
             "type": "radio",
-            "text": "no"
+            "text": "No"
 
 		}]
 	}, {
@@ -356,7 +356,7 @@
         "answers": [{
             "id": "CH_7_0",
             "type": "radio",
-            "text": "yes",
+            "text": "Yes",
             "options": {
                 "id": "CH_7_0_0",
                 "type": "text",
@@ -366,7 +366,7 @@
 		}, {
             "id": "CH_7_1",
             "type": "radio",
-            "text": "no"
+            "text": "No"
 
 		}]
 	}, {
@@ -375,7 +375,7 @@
         "answers": [{
             "id": "CH_8_0",
             "type": "radio",
-            "text": "yes",
+            "text": "Yes",
             "options": [{
                 "id": "CH_8_0_0",
                 "type": "text",
@@ -385,7 +385,7 @@
 		}, {
             "id": "CH_8_1",
             "type": "radio",
-            "text": "no"
+            "text": "No"
 
 		}]
 	}]
@@ -916,7 +916,7 @@
                 "options": [{
                     "id": "PMH_0_0_4_0",
                     "type": "text",
-                    "text": "Please list:"
+                    "text": "Please list"
 				}]
 			}]
 		}]
@@ -1068,7 +1068,7 @@
     "desc": "Please answer the following questions about your menstrual history and leave any necessary comments. Please note any changes in your menstrual cycle from before your injury (pre-injury) to after your injury (post-injury).",
     "questions": [{
         "id": "MH_0",
-        "question": "Day of last period(first day):",
+        "question": "Day of last period (first day):",
         "answers": [{
             "id": "MH_0_0",
             "type": "date",
@@ -1079,12 +1079,12 @@
         "question": "Are you menopausal?",
         "answers": [{
             "id": "MH_1_0",
-            "text": "yes",
+            "text": "Yes",
             "type": "radio",
             "options": []
 		}, {
             "id": "MH_1_1",
-            "text": "no",
+            "text": "No",
             "type": "radio",
             "options": []
 		}]
@@ -1093,12 +1093,12 @@
         "question": "Are you taking oral contraceptives?",
         "answers": [{
             "id": "MH_2_0",
-            "text": "yes",
+            "text": "Yes",
             "type": "radio",
             "options": []
 		}, {
             "id": "MH_2_1",
-            "text": "no",
+            "text": "No",
             "type": "radio",
             "options": []
 		}]
@@ -1107,7 +1107,7 @@
         "question": "Have you missed any periods recently? (since last check-in)",
         "answers": [{
             "id": "MH_3_0",
-            "text": "yes",
+            "text": "Yes",
             "type": "radio",
             "options": [{
                 "id": "MH_3_0_0",
@@ -1116,7 +1116,7 @@
 			}]
 		}, {
             "id": "MH_3_1",
-            "text": "no",
+            "text": "No",
             "type": "radio",
             "options": []
 		}]
@@ -2707,7 +2707,7 @@
             "options": [{
                 "id": "RA_18_0_0",
                 "type": "",
-                "text": "If yes, please list the items and estimate the weight.",
+                "text": "If yes, please list the items and estimate the weight",
                 "options": [{
                     "id": "RA_18_0_0_0",
                     "type": "text",
@@ -2849,11 +2849,16 @@
                     "id": "RA_19_0_0_7",
                     "type": "checkbox",
                     "text": "Mowing the lawn"
-				}, {
-                    "id": "RA_19_0_0_8",
-                    "type": "text",
-                    "text": "Other:"
-				}]
+				}, 
+                {
+                "id": "RA_19_0_0_8",
+                "type": "checkbox",
+                "text": "Other",
+                "options": [{
+                    "id": "RA_19_0_0_8_0",
+                    "type": "text"
+                    }]
+                }]
 			}, {
                 "id": "RA_19_0_1",
                 "type": "",
