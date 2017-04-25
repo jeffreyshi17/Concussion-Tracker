@@ -41,10 +41,17 @@ save+= new Date();
 save += '", "answers": [';
 var body = document.getElementsByTagName('input');
 for(var i = 0; i < body.length; i++){
-	if(body[i].checked == true){
+	if(body[i].checked == true && body[i].id == "MH_4_0"){
+		save +='{"id": "'+ body[i].id +'","answer": "Light"},';
+	}else if(body[i].checked == true && body[i].id == "MH_4_1"){
+		save +='{"id": "'+ body[i].id +'","answer": "Moderate"},';
+	}else if(body[i].checked == true && body[i].id == "MH_4_2"){
+		save +='{"id": "'+ body[i].id +'","answer": "Heavy"},';
+	}else if(body[i].checked == true && body[i].id.slice(-1) == "0"){
 		save +='{"id": "'+ body[i].id +'","answer": "Yes"},';
-	}
-	if(body[i].type == "text"){
+	}else if(body[i].checked == true && body[i].id.slice(-1) == "1"){
+		save +='{"id": "'+ body[i].id +'","answer": "No"},';
+	}else if(body[i].type == "date"){
 		save +='{"id": "'+ body[i].id +'","answer": "' + body[i].value +'"},';
 	}
 }
