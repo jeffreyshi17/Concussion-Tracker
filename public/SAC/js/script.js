@@ -125,6 +125,8 @@ function exportCSV() {
     a.click();
 }
 
+var form = document.createElement('form');
+
 function generateForm() {
     for (var k = 0; k < JSONsrc.length; k++) {
         //Creating localStorage Object
@@ -155,11 +157,12 @@ function generateForm() {
                 appendOptions(e, l1["answers"], 0);
             }
         }
-        if (container.firstChild) container.insertBefore(section, container.firstChild);
-        else container.appendChild(section);
 
-        //container.appendChild(section);
+        form.appendChild(section);
     }
+
+    if (container.firstChild) container.insertBefore(form, container.firstChild);
+    else container.appendChild(form);
     restoreFromLocalStorage();
     hideunhide();
 }
