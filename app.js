@@ -65,7 +65,7 @@ app.get('/mainjson', function (req, res) {
     //res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify(fs.readFileSync("data/concussiontracker.json", 'utf8'), null, 3));
 });
-app.get('/sacjson', function (req, res) {
+app.get('/dailyjson', function (req, res) {
     console.log('request received');
     res.writeHead(200, {
         'Content-Type': 'text/plain',
@@ -74,7 +74,7 @@ app.get('/sacjson', function (req, res) {
         "Access-Control-Allow-Origin": "*"
     });
     //res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify(fs.readFileSync("data/SAC.json", 'utf8'), null, 3));
+    res.end(JSON.stringify(fs.readFileSync("data/daily.json", 'utf8'), null, 3));
 });
 
 app.get('/settings', function (req, res) {

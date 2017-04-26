@@ -16,8 +16,8 @@ function updateJSON() {
         dataType: "json",
         timeout: 5000,
         success: function (data) {
-            localStorage["initForm"] = data;
-            JSONsrc = JSON.parse(localStorage["initForm"]).form;
+            localStorage["dailyForm"] = data;
+            JSONsrc = JSON.parse(localStorage["dailyForm"]).form;
             generateForm();
             $('input:checkbox').change(function () {
                 hideunhide();
