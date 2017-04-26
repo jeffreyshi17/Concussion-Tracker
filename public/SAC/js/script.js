@@ -19,6 +19,14 @@ function updateJSON() {
             localStorage["sacForm"] = data;
             JSONsrc = JSON.parse(localStorage["sacForm"]).form;
             generateForm();
+
+            $('input:checkbox').change(function () {
+                hideunhide();
+            });
+            $('input:radio').change(function () {
+                hideunhide();
+            });
+
         },
         error: function (jqXHR, textStatus, errorThrown) {
             console.log('failed to update json');
@@ -111,8 +119,7 @@ function generateForm() {
         }
     }
     restoreFromLocalStorage();
-    hideunhide();
-    appendSubmit();
+    hideunhide();appendSubmit();
 }
 
 function appendOptions(e1, lev, x) {
@@ -299,13 +306,6 @@ function hideunhide() {
         }
     });
 }
-$('input:checkbox').change(function () {
-    hideunhide();
-});
-$('input:radio').change(function () {
-    hideunhide();
-});
-
 
 function submit() {
     console.log("submit running");

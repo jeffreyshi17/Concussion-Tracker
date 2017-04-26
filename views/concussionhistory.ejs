@@ -1,15 +1,28 @@
 <!doctype html>
 <html>
+
 <head>
     <title>Concussion History</title>
-  	<% include partials/head %>
+    <% include partials/head %>
 
 </head>
 
 <body>
-    	<% include partials/nav %>
-    <div id="container"> </div>
-    <script src="CH/js/script.js">
-    </script>
+    <% include partials/nav %>
+        <div id="container">
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+
+            <button class="action back btn btn-info">Back</button>
+            <button class="action next btn btn-info">Next</button>
+            <button class="action submit btn btn-success" id="submit">Submit</button>
+
+        </div>
+        <script src="CH/js/script.js">
+
+
+        </script>
 </body>
+
 </html>

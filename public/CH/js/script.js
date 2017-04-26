@@ -19,11 +19,56 @@ function updateJSON() {
             localStorage["initForm"] = data;
             JSONsrc = JSON.parse(localStorage["initForm"]).form;
             generateForm();
+            $('input:checkbox').change(function () {
+                hideunhide();
+            });
+            $('input:radio').change(function () {
+                hideunhide();
+            });
+
+            $('#submit').on('click', function () {
+                storeToLocalStorage('init');
+                window.location.replace("/allresults");
+
+                //exportCSV();
+            });
+
+            var current = 1;
+
+            widget = $(".step");
+            btnnext = $(".next");
+            btnback = $(".back");
+            btnsubmit = $(".submit");
+
+            // Init buttons and UI
+            widget.not(':eq(0)').hide();
+            hideButtons(current);
+            setProgress(current);
+
+            // Next button click action
+            btnnext.click(function () {
+                if (current < widget.length) {
+                    widget.show();
+                    widget.not(':eq(' + (current++) + ')').hide();
+                    setProgress(current);
+                }
+                hideButtons(current);
+            })
+
+            // Back button click action
+            btnback.click(function () {
+                if (current > 1) {
+                    current = current - 2;
+                    btnnext.trigger('click');
+                }
+                hideButtons(current);
+            })
         },
         error: function (jqXHR, textStatus, errorThrown) {
             console.log('failed to update json');
         }
     });
+
 }
 
 function storeToLocalStorage(localStorageVariableName) {
@@ -45,6 +90,7 @@ function storeToLocalStorage(localStorageVariableName) {
         if (e.type == "range") {
             answer.answer = $("#" + e.id + "Val").innerHTML;
         }
+        console.log(e, id, idIndex);
         answersObj[idIndex].answers.push(answer);
     }
     var s = JSON.stringify(answersObj);
@@ -90,6 +136,9 @@ function generateForm() {
         temp.answers = [];
         answersObj.push(temp);
         idlist.push(JSONsrc[k].id);
+
+        var section = document.createElement('div');
+        section.className = "step well";
         //title, description
         var title = document.createElement('h1');
         title.className = "page-header";
@@ -97,22 +146,23 @@ function generateForm() {
         title.appendChild(document.createTextNode(JSONsrc[k]["title"]));
         title.id = JSONsrc[k].id;
         description.appendChild(document.createTextNode(JSONsrc[k]["desc"]));
-        container.appendChild(title);
-        container.appendChild(description);
+        section.appendChild(title);
+        section.appendChild(description);
         //Generating the actual form
         for (var i = 0; i < JSONsrc[k]["questions"].length; i++) {
             var e = document.createElement('h3');
             e.innerHTML = JSONsrc[k]["questions"][i].question;
-            container.appendChild(e);
+            section.appendChild(e);
             var l1 = JSONsrc[k]["questions"][i];
             if (l1["answers"]) {
                 appendOptions(e, l1["answers"], 0);
             }
         }
+
+        container.appendChild(section);
     }
     restoreFromLocalStorage();
     hideunhide();
-    appendSubmit();
 }
 
 function appendOptions(e1, lev, x) {
@@ -224,18 +274,6 @@ function appendOption(target, op) {
     return input;
 }
 
-function appendSubmit() {
-    var sub = document.createElement('button');
-    sub.className = "btn btn-default";
-    sub.innerHTML = "Submit";
-    sub.id = "submit";
-    container.appendChild(sub);
-    $(sub).on('click', function () {
-        storeToLocalStorage('init');
-        exportCSV();
-    });
-}
-
 function appendRestore() {
     var restore = document.createElement('button');
     restore.className = "btn btn-default";
@@ -299,9 +337,25 @@ function hideunhide() {
         }
     });
 }
-$('input:checkbox').change(function () {
-    hideunhide();
-});
-$('input:radio').change(function () {
-    hideunhide();
-});
+
+
+// Change progress bar action
+setProgress = function (currstep) {
+    var percent = parseFloat(100 / widget.length) * currstep;
+    percent = percent.toFixed();
+    $(".progress-bar").css("width", percent + "%").html(percent + "%");
+}
+
+// Hide buttons according to the current step
+hideButtons = function (current) {
+    var limit = parseInt(widget.length);
+
+    $(".action").hide();
+
+    if (current < limit) btnnext.show();
+    if (current > 1) btnback.show();
+    if (current == limit) {
+        btnnext.hide();
+        btnsubmit.show();
+    }
+}
