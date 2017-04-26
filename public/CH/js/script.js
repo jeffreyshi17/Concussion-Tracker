@@ -116,7 +116,7 @@ function exportCSV() {
         if (e.type == "range") {
             answer.answer = $("#" + e.id + "Val").innerHTML;
         }
-        csv.push([answer.id, answer.answer]);
+        csv.push(["\""+answer.id+"\"", "\""+answer.answer+"\""]);
         csvRows.push(csv[i].join(','));
     }
     csv = csvRows.join("%0A");
