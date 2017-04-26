@@ -17,7 +17,7 @@ function updateJSON() {
         timeout: 5000,
         success: function (data) {
             localStorage["sacForm"] = data;
-            JSONsrc = JSON.parse(localStorage["initForm"]).form;
+            JSONsrc = JSON.parse(localStorage["sacForm"]).form;
             generateForm();
         },
         error: function (jqXHR, textStatus, errorThrown) {
@@ -311,15 +311,7 @@ function submit() {
     console.log("submit running");
     var date = "";
     var d = new Date();
-    // var dSeconds = "";
-    // var dMinutes = "";
-    // var dHours = "";
-    // var dDates = "";
-    // var dMonths = "";
-    // var dYears = "";
     date = d.toLocaleString();
-
-    // date = (d.getMinutes().toString()) + "." + (d.getHours().toString()) + "." + (d.getDate().toString()) + "." + (d.getMonth().toString()) + "." + (d.getFullYear().toString());
 
     if (localStorage.getItem("SAC") == null) {
         var answerJ = '{"title": "Sleep, Alcohol, Caffeine Tracker", "groups": [{';
@@ -379,6 +371,5 @@ function submit() {
         answerJ += ']}';
         ls += answerJ;
         localStorage.setItem("SAC", ls);
-
     }
 }
