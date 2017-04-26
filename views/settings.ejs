@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>FAQ</title>
+    <title>Account Settings</title>
     <% include partials/head %>
         <script>
             var app = angular.module('myApp', []);
@@ -36,6 +36,21 @@
         <div class="container">
             <div class="jumbotron text-center">
                 <h1>Account Settings</h1> </div>
+		//Bennet's Buttons for RTP
+		<label id="eRTP">
+  			<input type="checkbox" data-toggle="toggle" id="eRTPbutton"> 
+		</label>
+		<div id="eRTPText">Enable Return to Play</div>
+		<BR>
+		<label id="eTestMode">
+  			<input type="checkbox" id="eTestModeButton" data-toggle="toggle"> Enable Test Mode
+		</label>
+		<h3>Test mode disables the requirement for 24 hours to elapse between tracking symptoms. Use this mode if you want to test the Return to Play protocol.</h3>
+		//end Bennet's buttons for RTP
+		
+		
+		
+		
             <div class="col-md-12" ng-app="myApp" ng-controller="myCtrl">
                 <div class="panel panel-default">
                     <div role="button" class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#name" aria-expanded="false" aria-controls="name" role="tab">
