@@ -47,6 +47,10 @@ function updateJSON() {
                 if (current < widget.length) {
                     widget.show();
                     widget.not(':eq(' + (current++) + ')').hide();
+                    $("html, body").animate({
+                        scrollTop: 0
+                    }, "fast");
+
                     setProgress(current);
                 }
                 hideButtons(current);
