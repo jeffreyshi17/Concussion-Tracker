@@ -155,8 +155,10 @@ function generateForm() {
                 appendOptions(e, l1["answers"], 0);
             }
         }
+        if (container.firstChild) pa.insertBefore(section, container.firstChild);
+        else container.appendChild(section);
 
-        container.appendChild(section);
+        //container.appendChild(section);
     }
     restoreFromLocalStorage();
     hideunhide();
