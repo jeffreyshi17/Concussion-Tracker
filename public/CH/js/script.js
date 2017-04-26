@@ -29,8 +29,6 @@ function updateJSON() {
             $('#submit').on('click', function () {
                 storeToLocalStorage('init');
                 window.location.replace("/allresults");
-
-                //exportCSV();
             });
 
             var current = 1;
@@ -62,10 +60,6 @@ function updateJSON() {
                 }
                 hideButtons(current);
             })
-
-
-            btnnext.trigger('click');
-            btnnext.trigger('click');
         },
         error: function (jqXHR, textStatus, errorThrown) {
             console.log('failed to update json');

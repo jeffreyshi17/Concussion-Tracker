@@ -12,13 +12,14 @@ updateJSON();
 
 function updateJSON() {
     $.ajax({
-        url: 'http://concussiontracker.herokuapp.com/dailyjson',
+        url: 'http://concussiontracker.herokuapp.com/sacjson',
         dataType: "json",
         timeout: 5000,
         success: function (data) {
-            localStorage["initForm"] = data;
-            JSONsrc = JSON.parse(localStorage["initForm"]).form;
+            localStorage["sacForm"] = data;
+            JSONsrc = JSON.parse(localStorage["sacForm"]).form;
             generateForm();
+
             $('input:checkbox').change(function () {
                 hideunhide();
             });
@@ -26,46 +27,11 @@ function updateJSON() {
                 hideunhide();
             });
 
-            $('#submit').on('click', function () {
-                storeToLocalStorage('init');
-                window.location.replace("/allresults");
-            });
-
-            var current = 1;
-            widget = $(".step");
-            btnnext = $(".next");
-            btnback = $(".back");
-            btnsubmit = $(".submit");
-
-            // Init buttons and UI
-            widget.not(':eq(0)').hide();
-            hideButtons(current);
-            setProgress(current);
-
-            // Next button click action
-            btnnext.click(function () {
-                if (current < widget.length) {
-                    widget.show();
-                    widget.not(':eq(' + (current++) + ')').hide();
-                    setProgress(current);
-                }
-                hideButtons(current);
-            })
-
-            // Back button click action
-            btnback.click(function () {
-                if (current > 1) {
-                    current = current - 2;
-                    btnnext.trigger('click');
-                }
-                hideButtons(current);
-            })
         },
         error: function (jqXHR, textStatus, errorThrown) {
             console.log('failed to update json');
         }
     });
-
 }
 
 function storeToLocalStorage(localStorageVariableName) {
@@ -87,7 +53,6 @@ function storeToLocalStorage(localStorageVariableName) {
         if (e.type == "range") {
             answer.answer = $("#" + e.id + "Val").innerHTML;
         }
-        console.log(e, id, idIndex);
         answersObj[idIndex].answers.push(answer);
     }
     var s = JSON.stringify(answersObj);
@@ -113,7 +78,7 @@ function exportCSV() {
         if (e.type == "range") {
             answer.answer = $("#" + e.id + "Val").innerHTML;
         }
-        csv.push(["\"" + answer.id + "\"", "\"" + answer.answer + "\""]);
+        csv.push([answer.id, answer.answer]);
         csvRows.push(csv[i].join(','));
     }
     csv = csvRows.join("%0A");
@@ -133,9 +98,6 @@ function generateForm() {
         temp.answers = [];
         answersObj.push(temp);
         idlist.push(JSONsrc[k].id);
-
-        var section = document.createElement('div');
-        section.className = "step well";
         //title, description
         var title = document.createElement('h1');
         title.className = "page-header";
@@ -143,23 +105,21 @@ function generateForm() {
         title.appendChild(document.createTextNode(JSONsrc[k]["title"]));
         title.id = JSONsrc[k].id;
         description.appendChild(document.createTextNode(JSONsrc[k]["desc"]));
-        section.appendChild(title);
-        section.appendChild(description);
+        container.appendChild(title);
+        container.appendChild(description);
         //Generating the actual form
         for (var i = 0; i < JSONsrc[k]["questions"].length; i++) {
             var e = document.createElement('h3');
             e.innerHTML = JSONsrc[k]["questions"][i].question;
-            section.appendChild(e);
+            container.appendChild(e);
             var l1 = JSONsrc[k]["questions"][i];
             if (l1["answers"]) {
                 appendOptions(e, l1["answers"], 0);
             }
         }
-
-        container.appendChild(section);
     }
     restoreFromLocalStorage();
-    hideunhide();
+    hideunhide();appendSubmit();
 }
 
 function appendOptions(e1, lev, x) {
@@ -271,6 +231,18 @@ function appendOption(target, op) {
     return input;
 }
 
+function appendSubmit() {
+    var sub = document.createElement('button');
+    sub.className = "btn btn-default";
+    sub.innerHTML = "Submit";
+    sub.id = "submit";
+    container.appendChild(sub);
+    $(sub).on('click', function () {
+        submit();
+        exportCSV();
+    });
+}
+
 function appendRestore() {
     var restore = document.createElement('button');
     restore.className = "btn btn-default";
@@ -335,24 +307,69 @@ function hideunhide() {
     });
 }
 
+function submit() {
+    console.log("submit running");
+    var date = "";
+    var d = new Date();
+    date = d.toLocaleString();
 
-// Change progress bar action
-setProgress = function (currstep) {
-    var percent = parseFloat(100 / widget.length) * currstep;
-    percent = percent.toFixed();
-    $(".progress-bar").css("width", percent + "%").html(percent + "%");
-}
+    if (localStorage.getItem("SAC") == null) {
+        var answerJ = '{"title": "Sleep, Alcohol, Caffeine Tracker", "groups": [{';
+        answerJ += '"date": ' + '"' + date + '", ';
+        answerJ += '"answers": [';
 
-// Hide buttons according to the current step
-hideButtons = function (current) {
-    var limit = parseInt(widget.length);
+        var full = document.querySelectorAll("input");
+        for (var i = 0; i < full.length; i++) {
+            if (full[i].type == "checkbox") {
+                if (full[i].checked == true) {
+                    answerJ += '{"id": "' + full[i].id + '", "answer": "Yes"}, ';
+                } else {
+                    answerJ += '{"id": "' + full[i].id + '", "answer": "No"}, ';
+                }
+            } else if (full[i].type == "text") {
+                answerJ += '{"id": "' + full[i].id + '", "answer": "' + full[i].value + '"}, ';
+            } else if (full[i].type == "radio") {
+                if (full[i].checked == true) {
+                    answerJ += '{"id": "' + full[i].id + '", "answer": "Yes"}, ';
+                } else {
+                    answerJ += '{"id": "' + full[i].id + '", "answer": "No"}, ';
+                }
+            }
+        }
+        answerJ = answerJ.substring(0, answerJ.length - 2); //gets rid of extra comma
+        answerJ += ']}';
+        answerJ += ']}';
+        localStorage.setItem("SAC", answerJ);
+    } else if (localStorage.getItem("SAC") != null) {
+        var ls = localStorage.getItem("SAC");
+        ls = ls.substring(0, ls.length - 2); //gets rid of last } and ]
+        ls += ', {';
+        var answerJ = '';
+        answerJ += '"date": ' + '"' + date + '", ';
+        answerJ += '"answers": [';
 
-    $(".action").hide();
-
-    if (current < limit) btnnext.show();
-    if (current > 1) btnback.show();
-    if (current == limit) {
-        btnnext.hide();
-        btnsubmit.show();
+        var full = document.querySelectorAll("input");
+        for (var i = 0; i < full.length; i++) {
+            if (full[i].type == "checkbox") {
+                if (full[i].checked == true) {
+                    answerJ += '{"id": "' + full[i].id + '", "answer": "Yes"}, ';
+                } else {
+                    answerJ += '{"id": "' + full[i].id + '", "answer": "No"}, ';
+                }
+            } else if (full[i].type == "text") {
+                answerJ += '{"id": "' + full[i].id + '", "answer": "' + full[i].value + '"}, ';
+            } else if (full[i].type == "radio") {
+                if (full[i].checked == true) {
+                    answerJ += '{"id": "' + full[i].id + '", "answer": "Yes"}, ';
+                } else {
+                    answerJ += '{"id": "' + full[i].id + '", "answer": "No"}, ';
+                }
+            }
+        }
+        answerJ = answerJ.substring(0, answerJ.length - 2); //gets rid of extra comma
+        answerJ += ']}';
+        answerJ += ']}';
+        ls += answerJ;
+        localStorage.setItem("SAC", ls);
     }
 }
