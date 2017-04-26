@@ -156,7 +156,7 @@ function generateForm() {
             }
         }
 
-        if (container.firstChild) pa.insertBefore(section, container.firstChild);
+        if (container.firstChild) container.insertBefore(section, container.firstChild);
         else container.appendChild(section);
     }
     restoreFromLocalStorage();
