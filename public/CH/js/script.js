@@ -8,7 +8,7 @@ $.ajaxPrefilter(function (options) {
     }
 });
 
-if ($('#versionnumber').text().replace(/\s+/g, '') != JSON.parse(localStorage["initForm"]).version) {
+if (!localStorage["initForm"] || ($('#versionnumber').text().replace(/\s+/g, '') != JSON.parse(localStorage["initForm"]).version)) {
     updateJSON();
     console.log("server");
 } else {
