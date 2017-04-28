@@ -18,10 +18,6 @@ app.get('/summary', function (req, res) {
     res.locals.data = JSON.parse(fs.readFileSync("data/concussiontracker.json", 'utf8'));
     res.render('summary.ejs');
 });
-app.get('/symptoms', function (req, res) {
-    res.locals.data = JSON.parse(fs.readFileSync("data/symptoms.json", 'utf8'));
-    res.render('symptoms.ejs');
-});
 app.get('/results', function (req, res) {
     res.locals.data = JSON.parse(fs.readFileSync("data/symptoms.json", 'utf8'));
     res.render('results.ejs');
