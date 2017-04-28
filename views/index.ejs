@@ -14,17 +14,26 @@
     <div class="jumbotron text-center">
       <div class="container">
       	<!-- <div class="col-md-4 text-center"> -->
-	        <h1> Welcome to Concussion Tracker!</h1>
-	        <% if(1===1){ %>
-	        	<p> It looks like it's your first time visiting! To start, please fill out the initial questionnaire below. </p>
-	       	<% } else{ %>
-	       	<% } %>
-	        <button class="btn btn-primary" onclick="window.location.href='/question'">Start Initial Questionnaire</button>
+	        <h1 id="jumbo"> Welcome to Concussion Tracker!</h1>
+	        	<p id="desc"> It looks like it's your first time visiting! To start, please fill out the initial questionnaire below. </p>
+	        <button id="initbutton" class="btn btn-primary" onclick="window.location.href='/question'">Start Initial Questionnaire</button>
        <!--  </div> -->
       </div>
     </div>
 </div>
 
+<script>
+
+json = JSON.parse(localStorage.getItem("init"));
+
+if(localStorage.length > 0 && json[0].answers[0].answer != ""){
+	document.getElementById("jumbo").innerHTML = "Welcome Back to Concussion Tracker!";
+	document.getElementById("desc").innerHTML = "Please select a tracker below to update your concussion progress:";
+	document.getElementById("initbutton").remove();
+}
+else{
+
+}
+</script>
 </body>
-</head>
 </html>
