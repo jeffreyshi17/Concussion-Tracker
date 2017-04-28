@@ -33,15 +33,15 @@
             "question": "What gender are you?",
             "answers": [{
                 "id": "PI_3_0",
-                "type": "checkbox",
+                "type": "radio",
                 "text": "Male"
 		}, {
                 "id": "PI_3_1",
-                "type": "checkbox",
+                "type": "radio",
                 "text": "Female"
 		}, {
                 "id": "PI_3_2",
-                "type": "checkbox",
+                "type": "radio",
                 "text": "Other",
                 "options": [{
                     "id": "PI_3_2_0",
