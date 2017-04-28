@@ -8,7 +8,11 @@ $.ajaxPrefilter(function (options) {
     }
 });
 
-updateJSON();
+if ($('#versionnumber').text().replace(/\s+/g, '') != JSON.parse(localStorage["dailyForm"]).version) {
+    updateJSON();
+} else {
+    generatePage();
+}
 
 function updateJSON() {
     $.ajax({
@@ -17,59 +21,85 @@ function updateJSON() {
         timeout: 5000,
         success: function (data) {
             localStorage["dailyForm"] = data;
-            JSONsrc = JSON.parse(localStorage["dailyForm"]).form;
-            generateForm();
-            $('input:checkbox').change(function () {
-                hideunhide();
-            });
-            $('input:radio').change(function () {
-                hideunhide();
-            });
-
-            $('#submit').on('click', function () {
-                storeToLocalStorage('init');
-                window.location.replace("/allresults");
-            });
-
-            var current = 1;
-            widget = $(".step");
-            btnnext = $(".next");
-            btnback = $(".back");
-            btnsubmit = $(".submit");
-
-            // Init buttons and UI
-            widget.not(':eq(0)').hide();
-            hideButtons(current);
-            setProgress(current);
-
-            // Next button click action
-            btnnext.click(function () {
-                if (current < widget.length) {
-                    widget.show();
-                    widget.not(':eq(' + (current++) + ')').hide();
-                    $("html, body").animate({
-                        scrollTop: 0
-                    }, "slow");
-
-                    setProgress(current);
-                }
-                hideButtons(current);
-            })
-
-            // Back button click action
-            btnback.click(function () {
-                if (current > 1) {
-                    current = current - 2;
-                    btnnext.trigger('click');
-                }
-                hideButtons(current);
-            })
+            generatePage();
         },
         error: function (jqXHR, textStatus, errorThrown) {
             console.log('failed to update json');
         }
     });
 
+}
+
+function generatePage() {
+
+    JSONsrc = JSON.parse(localStorage["dailyForm"]).form;
+    generateForm();
+    $('input:checkbox').change(function () {
+        hideunhide();
+    });
+    $('input:radio').change(function () {
+        hideunhide();
+    });
+    $('#submit').on('click', function () {
+        storeToLocalStorage('init');
+        window.location.replace("/allresults");
+    });
+
+    var current = 1;
+    widget = $(".step");
+    btnnext = $(".next");
+    btnback = $(".back");
+    btnsubmit = $(".submit");
+
+
+    // Change progress bar action
+    setProgress = function (currstep) {
+        var percent = parseFloat(100 / widget.length) * currstep;
+        percent = percent.toFixed();
+        $(".progress-bar").css("width", percent + "%").html(percent + "%");
+    }
+
+    // Hide buttons according to the current step
+    hideButtons = function (current) {
+        var limit = parseInt(widget.length);
+
+        $(".action").hide();
+
+        if (current < limit) btnnext.show();
+        if (current > 1) btnback.show();
+        if (current == limit) {
+            btnnext.hide();
+            btnsubmit.show();
+        }
+    }
+
+    // Init buttons and UI
+    widget.not(':eq(0)').hide();
+    hideButtons(current);
+    setProgress(current);
+
+    // Next button click action
+    btnnext.click(function () {
+        if (current < widget.length) {
+            widget.show();
+            widget.not(':eq(' + (current++) + ')').hide();
+            $("html, body").animate({
+                scrollTop: 0
+            }, "fast");
+
+            setProgress(current);
+        }
+        hideButtons(current);
+    })
+
+    // Back button click action
+    btnback.click(function () {
+        if (current > 1) {
+            current = current - 2;
+            btnnext.trigger('click');
+        }
+        hideButtons(current);
+    })
 }
 
 function storeToLocalStorage(localStorageVariableName) {
@@ -129,9 +159,10 @@ function exportCSV() {
     a.click();
 }
 
-var form = document.createElement('form');
 
 function generateForm() {
+
+    var form = document.createElement('form');
     for (var k = 0; k < JSONsrc.length; k++) {
         //Creating localStorage Object
         var temp = {};
@@ -342,26 +373,4 @@ function hideunhide() {
             }
         }
     });
-}
-
-
-// Change progress bar action
-setProgress = function (currstep) {
-    var percent = parseFloat(100 / widget.length) * currstep;
-    percent = percent.toFixed();
-    $(".progress-bar").css("width", percent + "%").html(percent + "%");
-}
-
-// Hide buttons according to the current step
-hideButtons = function (current) {
-    var limit = parseInt(widget.length);
-
-    $(".action").hide();
-
-    if (current < limit) btnnext.show();
-    if (current > 1) btnback.show();
-    if (current == limit) {
-        btnnext.hide();
-        btnsubmit.show();
-    }
 }

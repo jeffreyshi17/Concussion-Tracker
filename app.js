@@ -37,9 +37,9 @@ app.get('/menstrualtracker', function (req, res) {
     res.locals.data = JSON.parse(fs.readFileSync("data/menstrualtracker.json", 'utf8'));
     res.render('menstrualtracker.ejs');
 });
-app.get('/sactracker', function (req, res) {
-    res.locals.data = JSON.parse(fs.readFileSync("data/SAC.json", 'utf8'));
-    res.render('SAC.ejs');
+app.get('/dailytracker', function (req, res) {
+    res.locals.data = JSON.parse(fs.readFileSync("data/daily.json", 'utf8'));
+    res.render('dailytracker.ejs');
 });
 app.get('/allresults', function (req, res) {
     res.locals.data = JSON.parse(fs.readFileSync("data/symptoms.json", 'utf8'));
