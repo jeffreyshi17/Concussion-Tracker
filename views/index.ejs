@@ -28,8 +28,11 @@
 json = JSON.parse(localStorage.getItem("init"));
 if(localStorage.length > 0 && json[0].answers[0].answer != ""){
 	document.getElementById("jumbo").innerHTML = "Welcome Back to Concussion Tracker!";
-	document.getElementById("desc").innerHTML = "Please select a tracker below to update your concussion progress:";
+	document.getElementById("desc").innerHTML = "Please update your concussion progress below:";
 	document.getElementById("initbutton").remove();
+	if (JSON.parse(localStorage.init)[0].answers[3].answer) {
+		document.getElementById("menstrual").remove();
+	}
 }
 else{
 	document.getElementById("daily").remove();
