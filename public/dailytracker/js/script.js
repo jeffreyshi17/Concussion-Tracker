@@ -323,8 +323,8 @@ function appendRestore() {
 }
 
 function restoreFromLocalStorage() {
-    if (localStorage.getItem('init')) {
-        var a = JSON.parse(localStorage.getItem('init'));
+    if (localStorage.getItem('daily')) {
+        var a = JSON.parse(localStorage.getItem('daily'));
         for (var i = 0; i < a.length; i++) {
             for (var j = 0; j < a[i].answers.length; j++) {
                 var q = a[i].answers[j];

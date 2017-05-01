@@ -73,6 +73,17 @@ app.get('/dailyjson', function (req, res) {
     res.end(JSON.stringify(fs.readFileSync("data/daily.json", 'utf8'), null, 3));
 });
 
+app.get('/menstrualjson', function (req, res) {
+    console.log('request received');
+    res.writeHead(200, {
+        'Content-Type': 'text/plain',
+        'Access-Control-Allow-Methods': 'PUT, GET, POST, DELETE, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        "Access-Control-Allow-Origin": "*"
+    });
+    //res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify(fs.readFileSync("data/menstrualtracker.json", 'utf8'), null, 3));
+});
 app.get('/settings', function (req, res) {
     //res.locals.data = JSON.parse(fs.readFileSync("data/concussiontracker.json", 'utf8'));
     res.render('settings.ejs');
