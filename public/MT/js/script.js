@@ -16,7 +16,7 @@ if (!localStorage["menstrualForm"] || ($('#versionnumber').text().replace(/\s+/g
 
 function updateJSON() {
     $.ajax({
-        url: 'http://concussiontracker.herokuapp.com/menstraljson',
+        url: 'http://concussiontracker.herokuapp.com/menstrualjson',
         dataType: "json",
         timeout: 5000,
         success: function (data) {

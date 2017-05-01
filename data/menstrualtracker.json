@@ -65,7 +65,7 @@
                                 {
                                     "id": "MH_3_0_0",
                                     "text": "If yes, how many and when?",
-                                    "type": "textbox"
+                                    "type": "text"
 								}
 							]
 						},
