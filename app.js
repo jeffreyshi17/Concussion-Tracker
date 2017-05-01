@@ -18,10 +18,6 @@ app.get('/summary', function (req, res) {
     res.locals.data = JSON.parse(fs.readFileSync("data/concussiontracker.json", 'utf8'));
     res.render('summary.ejs');
 });
-app.get('/results', function (req, res) {
-    res.locals.data = JSON.parse(fs.readFileSync("data/symptoms.json", 'utf8'));
-    res.render('results.ejs');
-});
 app.get('/recoveryactivities', function (req, res) {
     res.locals.data = JSON.parse(fs.readFileSync("data/recoveryActivities.json", 'utf8'));
     res.render('recoveryactivities.ejs');
@@ -41,12 +37,12 @@ app.get('/dailytracker', function (req, res) {
     res.locals.data = JSON.parse(fs.readFileSync("data/daily.json", 'utf8'));
     res.render('dailytracker.ejs');
 });
-app.get('/allresults', function (req, res) {
+app.get('/results', function (req, res) {
     res.locals.dataCH = JSON.parse(fs.readFileSync("data/concussiontracker.json", 'utf8'));
 	res.locals.dataD = JSON.parse(fs.readFileSync("data/daily.json", 'utf8'));
 	res.locals.dataMT = JSON.parse(fs.readFileSync("data/menstrualtracker.json", 'utf8'));
 
-    res.render('allresults.ejs');
+    res.render('results.ejs');
 });
 app.get('/settings', function (req, res) {
     res.render('settings.ejs');
