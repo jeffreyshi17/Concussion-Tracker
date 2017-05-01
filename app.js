@@ -50,7 +50,7 @@ app.get('/allresults', function (req, res) {
 app.get('/settings', function (req, res) {
     res.render('settings.ejs');
 });
-app.get('/mainjson', function (req, res) {
+app.get('/initjson', function (req, res) {
     console.log('request received');
     res.writeHead(200, {
         'Content-Type': 'text/plain',
