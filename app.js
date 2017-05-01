@@ -42,9 +42,10 @@ app.get('/dailytracker', function (req, res) {
     res.render('dailytracker.ejs');
 });
 app.get('/allresults', function (req, res) {
-    res.locals.data = JSON.parse(fs.readFileSync("data/symptoms.json", 'utf8'));
-    res.locals.data1 = JSON.parse(fs.readFileSync("data/SAC.json", 'utf8'));
-    res.locals.data2 = JSON.parse(fs.readFileSync("data/concussiontracker.json", 'utf8'));
+    res.locals.dataCH = JSON.parse(fs.readFileSync("data/concussiontracker.json", 'utf8'));
+	res.locals.dataD = JSON.parse(fs.readFileSync("data/daily.json", 'utf8'));
+	res.locals.dataMT = JSON.parse(fs.readFileSync("data/menstrualtracker.json", 'utf8'));
+
     res.render('allresults.ejs');
 });
 app.get('/settings', function (req, res) {
