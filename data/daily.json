@@ -239,14 +239,14 @@
                 "question": "Headaches",
                 "answers": [{
                     "id": "SY_0_0",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Pre-Injury",
                     "min": "0",
                     "max": "10",
                     "step": "1"
 		}, {
                     "id": "SY_0_1",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Post-Injury",
                     "min": "0",
                     "max": "10",
@@ -261,14 +261,14 @@
                 "question": "Pressure in Head",
                 "answers": [{
                     "id": "SY_1_0",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Pre-Injury",
                     "min": "0",
                     "max": "10",
                     "step": "1"
 			}, {
                     "id": "SY_1_1",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Post-Injury",
                     "min": "0",
                     "max": "10",
@@ -283,14 +283,14 @@
                 "question": "Nausea/Vomiting",
                 "answers": [{
                     "id": "SY_2_0",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Pre-Injury",
                     "min": "0",
                     "max": "10",
                     "step": "1"
 			}, {
                     "id": "SY_2_1",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Post-Injury",
                     "min": "0",
                     "max": "10",
@@ -305,14 +305,14 @@
                 "question": "Sensitivity to light",
                 "answers": [{
                     "id": "SY_3_0",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Pre-Injury",
                     "min": "0",
                     "max": "10",
                     "step": "1"
 			}, {
                     "id": "SY_3_1",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Post-Injury",
                     "min": "0",
                     "max": "10",
@@ -327,14 +327,14 @@
                 "question": "Sensitivity to Noise",
                 "answers": [{
                     "id": "SY_4_0",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Pre-Injury",
                     "min": "0",
                     "max": "10",
                     "step": "1"
 			}, {
                     "id": "SY_4_1",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Post-Injury",
                     "min": "0",
                     "max": "10",
@@ -349,14 +349,14 @@
                 "question": "Dizziness/Vertigo",
                 "answers": [{
                     "id": "SY_5_0",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Pre-Injury",
                     "min": "0",
                     "max": "10",
                     "step": "1"
 			}, {
                     "id": "SY_5_1",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Post-Injury",
                     "min": "0",
                     "max": "10",
@@ -371,14 +371,14 @@
                 "question": "Slowed Down",
                 "answers": [{
                     "id": "SY_6_0",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Pre-Injury",
                     "min": "0",
                     "max": "10",
                     "step": "1"
 			}, {
                     "id": "SY_6_1",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Post-Injury",
                     "min": "0",
                     "max": "10",
@@ -393,14 +393,14 @@
                 "question": "In a Fog",
                 "answers": [{
                     "id": "SY_7_0",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Pre-Injury",
                     "min": "0",
                     "max": "10",
                     "step": "1"
 			}, {
                     "id": "SY_7_1",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Post-Injury",
                     "min": "0",
                     "max": "10",
@@ -415,14 +415,14 @@
                 "question": "Not Right",
                 "answers": [{
                     "id": "SY_8_0",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Pre-Injury",
                     "min": "0",
                     "max": "10",
                     "step": "1"
 			}, {
                     "id": "SY_8_1",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Post-Injury",
                     "min": "0",
                     "max": "10",
@@ -437,14 +437,14 @@
                 "question": "Difficulty Concentrating",
                 "answers": [{
                     "id": "SY_9_0",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Pre-Injury",
                     "min": "0",
                     "max": "10",
                     "step": "1"
 			}, {
                     "id": "SY_9_1",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Post-Injury",
                     "min": "0",
                     "max": "10",
@@ -459,14 +459,14 @@
                 "question": "Memory Difficulties",
                 "answers": [{
                     "id": "SY_10_0",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Pre-Injury",
                     "min": "0",
                     "max": "10",
                     "step": "1"
 			}, {
                     "id": "SY_10_1",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Post-Injury",
                     "min": "0",
                     "max": "10",
@@ -481,14 +481,14 @@
                 "question": "Fatigued or Low Energy",
                 "answers": [{
                     "id": "SY_11_0",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Pre-Injury",
                     "min": "0",
                     "max": "10",
                     "step": "1"
 			}, {
                     "id": "SY_11_1",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Post-Injury",
                     "min": "0",
                     "max": "10",
@@ -503,14 +503,14 @@
                 "question": "Confused",
                 "answers": [{
                     "id": "SY_12_0",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Pre-Injury",
                     "min": "0",
                     "max": "10",
                     "step": "1"
 			}, {
                     "id": "SY_12_1",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Post-Injury",
                     "min": "0",
                     "max": "10",
@@ -525,14 +525,14 @@
                 "question": "Irritable",
                 "answers": [{
                     "id": "SY_13_0",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Pre-Injury",
                     "min": "0",
                     "max": "10",
                     "step": "1"
 			}, {
                     "id": "SY_13_1",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Post-Injury",
                     "min": "0",
                     "max": "10",
@@ -547,14 +547,14 @@
                 "question": "Sad",
                 "answers": [{
                     "id": "SY_14_0",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Pre-Injury",
                     "min": "0",
                     "max": "10",
                     "step": "1"
 			}, {
                     "id": "SY_14_1",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Post-Injury",
                     "min": "0",
                     "max": "10",
@@ -569,14 +569,14 @@
                 "question": "Nervous",
                 "answers": [{
                     "id": "SY_15_0",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Pre-Injury",
                     "min": "0",
                     "max": "10",
                     "step": "1"
 			}, {
                     "id": "SY_15_1",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Post-Injury",
                     "min": "0",
                     "max": "10",
@@ -591,14 +591,14 @@
                 "question": "Anxious",
                 "answers": [{
                     "id": "SY_16_0",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Pre-Injury",
                     "min": "0",
                     "max": "10",
                     "step": "1"
 			}, {
                     "id": "SY_16_1",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Post-Injury",
                     "min": "0",
                     "max": "10",
@@ -613,14 +613,14 @@
                 "question": "Drowsy",
                 "answers": [{
                     "id": "SY_17_0",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Pre-Injury",
                     "min": "0",
                     "max": "10",
                     "step": "1"
 			}, {
                     "id": "SY_17_1",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Post-Injury",
                     "min": "0",
                     "max": "10",
@@ -635,14 +635,14 @@
                 "question": "Sleeping More Than Usual",
                 "answers": [{
                     "id": "SY_18_0",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Pre-Injury",
                     "min": "0",
                     "max": "10",
                     "step": "1"
 			}, {
                     "id": "SY_18_1",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Post-Injury",
                     "min": "0",
                     "max": "10",
@@ -657,14 +657,14 @@
                 "question": "Sleeping Less Than Usual",
                 "answers": [{
                     "id": "SY_19_0",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Pre-Injury",
                     "min": "0",
                     "max": "10",
                     "step": "1"
 				}, {
                     "id": "SY_19_1",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Post-Injury",
                     "min": "0",
                     "max": "10",
@@ -679,14 +679,14 @@
                 "question": "Balance Problems",
                 "answers": [{
                     "id": "SY_20_0",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Pre-Injury",
                     "min": "0",
                     "max": "10",
                     "step": "1"
 			}, {
                     "id": "SY_20_1",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Post-Injury",
                     "min": "0",
                     "max": "10",
@@ -701,14 +701,14 @@
                 "question": "Neck Pain",
                 "answers": [{
                     "id": "SY_21_0",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Pre-Injury",
                     "min": "0",
                     "max": "10",
                     "step": "1"
 			}, {
                     "id": "SY_21_1",
-                    "type": "slider",
+                    "type": "range",
                     "text": "Post-Injury",
                     "min": "0",
                     "max": "10",
