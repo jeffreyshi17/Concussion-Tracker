@@ -6,7 +6,7 @@
         "desc": " ",
         "questions": [{
             "id": "PI_0",
-            "question": "What is your first name?",
+            "question": "What is your username?",
             "answers": [{
                 "id": "PI_0_0",
                 "type": "text",
@@ -14,74 +14,42 @@
 		}]
 	}, {
             "id": "PI_1",
-            "question": "What is your last name?",
-            "answers": [{
-                "id": "PI_1_0",
-                "type": "text",
-                "text": ""
-		}]
-	}, {
-            "id": "PI_2",
             "question": "When is your birthday?",
             "answers": [{
-                "id": "PI_2_0",
+                "id": "PI_1_0",
                 "type": "date",
                 "text": ""
 		}]
 	}, {
-            "id": "PI_3",
+            "id": "PI_2",
             "question": "What gender are you?",
             "answers": [{
-                "id": "PI_3_0",
+                "id": "PI_2_0",
                 "type": "radio",
                 "text": "Male"
 		}, {
-                "id": "PI_3_1",
+                "id": "PI_2_1",
                 "type": "radio",
                 "text": "Female"
 		}, {
-                "id": "PI_3_2",
+                "id": "PI_2_2",
                 "type": "radio",
                 "text": "Other",
                 "options": [{
-                    "id": "PI_3_2_0",
+                    "id": "PI_2_2_0",
                     "type": "text",
                     "text": "Please specify:"
 			}]
 		}]
 	}, {
-            "id": "PI_4",
+            "id": "PI_3",
             "question": "What is your email?",
             "answers": [{
-                "id": "PI_4_0",
+                "id": "PI_3_0",
                 "type": "text",
                 "text": ""
 		}]
-	}, {
-            "id": "PI_5",
-            "question": "What is your parent&#39s first name?",
-            "answers": [{
-                "id": "PI_5_0",
-                "type": "text",
-                "text": ""
-		}]
-	}, {
-            "id": "PI_6",
-            "question": "What is your parent&#39s last name?",
-            "answers": [{
-                "id": "PI_6_0",
-                "type": "text",
-                "text": ""
-		}]
-	}, {
-            "id": "PI_7",
-            "question": "What is your parent&#39s email?",
-            "answers": [{
-                "id": "PI_7_0",
-                "type": "text",
-                "text": ""
-		}]
-	}]
+    }]
 }, {
         "id": "CH",
         "title": "Concussion History",
