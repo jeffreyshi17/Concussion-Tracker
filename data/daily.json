@@ -13,8 +13,7 @@
                     "answers": [
                         {
                             "id": "SAC_0_0",
-                            "type": "text",
-                            "text": "Hours"
+                            "type": "text"
           }
         ]
       },
