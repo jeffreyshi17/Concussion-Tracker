@@ -41,6 +41,10 @@ app.get('/results', function (req, res) {
 
     res.render('results.ejs');
 });
+app.get('/FTQ_results', function (req, res) {
+    res.locals.dataCH = JSON.parse(fs.readFileSync("data/concussiontracker.json", 'utf8'));
+    res.render('FTQ_results.ejs');
+});
 app.get('/settings', function (req, res) {
     res.render('settings.ejs');
 });
