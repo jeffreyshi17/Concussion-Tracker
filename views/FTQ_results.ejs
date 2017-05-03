@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Results</title>
+    <title>FTQ_Results</title>
     <% include partials/head %>
-    <script src="https://d3js.org/d3.v3.min.js"></script>
     <script src= "/js/script2.js"></script>
     <link rel="stylesheet" type="text/css" href="/results/css/style.css">
 </head>
@@ -11,6 +10,16 @@
 <body>
         <% include partials/nav %>
         <div id='dashboard'></div>
+        <h1>Initial Questionaire Answers</h1>
+        <ol id=questions>
+        	<%for(i=0;i<2;i++){%>
+        		<%for(j=0;j<dataCH.form[i].questions[].length;j++){%>
+  				<li id=<%=dataCH.form[i].questions[j].id%>>
+  					<p><%=dataCH.form[i].questions[j].question%>: no answer</p>
+  				</li>
+        	<%}%>
+        </ol>
+
 
 </body>
 </html>
