@@ -15,10 +15,11 @@
         <ol id=questions>
         	<%for(i=0;i<2;i++){%>
                 <%=dataCH.form[i].title%>
-        		<%for(j=0;j<dataCH.form[i].questions[].length;j++){%>
+        		<%for(j=0;j<dataCH.form[i].questions.length;j++){%>
   				<li id=<%=dataCH.form[i].questions[j].id%>>
   					<p><%=dataCH.form[i].questions[j].question%>: no answer</p>
   				</li>
+                <%}%>
         	<%}%>
         </ol>
 
