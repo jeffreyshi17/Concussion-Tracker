@@ -30,6 +30,11 @@ app.get('/menstrualtracker', function (req, res) {
     res.locals.data = JSON.parse(fs.readFileSync("data/menstrualtracker.json", 'utf8'));
     res.render('menstrualtracker.ejs');
 });
+app.get('/returntoplay', function (req, res) {
+    //res.locals.data = JSON.parse(fs.readFileSync("data/menstrualtracker.json", 'utf8'));
+    res.render('public/returnToPlayForServer.html');
+});//probably will change
+
 app.get('/dailytracker', function (req, res) {
     res.locals.data = JSON.parse(fs.readFileSync("data/daily.json", 'utf8'));
     res.render('dailytracker.ejs');
