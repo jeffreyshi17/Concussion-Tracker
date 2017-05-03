@@ -1,10 +1,10 @@
 {
-    "version": "1.0.4",
+    "version": "1.0.5",
     "form": [
         {
             "id": "MH",
-            "title": "Menstrual History",
-            "desc": "Please answer the following questions about your menstrual history and leave any necessary comments. Please note any changes in your menstrual cycle from before your injury (pre-injury) to after your injury (post-injury).",
+            "title": "Menstrual Tracker",
+            "desc": "Please answer the following questions about your menstrual cycle and leave any necessary comments.",
             "questions": [
                 {
                     "id": "MH_0",
