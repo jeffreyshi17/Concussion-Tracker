@@ -11,17 +11,20 @@
 <body>
         <% include partials/nav %>
         <div id='dashboard'></div>
-        <h1>Initial Questionaire Answers</h1>
-        <ol id=questions>
+        
+        
         	<%for(i=0;i<2;i++){%>
-                <%=dataCH.form[i].title%>
+        	<h1><%=dataCH.form[i].title%></h1>
+        	<ol class=questions id=<%=dataCH.form[i].title%>>
+        	
         		<%for(j=0;j<dataCH.form[i].questions.length;j++){%>
   				<li id=<%=dataCH.form[i].questions[j].id%>>
-  					<p><%=dataCH.form[i].questions[j].question%>: no answer</p>
+  					<p class=question><%=dataCH.form[i].questions[j].question%></p><ul class=answer>null</ul>
   				</li>
-                <%}%>
+  				<%}%>
+  			</ol>
         	<%}%>
-        </ol>
+        
 
 
 </body>
