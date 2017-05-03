@@ -50,7 +50,7 @@ function generatePage() {
 
     $('#submit').on('click', function () {
         storeToLocalStorage('init');
-        window.location.replace("/allresults");
+        window.location.replace("/results");
     });
 
     var current = 1;
