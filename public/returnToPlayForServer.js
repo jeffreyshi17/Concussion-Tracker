@@ -1,6 +1,8 @@
 var jsonSymptoms = JSON.parse(localStorage.getItem("symptoms"));
 
 var jsonQuestionnaire = JSON.parse(localStorage.getItem("initialAnswers"));
+var x = 0; //initlal text box count
+$("#submitError").hide();
 
 if(localStorage.getItem("initialAnswers") == null){
 	$("#completeSym").hide();
@@ -9,7 +11,7 @@ if(localStorage.getItem("initialAnswers") == null){
 	$("#nextStep").hide();
 	$("#current").hide();
 	$("#pre-injury").hide();
-	window.alert("You must complete the initial questionnare before you can access return to play");
+	window.alert("You must complete the initial questionnare before you can access return to play or the activity tracker.");
 
 }
 
@@ -174,7 +176,100 @@ if(!(currentStep > 5)){
 	localStorage.setItem("step", currentStep);
 }
 
+
+
+    var max_fields      = 99; 
+    var wrapper         = $(".input_fields_wrap"); 
+    var add_button      = $(".add_field_button"); 
+    
+    
+    $(add_button).click(function(e){ 
+        e.preventDefault();
+        if(x < max_fields){ 
+            x++; 
+            
+            $(wrapper).append('<div><tr><td><input type="text" id="' + x + 'b0"/></td><td><input type="text" id="' + x + 'b1"/></td><td><a href="#" class="remove_field">Remove</a></td></tr></div>'); //add input box
+        }
+    });
+    
+    $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+        e.preventDefault(); $(this).parent('div').remove(); x--;
+    })
+
+
+    if(parseInt(currentStep) === 0){
+		$("#allowedAct").html("<h3>You should not complete any physical activity</h3>");
+	}
+	
+	else{
+		var allowedActString = " ";
+		for(var p = parseInt(currentStep); p > 0; p--){
+			allowedActString += "" + steps[p] + " <br>";
+		}
+		$("#allowedAct").html("<h3>You are allowed to do these types of activities:</h3>" + allowedActString);
+	}
+
+
+
+
 });// doc ready
+
+
+var jsonActivity = localStorage.getItem("activityTracker");
+var jsonActivityString = "";
+
+
+$('#subButton').on("click", function() {
+	if( $("#0b0").val() === ""){
+		$("#submitError").show();
+	}
+	else{
+
+		$("#submitError").hide();
+		if(jsonActivity != null){
+			var getDate = new Date();
+			getDate = getDate.getTime();
+			jsonActivity = jsonActivity.substring(0, jsonActivity.length-2);
+			jsonActivity += ',{"timeStamp": "' + getDate + '","trackedActivies":[';
+
+			for(var i = 0; i<=x; i++){
+				var idString0 = '#' + i + 'b0';
+				var enteredText0 = $(idString0).val();
+				var idString1 = '#' + i + 'b1';
+				var enteredText1 = $(idString1).val();
+				jsonActivity += '{"activity":"' + enteredText0 + '", "duration":"' + enteredText1 + '"},';
+			}
+			jsonActivity = jsonActivity.substring(0, jsonActivity.length-1);
+			jsonActivity += ']}]}';
+			localStorage.setItem("activityTracker", jsonActivity);
+			location.reload();
+
+
+
+		}
+		else{//build the json for the first submission
+
+			var getDate = new Date();
+			getDate = getDate.getTime();
+			jsonActivityString = '{"Submissions":[{"timeStamp": "' + getDate + '","trackedActivies":[';
+		
+			for(var i = 0; i<=x; i++){
+				var idString0 = '#' + i + 'b0';
+				var enteredText0 = $(idString0).val();
+				var idString1 = '#' + i + 'b1';
+				var enteredText1 = $(idString1).val();
+				jsonActivityString += '{"activity":"' + enteredText0 + '", "duration":"' + enteredText1 + '"},';
+			}
+			jsonActivityString = jsonActivityString.substring(0, jsonActivityString.length-1);
+			jsonActivityString += ']}]}';
+			localStorage.setItem("activityTracker", jsonActivityString);
+			location.reload();
+		}
+	}
+
+
+
+});
 
 
 
@@ -193,9 +288,6 @@ $('#doctorCheckedText').on("click", function() {
 	});
 
 
-
-	
-
 var formLength = jsonSymptoms.form.length;
 
 if(addit){
@@ -203,11 +295,6 @@ if(addit){
 }
 
 localStorage.setItem("form", formLength);
-
-
-
-
-
 
 
 
@@ -232,3 +319,4 @@ function symptomCheck(){
 	return symptoms;
 
 }
+
