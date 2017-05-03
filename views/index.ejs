@@ -25,19 +25,28 @@
 </div>
 
 <script>
-json = JSON.parse(localStorage.getItem("init"));
-if(localStorage.length > 0 && json[0].answers[0].answer != ""){
-	document.getElementById("jumbo").innerHTML = "Welcome Back to Concussion Tracker!";
-	document.getElementById("desc").innerHTML = "Please update your concussion progress below:";
-	document.getElementById("initbutton").remove();
-	if (JSON.parse(localStorage.init)[0].answers[3].answer) {
-		document.getElementById("menstrual").remove();
+if(localStorage.getItem("init")){
+	json = JSON.parse(localStorage.getItem("init"));
+	if(localStorage.length > 0 && json[0].answers[0].answer != ""){
+		document.getElementById("jumbo").innerHTML = "Welcome Back to Concussion Tracker!";
+		document.getElementById("desc").innerHTML = "Please update your concussion progress below:";
+		document.getElementById("initbutton").remove();
+		if (JSON.parse(localStorage.init)[0].answers[3].answer) {
+			document.getElementById("menstrual").remove();
+		}
 	}
+}
+else if(localStorage.getItem("init") && json[0].answers[0].answer == ""){
+	document.getElementById("jumbo").innerHTML = "Please finish the initial questionnaire: ";
+	document.getElementById("desc").remove();
+	document.getElementById("daily").remove();
+	document.getElementById("menstrual").remove();
 }
 else{
 	document.getElementById("daily").remove();
 	document.getElementById("menstrual").remove();
 }
 </script>
+
 </body>
 </html>
