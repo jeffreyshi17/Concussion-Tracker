@@ -1,10 +1,10 @@
 {
-  "version": "1.0.5",
+  "version": "1.0.6",
   "form": [
     {
       "id": "SY",
       "title": "Symptoms",
-      "desc": "Please indicate any symptoms you experienced regularly at any time prior to your injury (pre-injury) and symptoms you experienced after your injury (post-injury). Leave any necessary comments.",
+      "desc": "Please indicate any symptoms you are experiencing. Leave any necessary comments.",
       "questions": [
         {
           "id": "SY_0",
@@ -328,8 +328,8 @@
     },
     {
       "id": "SAC",
-      "title": "Sleep/Alcohol/Caffeine Tracker",
-      "desc": "Please answer the following questions about your daily sleep and alcohol/caffeine consumption",
+      "title": "Sleep/Alcohol/Caffeine",
+      "desc": "Please answer the following questions about your daily sleep, alcohol, and caffeine consumption",
       "date": "",
       "questions": [
         {

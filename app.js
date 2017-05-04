@@ -14,14 +14,7 @@ app.get('/question', function (req, res) {
     res.locals.data = JSON.parse(fs.readFileSync("data/concussiontracker.json", 'utf8'));
     res.render('concussionhistory.ejs');
 });
-app.get('/summary', function (req, res) {
-    res.locals.data = JSON.parse(fs.readFileSync("data/concussiontracker.json", 'utf8'));
-    res.render('summary.ejs');
-});
-app.get('/results', function (req, res) {
-    res.locals.data = JSON.parse(fs.readFileSync("data/symptoms.json", 'utf8'));
-    res.render('results.ejs');
-});
+
 app.get('/recoveryactivities', function (req, res) {
     res.locals.data = JSON.parse(fs.readFileSync("data/recoveryActivities.json", 'utf8'));
     res.render('recoveryactivities.ejs');
@@ -37,15 +30,21 @@ app.get('/menstrualtracker', function (req, res) {
     res.locals.data = JSON.parse(fs.readFileSync("data/menstrualtracker.json", 'utf8'));
     res.render('menstrualtracker.ejs');
 });
+
 app.get('/dailytracker', function (req, res) {
     res.locals.data = JSON.parse(fs.readFileSync("data/daily.json", 'utf8'));
     res.render('dailytracker.ejs');
 });
-app.get('/allresults', function (req, res) {
-    res.locals.data = JSON.parse(fs.readFileSync("data/symptoms.json", 'utf8'));
-    res.locals.data1 = JSON.parse(fs.readFileSync("data/SAC.json", 'utf8'));
-    res.locals.data2 = JSON.parse(fs.readFileSync("data/concussiontracker.json", 'utf8'));
-    res.render('allresults.ejs');
+app.get('/results', function (req, res) {
+    res.locals.dataCH = JSON.parse(fs.readFileSync("data/concussiontracker.json", 'utf8'));
+	res.locals.dataD = JSON.parse(fs.readFileSync("data/daily.json", 'utf8'));
+	res.locals.dataMT = JSON.parse(fs.readFileSync("data/menstrualtracker.json", 'utf8'));
+
+    res.render('results.ejs');
+});
+app.get('/FTQ_results', function (req, res) {
+    res.locals.dataCH = JSON.parse(fs.readFileSync("data/concussiontracker.json", 'utf8'));
+    res.render('FTQ_results.ejs');
 });
 app.get('/settings', function (req, res) {
     res.render('settings.ejs');
