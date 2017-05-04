@@ -13,13 +13,13 @@
         <div id='dashboard'></div>
         
         
-        	<%for(i=0;i<2;i++){%>
+        	<%for(i=0;i<7;i++){%>
         	<h1><%=dataCH.form[i].title%></h1>
         	<ol class=questions id=<%=dataCH.form[i].title%>>
         	
         		<%for(j=0;j<dataCH.form[i].questions.length;j++){%>
-  				<li id=<%=dataCH.form[i].questions[j].id%>>
-  					<p class=question><%=dataCH.form[i].questions[j].question%></p><ul class=answer>null</ul>
+  				<li class=question id=<%=dataCH.form[i].questions[j].id%>>
+  					<%=dataCH.form[i].questions[j].question%><ul class=answers>ordered list to be populated</ul>
   				</li>
   				<%}%>
   			</ol>
