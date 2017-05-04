@@ -31,12 +31,6 @@ function updateJSON() {
     });
 }
 
-function JSONsuccess() {
-    JSONsrc = JSON.parse(localStorage[pageFormName]).form;
-    generatePage();
-    restoreFromLocalStorage(pageName);
-    hideunhide();
-}
 
 function generatePage() {
     generateForm();
@@ -96,7 +90,9 @@ function generatePage() {
 
             setProgress(current);
         }
-        storeToLocalStorage(pageName);
+        if (pageName == 'init') {
+            storeToLocalStorage(pageName);
+        }
         hideButtons(current);
     })
 
@@ -155,6 +151,7 @@ function appendOptions(e1, lev, x) {
     var select = false; //boolean select
     if (e1.innerText.indexOf("Other") != -1) {
         other = false;
+        //not useful
     }
     if (lev[0] && lev[0].type == "select") {
         select = true;
@@ -297,29 +294,6 @@ function hideunhide() {
     });
 }
 
-function storeToLocalStorage(localStorageVariableName) {
-    var inputs = Array.prototype.slice.call(document.getElementById('container').getElementsByTagName('INPUT')).concat(Array.prototype.slice.call(document.getElementById('container').getElementsByClassName('slider-value')));
-    var i, e;
-    for (i = 0; i < inputs.length; ++i) {
-        e = inputs[i];
-        var answer = {};
-        var id = e.id.substring(0, e.id.indexOf("_"));
-        var idIndex = idlist.indexOf(id);
-        answer.id = e.id;
-        if (e.type == "text" || e.type == "date") {
-            answer.answer = e.value;
-        }
-        if (e.type == "checkbox" || e.type == "radio") {
-            answer.answer = e.checked;
-        }
-        if ($(e).attr('class') == "slider-value") {
-            answer.answer = e.innerHTML;
-        }
-        answersObj[idIndex].answers.push(answer);
-    }
-    var s = JSON.stringify(answersObj);
-    localStorage.setItem(localStorageVariableName, s);
-}
 
 function restoreFromLocalStorage(localStorageVariableName) {
     if (localStorage.getItem(localStorageVariableName)) {
