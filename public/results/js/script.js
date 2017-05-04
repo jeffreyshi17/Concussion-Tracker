@@ -2,16 +2,24 @@ function dashboard(id, fData) {
     var barColor = 'steelblue';
 
     function segColor(c) {
-        return {
-            low: "#807dba",
-            mid: "#e08214",
-            high: "#41ab5d"
-        }[c];
+        var colors = freqData[0].freq;
+
+        for (var property in colors) {
+            if (colors.hasOwnProperty(property)) {
+                property = "#" + Math.random().toString(16).slice(2, 8);
+            }
+        }
+        return colors[c];
     }
 
     // compute total for each state.
     fData.forEach(function (d) {
-        d.total = d.freq.low + d.freq.mid + d.freq.high;
+        d.total = 0;
+        for (var property in d.freq) {
+            if (d.freq.hasOwnProperty(property)) {
+                d.total += d.freq[property];
+            }
+        }
     });
 
     // function to handle histogram.
@@ -202,13 +210,11 @@ function dashboard(id, fData) {
     // function to handle legend.
     function legend(lD) {
         var leg = {};
-
         // create table for legend.
         var legend = d3.select(id).append("table").attr('class', 'legend');
 
         // create one row per segment.
         var tr = legend.append("tbody").selectAll("tr").data(lD).enter().append("tr");
-
         // create the first column for each segment.
         tr.append("td").append("svg").attr("width", '16').attr("height", '16').append("rect")
             .attr("width", '16').attr("height", '16')
@@ -258,7 +264,8 @@ function dashboard(id, fData) {
     }
 
     // calculate total frequency by segment for all state.
-    var tF = ['low', 'mid', 'high'].map(function (d) {
+    var tF = symptomNames.map(function (d) {
+        console.log(d);
         return {
             type: d,
             freq: d3.sum(fData.map(function (t) {
@@ -271,108 +278,55 @@ function dashboard(id, fData) {
     var sF = fData.map(function (d) {
         return [d.State, d.total];
     });
-
+    console.log(tF);
     var hG = histoGram(sF), // create the histogram.
         pC = pieChart(tF), // create the pie-chart.
         leg = legend(tF); // create the legend.
 }
 
-var freqData = [
-    {
-        State: 'AL',
-        freq: {
-            low: 4786,
-            mid: 1319,
-            high: 249
-        }
-    }
-, {
-        State: 'AZ',
-        freq: {
-            low: 1101,
-            mid: 412,
-            high: 674
-        }
-    }
-, {
-        State: 'CT',
-        freq: {
-            low: 932,
-            mid: 2149,
-            high: 418
-        }
-    }
-, {
-        State: 'DE',
-        freq: {
-            low: 832,
-            mid: 1152,
-            high: 1862
-        }
-    }
-, {
-        State: 'FL',
-        freq: {
-            low: 4481,
-            mid: 3304,
-            high: 948
-        }
-    }
-, {
-        State: 'GA',
-        freq: {
-            low: 1619,
-            mid: 167,
-            high: 1063
-        }
-    }
-, {
-        State: 'IA',
-        freq: {
-            low: 1819,
-            mid: 247,
-            high: 1203
-        }
-    }
-, {
-        State: 'IL',
-        freq: {
-            low: 4498,
-            mid: 3852,
-            high: 942
-        }
-    }
-, {
-        State: 'IN',
-        freq: {
-            low: 797,
-            mid: 1849,
-            high: 1534
-        }
-    }
-, {
-        State: 'KS',
-        freq: {
-            low: 162,
-            mid: 379,
-            high: 471
-        }
-    }
-];
-
+var freqData = [];
+var symptomNames = [];
 
 $(document).ready(function () {
-
+    loadData();
+    dashboard('#dashboard', freqData);
 });
 
 function loadData() {
     var daily_data;
     if (localStorage.daily) {
-        daily_data = JSON.parse(localStorage.data);
+        daily_data = JSON.parse(localStorage.daily);
     }
-        for (var i = 0; i < daily_data.length; i++) {
+    var daily_form;
+    if (localStorage.daily) {
+        daily_form = JSON.parse(localStorage.dailyForm).form[0].questions;
+    }
+
+    for (var i = 0; i < daily_data.length; i++) {
+        var dayData = {};
+        dayData.Date = daily_data[i].date;
+        var freq = {};
+        for (var j = 0; j < daily_data[i].answers[0].answers.length; j++) {
+            if (parseInt(daily_data[i].answers[0].answers[j].answer) === 0 || isNaN(daily_data[i].answers[0].answers[j].answer) || (daily_data[i].answers[0].answers[j].answer == "")) {
+
+            } else {
+                var id = daily_data[i].answers[0].answers[j].id;
+                var symptomName;
+                for (var k = 0; k < daily_form.length; k++) {
+                    if (id == daily_form[k].answers[0].id) {
+                        symptomName = daily_form[k].question;
+                        symptomNames.push(symptomName);
+                        break;
+                    }
+                }
+                freq[symptomName] = daily_data[i].answers[0].answers[j].answer;
+            }
+            dayData.freq = freq;
+            freqData.push(dayData);
+        }
+    }
+
+    console.log(freqData);
 }
 
-$(window).bind("load", function () {
-    dashboard('#dashboard', freqData);
-});
+$(window).bind("load", function () {});
