@@ -35,7 +35,7 @@ function updateJSON() {
 function JSONsuccess() {
     JSONsrc = JSON.parse(localStorage[pageFormName]).form;
     generatePage();
-    restoreFromLocalStorage();
+    restoreFromLocalStorage(pageName);
     hideunhide();
 }
 
@@ -49,7 +49,7 @@ function generatePage() {
     });
 
     $('#submit').on('click', function () {
-        storeToLocalStorage('init');
+        storeToLocalStorage(pageName);
         window.location.replace("/allresults");
     });
 
@@ -97,6 +97,7 @@ function generatePage() {
 
             setProgress(current);
         }
+        storeToLocalStorage(pageName);
         hideButtons(current);
     })
 
@@ -209,8 +210,10 @@ function appendOption(target, op) {
         var slidervalue = document.createElement('span');
         var tabElement = document.createElement('tab');
         tabElement.align = "right";
-        slidervalue.id = id + "Val";
-        label.htmlFor = id;
+        slidervalue.id = id;
+        slidervalue.className = "slider-value";
+        label.htmlFor = id + "_slider";
+        input.id = id + "_slider";
         $(slidervalue).css("padding-left", "10px");
         label.appendChild(document.createTextNode(text));
         target.appendChild(label);
@@ -253,7 +256,6 @@ function appendOption(target, op) {
         } else if (type == "date") {
             target.appendChild(input);
             target.appendChild(label);
-            input.className = "form-control";
         } else {
             target.appendChild(input);
             target.appendChild(label);
@@ -294,4 +296,50 @@ function hideunhide() {
             }
         }
     });
+}
+
+function storeToLocalStorage(localStorageVariableName) {
+    var inputs = Array.prototype.slice.call(document.getElementById('container').getElementsByTagName('INPUT')).concat(Array.prototype.slice.call(document.getElementById('container').getElementsByClassName('slider-value')));
+    var i, e;
+    for (i = 0; i < inputs.length; ++i) {
+        e = inputs[i];
+        var answer = {};
+        var id = e.id.substring(0, e.id.indexOf("_"));
+        var idIndex = idlist.indexOf(id);
+        answer.id = e.id;
+        if (e.type == "text" || e.type == "date") {
+            answer.answer = e.value;
+        }
+        if (e.type == "checkbox" || e.type == "radio") {
+            answer.answer = e.checked;
+        }
+        if ($(e).attr('class') == "slider-value") {
+            answer.answer = e.innerHTML;
+        }
+        answersObj[idIndex].answers.push(answer);
+    }
+    var s = JSON.stringify(answersObj);
+    localStorage.setItem(localStorageVariableName, s);
+}
+
+function restoreFromLocalStorage(localStorageVariableName) {
+    if (localStorage.getItem(localStorageVariableName)) {
+        var a = JSON.parse(localStorage.getItem(localStorageVariableName));
+        for (var i = 0; i < a.length; i++) {
+            for (var j = 0; j < a[i].answers.length; j++) {
+                var q = a[i].answers[j];
+                if (document.getElementById(q.id)) {
+                    var type = document.getElementById(q.id).type;
+                    if (type == "checkbox" || type == "radio") {
+                        document.getElementById(q.id).checked = q.answer;
+                    } else if ($('#' + q.id).attr('class') == "slider-value") {
+                        $('#' + q.id + "_slider").slider().slider("value", q.answer);
+                        document.getElementById(q.id).innerText = q.answer;
+                    } else {
+                        document.getElementById(q.id).value = q.answer;
+                    }
+                }
+            }
+        }
+    }
 }
