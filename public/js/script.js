@@ -29,7 +29,6 @@ function updateJSON() {
             console.log('failed to update json');
         }
     });
-
 }
 
 function JSONsuccess() {
@@ -50,7 +49,7 @@ function generatePage() {
 
     $('#submit').on('click', function () {
         storeToLocalStorage(pageName);
-        window.location.replace("/allresults");
+        window.location.replace("/results");
     });
 
     var current = 1;
