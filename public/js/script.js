@@ -112,6 +112,7 @@ function generateForm() {
         //Creating localStorage Object
         var temp = {};
         temp.title = JSONsrc[k].title;
+        temp.id=JSONsrc[k].id;
         temp.answers = [];
         answersObj.push(temp);
         idlist.push(JSONsrc[k].id);
