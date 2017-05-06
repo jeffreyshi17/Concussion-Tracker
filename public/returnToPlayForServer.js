@@ -1,3 +1,4 @@
+//test
 var jsonSymptoms = JSON.parse(localStorage.getItem("symptoms"));
 
 var jsonQuestionnaire = JSON.parse(localStorage.getItem("initialAnswers"));
