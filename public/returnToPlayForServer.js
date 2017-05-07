@@ -311,7 +311,7 @@ function symptomCheck(){
 	var symptoms = [];
 	
 
-	console.log("length: " + jsonSymptoms[jsonSymptoms.length-2].answers[0].answers.length);
+	//console.log("length: " + jsonSymptoms[jsonSymptoms.length-2].answers[0].answers.length);
 	for(var i = 1; i < jsonSymptoms[jsonSymptoms.length-1].answers[0].answers.length; i++){
 		//console.log("i: " + i);
 		
