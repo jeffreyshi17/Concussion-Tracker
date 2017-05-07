@@ -1,25 +1,94 @@
-var answerSrc=JSON.parse(localStorage.init);
-var questionSrc=JSON.parse(localStorage.initForm);
+var answersSrc=JSON.parse(localStorage.init);
+var questionSrc=JSON.parse(localStorage.initForm).form;
+ 
 
-function generateAnswerArray(){
-    var answers={};
-    for(i=0;i<7;i++){
-        for(j=0;j<answerSrc[i].answers.length;j++){
-            answers.push(answerSrc[i].answers[j].id);
-            answers.push(answerSrc[i].answers[j].answer);
+$(document).ready(function() {
+       populateLists();
+});
+
+//var doc = { /* your json */ };
+
+function getById(arr, id) {
+    for (var d = 0, len = arr.length; d < len; d += 1) {
+        if (arr[d].id === id) {
+            return arr[d];
         }
     }
-    console.log(answers);
 }
+
+//var doc_id_2 = getById(doc.results, 2);
+function generateAnswerArray(arr){
+    var answers=[];
+        for(j=0;j<arr.length;j++){
+            //var pos=getPosition(arr[j].id,_,2);
+            //if(arr[j].id.substring(0,pos)==filter){
+                answers.push(arr[j].id);
+                answers.push(arr[j].answer);
+            //}
+        }
+
+    //console.log(answers);
+    return answers;
+}
+           // types: date, text, radio, checkbox, radio to text, checkbox to text, select,range
+
+function recurAppend(el,structure,answers){
+    var x;
+    for(i=0;i<structure.length;i++){
+       // console.log(structure[i].id);
+        var id = structure[i].id;
+        var type=structure[i].type;
+        var text=structure[i].text;
+        var answer = answers[answers.indexOf(id)+1];
+        if(type=="text"||type=="date"||type=="range"){
+            if(answer!=""||answer!=0){
+                el.append("<li>"+answer+"</li>");
+                el.append("<ul></ul>");
+            }
+        }
+        else if(type=="radio"||type=="checkbox"){
+            if(answer){
+                el.append("<li>"+text+"</li>");
+                el.append("<ul></ul>");
+            }
+        }
+        else if(type=="select"){
+            if(answer!=0){
+                el.append("<li>"+answer+"</li>");
+                el.append("<ul></ul>");
+            }
+        }
+        x=structure[i];
+         
+    }
+
+    if(structure["options"]){
+            recurAppend(el.find("ul"),structure["options"],answers);
+        }
+
+}
+
 function populateLists(){
     $("ol").each(function(){
+        var sectionId=this.id;
+        //var sectionId2=          whater.answers[0].id.substring(0,2)
+
         $(this).children().each(function(){
-            var questionId=this.id;
+            var questionId = this.id;
+            var structure = getById(getById(questionSrc,sectionId).questions,questionId).answers;
+
+
+            //questionSrc.form[sectionId].questions[questionId].answers;
+            var answersArr = generateAnswerArray(getById(answersSrc,sectionId).answers);
+            //console.log($(this).find("ul").attr("class")+", "+structure[1]+", "+answersArr)
+            console.log(structure);
+            recurAppend($(this).find("ul"),structure,answersArr);
+            
         });
 
     });
-
 }
+   
 function exportCSV() {
     var ancestor = document.getElementById('container'),
         descendents = ancestor.getElementsByTagName('INPUT');
@@ -50,3 +119,5 @@ function exportCSV() {
     document.body.appendChild(a);
     a.click();
 }
+
+
