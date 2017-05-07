@@ -28,7 +28,7 @@ function generateAnswerArray(arr) {
 var answers1;
 
 function recurAppend(el, structure, answers) {
-    for (i = 0; i < structure.length; i++) {
+    for (var i = 0; i < structure.length; i++) {
         addElement(el, structure[i], answers);
     }
 }
@@ -39,37 +39,34 @@ function addElement(el, structureObj, answers) {
     var text = structureObj.text;
     var answer = answers[answers.indexOf(id) + 1];
     var answerElement = document.createElement('li');
+    var ulElement = document.createElement('ul');
     if (type == "text" || type == "date" || type == "range") {
         if (answer != "" || answer != 0) {
             answerElement.innerText = answer;
-            el.append(answerElement);
+            ulElement.append(answerElement);
+            el.append(ulElement);
         }
     }
     else if (type == "radio" || type == "checkbox") {
         if (answer) {
             answerElement.innerText = text;
-            el.append(answerElement);
+            ulElement.append(answerElement);
+            el.append(ulElement);
         }
     }
     else if (type == "select") {
         if (answer != 0) {
             answerElement.innerText = answer;
-            el.append(answerElement);
+            ulElement.append(answerElement);
+            el.append(ulElement);
         }
     }
-    //var answerElement = document.createElement('li');
     //el.append("<ul></ul>");
     if (structureObj["options"]) {
-        /*
-        for (i = 0; i < structureObj["options"].length; i++) {
-            if (structureObj["options"][i]) {
-                addElement(answerElement, structureObj["options"][0], answers);
-            }
-        }*/
-        console.log(structureObj["options"].length);
+        for (var i = 0; i < structureObj["options"].length; i++) {
+            addElement(answerElement, structureObj["options"][i], answers);
+        }
         //console.log(structureObj, structureObj["options"][0], structureObj["options"].length);
-        /*
-         */
     }
 }
 
@@ -89,32 +86,25 @@ function populateLists() {
 }
 
 function exportCSV() {
-    var ancestor = document.getElementById('container')
-        , descendents = ancestor.getElementsByTagName('INPUT');
+    var answersJSON = JSON.parse(localStorage.init);
     var csv = [['id', 'answer']];
     var csvRows = [];
-    for (i = 0; i < descendents.length; ++i) {
-        e = descendents[i];
-        var answer = {};
-        var id = e.id.substring(0, e.id.indexOf("_"));
-        answer.id = e.id;
-        if (e.type == "text" || e.type == "date") {
-            answer.answer = e.value;
+    for (var i = 0; i < answersJSON.length; i++) {
+        for (var j = 0; j < answersJSON[i].answers.length; j++) {
+            csv.push(["\"" + answersJSON[i].answers[j].id + "\"", "\"" + answersJSON[i].answers[j].answer + "\""]);
         }
-        if (e.type == "checkbox" || e.type == "radio") {
-            answer.answer = e.checked;
-        }
-        if (e.type == "range") {
-            answer.answer = $("#" + e.id + "Val").innerHTML;
-        }
-        csv.push(["\"" + answer.id + "\"", "\"" + answer.answer + "\""]);
+    }
+    console.log(csv);
+    for (var i = 0; i < csv.length; i++) {
         csvRows.push(csv[i].join(','));
     }
     csv = csvRows.join("%0A");
+    
     var a = document.createElement('a');
     a.href = 'data:attachment/csv,' + csv;
     a.target = '_blank';
-    a.download = 'PatientInformation.csv';
+    a.download = 'init.csv';
     document.body.appendChild(a);
     a.click();
+    
 }
