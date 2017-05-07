@@ -58,6 +58,8 @@ function loadData() {
     for (var k = 0; k < daily_form.length; k++) {
         symptomNames.push(daily_form[k].question);
     }
+    
+    
     for (var k = 0; k < daily_form.length; k++) {
         symptomPoints[daily_form[k].answers[0].id] = [];
         console.log(daily_form[k].answers[0].id);
@@ -70,6 +72,10 @@ function loadData() {
             }
             symptomPoints[daily_form[k].answers[0].id].push(dataPoint);
         }
+    }
+    
+    for (var i = 0; i < dateLabels.length; i++) {
+    dateLabels[i]=new Date(dateLabels[i]).toDateString();
     }
 }
 var data;
