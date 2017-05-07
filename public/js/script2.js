@@ -1,13 +1,9 @@
-var answersSrc=JSON.parse(localStorage.init);
-var questionSrc=JSON.parse(localStorage.initForm).form;
- 
-
-$(document).ready(function() {
-       populateLists();
+var answersSrc = JSON.parse(localStorage.init);
+var questionSrc = JSON.parse(localStorage.initForm).form;
+$(document).ready(function () {
+    populateLists();
 });
-
 //var doc = { /* your json */ };
-
 function getById(arr, id) {
     for (var d = 0, len = arr.length; d < len; d += 1) {
         if (arr[d].id === id) {
@@ -15,83 +11,91 @@ function getById(arr, id) {
         }
     }
 }
-
 //var doc_id_2 = getById(doc.results, 2);
-function generateAnswerArray(arr){
-    var answers=[];
-        for(j=0;j<arr.length;j++){
-            //var pos=getPosition(arr[j].id,_,2);
-            //if(arr[j].id.substring(0,pos)==filter){
-                answers.push(arr[j].id);
-                answers.push(arr[j].answer);
-            //}
-        }
-
+function generateAnswerArray(arr) {
+    var answers = [];
+    for (j = 0; j < arr.length; j++) {
+        //var pos=getPosition(arr[j].id,_,2);
+        //if(arr[j].id.substring(0,pos)==filter){
+        answers.push(arr[j].id);
+        answers.push(arr[j].answer);
+        //}
+    }
     //console.log(answers);
     return answers;
 }
-           // types: date, text, radio, checkbox, radio to text, checkbox to text, select,range
+// types: date, text, radio, checkbox, radio to text, checkbox to text, select,range
+var answers1;
 
-function recurAppend(el,structure,answers){
-    var x;
-    for(i=0;i<structure.length;i++){
-       // console.log(structure[i].id);
-        var id = structure[i].id;
-        var type=structure[i].type;
-        var text=structure[i].text;
-        var answer = answers[answers.indexOf(id)+1];
-        if(type=="text"||type=="date"||type=="range"){
-            if(answer!=""||answer!=0){
-                el.append("<li>"+answer+"</li>");
-                el.append("<ul></ul>");
-            }
-        }
-        else if(type=="radio"||type=="checkbox"){
-            if(answer){
-                el.append("<li>"+text+"</li>");
-                el.append("<ul></ul>");
-            }
-        }
-        else if(type=="select"){
-            if(answer!=0){
-                el.append("<li>"+answer+"</li>");
-                el.append("<ul></ul>");
-            }
-        }
-        x=structure[i];
-         
+function recurAppend(el, structure, answers) {
+    for (i = 0; i < structure.length; i++) {
+        addElement(el, structure[i], answers);
     }
-
-    if(structure["options"]){
-            recurAppend(el.find("ul"),structure["options"],answers);
-        }
-
 }
 
-function populateLists(){
-    $("ol").each(function(){
-        var sectionId=this.id;
-        //var sectionId2=          whater.answers[0].id.substring(0,2)
-
-        $(this).children().each(function(){
-            var questionId = this.id;
-            var structure = getById(getById(questionSrc,sectionId).questions,questionId).answers;
-
-
-            //questionSrc.form[sectionId].questions[questionId].answers;
-            var answersArr = generateAnswerArray(getById(answersSrc,sectionId).answers);
-            //console.log($(this).find("ul").attr("class")+", "+structure[1]+", "+answersArr)
-            console.log(structure);
-            recurAppend($(this).find("ul"),structure,answersArr);
+function addElement(el, structureObj, answers) {
+    var id = structureObj.id;
+    var type = structureObj.type;
+    var text = structureObj.text;
+    var answer = answers[answers.indexOf(id) + 1];
+    var answerElement = document.createElement('li');
+    if (type == "text" || type == "date" || type == "range") {
+        if (answer != "" || answer != 0) {
+            answerElement.innerText = answer;
+            el.append(answerElement);
+        }
+    }
+    else if (type == "radio" || type == "checkbox") {
+        if (answer) {
+            answerElement.innerText = text;
+            el.append(answerElement);
+        }
+    }
+    else if (type == "select") {
+        if (answer != 0) {
+            answerElement.innerText = answer;
+            el.append(answerElement);
+        }
+    }
+    //var answerElement = document.createElement('li');
+    //el.append("<ul></ul>");
+    if (structureObj["options"]) {
+        if (Object.prototype.toString.call(structureObj["options"]) === '[object Array]') {
+            /*
+            for (i = 0; i < structureObj["options"].length; i++) {
+                if (structureObj["options"][i]) {
+                    //addElement(answerElement, structureObj["options"][i], answers);
+                }
+            }*/
+            console.log(structureObj["options"]);
+        } else {
             
-        });
+        addElement(answerElement, structureObj["options"], answers);
+        }
+        //console.log(structureObj, structureObj["options"][0], structureObj["options"].length);
+        /*
+         */
+    }
+}
 
+function populateLists() {
+    $("ol").each(function () {
+        var sectionId = this.id;
+        //var sectionId2=          whater.answers[0].id.substring(0,2)
+        $(this).children().each(function () {
+            var questionId = this.id;
+            var structure = getById(getById(questionSrc, sectionId).questions, questionId).answers;
+            //questionSrc.form[sectionId].questions[questionId].answers;
+            var answersArr = generateAnswerArray(getById(answersSrc, sectionId).answers);
+            //console.log($(this).find("ul").attr("class")+", "+structure[1]+", "+answersArr)
+            recurAppend($(this).find("ul"), structure, answersArr);
+        });
     });
 }
-   
+
 function exportCSV() {
-    var ancestor = document.getElementById('container'),
-        descendents = ancestor.getElementsByTagName('INPUT');
+    var ancestor = document.getElementById('container')
+        , descendents = ancestor.getElementsByTagName('INPUT');
     var csv = [['id', 'answer']];
     var csvRows = [];
     for (i = 0; i < descendents.length; ++i) {
@@ -119,5 +123,3 @@ function exportCSV() {
     document.body.appendChild(a);
     a.click();
 }
-
-
