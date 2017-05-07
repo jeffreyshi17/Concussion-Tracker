@@ -15,11 +15,11 @@
         
         	<%for(i=0;i<7;i++){%>
         	<h1><%=dataCH.form[i].title%></h1>
-        	<ol class=questions id=<%=dataCH.form[i].title%>>
+        	<ol class=questions id=<%=dataCH.form[i].id%>>
         	
         		<%for(j=0;j<dataCH.form[i].questions.length;j++){%>
   				<li class=question id=<%=dataCH.form[i].questions[j].id%>>
-  					<%=dataCH.form[i].questions[j].question%><ul class=answers>ordered list to be populated</ul>
+  					<%=dataCH.form[i].questions[j].question%><ul class=answers></ul>
   				</li>
   				<%}%>
   			</ol>
