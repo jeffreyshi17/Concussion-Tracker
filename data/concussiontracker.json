@@ -1,5 +1,5 @@
 {
-    "version": "1.0.6",
+    "version": "1.0.7",
     "form": [{
         "id": "PI",
         "title": "Patient Information",
@@ -1027,8 +1027,7 @@
             "answers": [{
                 "id": "MH_1_0",
                 "text": "Yes",
-                "type": "radio",
-                "options": []
+                "type": "radio"
 		}, {
                 "id": "MH_1_1",
                 "text": "No",

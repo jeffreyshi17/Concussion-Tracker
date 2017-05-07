@@ -60,18 +60,13 @@ function addElement(el, structureObj, answers) {
     //var answerElement = document.createElement('li');
     //el.append("<ul></ul>");
     if (structureObj["options"]) {
-        if (Object.prototype.toString.call(structureObj["options"]) === '[object Array]') {
-            /*
-            for (i = 0; i < structureObj["options"].length; i++) {
-                if (structureObj["options"][i]) {
-                    //addElement(answerElement, structureObj["options"][i], answers);
-                }
-            }*/
-            console.log(structureObj["options"]);
-        } else {
-            
-        addElement(answerElement, structureObj["options"], answers);
-        }
+        /*
+        for (i = 0; i < structureObj["options"].length; i++) {
+            if (structureObj["options"][i]) {
+                addElement(answerElement, structureObj["options"][0], answers);
+            }
+        }*/
+        console.log(structureObj["options"].length);
         //console.log(structureObj, structureObj["options"][0], structureObj["options"].length);
         /*
          */
