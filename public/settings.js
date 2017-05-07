@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	if(localStorage.getItem("symptoms") == null){
+	if(localStorage.getItem("daily") == null){
 		$("#eRTP").hide();
 		$("#eRTPText").html("You must track your symptoms once before you can enable Return To Play");
 	}
@@ -14,8 +14,9 @@ $(document).ready(function(){
 			console.log("entered if state");
 			
 				localStorage.setItem("step", "1000");
-				var jsonSym = JSON.parse(localStorage.getItem("symptoms"));
-				localStorage.setItem("form", jsonSym.form.length-1);
+				var jsonSym = JSON.parse(localStorage.getItem("daily"));
+				localStorage.setItem("form", jsonSym.length-1);
+				
 			
 		}
 

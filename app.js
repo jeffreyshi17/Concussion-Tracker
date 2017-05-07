@@ -49,6 +49,9 @@ app.get('/FTQ_results', function (req, res) {
 app.get('/settings', function (req, res) {
     res.render('settings.ejs');
 });
+app.get('/returntoplay', function (req, res) {
+    res.render('returntoplay.ejs'); 
+});
 app.get('/initjson', function (req, res) {
     console.log('request received');
     res.writeHead(200, {
