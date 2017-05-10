@@ -1,5 +1,5 @@
 {
-    "version": "1.0.7",
+    "version": "1.0.8",
     "form": [{
         "id": "PI",
         "title": "Patient Information",
@@ -1344,7 +1344,7 @@
 				}]
 			}]
 		}, {
-                "id": "RA_3_0",
+                "id": "RA_4_0",
                 "type": "radio",
                 "text": "No"
 		}]
