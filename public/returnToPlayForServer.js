@@ -1,10 +1,10 @@
-var jsonSymptoms = JSON.parse(localStorage.getItem("symptoms"));
+var jsonSymptoms = JSON.parse(localStorage.getItem("daily"));
 
-var jsonQuestionnaire = JSON.parse(localStorage.getItem("initialAnswers"));
+var jsonQuestionnaire = JSON.parse(localStorage.getItem("init"));
 var x = 0; //initlal text box count
 $("#submitError").hide();
 
-if(localStorage.getItem("initialAnswers") == null){
+if(localStorage.getItem("init") == null){
 	$("#completeSym").hide();
 	$("#currentStep").hide();
 	$("#problematicSymptoms").hide();
@@ -17,11 +17,11 @@ if(localStorage.getItem("initialAnswers") == null){
 
 
 
-
+  
 
 var steps = ["No physical activity: rest until you are not exhibiting symptoms.", "You may participate in light aerobic exercise.", "You may participate in sport specific training. (No Contact)", "You may participate in non-contact drills.", "You may participate in full contact drills.", "You may return to play!"];
 
-
+var symptomArr = ["Headaches", "Pressure in Head", "Nausea/Vomiting", "Sensitivity to light", "Sensitivity to Noise", "Dizziness/Vertigo", "Slowed Down", "In a Fog", "Not Right", "Difficulty Concentrating", "Memory Difficulties", "Fatigued or Low Energy", "Confused", "Irritable", "Sad", "Nervous", "Anxious", "Drowsy", "Sleeping More Than Usual", "Sleeping Less Than Usual", "Balance Problems", "Neck Pain"];
 
 $("#doctorCheckedText").hide();
 
@@ -40,7 +40,11 @@ if(localStorage.getItem("step") == null){
 var update = true;
 
 
-if(!(jsonSymptoms.form.length > localStorage.getItem("form"))){
+
+console.log(jsonSymptoms[jsonSymptoms.length-1].answers[0].answers[1].answer);
+//console.log(jsonSymptoms);
+
+if(!(jsonSymptoms.length > localStorage.getItem("form"))){
 	$("#completeSym").show();
 	$("#currentStep").show();
 	$("#problematicSymptoms").show();
@@ -49,7 +53,7 @@ if(!(jsonSymptoms.form.length > localStorage.getItem("form"))){
 	update = false;
 }
 
-
+console.log("after");
 
 var currentStep = localStorage.getItem("step");
 
@@ -188,7 +192,7 @@ if(!(currentStep > 5)){
         if(x < max_fields){ 
             x++; 
             
-            $(wrapper).append('<div><tr><td><input type="text" id="' + x + 'b0"/></td><td><input type="text" id="' + x + 'b1"/></td><td><a href="#" class="remove_field">Remove</a></td></tr></div>'); //add input box
+            $(wrapper).append('<div><tr><td><input type="text" id="' + x + 'b0"/></td>&nbsp&nbsp&nbsp&nbsp&nbsp<td><input type="text" id="' + x + 'b1"/></td><td><a href="#" class="remove_field">Remove</a></td></tr></div>'); //add input box
         }
     });
     
@@ -288,7 +292,7 @@ $('#doctorCheckedText').on("click", function() {
 	});
 
 
-var formLength = jsonSymptoms.form.length;
+var formLength = jsonSymptoms.length;
 
 if(addit){
 	formLength + 1;
@@ -307,11 +311,12 @@ function symptomCheck(){
 	var symptoms = [];
 	
 
-	
-	for(var i = 0; i < jsonSymptoms.form[jsonSymptoms.form.length-1].responses.length; i++){
+	//console.log("length: " + jsonSymptoms[jsonSymptoms.length-2].answers[0].answers.length);
+	for(var i = 1; i < jsonSymptoms[jsonSymptoms.length-1].answers[0].answers.length; i++){
+		//console.log("i: " + i);
 		
-		if((jsonSymptoms.form[jsonSymptoms.form.length-1].responses[i].value - jsonQuestionnaire[6].answers[i*3].answer > 0)){
-			symptoms.push(jsonSymptoms.form[jsonSymptoms.form.length-1].responses[i].symptom);
+		if((jsonSymptoms[jsonSymptoms.length-1].answers[0].answers[i].answer - jsonQuestionnaire[2].answers[86 + i*2].answer > 0)){
+			symptoms.push(symptomArr[i-1]);
 		}
 
 	}// for iterating through symptoms. 

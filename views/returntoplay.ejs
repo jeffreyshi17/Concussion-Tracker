@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Return to Play Protocol</title>
+    <% include partials/head %>
+    
+    
+    
+  <body>
+    
+    <% include partials/nav %>
+    <div class="container-fluid">
+     <div class="text-center">
+
+    <div id = "title"><h1>Return To Play Protocol</h1></div>
+    <div id = "description"><h2>Let's get you active again!</h2></div>
+
+    <div id = "completeSym"><p>You must complete the daily tracker again to view updated Return to Play status</p></div>
+    <div id = "current"><p>You are currently in this phase of the return to play protocol:</p></div>
+    <div id = "currentStep"><h2>Current Step Error</h2></div>
+
+    
+    <p></p>
+    <div id = "problematicSymptoms"><p>Problematic Symptoms Error</p></div>
+    <div id = "nextStep"><p>Next Step Error</p></div>
+    
+    
+    <div id = "doctorCheckedText"><input type="checkbox" id = "doctorChecked" name="doctorChecked" value="Bike"> Check the box if your doctor has approved you to return to play</div> <br>
+    
+    
+
+
+   <div id = "pre-injury"><p>The pre-injury symptoms filled out in the first time questionnaire are used as baseline values.</p></div>
+  </div>
+
+   <h1>Activity Tracker</h1>
+
+   <div id = "allowedAct"><h3>You are allowed to do these types of activities:</h3></div>
+
+   <h3>Record any physical or mental activities you have completed today:</h3>
+
+    <div class="input_fields_wrap">
+    <form action="">
+    <TABLE>
+    <tr>
+      <th>Activity Type</th>
+      <th>Duration (Minutes) of activity</th>
+    </tr>
+   
+      <button class="add_field_button">Add Another Activity</button>
+      <div id = "submitError"><h3>Please complete all of the fields before submitting!</h3></div>
+   
+    
+      <div><tr><td><input type="text" id="0b0" ></td><td><input type="text" id="0b1"></td></tr></div>
+    
+      </TABLE>
+   </form>
+    </div>
+    <input type="button" id= "subButton" value="Submit Activities">
+
+   
+    </div>
+   
+    
+    <div id="footer"></div>
+
+    <script src="/returnToPlayForServer.js"></script>
+    
+  </body>
+</html>

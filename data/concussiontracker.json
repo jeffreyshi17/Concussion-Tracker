@@ -1,5 +1,5 @@
 {
-    "version": "1.0.5",
+    "version": "1.0.7",
     "form": [{
         "id": "PI",
         "title": "Patient Information",
@@ -325,12 +325,12 @@
                 "id": "CH_7_0",
                 "type": "radio",
                 "text": "Yes",
-                "options": {
+                "options": [{
                     "id": "CH_7_0_0",
                     "type": "text",
                     "text": "If yes, please list dates and describe the details, setting sin which it happened, and how long it took for you to recover"
 
-                }
+                }]
 		}, {
                 "id": "CH_7_1",
                 "type": "radio",
@@ -860,23 +860,19 @@
                 "options": [{
                     "id": "PMH_0_0_0",
                     "type": "checkbox",
-                    "text": "Headaches/migraines",
-                    "options": []
+                    "text": "Headaches/migraines"
 			}, {
                     "id": "PMH_0_0_1",
                     "type": "checkbox",
-                    "text": "Depression",
-                    "options": []
+                    "text": "Depression"
 			}, {
                     "id": "PMH_0_0_2",
                     "type": "checkbox",
-                    "text": "Anxiety",
-                    "options": []
+                    "text": "Anxiety"
 			}, {
                     "id": "PMH_0_0_3",
                     "type": "checkbox",
-                    "text": "Mood changes",
-                    "options": []
+                    "text": "Mood changes"
 			}, {
                     "id": "PMH_0_0_4",
                     "type": "checkbox",
@@ -898,23 +894,19 @@
                 "options": [{
                     "id": "PMH_1_0_0",
                     "type": "checkbox",
-                    "text": "Headaches/migraines",
-                    "options": []
+                    "text": "Headaches/migraines"
 			}, {
                     "id": "PMH_1_0_1",
                     "type": "checkbox",
-                    "text": "Depression",
-                    "options": []
+                    "text": "Depression"
 			}, {
                     "id": "PMH_1_0_2",
                     "type": "checkbox",
-                    "text": "Anxiety",
-                    "options": []
+                    "text": "Anxiety"
 			}, {
                     "id": "PMH_1_0_3",
                     "type": "checkbox",
-                    "text": "Mood changes",
-                    "options": []
+                    "text": "Mood changes"
 			}]
 		}]
 	}, {
@@ -927,8 +919,7 @@
                 "options": [{
                     "id": "PMH_2_0_0",
                     "type": "checkbox",
-                    "text": "Full term",
-                    "options": []
+                    "text": "Full term"
 			}, {
                     "id": "PMH_2_0_1",
                     "type": "checkbox",
@@ -941,8 +932,7 @@
 			}, {
                     "id": "PMH_2_0_2",
                     "type": "checkbox",
-                    "text": "Vaginal",
-                    "options": []
+                    "text": "Vaginal"
 			}, {
                     "id": "PMH_2_0_3",
                     "type": "checkbox",
@@ -960,8 +950,7 @@
             "answers": [{
                 "id": "PMH_3_0",
                 "type": "radio",
-                "text": "Yes",
-                "options": []
+                "text": "Yes"
 		}, {
                 "id": "PMH_3_1",
                 "type": "radio",
@@ -969,8 +958,7 @@
                 "options": [{
                     "id": "PMH_3_1_0",
                     "type": "text",
-                    "text": "If no, please explain",
-                    "options": []
+                    "text": "If no, please explain"
 			}]
 		}]
 	}, {
@@ -979,13 +967,11 @@
             "answers": [{
                 "id": "PMH_4_0",
                 "type": "checkbox",
-                "text": "Pre-Injury",
-                "options": []
+                "text": "Pre-Injury"
 		}, {
                 "id": "PMH_4_1",
                 "type": "checkbox",
-                "text": "Post-Injury",
-                "options": []
+                "text": "Post-Injury"
 		}]
 	}, {
             "id": "PMH_5",
@@ -993,13 +979,11 @@
             "answers": [{
                 "id": "PMH_5_0",
                 "type": "checkbox",
-                "text": "Pre-Injury",
-                "options": []
+                "text": "Pre-Injury"
 		}, {
                 "id": "PMH_5_1",
                 "type": "checkbox",
-                "text": "Post-Injury",
-                "options": []
+                "text": "Post-Injury"
 		}]
 	}, {
             "id": "PMH_6",
@@ -1007,13 +991,11 @@
             "answers": [{
                 "id": "PMH_6_0",
                 "type": "checkbox",
-                "text": "Pre-Injury",
-                "options": []
+                "text": "Pre-Injury"
 		}, {
                 "id": "PMH_6_1",
                 "type": "checkbox",
-                "text": "Post-Injury",
-                "options": []
+                "text": "Post-Injury"
 		}]
 	}, {
             "id": "PMH_7",
@@ -1021,13 +1003,11 @@
             "answers": [{
                 "id": "PMH_7_0",
                 "type": "checkbox",
-                "text": "Pre-Injury",
-                "options": []
+                "text": "Pre-Injury"
 		}, {
                 "id": "PMH_7_1",
                 "type": "checkbox",
-                "text": "Post-Injury",
-                "options": []
+                "text": "Post-Injury"
 		}]
 	}]
 }, {
@@ -1039,8 +1019,7 @@
             "question": "Day of last period (first day):",
             "answers": [{
                 "id": "MH_0_0",
-                "type": "date",
-                "options": []
+                "type": "date"
 		}]
 	}, {
             "id": "MH_1",
@@ -1048,13 +1027,11 @@
             "answers": [{
                 "id": "MH_1_0",
                 "text": "Yes",
-                "type": "radio",
-                "options": []
+                "type": "radio"
 		}, {
                 "id": "MH_1_1",
                 "text": "No",
-                "type": "radio",
-                "options": []
+                "type": "radio"
 		}]
 	}, {
             "id": "MH_2",
@@ -1062,13 +1039,11 @@
             "answers": [{
                 "id": "MH_2_0",
                 "text": "Yes",
-                "type": "radio",
-                "options": []
+                "type": "radio"
 		}, {
                 "id": "MH_2_1",
                 "text": "No",
-                "type": "radio",
-                "options": []
+                "type": "radio"
 		}]
 	}, {
             "id": "MH_3",
@@ -1085,8 +1060,7 @@
 		}, {
                 "id": "MH_3_1",
                 "text": "No",
-                "type": "radio",
-                "options": []
+                "type": "radio"
 		}]
 	}, {
             "id": "MH_4",
@@ -1094,18 +1068,15 @@
             "answers": [{
                 "id": "MH_4_0",
                 "text": "Light",
-                "type": "radio",
-                "options": []
+                "type": "radio"
 		}, {
                 "id": "MH_4_1",
                 "text": "Moderate",
-                "type": "radio",
-                "options": []
+                "type": "radio"
 		}, {
                 "id": "MH_4_2",
                 "text": "Heavy",
-                "type": "radio",
-                "options": []
+                "type": "radio"
 		}]
 	}]
 }, {
@@ -1118,8 +1089,7 @@
             "answers": [{
                 "id": "RA_0_0",
                 "type": "text",
-                "text": "Days",
-                "options": []
+                "text": "Days"
 		}]
 	}, {
             "id": "RA_1",
@@ -1127,13 +1097,11 @@
             "answers": [{
                 "id": "RA_1_0",
                 "type": "text",
-                "text": "Before your concussion",
-                "options": []
+                "text": "Before your concussion"
 		}, {
                 "id": "RA_1_1",
                 "type": "text",
-                "text": "After your concussion",
-                "options": []
+                "text": "After your concussion"
 		}]
 	}, {
             "id": "RA_2",
@@ -1145,14 +1113,12 @@
                 "options": [{
                     "id": "RA_2_0_0",
                     "type": "text",
-                    "text": "If yes, how many days (including half days)?",
-                    "options": []
+                    "text": "If yes, how many days (including half days)?"
 			}]
 		}, {
                 "id": "RA_2_1",
                 "type": "radio",
-                "text": "No",
-                "options": []
+                "text": "No"
 		}]
 	}, {
             "id": "RA_3",
@@ -1380,8 +1346,7 @@
 		}, {
                 "id": "RA_3_0",
                 "type": "radio",
-                "text": "No",
-                "options": []
+                "text": "No"
 		}]
 	}, {
             "id": "RA_5",
@@ -1488,8 +1453,7 @@
 		}, {
                 "id": "RA_5_1",
                 "type": "radio",
-                "text": "No",
-                "options": []
+                "text": "No"
 		}]
 	}, {
             "id": "RA_6",
@@ -1596,8 +1560,7 @@
 		}, {
                 "id": "RA_6_1",
                 "type": "radio",
-                "text": "No",
-                "options": []
+                "text": "No"
 		}]
 	}, {
             "id": "RA_7",
@@ -1704,8 +1667,7 @@
 		}, {
                 "id": "RA_7_1",
                 "type": "radio",
-                "text": "No",
-                "options": []
+                "text": "No"
 		}]
 	}, {
             "id": "RA_8",
@@ -1812,8 +1774,7 @@
 		}, {
                 "id": "RA_8_1",
                 "type": "radio",
-                "text": "No",
-                "options": []
+                "text": "No"
 		}]
 	}, {
             "id": "RA_9",
@@ -1941,8 +1902,7 @@
 		}, {
                 "id": "RA_9_1",
                 "type": "radio",
-                "text": "No",
-                "options": []
+                "text": "No"
 		}]
 	}, {
             "id": "RA_10",
@@ -2070,8 +2030,7 @@
 		}, {
                 "id": "RA_10_1",
                 "type": "radio",
-                "text": "No",
-                "options": []
+                "text": "No"
 		}]
 	}, {
             "id": "RA_11",
@@ -2191,8 +2150,7 @@
 		}, {
                 "id": "RA_11_1",
                 "type": "radio",
-                "text": "No",
-                "options": []
+                "text": "No"
 		}]
 	}, {
             "id": "RA_12",
@@ -2357,8 +2315,7 @@
 		}, {
                 "id": "RA_12_1",
                 "type": "radio",
-                "text": "No",
-                "options": []
+                "text": "No"
 		}]
 	}, {
             "id": "RA_13",
@@ -2474,8 +2431,7 @@
 		}, {
                 "id": "RA_13_1",
                 "type": "radio",
-                "text": "No",
-                "options": []
+                "text": "No"
 		}]
 	}, {
             "id": "RA_14",
@@ -2487,14 +2443,12 @@
                 "options": [{
                     "id": "RA_14_0_0",
                     "type": "text",
-                    "text": "If yes, what was the event? Include the date and length of the event",
-                    "options": []
+                    "text": "If yes, what was the event? Include the date and length of the event"
 			}]
 		}, {
                 "id": "RA_14_1",
                 "type": "radio",
-                "text": "No",
-                "options": []
+                "text": "No"
 		}]
 	}, {
             "id": "RA_15",
@@ -2541,8 +2495,7 @@
 		}, {
                 "id": "RA_15_1",
                 "type": "radio",
-                "text": "No",
-                "options": []
+                "text": "No"
 		}]
 	}, {
             "id": "RA_16",
@@ -2649,8 +2602,7 @@
 		}, {
                 "id": "RA_16_1",
                 "type": "radio",
-                "text": "No",
-                "options": []
+                "text": "No"
 		}]
 	}, {
             "id": "RA_17",
@@ -2766,8 +2718,7 @@
 		}, {
                 "id": "RA_17_1",
                 "type": "radio",
-                "text": "No",
-                "options": []
+                "text": "No"
 		}]
 	}, {
             "id": "RA_18",
@@ -2883,8 +2834,7 @@
 		}, {
                 "id": "RA_18_1",
                 "type": "radio",
-                "text": "No",
-                "options": []
+                "text": "No"
 		}]
 	}, {
             "id": "RA_19",
@@ -3037,8 +2987,7 @@
 		}, {
                 "id": "RA_19_1",
                 "type": "radio",
-                "text": "No",
-                "options": []
+                "text": "No"
 		}]
 	}]
 }, {

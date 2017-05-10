@@ -15,8 +15,8 @@
       <div class="container">
       	<!-- <div class="col-md-4 text-center"> -->
 	        <h1 id="jumbo"> Welcome to Concussion Tracker!</h1>
-	        	<p id="desc"> It looks like it's your first time visiting! To start, please fill out the initial questionnaire below. </p>
-	        <button id="initbutton" class="btn btn-primary" onclick="window.location.href='/question'">Start Initial Questionnaire</button>
+	        	<p id="desc"> It looks like it's your first time visiting! To start, please fill out the first time questionnaire below. </p>
+	        <button id="initbutton" class="btn btn-primary" onclick="window.location.href='/question'">First Time Questionnaire</button>
 	        <button id="daily" class="btn btn-primary" onclick="window.location.href='/dailytracker'">Daily Tracker</button>
 	        <button id="menstrual" class="btn btn-primary" onclick="window.location.href='/menstrualtracker'">Menstrual Tracker</button>
        <!--  </div> -->
@@ -25,25 +25,21 @@
 </div>
 
 <script>
-if(localStorage.getItem("init")){
-	json = JSON.parse(localStorage.getItem("init"));
-}
+json = JSON.parse(localStorage.getItem("init"));
 if(localStorage.getItem("init") && json[0].answers[0].answer == ""){
 	document.getElementById("jumbo").innerHTML = "Please finish the initial questionnaire: ";
 	document.getElementById("desc").remove();
 	document.getElementById("daily").remove();
 	document.getElementById("menstrual").remove();
-}//init exists but the name isn't filled out
-else if(localStorage.getItem("init")){
-	if(localStorage.length > 0 && json[0].answers[0].answer != ""){
-		document.getElementById("jumbo").innerHTML = "Welcome Back to Concussion Tracker!";
-		document.getElementById("desc").innerHTML = "Please update your concussion progress below:";
-		document.getElementById("initbutton").remove();
-		if (JSON.parse(localStorage.init)[0].answers[3].answer) {
-			document.getElementById("menstrual").remove();
-		}
+}
+else if(localStorage.getItem("init") && json[0].answers[0].answer != ""){
+	document.getElementById("jumbo").innerHTML = "Welcome Back to Concussion Tracker!";
+	document.getElementById("desc").innerHTML = "Please update your concussion progress below:";
+	document.getElementById("initbutton").remove();
+	if (json[0].answers[2].answer) {
+		document.getElementById("menstrual").remove();
 	}
-}//init exists and the name is filled out
+}
 else{
 	document.getElementById("daily").remove();
 	document.getElementById("menstrual").remove();

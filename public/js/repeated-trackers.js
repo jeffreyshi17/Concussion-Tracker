@@ -27,7 +27,7 @@ function storeToLocalStorage(localStorageVariableName) {
         answersObj[idIndex].answers.push(answer);
     }
     var answerContainer = {};
-    answerContainer.date = (new Date()).toUTCString();
+    answerContainer.date = (new Date()).getTime();
     answerContainer.answers = answersObj;
 
     if (!localStorage.getItem(localStorageVariableName)) {
