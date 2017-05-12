@@ -3,6 +3,10 @@ var questionSrc = JSON.parse(localStorage.initForm).form;
 $(document).ready(function () {
     populateLists();
 });
+
+$('#submit').on('click', function () {
+        exportCSV();    
+    });
 //var doc = { /* your json */ };
 function getById(arr, id) {
     for (var d = 0, len = arr.length; d < len; d += 1) {
